@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <title>  --- </title>
+  <meta name="description" content="Speed up your development with a complete and scalable gulpjs based build system that scaffolds the project for you." />
+  <meta name="author" content="UI-Lib" />
+  <meta name="twitter:title" content="NA">
+<meta name="twitter:description" content="Description here">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="">
+<meta property="og:video" content="./assets/img/logo/cover.mp4" />
+<meta property="og:video:type" content="video/mp4" />
+<meta property="twitter:video" content="./assets/img/logo/cover.mp4" />
+<meta property="twitter:video:type" content="video/mp4" />
+  <meta name="copyright" content="Copyright SHIBARIUM P 2023. All Rights Reserved." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/x-icon" href="assets/img/logo/Logo.png" />
+  
+
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/plugin-css/splide.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/plugin-css/preloader.css" />
+  <style>
+    .text-green-900{
+      color: #acf557;
+    }
+       .marquee,
+      .marquee-with-options,
+      .marquee-vert-before,
+      .marquee-vert {
+        width: 100%;
+        overflow: hidden;
+        /* border:1px solid #ccc; */
+        
+      }
+      .js-marquee{
+        display: flex;
+      }
+      .text-lg{
+        font-size: 1.425rem;
+      }
+      .hover\:text-primary-500:hover {
+    --tw-text-opacity: 1;
+    color: rgb(223 29 50 / var(--tw-text-opacity));
+    
+    opacity: 1;
+    /* border: 2px solid #fea40a; */
+}
+      .content {
+  /* max-width: 800px; */
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.content p {
+  position: relative;
+  font-family: Monospace;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  transition: color 500ms ease-in 500ms;
+}
+.the-cardsS{
+  width: 100%;margin:0 0 0 0rem
+}
+@media (max-width: 500px) {
+  /* … */
+  .the-cardsS{
+  width: 100%;margin:0 0 0 0rem
+}
+}
+.content p:before, .content p:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 500ms ease-out;
+}
+.content p:before {
+  width: 100%;
+  opacity: 1;
+  background: repeating-linear-gradient(to bottom, white, transparent 1px, rgba(238, 238, 238, 0.5) 1px, rgba(238, 238, 238, 0.5) 27px, transparent 27px, white 28px);
+}
+.content p:after {
+  width: 10%;
+  opacity: 0.5;
+  filter: blur(20px);
+  background: repeating-linear-gradient(to bottom, white, transparent 1px, #dddddd 1px, #dddddd 27px, transparent 27px, white 28px);
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeholder;
+  animation-timing-function: linear;
+}
+.content p.fade {
+  color: black;
+}
+.content p.fade:before, .content p.fade:after {
+  opacity: 0;
+}
+.main-color{
+  color: #df1d32;
+}
+
+@keyframes placeholder {
+  0% {
+    left: -10%;
+    width: 10%;
+  }
+  25% {
+    width: 20%;
+  }
+  50% {
+    width: 35%;
+  }
+  75% {
+    width: 60%;
+  }
+  100% {
+    left: 110%;
+    width: 10%;
+  }
+}
+  </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 relative">
+  <div style="z-index: 1000" class="bg-gray-900" id="preloader">
+    <div id="loader"></div>
+  </div>
+  <nav data-navbar-version="v1" data-position-style="sticky" class="navbar bg-transparent transition-all duration-200 z-50 py-2">
+    <div data-placement="left" data-drawer-width="220px" data-drawer-name="mobile-navbar" class="drawer shadow-hover fixed top-0 h-screen z-[100] overflow-hidden transition-all duration-300 w-0">
+      <div class="w-[220px] h-full overflow-y-auto bg-white dark:bg-dark">
+        <div class="p-4 flex items-center justify-between">
+          <div class="relative max-w-[206px] w-full">
+            <a href="/" class="flex items-center mr-10">
+              <img src="assets/img/logo/logorocket.gif" class="mr-3 h-6 sm:h-9" alt="naw-nft" />
+            
+            </a>
+            
+          </div>
+          <div class="block ml-4">
+            <button data-target-drawer="mobile-navbar" class="drawer-handler w-9 h-9 p-2 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 dark:bg-gray-500/5 dark:hover:bg-gray-500/10 rounded-full">
+              <svg class="w-4 h-4 fill-gray-700
+                  dark:fill-gray-500" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.705 12.4677C14.0563 12.8182 14.0563 13.3867 13.705 13.7372C13.3536 14.0876 12.7835 14.0876 12.4321 13.7372L8.00061 9.28477L3.53765 13.7357C3.18628 14.0861 2.61618 14.0861 2.26477 13.7357C1.91336 13.3852 1.91339 12.8167 2.26477 12.4662L6.72923 8.01683L2.26353 3.53227C1.91216 3.18185 1.91216 2.61329 2.26353 2.26283C2.6149 1.91237 3.185 1.91241 3.53641 2.26283L8.00061 6.74889L12.4636 2.29799C12.8149 1.94757 13.385 1.94757 13.7365 2.29799C14.0879 2.64841 14.0878 3.21697 13.7365 3.56743L9.27199 8.01683L13.705 12.4677Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <ul class="flex flex-col transition-all duration-200 bg-transparent">
+         <li class="py-2 px-6">
+            <a href="#" class="block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Home </a>
+          </li>
+          <li class="py-2 px-6">
+            <a href="/contact" class="block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Whitepaper </a>
+          </li>
+          <li class="py-2 px-6">
+            <a href="/" class="block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> How to buy </a>
+          </li>
+          
+          <li class="px-6">
+            <div data-active-type="single" class="accordion w-full overflow-hidden">
+              <div class="py-2">
+                <input id="Pages" type="checkbox" class="collapse hidden" />
+                <label for="Pages" class="collapse-label group flex items-center justify-between cursor-pointer text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Socials
+                   <svg data-active-rotate="rotate-90" class="collapse-label-icon w-2 h-2 fill-gray-600
+            group-hover:fill-primary-500" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.38875 1.41411L11.9887 7.00577C12.2644 7.31813 12.4 7.67889 12.4 8.00004C12.4 8.3212 12.2633 8.72067 11.9898 8.99563L6.38984 14.5873C5.98927 14.9901 5.38753 15.1108 4.86384 14.8927C4.34016 14.6747 4 14.2384 4 13.6313V2.40838C4 1.83909 4.34042 1.32524 4.86406 1.10703C5.38771 0.888818 5.99062 1.01068 6.38875 1.41411Z" />
+                  </svg>
+                </label>
+              </div>
+              <div class="accordion-content py-2 max-h-0 transition-all duration-200">
+                <ul>
+                  <li>
+                    <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                      <i class="ml-3 fa-brands fa-telegram mr-2"></i>   Telegram  </a>
+                  </li>
+                  <li>
+                    <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                      <i class="ml-3 fa-brands fa-twitter mr-2"></i>    Twitter  </a>
+                  </li>
+                  <li>
+                    <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                      <i class="ml-3 fa-solid fa-blog mr-2"></i>    Blog  </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="py-2 px-6">
+            <button type="button" class="text-white whitespace-nowrap text-sm px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md"> Connect Wallet </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+     <div class="container flex justify-between items-center mx-auto">
+      <div class="navLink flex items-center">
+        <a href="/" class="flex items-center mr-10">
+          <img src="assets/img/logo/logorocket.gif" class="mr-3 h-6 sm:h-9" alt="naw-nft" />
+          <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white" style="color:#f30000"> SHIBARIUM PAD </span>
+        </a>
+       
+      </div>
+      
+      <div class="hidden justify-between items-center w-full lg:flex lg:w-auto">
+        <ul class="flex items-center transition-all duration-200 bg-transparent flex-row">
+          <li class="px-[18px]">
+            <a href="/" class="text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Home </a>
+          </li>
+          <li class="px-[18px]">
+            <a href="/" class="text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Whitepaper </a>
+          </li>
+          <li class="px-[18px]">
+            <a href="/" class="text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> How to buy </a>
+          </li>
+          <li class="px-[18px]">
+            <div data-action-type="hover" data-target-element="pages-dropdown" class="dropdown relative">
+              <button class="group flex justify-between items-center text-gray-900 font-normal  dark:text-white hover:text-primary-500 dark:hover:text-primary-500"> 
+                Socials  <i class="fa-solid fa-caret-down ml-3"></i>
+              </button>
+              <div id="pages-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute top-5 transition-all h-full invisible opacity-0 z-0 pt-0">
+                <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 w-[216px] shadow-drop">
+                  <div class="absolute -top-3 left-4 overflow-hidden inline-block">
+                    <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                  </div>
+                  <ul class="py-2">
+                    <li>
+                      <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <i class="ml-3 fa-brands fa-telegram mr-2"></i>   Telegram  </a>
+                    </li>
+                    <li>
+                      <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <i class="ml-3 fa-brands fa-twitter mr-2"></i>    Twitter  </a>
+                    </li>
+                    <li>
+                      <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <i class="ml-3 fa-solid fa-blog mr-2"></i>    Blog  </a>
+                    </li>
+                   
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+         
+         
+        </ul>
+      </div>
+      <div class="flex items-center">
+        <ul class="flex items-center">
+          <li class="mr-4 hidden lg:block">
+            <a style="    padding: 0.7rem;" href="#" class="text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg"> Connect Wallet  </a>
+          </li>
+          
+          
+          <li>
+            <button id="lightOrDarkMode" class="w-7 h-7 ml-4 border border-gray-300 dark:border-primary-300 rounded-full flex items-center justify-center">
+              <svg class="block dark:hidden w-[12px]
+						h-[12px] fill-gray-700 dark:fill-primary-100" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.5915 13.0556C7.75928 13.0556 4.65887 9.925 4.65887 6.05556C4.65887 4.13056 5.42916 2.38056 6.68088 1.11667C3.44567 1.71945 1 4.55834 1 8C1 11.8694 4.10041 15 7.9326 15C9.85832 15 11.5915 14.2028 12.8432 12.9389C12.4388 13.0167 12.0344 13.0556 11.5915 13.0556Z" />
+                <path d="M12.6891 4.675L14.1141 5.43333L13.8445 3.83889L15 2.69167L13.4016 2.45833L12.6891 1L11.9766 2.45833L10.3782 2.69167L11.5337 3.83889L11.2641 5.43333L12.6891 4.675Z" />
+                <path d="M9.03026 8.91389L9.97387 9.4L9.80055 8.33055L10.5708 7.57222L9.51169 7.41666L9.03026 6.44444L8.54883 7.41666L7.48969 7.57222L8.25997 8.33055L8.08666 9.4L9.03026 8.91389Z" />
+              </svg>
+              <svg class="hidden dark:block w-[12px]
+						h-[12px] fill-gray-700 dark:fill-primary-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M224 80V32c0-17.7 14.3-32 32-32s32 14.3 32 32V80c0 17.7-14.3 32-32 32s-32-14.3-32-32zM352 256c0 53-43 96-96 96s-96-43-96-96s43-96 96-96s96 43 96 96zM0 256c0-17.7 14.3-32 32-32H80c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm432-32h48c17.7 0 32 14.3 32 32s-14.3 32-32 32H432c-17.7 0-32-14.3-32-32s14.3-32 32-32zM256 512c-17.7 0-32-14.3-32-32V432c0-17.7 14.3-32 32-32s32 14.3 32 32v48c0 17.7-14.3 32-32 32zM73.4 438.6c-12.5-12.5-12.5-32.8 0-45.3l32-32c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-32 32c-12.5 12.5-32.8 12.5-45.3 0zm288-333.3l32-32c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-32 32c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3zm77.3 333.3c-12.5 12.5-32.8 12.5-45.3 0l-32-32c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l32 32c12.5 12.5 12.5 32.8 0 45.3zm-333.3-288l-32-32c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l32 32c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0z" />
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <button data-target-drawer="mobile-navbar" class="drawer-handler flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden">
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <!-- Page body content start -->
+  <div class="bg-gray-25 dark:bg-gray-900 relative">
+    <div class="bg-[url('/assets/img/hero-bg/light-landing4.png')] dark:bg-[url('/assets/img/hero-bg/dark-landing4.png')] bg-no-repeat bg-[length:100%_100%] pt-20 md:pt-[120px]">
+      <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center pb-[100px]">
+        <div class="max-w-[490px] py-6 mx-auto md:mx-0  md:text-start">
+          <p class="text-primary-500 text-xs md:text-base font-normal"> LAUNCH PAD </p>
+          <h2 class="font-semibold text-2xl md:text-6xl text-gray-900 dark:text-white">  Get early access to the 
+            <span class="text-primary-500 bg-contain bg-no-repeat" style="
+							background-image: url('assets/img/logo/nft-text-bg2.png');
+						">  greatest projects </span>  on Shibarium.
+          </h2>
+          <p class="font-normal text-xs md:text-base text-gray-700 dark:text-gray-400 py-3 md:py-6"> 
+            
+            Trustworthy <b class="main-color">Shibarium Projects</b> that have undergone rigorous vetting. Backed by prominent individuals and influencers across the industry.
+          </p>
+            
+          <div class="flex justify-center md:justify-start pt-1 md:pt-2 pb-4 md:pb-12">
+            <button class="px-4 md:px-8 py-2 md:py-4 rounded-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 mr-4"> Get Started </button>
+            <button class="px-4 md:px-8 py-2 md:py-4 rounded-md font-medium text-base flex items-center justify-center hover:bg-primary-25 bg-white border border-primary-500 dark:border-gray-700 text-gray-700 dark:text-white hover:text-primary-500 dark:bg-dark transition-colors duration-200 mr-4"> Create </button>
+          </div>
+          <div class="flex items-center justify-between pb-6 md:pb-0">
+            <div>
+              <h4 class="font-semibold text-xl md:text-4xl text-gray-900 dark:text-white"> 0 </h4>
+              <p class="font-normal text-xs md:text-base text-gray-700 dark:text-gray-400"> IDEAS FUNDED </p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-xl md:text-4xl text-gray-900 dark:text-white"> 0 </h4>
+              <p class="font-normal text-xs md:text-base text-gray-700 dark:text-gray-400"> PROJECTS MKT CAP </p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-xl md:text-4xl text-gray-900 dark:text-white"> 0 </h4>
+              <p class="font-normal text-xs md:text-base text-gray-700 dark:text-gray-400"> UNIQUE PARTICIPANTS </p>
+            </div>
+          </div>
+        </div>
+        <div class="md:max-w-[482px] md:ml-auto">
+          <div class="group p-4 relative bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+            <a href="#">
+              <div class="w-full h-[300px] bg-cover bg-center relative rounded-lg mb-4 flex items-end justify-center" style="background-image: url(https://cdn.dribbble.com/users/8011399/screenshots/16003493/media/87a71cbe22e2a59511137fac42b1fb78.png?compress=1&resize=1600x1200&vertical=top);">
+                <div class="w-full h-14 px-4 py-2 flex items-center justify-between" style="
+									max-width: 370px;
+									background: linear-gradient(
+										180deg,
+										rgba(255, 255, 255, 0.8) 0%,
+										rgba(255, 255, 255, 0.5) 100%
+									);
+									backdrop-filter: blur(14px);
+									border-radius: 8px 8px 0px 0px;
+								">
+                 <!-- <p id="days"></p>
+                 <p id="hours"></p>
+                 <p id="mins"></p>
+                 <p id="secs"></p> -->
+                 <div style="    display: contents;" id="countdowni"></div>
+                </div>
+              </div>
+            </a>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <p class="font-medium text-gray-700 text-lg dark:text-white mr-2"> $SFC </p>
+                <svg width="12" height="12" viewBox="0 0 16 16" class="fill-primary-500">
+                  <path d="M8 0C9.15 0 10.15 0.646875 10.6531 1.59687C11.6812 1.25312 12.8156 1.53 13.6562 2.34313C14.4688 3.15625 14.6906 4.31875 14.4031 5.34688C15.3531 5.85 16 6.85 16 8C16 9.15 15.3531 10.15 14.4031 10.6531C14.7187 11.6812 14.4688 12.8156 13.6562 13.6562C12.8156 14.4688 11.6812 14.6906 10.6531 14.4031C10.15 15.3531 9.15 16 8 16C6.85 16 5.85 15.3531 5.34688 14.4031C4.31875 14.7187 3.15625 14.4688 2.34313 13.6562C1.53 12.8156 1.28125 11.6812 1.59687 10.6531C0.646875 10.15 0 9.15 0 8C0 6.85 0.646875 5.85 1.59687 5.34688C1.25312 4.31875 1.53 3.15625 2.34313 2.34313C3.15625 1.53 4.31875 1.28125 5.34688 1.59687C5.85 0.646875 6.85 0 8 0ZM11.0031 7.00313C11.3219 6.7375 11.3219 6.2625 11.0031 5.96875C10.7375 5.67812 10.2625 5.67812 9.96875 5.96875L7 8.94063L5.75313 7.71875C5.4875 7.42812 5.0125 7.42812 4.71875 7.71875C4.42812 8.0125 4.42812 8.4875 4.71875 8.75313L6.46875 10.5031C6.7625 10.8219 7.2375 10.8219 7.50313 10.5031L11.0031 7.00313Z" />
+                </svg>
+              </div>
+              <p class="text-gray-700 dark:text-gray-400 font-normal"> Starting : 19.02.2023 </p>
+            </div>
+            <a href="#">
+              <h6 class="text-primary-500 my-3">Shibarium Fight Club #269</h6>
+            </a>
+            <p class="text-gray-700 dark:text-gray-400"> The First Cross-IP PVP game for Shibarium NFT Universe            </p>
+            <div class="flex items-center justify-between mt-3">
+              <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Token Sale </button>
+              <div class="flex flex-col items-end">
+                <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Price per token <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                    <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                    <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                    <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                    <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                    <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                    <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                  </svg>
+                  <span class="text-gray-900 dark:text-white font-medium">0.0001</span>
+                </p>
+                <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                    <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#FCC5B2" />
+                    <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#F0786C" />
+                    <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#F0786C" />
+                    <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#E73E3E" />
+                    <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#F79D8B" />
+                    <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#E73E3E" />
+                  </svg>
+                  <span class="text-gray-900 dark:text-white">$100</span>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto py-[100px]">
+      <div>
+        <div class="text-center">
+          
+          <p class="text-gray-700 dark:text-gray-400" style="text-transform: uppercase">
+             Raise funds through the <b class="main-color"> Shibarium</b>  BLOCKCHAIN. 
+             </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mt-12">
+          <div class="flex flex-col p-12 justify-center items-center bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+            
+            <a href="#">
+              <h6 class="text-gray-900 dark:text-white my-1" style="font-size: 22px"> $0 </h6>
+            </a>
+            <small class="text-gray-700 dark:text-gray-400 text-center"> TOTAL RAISED </small>
+          </div>
+          <div class="flex flex-col p-12 justify-center items-center bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+            <a href="#">
+              <h6 class="text-gray-900 dark:text-white my-1" style="font-size: 22px"> 0 </h6>
+            </a>
+            <small class="text-gray-700 dark:text-gray-400 text-center"> TOKENS FUNDED </small>
+          </div>
+          <div class="flex flex-col p-12 justify-center items-center bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+            <a href="#">
+              <h6 class="text-gray-900 dark:text-white my-1" style="font-size: 22px"> $0
+              </h6>
+            </a>
+            <small class="text-gray-700 dark:text-gray-400 text-center"> TOTAL MKT CAP  </small>
+          </div>
+          <div class="flex flex-col p-12 justify-center items-center bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+            <a href="#">
+              <h6 class="text-gray-900 dark:text-white my-1" style="font-size: 22px">0</h6>
+            </a>
+            <small class="text-gray-700 dark:text-gray-400 text-center"> TOTAL PARTICIPANTS </small>
+          </div>
+          
+          
+          
+          
+        </div>
+      </div>
+    </div>
+
+    
+    
+    <!-- <div class="container mx-auto pt-20 pb-[100px]">
+      <div class="p-6 md:p-20 bg-primary-25 dark:bg-dark rounded-md">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 items-center">
+          <div>
+            <h4 class="text-gray-900 dark:text-white mb-3"> SIBARIUM PAD
+               </h4>
+            <p class="text-gray-700 dark:text-gray-400"> DogPad is a ecosystem of utilities for the launch and creation of new tokens on the Shibarium chain. Powered by $DOGPAD and built by our team of developers.</p>
+            <br>
+            <p class="text-gray-700 dark:text-gray-400"> DogPad is a ecosystem of utilities for the launch and creation of new tokens on the Shibarium chain. Powered by $DOGPAD and built by our team of developers.</p>
+            <br>
+            <p class="text-gray-700 dark:text-gray-400"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quae ad vero optio provident! Adipisci voluptatum veniam, debitis minus officia sequi explicabo voluptas deleniti eius odio repellendus, deserunt officiis omnis?</p>
+            <div class="flex dark:border-gray-700  dark:bg-dark p-1 mt-9">
+              
+              <a class="px-[30px] py-3 rounded-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Buy Here </a>
+              <a class="px-[30px] ml-2 py-3 rounded-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Join Telegram </a>
+            </div>
+          </div>
+          <img class="w-full" src="assets/img/logo/about.png" alt="" />
+        </div>
+      </div>
+    </div> -->
+
+
+    
+   <!--TTTTTT--->
+   <section class="container pb-[100px]" style="    display: block;margin: 0 auto;">
+    <!-- <h4 class="text-gray-900 dark:text-white text-center"> Browse by <span class="text-primary-500">Category</span> -->
+    </h4>
+<style>
+
+.cards {
+  /* width: calc(100% - 2em); */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1em;
+  grid-template-areas: "a a b c" "a a d d";
+  width: 100%;
+  margin: 0 0 0 2rem;
+}
+
+.card {
+  width: 100%;
+  position: relative;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.card:last-child {
+  margin-bottom: 0;
+}
+.card:before {
+  height: 0;
+  content: "";
+  display: block;
+  padding-bottom: 47.36%;
+}
+.card.content:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  content: "";
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+}
+.card:nth-child(1) {
+  grid-area: a;
+}
+.card:nth-child(2) {
+  grid-area: b;
+}
+.card:nth-child(3) {
+  grid-area: c;
+}
+.card:nth-child(4) {
+  grid-area: d;
+}
+.card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-label {
+  position: absolute;
+  top: 0.45rem;
+  left: 0.45rem;
+  background: #089f8a;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.7em;
+  color: white;
+  padding: 0.5em;
+}
+.card-title {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  color: #d6dbeb;
+  z-index: 5;
+  font-size: 0.8em;
+}
+.card.form {
+  position: relative;
+}
+.card.form:before {
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+}
+.card.form:after {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  width: calc(100% - 1em);
+  height: calc(100% - 1em);
+  content: "";
+  background: #252833;
+}
+.card.form .form-title {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 7vw;
+  font-weight: 900;
+  z-index: 5;
+  text-transform: uppercase;
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.card.form .form-title:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  content: "Sign Up";
+  opacity: 0.5;
+  filter: blur(10px);
+  transition: all 0.25s ease;
+  z-index: 2;
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transform: translateX(-50%) translateY(-50%);
+}
+.card:nth-child(2) .card-label {
+  background: #ef4e7b;
+}
+.card:nth-child(3) .card-label {
+  background: #1098ad;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+}
+.card:hover .form-title:before {
+  filter: blur(3px);
+  opacity: 0.7;
+}
+#arrow {
+  position: relative;
+  left: 0;
+  transition: left ease 0.5s;
+}
+#arrow:hover {
+  left: 10px;
+}
+</style>
+<div class="container">
+  <h4 class="flex text-gray-900 dark:text-white text-left"> 
+    Get Educated About <b class="main-color"> ShibariumPad </b> <span class="ml-5" style="font-size:1rem"><span > <a id="arrow"  href="#"> Learn About Us <i class="fa-solid fa-chevron-right"></i> </a></span></span></h4>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-7 pt-12 the-cardsS" >
+      <div class="col-md-6">
+      <div>
+        
+        <div class="flex items-end relative bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover h-[442px] bg-cover bg-center" style="
+						background-image: linear-gradient(
+								359.88deg,
+								rgba(13, 15, 12, 0.87) 10.1%,
+								rgba(9, 11, 11, 0.08) 98.86%
+							),
+							url(https://cdn.dribbble.com/users/394112/screenshots/17170911/media/76a08bbe06695131ffb3285a1db34498.jpg?compress=1&resize=800x600&vertical=top);
+					">
+              
+                  <div class="p-4">
+                    <div class="flex items-center justify-between mb-2 pb-5">
+                      
+                      
+                    </div>
+          
+                    <h6 class="text-white py-2 font-light"> How to participate in SHIBARIUM PAD </h6>
+                    <p class="text-white py-2 font-light"> A good place to start is: what is Shibarim Pad?  </p>
+                    <div class="w-10 h-14 absolute top-4 right-4 " style="
+                   
+                  ">
+                   <i class="fa-solid fa-2x fa-play text-white"></i>
+                      </div>
+                  </div>
+                </div>
+        
+      </div>
+      <!-- <div>
+        <div class="mt-4 flex p-0 bg-cover bg-center items-end px-5 py-4 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover" style="
+      background-image: linear-gradient(
+          359.88deg,
+          rgba(13, 15, 12, 0.87) 10.1%,
+          rgba(9, 11, 11, 0.08) 98.86%
+        ),
+        
+        url(assets/img/images/jon-tyson.jpg);
+        padding:0;
+    ">
+    <video class="rounded-lg"   style="width:100%;height:100%;z-index: 0;" controls autoplay loop>
+      <source src="https://cdn.dribbble.com/users/721278/screenshots/15785802/media/5d83546414d7bd334c675578df2dcc67.mp4" type="video/mp4">
+    </video>
+          
+        </div>
+      </div> -->
+
+      </div>
+<div class="col-md-6">
+      
+      <div>
+        <div class="flex h-[278px] bg-cover bg-center items-end px-5 py-4 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover" style="
+      background-image: linear-gradient(
+          359.88deg,
+          rgba(13, 15, 12, 0.87) 10.1%,
+          rgba(9, 11, 11, 0.08) 98.86%
+        ),
+        url(https://cdn.dribbble.com/users/3464678/screenshots/17504503/media/a2a6b32c0d7a6d86075261f58ef6c38f.png?compress=1&resize=1600x1200&vertical=top);
+        height: 210px;
+    ">
+          <p class="text-white font-normal text-lg pb-10">How to buy the Shibarim $SHIDO token?</p>
+        </div>
+      </div>
+     
+      <div>
+        <div class="mt-4 flex items-end relative bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover h-[442px] bg-cover bg-center" style="
+						background-image: linear-gradient(
+								359.88deg,
+								rgba(13, 15, 12, 0.87) 10.1%,
+								rgba(9, 11, 11, 0.08) 98.86%
+							),
+							url(/assets/ido.gif);
+              height: 210px;
+					">
+              
+                  <div class="p-4">
+                    <div class="flex items-center justify-between mb-2 pb-5">
+                      
+                      
+                    </div>
+          
+                    <h6 class="text-white py-2 font-light pb-10"> What is an IDO <br/> (Initial Decentralized Offering)? </h6>
+                    
+                   
+                  </div>
+                </div>
+        
+      </div>
+    </div>         
+    </div>
+  </div>
+  </section>
+  <!---TTTT--->
+    <!-- <section class="container mx-auto mb-[100px]">
+      <div class="max-w-[970px] mx-auto">
+        <h4 data-aos="fade-up" class="text-2xl md:text-[32px] font-semibold text-gray-800 max-w-[554px] mx-auto text-center mb-12" style="line-height: 40px">
+          <span style="
+  background: linear-gradient(90.22deg, #f30000 23.44%, #fea40a 53.4%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+"> Some Title </span> some section, tokenomics or whatever we decide.
+        </h4>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 items-center" data-aos="fade-up">
+          <div>
+            <div class="flex items-start mb-8">
+              <div class="pt-1">
+                <svg class="w-4 h-4 md:w-[20px]
+                      md:h-[20px] mr-4 fill-primary-500" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 14C3.15 14 0 10.85 0 7C0 3.15 3.15 0 7 0C10.85 0 14 3.15 14 7C14 10.85 10.85 14 7 14ZM7 1.45833C3.96667 1.45833 1.45833 3.96667 1.45833 7C1.45833 10.0333 3.96667 12.5417 7 12.5417C10.0333 12.5417 12.5417 10.0333 12.5417 7C12.5417 3.96667 10.0333 1.45833 7 1.45833Z" />
+                  <path d="M5.89154 9.74154C5.71654 9.74154 5.4832 9.6832 5.36654 9.5082L3.9082 8.04987C3.61654 7.7582 3.61654 7.29154 3.9082 6.99987C4.19987 6.7082 4.66654 6.7082 4.9582 6.99987L5.89154 7.9332L9.04154 4.7832C9.3332 4.49154 9.79987 4.49154 10.0915 4.7832C10.3832 5.07487 10.3832 5.54154 10.0915 5.8332L6.41654 9.5082C6.24154 9.6832 6.06654 9.74154 5.89154 9.74154Z" />
+                </svg>
+              </div>
+              <div>
+                <h6 class="text-lg md:text-[20px] font-medium mb-4 text-gray-800"> Lorem ipsum dolor sit amet </h6>
+                <p class="text-sm md:text-base text-gray-500">  consectetur adipisicing elit. Fugiat ad libero autem earum quod praesentium. Sint sit soluta tempore animi consequatur, nam consequuntur incidunt ad doloribus esse delectus impedit eligendi. </p>
+              </div>
+            </div>
+            <div class="flex items-start mb-8">
+              <div class="pt-1">
+                <svg class="w-4 h-4 md:w-[20px]
+                      md:h-[20px] mr-4 fill-primary-500" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 14C3.15 14 0 10.85 0 7C0 3.15 3.15 0 7 0C10.85 0 14 3.15 14 7C14 10.85 10.85 14 7 14ZM7 1.45833C3.96667 1.45833 1.45833 3.96667 1.45833 7C1.45833 10.0333 3.96667 12.5417 7 12.5417C10.0333 12.5417 12.5417 10.0333 12.5417 7C12.5417 3.96667 10.0333 1.45833 7 1.45833Z" />
+                  <path d="M5.89154 9.74154C5.71654 9.74154 5.4832 9.6832 5.36654 9.5082L3.9082 8.04987C3.61654 7.7582 3.61654 7.29154 3.9082 6.99987C4.19987 6.7082 4.66654 6.7082 4.9582 6.99987L5.89154 7.9332L9.04154 4.7832C9.3332 4.49154 9.79987 4.49154 10.0915 4.7832C10.3832 5.07487 10.3832 5.54154 10.0915 5.8332L6.41654 9.5082C6.24154 9.6832 6.06654 9.74154 5.89154 9.74154Z" />
+                </svg>
+              </div>
+              <div>
+                <h6 class="text-lg md:text-[20px] font-medium mb-4 text-gray-800"> doloribus esse delectus impedit eligendi </h6>
+                <p class="text-sm md:text-base text-gray-500">  consectetur adipisicing elit. Fugiat ad libero autem earum quod praesentium. Sint sit soluta tempore animi consequatur, nam consequuntur incidunt ad doloribus esse delectus impedit eligendi. </p>
+              </div>
+            </div>
+            <div class="flex items-start mb-8">
+              <div class="pt-1">
+                <svg class="w-4 h-4 md:w-[20px]
+                      md:h-[20px] mr-4 fill-primary-500" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 14C3.15 14 0 10.85 0 7C0 3.15 3.15 0 7 0C10.85 0 14 3.15 14 7C14 10.85 10.85 14 7 14ZM7 1.45833C3.96667 1.45833 1.45833 3.96667 1.45833 7C1.45833 10.0333 3.96667 12.5417 7 12.5417C10.0333 12.5417 12.5417 10.0333 12.5417 7C12.5417 3.96667 10.0333 1.45833 7 1.45833Z" />
+                  <path d="M5.89154 9.74154C5.71654 9.74154 5.4832 9.6832 5.36654 9.5082L3.9082 8.04987C3.61654 7.7582 3.61654 7.29154 3.9082 6.99987C4.19987 6.7082 4.66654 6.7082 4.9582 6.99987L5.89154 7.9332L9.04154 4.7832C9.3332 4.49154 9.79987 4.49154 10.0915 4.7832C10.3832 5.07487 10.3832 5.54154 10.0915 5.8332L6.41654 9.5082C6.24154 9.6832 6.06654 9.74154 5.89154 9.74154Z" />
+                </svg>
+              </div>
+              <div>
+                <h6 class="text-lg md:text-[20px] font-medium mb-4 text-gray-800"> doloribus esse delectus impedit eligendi </h6>
+                <p class="text-sm md:text-base text-gray-500">  consectetur adipisicing elit. Fugiat ad libero autem earum quod praesentium. Sint sit soluta tempore animi consequatur, nam consequuntur incidunt ad doloribus esse delectus impedit eligendi. </p>
+              </div>
+            </div>
+          </div>
+          <img class="max-w-full mx-auto lg:mx-0" src="https://cdn.dribbble.com/users/371658/screenshots/14249205/media/a2a169c3b1fd1dd619cfd6fe3468501f.gif" alt="" />
+        </div>
+      </div>
+    </section> -->
+
+    <section  id="" class=" container  pb-[100px]  mx-auto" aria-labelledby="carousel-heading">
+      <h4 class="text-gray-900 dark:text-white text-left"> Upcoming  <span class="text-primary-500">Projects 
+      </span> </h4>
+      <p class="text-lg md:text-base text-gray-500">We bring in only the most successful projects.</p>
+      <div class=" grid grid-cols-1 lg:grid-cols-3 gap-7 pt-12">
+        <div class="group p-4 relative bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+          <a href="#">
+            <div class="w-full h-[300px] bg-cover bg-center relative rounded-lg mb-4 flex items-end justify-center" style="background-image: url(https://cdn.dribbble.com/users/8011399/screenshots/16003493/media/87a71cbe22e2a59511137fac42b1fb78.png?compress=1&resize=1600x1200&vertical=top);">
+              <div class="w-full h-14 px-4 py-2 flex items-center justify-between" style="
+                max-width: 370px;
+                background: linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0.8) 0%,
+                  rgba(255, 255, 255, 0.5) 100%
+                );
+                backdrop-filter: blur(14px);
+                border-radius: 8px 8px 0px 0px;
+              ">
+               <!-- <p id="days"></p>
+               <p id="hours"></p>
+               <p id="mins"></p>
+               <p id="secs"></p> -->
+               <div style="    display: contents;" id="countdown"></div>
+              </div>
+            </div>
+          </a>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <p class="font-medium text-gray-700 text-lg dark:text-white mr-2"> $SFC </p>
+              <svg width="12" height="12" viewBox="0 0 16 16" class="fill-primary-500">
+                <path d="M8 0C9.15 0 10.15 0.646875 10.6531 1.59687C11.6812 1.25312 12.8156 1.53 13.6562 2.34313C14.4688 3.15625 14.6906 4.31875 14.4031 5.34688C15.3531 5.85 16 6.85 16 8C16 9.15 15.3531 10.15 14.4031 10.6531C14.7187 11.6812 14.4688 12.8156 13.6562 13.6562C12.8156 14.4688 11.6812 14.6906 10.6531 14.4031C10.15 15.3531 9.15 16 8 16C6.85 16 5.85 15.3531 5.34688 14.4031C4.31875 14.7187 3.15625 14.4688 2.34313 13.6562C1.53 12.8156 1.28125 11.6812 1.59687 10.6531C0.646875 10.15 0 9.15 0 8C0 6.85 0.646875 5.85 1.59687 5.34688C1.25312 4.31875 1.53 3.15625 2.34313 2.34313C3.15625 1.53 4.31875 1.28125 5.34688 1.59687C5.85 0.646875 6.85 0 8 0ZM11.0031 7.00313C11.3219 6.7375 11.3219 6.2625 11.0031 5.96875C10.7375 5.67812 10.2625 5.67812 9.96875 5.96875L7 8.94063L5.75313 7.71875C5.4875 7.42812 5.0125 7.42812 4.71875 7.71875C4.42812 8.0125 4.42812 8.4875 4.71875 8.75313L6.46875 10.5031C6.7625 10.8219 7.2375 10.8219 7.50313 10.5031L11.0031 7.00313Z" />
+              </svg>
+            </div>
+            <p class="text-gray-700 dark:text-gray-400 font-normal"> Starting : 19.02.2023 </p>
+          </div>
+          <a href="#">
+            <h6 class="text-primary-500 my-3">Shibarium Fight Club #269</h6>
+          </a>
+          <p class="text-gray-700 dark:text-gray-400"> The First Cross-IP PVP game for Shibarium NFT Universe            </p>
+          <div class="flex items-center justify-between mt-3">
+            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Token Sale </button>
+            <div class="flex flex-col items-end">
+              <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Price per token <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                  <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                  <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                  <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                  <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                  <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                  <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                </svg>
+                <span class="text-gray-900 dark:text-white font-medium">0.0001</span>
+              </p>
+              <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                  <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#FCC5B2" />
+                  <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#F0786C" />
+                  <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#F0786C" />
+                  <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#E73E3E" />
+                  <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#F79D8B" />
+                  <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#E73E3E" />
+                </svg>
+                <span class="text-gray-900 dark:text-white">$100</span>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="group p-4 relative bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+          <a href="#">
+            <div class="w-full h-[300px] bg-cover bg-center relative rounded-lg mb-4 flex items-end justify-center" style="background-image: url(https://cdn.dribbble.com/users/8011399/screenshots/16003493/media/87a71cbe22e2a59511137fac42b1fb78.png?compress=1&resize=1600x1200&vertical=top);">
+              <div class="w-full h-14 px-4 py-2 flex items-center justify-between" style="
+                max-width: 370px;
+                background: linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0.8) 0%,
+                  rgba(255, 255, 255, 0.5) 100%
+                );
+                backdrop-filter: blur(14px);
+                border-radius: 8px 8px 0px 0px;
+              ">
+               <!-- <p id="days"></p>
+               <p id="hours"></p>
+               <p id="mins"></p>
+               <p id="secs"></p> -->
+               <div style="    display: contents;" id="countdown2"></div>
+              </div>
+            </div>
+          </a>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <p class="font-medium text-gray-700 text-lg dark:text-white mr-2"> $SFC </p>
+              <svg width="12" height="12" viewBox="0 0 16 16" class="fill-primary-500">
+                <path d="M8 0C9.15 0 10.15 0.646875 10.6531 1.59687C11.6812 1.25312 12.8156 1.53 13.6562 2.34313C14.4688 3.15625 14.6906 4.31875 14.4031 5.34688C15.3531 5.85 16 6.85 16 8C16 9.15 15.3531 10.15 14.4031 10.6531C14.7187 11.6812 14.4688 12.8156 13.6562 13.6562C12.8156 14.4688 11.6812 14.6906 10.6531 14.4031C10.15 15.3531 9.15 16 8 16C6.85 16 5.85 15.3531 5.34688 14.4031C4.31875 14.7187 3.15625 14.4688 2.34313 13.6562C1.53 12.8156 1.28125 11.6812 1.59687 10.6531C0.646875 10.15 0 9.15 0 8C0 6.85 0.646875 5.85 1.59687 5.34688C1.25312 4.31875 1.53 3.15625 2.34313 2.34313C3.15625 1.53 4.31875 1.28125 5.34688 1.59687C5.85 0.646875 6.85 0 8 0ZM11.0031 7.00313C11.3219 6.7375 11.3219 6.2625 11.0031 5.96875C10.7375 5.67812 10.2625 5.67812 9.96875 5.96875L7 8.94063L5.75313 7.71875C5.4875 7.42812 5.0125 7.42812 4.71875 7.71875C4.42812 8.0125 4.42812 8.4875 4.71875 8.75313L6.46875 10.5031C6.7625 10.8219 7.2375 10.8219 7.50313 10.5031L11.0031 7.00313Z" />
+              </svg>
+            </div>
+            <p class="text-gray-700 dark:text-gray-400 font-normal"> Starting : 19.02.2023 </p>
+          </div>
+          <a href="#">
+            <h6 class="text-primary-500 my-3">Shibarium Fight Club #269</h6>
+          </a>
+          <p class="text-gray-700 dark:text-gray-400"> The First Cross-IP PVP game for Shibarium NFT Universe            </p>
+          <div class="flex items-center justify-between mt-3">
+            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Token Sale </button>
+            <div class="flex flex-col items-end">
+              <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Price per token <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                  <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                  <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                  <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                  <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                  <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                  <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                </svg>
+                <span class="text-gray-900 dark:text-white font-medium">0.0001</span>
+              </p>
+              <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                  <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#FCC5B2" />
+                  <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#F0786C" />
+                  <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#F0786C" />
+                  <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#E73E3E" />
+                  <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#F79D8B" />
+                  <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#E73E3E" />
+                </svg>
+                <span class="text-gray-900 dark:text-white">$100</span>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="group p-4 relative bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+          <a href="#">
+            <div class="w-full h-[300px] bg-cover bg-center relative rounded-lg mb-4 flex items-end justify-center" style="background-image: url(https://cdn.dribbble.com/users/8011399/screenshots/16003493/media/87a71cbe22e2a59511137fac42b1fb78.png?compress=1&resize=1600x1200&vertical=top);">
+              <div class="w-full h-14 px-4 py-2 flex items-center justify-between" style="
+                max-width: 370px;
+                background: linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0.8) 0%,
+                  rgba(255, 255, 255, 0.5) 100%
+                );
+                backdrop-filter: blur(14px);
+                border-radius: 8px 8px 0px 0px;
+              ">
+               <!-- <p id="days"></p>
+               <p id="hours"></p>
+               <p id="mins"></p>
+               <p id="secs"></p> -->
+               <div style="    display: contents;" id="countdown3"></div>
+              </div>
+            </div>
+          </a>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <p class="font-medium text-gray-700 text-lg dark:text-white mr-2"> $SFC </p>
+              <svg width="12" height="12" viewBox="0 0 16 16" class="fill-primary-500">
+                <path d="M8 0C9.15 0 10.15 0.646875 10.6531 1.59687C11.6812 1.25312 12.8156 1.53 13.6562 2.34313C14.4688 3.15625 14.6906 4.31875 14.4031 5.34688C15.3531 5.85 16 6.85 16 8C16 9.15 15.3531 10.15 14.4031 10.6531C14.7187 11.6812 14.4688 12.8156 13.6562 13.6562C12.8156 14.4688 11.6812 14.6906 10.6531 14.4031C10.15 15.3531 9.15 16 8 16C6.85 16 5.85 15.3531 5.34688 14.4031C4.31875 14.7187 3.15625 14.4688 2.34313 13.6562C1.53 12.8156 1.28125 11.6812 1.59687 10.6531C0.646875 10.15 0 9.15 0 8C0 6.85 0.646875 5.85 1.59687 5.34688C1.25312 4.31875 1.53 3.15625 2.34313 2.34313C3.15625 1.53 4.31875 1.28125 5.34688 1.59687C5.85 0.646875 6.85 0 8 0ZM11.0031 7.00313C11.3219 6.7375 11.3219 6.2625 11.0031 5.96875C10.7375 5.67812 10.2625 5.67812 9.96875 5.96875L7 8.94063L5.75313 7.71875C5.4875 7.42812 5.0125 7.42812 4.71875 7.71875C4.42812 8.0125 4.42812 8.4875 4.71875 8.75313L6.46875 10.5031C6.7625 10.8219 7.2375 10.8219 7.50313 10.5031L11.0031 7.00313Z" />
+              </svg>
+            </div>
+            <p class="text-gray-700 dark:text-gray-400 font-normal"> Starting : 19.02.2023 </p>
+          </div>
+          <a href="#">
+            <h6 class="text-primary-500 my-3">Shibarium Fight Club #269</h6>
+          </a>
+          <p class="text-gray-700 dark:text-gray-400"> The First Cross-IP PVP game for Shibarium NFT Universe            </p>
+          <div class="flex items-center justify-between mt-3">
+            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Token Sale </button>
+            <div class="flex flex-col items-end">
+              <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Price per token <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                  <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                  <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                  <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                  <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                  <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                  <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                </svg>
+                <span class="text-gray-900 dark:text-white font-medium">0.0001</span>
+              </p>
+              <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                  <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#FCC5B2" />
+                  <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#F0786C" />
+                  <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#F0786C" />
+                  <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#E73E3E" />
+                  <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#F79D8B" />
+                  <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#E73E3E" />
+                </svg>
+                <span class="text-gray-900 dark:text-white">$100</span>
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="group px-8 py-4 mt-12 rounded-md font-medium text-base flex items-center justify-center hover:bg-primary-25 bg-white border border-primary-500 text-gray-700 dark:text-white hover:dark:text-primary-500 hover:text-primary-500 dark:bg-dark transition-colors duration-200 mx-auto"> See all <svg width="14" height="14" viewBox="0 0 16 16" class="fill-gray-700 dark:fill-white group-hover:fill-primary-500 ml-2">
+          <path d="M15.7063 8.70625L11.7063 12.7063C11.3153 13.0972 10.6825 13.0966 10.2922 12.7063C9.90156 12.3156 9.90156 11.6828 10.2922 11.2922L12.5875 9H1C0.447187 9 0 8.55313 0 7.97188C0 7.39063 0.447187 7 1 7H12.5875L10.2944 4.70688C9.90375 4.31625 9.90375 3.68344 10.2944 3.29282C10.685 2.90219 11.3178 2.90219 11.7084 3.29282L15.7084 7.29282C16.0969 7.68438 16.0969 8.31563 15.7063 8.70625Z" />
+        </svg>
+      </button>
+    </section>
+
+    <div class="row-fluid mx-auto">
+     
+     
+
+      <section class="pb-[100px] row-fluid">
+        <p class="text-center text-gray-700 dark:text-gray-400">  
+          ASSISTING THE MOST AMBITIOUS <b class="main-color"> SHIBARIUM </b> PROJECTS LAUNCH.
+          </p>
+        
+        <div class="">
+          <div data-speed="100" data-direction="right" class='marquee mt-5'>
+            <div>
+              <a href="#">
+                <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                  <div class="flex items-center">
+                    <img style="filter:blur(9px)" alt="" src="https://cdn2.iconfinder.com/data/icons/cryptocurrency-logo/128/ic_shib-512.png"   class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                    <div class="content">
+                      <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                        Lorem ipsum todor
+                      </p>
+                      <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +130% </span>
+                      </small>
+                    </div>
+                  </div>
+                  
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                  <div class="flex items-center">
+                    <img  style="filter:blur(9px)" alt="" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_blur_linear_48px-512.png" class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                    <div class="content">
+                      <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                        Lorem ipsum todor
+                      </p>
+                      <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +600% </span>
+                      </small>
+                    </div>
+                  </div>
+                  
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                  <div class="flex items-center">
+                    <img  style="filter:blur(9px)" alt="" src="https://cdn0.iconfinder.com/data/icons/nft-37/64/tokens-art-crypto-token-512.png" class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                    <div class="content">
+                      <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                        Lorem ipsum todor
+                      </p>
+                      <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +320% </span>
+                      </small>
+                    </div>
+                  </div>
+                  
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                  <div class="flex items-center">
+                    <img  style="filter:blur(9px)" alt="" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_blur_linear_48px-512.png" class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                    <div class="content">
+                      <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                        Lorem ipsum todor
+                      </p>
+                      <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +980% </span>
+                      </small>
+                    </div>
+                  </div>
+                  
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                  <div class="flex items-center">
+                    <img  style="filter:blur(9px)" alt="" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_blur_linear_48px-512.png" class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                    <div class="content">
+                      <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                        Lorem ipsum todor
+                      </p>
+                      <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +54% </span>
+                      </small>
+                    </div>
+                  </div>
+                  
+                </div>
+              </a>
+          </div>
+          </div>
+          <div data-speed="100" data-direction="left" class='marquee mt-5'>
+          
+          <div>
+            <a href="#">
+              <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                <div class="flex items-center">
+                  <img  style="filter:blur(9px)" alt="" src="https://cdn.dribbble.com/users/1787323/avatars/normal/386abe46684b97977de4ab3d4ee954d6.jpg?1584893831" class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                  <div class="content">
+                    <p style="    filter: blur(4px);color: rgba(0, 0, 0, 0);" class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                      Lorem ipsum todor
+                    </p>
+                    <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +60% </span>
+                    </small>
+                  </div>
+                </div>
+                
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                <div class="flex items-center">
+                  <img  style="filter:blur(9px)" alt="" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_blur_linear_48px-512.png" class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                  <div class="content">
+                    <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                      Lorem ipsum todor
+                    </p>
+                    <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +54% </span>
+                    </small>
+                  </div>
+                </div>
+                
+              </div>
+            </a>
+        </div>
+        <div>
+          <a href="#">
+            <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+              <div class="flex items-center">
+                <img  style="filter:blur(9px)" alt="" src="https://cdn0.iconfinder.com/data/icons/nft-37/64/nft-symbol-art-crypto-token-512.png" class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                <div class="content">
+                  <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                    Lorem ipsum todor
+                  </p>
+                  <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +54% </span>
+                  </small>
+                </div>
+              </div>
+              
+            </div>
+          </a>
+      </div>
+        
+        
+        </div>
+        <div data-speed="100" data-direction="right" class='marquee mt-5'>
+          <div>
+            <a href="#">
+              <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                <div class="flex items-center">
+                  <img style="filter:blur(9px)" alt="" src="https://cdn2.iconfinder.com/data/icons/cryptocurrency-logo/128/ic_shib-512.png"   class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                  <div class="content">
+                    <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                      Lorem ipsum todor
+                    </p>
+                    <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +130% </span>
+                    </small>
+                  </div>
+                </div>
+                
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                <div class="flex items-center">
+                  <img  style="filter:blur(9px)" alt="" src="https://cdn0.iconfinder.com/data/icons/nft-37/64/tokens-art-crypto-token-512.png" class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                  <div class="content">
+                    <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                      Lorem ipsum todor
+                    </p>
+                    <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +600% </span>
+                    </small>
+                  </div>
+                </div>
+                
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                <div class="flex items-center">
+                  <img  style="filter:blur(9px)" alt="" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_blur_linear_48px-512.png" class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                  <div class="content">
+                    <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                      Lorem ipsum todor
+                    </p>
+                    <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +320% </span>
+                    </small>
+                  </div>
+                </div>
+                
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                <div class="flex items-center">
+                  <img  style="filter:blur(9px)" alt="" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_blur_linear_48px-512.png" class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                  <div class="content">
+                    <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                      Lorem ipsum todor
+                    </p>
+                    <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +980% </span>
+                    </small>
+                  </div>
+                </div>
+                
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <div class="ml-5 bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                <div class="flex items-center">
+                  <img  style="filter:blur(9px)" alt="" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_blur_linear_48px-512.png" class="w-14 h-14 mr-4 rounded-full outline outline-1 outline-white">
+                  <div class="content">
+                    <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
+                      Lorem ipsum todor
+                    </p>
+                    <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +54% </span>
+                    </small>
+                  </div>
+                </div>
+                
+              </div>
+            </a>
+        </div>
+      </section>
+     
+      <!-- <section class="pb-[100px]">
+        <h4 class="text-gray-900 dark:text-white text-center"> Live   <span class="text-primary-500">Projects</span>
+        </h4>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-7 py-12">
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/moritz-mentges.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> Andrew Petroy </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/rich-smith.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> Bond Street </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/arno-senoner.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> Bonton </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/stanislav-vdovin.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> Surf Conffee </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/arno-senoner-zz.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> Fendi </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/tamara-gore.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> Hard Rock </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/jon-tyson-unsplash.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> Gulf De Le </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/ben-wicks.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> Atcost </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/jon-tyson2-unsplash.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> Old Farmers </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/alex-carpenter.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> The Art Market </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/daniel-tong.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> Underground </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="group p-4 relative flex items-center justify-start bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
+              <a href="#">
+                <div style="width: 60px" class="mr-4">
+                  <div class="rounded-full h-[60px] w-[60px] bg-cover bg-center" style="background-image: url(assets/img/images/giorgio-trovato.jpg)"></div>
+                </div>
+              </a>
+              <div class="w-full">
+                <div class="flex items-end justify-between mb-1">
+                  <a href="#" class="group-hover:text-primary-500 text-lg font-medium text-gray-900 dark:text-white"> Leica </a>
+                  <small class="text-success-500">Active</small>
+                </div>
+                <div class="flex items-center justify-between">
+                  <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                      <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
+                      <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
+                      <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
+                      <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022" />
+                      <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B" />
+                      <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022" />
+                    </svg>
+                    <span class="dark:text-white">2.11</span>
+                  </small>
+                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="group px-8 py-4 rounded-md font-medium text-base flex items-center justify-center hover:bg-primary-25 bg-white border border-primary-500 text-gray-700 dark:text-white hover:dark:text-primary-500 hover:text-primary-500 dark:bg-dark transition-colors duration-200 mx-auto"> See all <svg width="14" height="14" viewBox="0 0 16 16" class="fill-gray-700 dark:fill-white group-hover:fill-primary-500 ml-2">
+            <path d="M15.7063 8.70625L11.7063 12.7063C11.3153 13.0972 10.6825 13.0966 10.2922 12.7063C9.90156 12.3156 9.90156 11.6828 10.2922 11.2922L12.5875 9H1C0.447187 9 0 8.55313 0 7.97188C0 7.39063 0.447187 7 1 7H12.5875L10.2944 4.70688C9.90375 4.31625 9.90375 3.68344 10.2944 3.29282C10.685 2.90219 11.3178 2.90219 11.7084 3.29282L15.7084 7.29282C16.0969 7.68438 16.0969 8.31563 15.7063 8.70625Z" />
+          </svg>
+        </button>
+      </section> -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var splide = new Splide("#upcomingProjects", {
+            type: "loop",
+            perPage: 3,
+            focus: "center",
+            pagination: false,
+            gap: "2rem",
+            padding: "2px",
+            breakpoints: {
+              768: {
+                perPage: 1,
+              },
+            },
+          });
+          splide.mount();
+        });
+      </script>
+      
+      <section class="pb-[100px]">
+        <h4 class="text-gray-900 dark:text-white text-center">
+          <span class="text-primary-500">Launched </span> Projects
+        </h4>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-7 pt-12">
+          <div class="group p-4 relative bg-white dark:bg-dark border border-gray-300 dark:border-gray-800 rounded-lg shadow-outline hover:shadow-hover hover:outline hover:outline-2 hover:outline-primary-500">
+            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10"> Token Sale </button>
+            <button class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
+              <svg width="18" height="18" viewBox="0 0 18 18">
+                <path d="M0 6.71134V6.50744C0 4.05002 1.77609 1.954 4.19766 1.55041C5.76914 1.28357 7.43203 1.80599 8.57812 2.95384L9 3.37502L9.39023 2.95384C10.568 1.80599 12.1992 1.28357 13.8023 1.55041C16.2246 1.954 18 4.05002 18 6.50744V6.71134C18 8.17033 17.3953 9.56603 16.3266 10.561L9.97383 16.4918C9.71016 16.7379 9.36211 16.875 9 16.875C8.63789 16.875 8.28984 16.7379 8.02617 16.4918L1.67309 10.561C0.605742 9.56603 1.05469e-05 8.17033 1.05469e-05 6.71134H0Z" fill="#585C7B" />
+              </svg>
+            </button>
+            <a href="/#">
+              <img src="https://cdn.dribbble.com/users/259220/screenshots/17780639/media/5da905709ee6630c93d73419bd81311c.png?compress=1&resize=1600x1200&vertical=top" class="w-full h-56 object-cover rounded-lg mb-4 flex items-end justify-center" alt="" />
+            </a>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <p class="font-normal text-gray-700 dark:text-white mr-2"> $SFC </p>
+                <svg width="12" height="12" viewBox="0 0 16 16" class="fill-primary-500">
+                  <path d="M8 0C9.15 0 10.15 0.646875 10.6531 1.59687C11.6812 1.25312 12.8156 1.53 13.6562 2.34313C14.4688 3.15625 14.6906 4.31875 14.4031 5.34688C15.3531 5.85 16 6.85 16 8C16 9.15 15.3531 10.15 14.4031 10.6531C14.7187 11.6812 14.4688 12.8156 13.6562 13.6562C12.8156 14.4688 11.6812 14.6906 10.6531 14.4031C10.15 15.3531 9.15 16 8 16C6.85 16 5.85 15.3531 5.34688 14.4031C4.31875 14.7187 3.15625 14.4688 2.34313 13.6562C1.53 12.8156 1.28125 11.6812 1.59687 10.6531C0.646875 10.15 0 9.15 0 8C0 6.85 0.646875 5.85 1.59687 5.34688C1.25312 4.31875 1.53 3.15625 2.34313 2.34313C3.15625 1.53 4.31875 1.28125 5.34688 1.59687C5.85 0.646875 6.85 0 8 0ZM11.0031 7.00313C11.3219 6.7375 11.3219 6.2625 11.0031 5.96875C10.7375 5.67812 10.2625 5.67812 9.96875 5.96875L7 8.94063L5.75313 7.71875C5.4875 7.42812 5.0125 7.42812 4.71875 7.71875C4.42812 8.0125 4.42812 8.4875 4.71875 8.75313L6.46875 10.5031C6.7625 10.8219 7.2375 10.8219 7.50313 10.5031L11.0031 7.00313Z" />
+                </svg>
+              </div>
+              <button class="w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800">
+                <svg width="14" height="14" viewBox="0 0 16 16" class="fill-gray-600 dark:fill-gray-300">
+                  <path d="M4.62963 8C4.62963 9.03 3.81718 9.86666 2.81481 9.86666C1.81245 9.86666 1 9.03 1 8C1 6.97 1.81245 6.13333 2.81481 6.13333C3.81718 6.13333 4.62963 6.97 4.62963 8ZM9.81481 8C9.81481 9.03 9.00139 9.86666 8 9.86666C6.99861 9.86666 6.18519 9.03 6.18519 8C6.18519 6.97 6.99861 6.13333 8 6.13333C9.00139 6.13333 9.81481 6.97 9.81481 8ZM11.3704 8C11.3704 6.97 12.1838 6.13333 13.1852 6.13333C14.1866 6.13333 15 6.97 15 8C15 9.03 14.1866 9.86666 13.1852 9.86666C12.1838 9.86666 11.3704 9.03 11.3704 8Z" />
+                </svg>
+              </button>
+            </div>
+            <a href="/#" class="group-hover:text-primary-500 font-medium text-gray-900 dark:text-white"> Shibarium Fight Club  #50 </a>
+            <div style="margin-top: 10px">
+              <small class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Total Raised
+                <img src="assets/11865.png" class="mr-2 ml-2" style="width: 20px;">
+                <span class="text-gray-900 dark:text-white font-medium">123</span>
+              </small>
+              <div class="flex items-center justify-between">
+                <small class="flex items-center text-gray-700 dark:text-gray-400"> Participants <i class="ml-2 mr-2  fa-solid fa-users-viewfinder"></i>
+                  <span class="text-gray-900 dark:text-white">500</span>
+                </small>
+                <small class="text-gray-700 dark:text-gray-400"> Ended: xx/xx/xxxx
+
+                  </small>
+              </div>
+            </div>
+          </div>
+          <div class="group p-4 relative bg-white dark:bg-dark border border-gray-300 dark:border-gray-800 rounded-lg shadow-outline hover:shadow-hover hover:outline hover:outline-2 hover:outline-primary-500">
+            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10"> Token Sale </button>
+            <button class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
+              <svg width="18" height="18" viewBox="0 0 18 18">
+                <path d="M0 6.71134V6.50744C0 4.05002 1.77609 1.954 4.19766 1.55041C5.76914 1.28357 7.43203 1.80599 8.57812 2.95384L9 3.37502L9.39023 2.95384C10.568 1.80599 12.1992 1.28357 13.8023 1.55041C16.2246 1.954 18 4.05002 18 6.50744V6.71134C18 8.17033 17.3953 9.56603 16.3266 10.561L9.97383 16.4918C9.71016 16.7379 9.36211 16.875 9 16.875C8.63789 16.875 8.28984 16.7379 8.02617 16.4918L1.67309 10.561C0.605742 9.56603 1.05469e-05 8.17033 1.05469e-05 6.71134H0Z" fill="#585C7B" />
+              </svg>
+            </button>
+            <a href="/#">
+              <img src="https://cdn.dribbble.com/users/5780498/screenshots/17605922/media/19e19ce493bff2638b45ef91c34ec6cc.jpg?compress=1&resize=1600x1200&vertical=top" class="w-full h-56 object-cover rounded-lg mb-4 flex items-end justify-center" alt="" />
+            </a>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <p class="font-normal text-gray-700 dark:text-white mr-2"> $SFC </p>
+                <svg width="12" height="12" viewBox="0 0 16 16" class="fill-primary-500">
+                  <path d="M8 0C9.15 0 10.15 0.646875 10.6531 1.59687C11.6812 1.25312 12.8156 1.53 13.6562 2.34313C14.4688 3.15625 14.6906 4.31875 14.4031 5.34688C15.3531 5.85 16 6.85 16 8C16 9.15 15.3531 10.15 14.4031 10.6531C14.7187 11.6812 14.4688 12.8156 13.6562 13.6562C12.8156 14.4688 11.6812 14.6906 10.6531 14.4031C10.15 15.3531 9.15 16 8 16C6.85 16 5.85 15.3531 5.34688 14.4031C4.31875 14.7187 3.15625 14.4688 2.34313 13.6562C1.53 12.8156 1.28125 11.6812 1.59687 10.6531C0.646875 10.15 0 9.15 0 8C0 6.85 0.646875 5.85 1.59687 5.34688C1.25312 4.31875 1.53 3.15625 2.34313 2.34313C3.15625 1.53 4.31875 1.28125 5.34688 1.59687C5.85 0.646875 6.85 0 8 0ZM11.0031 7.00313C11.3219 6.7375 11.3219 6.2625 11.0031 5.96875C10.7375 5.67812 10.2625 5.67812 9.96875 5.96875L7 8.94063L5.75313 7.71875C5.4875 7.42812 5.0125 7.42812 4.71875 7.71875C4.42812 8.0125 4.42812 8.4875 4.71875 8.75313L6.46875 10.5031C6.7625 10.8219 7.2375 10.8219 7.50313 10.5031L11.0031 7.00313Z" />
+                </svg>
+              </div>
+              <button class="w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800">
+                <svg width="14" height="14" viewBox="0 0 16 16" class="fill-gray-600 dark:fill-gray-300">
+                  <path d="M4.62963 8C4.62963 9.03 3.81718 9.86666 2.81481 9.86666C1.81245 9.86666 1 9.03 1 8C1 6.97 1.81245 6.13333 2.81481 6.13333C3.81718 6.13333 4.62963 6.97 4.62963 8ZM9.81481 8C9.81481 9.03 9.00139 9.86666 8 9.86666C6.99861 9.86666 6.18519 9.03 6.18519 8C6.18519 6.97 6.99861 6.13333 8 6.13333C9.00139 6.13333 9.81481 6.97 9.81481 8ZM11.3704 8C11.3704 6.97 12.1838 6.13333 13.1852 6.13333C14.1866 6.13333 15 6.97 15 8C15 9.03 14.1866 9.86666 13.1852 9.86666C12.1838 9.86666 11.3704 9.03 11.3704 8Z" />
+                </svg>
+              </button>
+            </div>
+            <a href="/#" class="group-hover:text-primary-500 font-medium text-gray-900 dark:text-white"> Shibarium Fight Club  #50 </a>
+            <div style="margin-top: 10px">
+              <small class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Total Raised
+                <img src="assets/11865.png" class="mr-2 ml-2" style="width: 20px;">
+                <span class="text-gray-900 dark:text-white font-medium">431</span>
+              </small>
+              <div class="flex items-center justify-between">
+                <small class="flex items-center text-gray-700 dark:text-gray-400"> Participants 
+                  <i class="ml-2 mr-2  fa-solid fa-users-viewfinder"></i>
+                  <span class="text-gray-900 dark:text-white">744</span>
+                </small>
+                <small class="text-gray-700 dark:text-gray-400"> Ended: xx/xx/xxxx
+
+                  </small>
+              </div>
+            </div>
+          </div>
+          <div class="group p-4 relative bg-white dark:bg-dark border border-gray-300 dark:border-gray-800 rounded-lg shadow-outline hover:shadow-hover hover:outline hover:outline-2 hover:outline-primary-500">
+            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10"> Token Sale </button>
+            <button class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
+              <svg width="18" height="18" viewBox="0 0 18 18">
+                <path d="M0 6.71134V6.50744C0 4.05002 1.77609 1.954 4.19766 1.55041C5.76914 1.28357 7.43203 1.80599 8.57812 2.95384L9 3.37502L9.39023 2.95384C10.568 1.80599 12.1992 1.28357 13.8023 1.55041C16.2246 1.954 18 4.05002 18 6.50744V6.71134C18 8.17033 17.3953 9.56603 16.3266 10.561L9.97383 16.4918C9.71016 16.7379 9.36211 16.875 9 16.875C8.63789 16.875 8.28984 16.7379 8.02617 16.4918L1.67309 10.561C0.605742 9.56603 1.05469e-05 8.17033 1.05469e-05 6.71134H0Z" fill="#585C7B" />
+              </svg>
+            </button>
+            <a href="/#">
+              <img src="https://cdn.dribbble.com/users/1620507/screenshots/3659318/media/0ba918ece7548a4d1ab75e9d152a44c8.png?compress=1&resize=800x600&vertical=top" class="w-full h-56 object-cover rounded-lg mb-4 flex items-end justify-center" alt="" />
+            </a>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <p class="font-normal text-gray-700 dark:text-white mr-2"> $SFC </p>
+                <svg width="12" height="12" viewBox="0 0 16 16" class="fill-primary-500">
+                  <path d="M8 0C9.15 0 10.15 0.646875 10.6531 1.59687C11.6812 1.25312 12.8156 1.53 13.6562 2.34313C14.4688 3.15625 14.6906 4.31875 14.4031 5.34688C15.3531 5.85 16 6.85 16 8C16 9.15 15.3531 10.15 14.4031 10.6531C14.7187 11.6812 14.4688 12.8156 13.6562 13.6562C12.8156 14.4688 11.6812 14.6906 10.6531 14.4031C10.15 15.3531 9.15 16 8 16C6.85 16 5.85 15.3531 5.34688 14.4031C4.31875 14.7187 3.15625 14.4688 2.34313 13.6562C1.53 12.8156 1.28125 11.6812 1.59687 10.6531C0.646875 10.15 0 9.15 0 8C0 6.85 0.646875 5.85 1.59687 5.34688C1.25312 4.31875 1.53 3.15625 2.34313 2.34313C3.15625 1.53 4.31875 1.28125 5.34688 1.59687C5.85 0.646875 6.85 0 8 0ZM11.0031 7.00313C11.3219 6.7375 11.3219 6.2625 11.0031 5.96875C10.7375 5.67812 10.2625 5.67812 9.96875 5.96875L7 8.94063L5.75313 7.71875C5.4875 7.42812 5.0125 7.42812 4.71875 7.71875C4.42812 8.0125 4.42812 8.4875 4.71875 8.75313L6.46875 10.5031C6.7625 10.8219 7.2375 10.8219 7.50313 10.5031L11.0031 7.00313Z" />
+                </svg>
+              </div>
+              <button class="w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800">
+                <svg width="14" height="14" viewBox="0 0 16 16" class="fill-gray-600 dark:fill-gray-300">
+                  <path d="M4.62963 8C4.62963 9.03 3.81718 9.86666 2.81481 9.86666C1.81245 9.86666 1 9.03 1 8C1 6.97 1.81245 6.13333 2.81481 6.13333C3.81718 6.13333 4.62963 6.97 4.62963 8ZM9.81481 8C9.81481 9.03 9.00139 9.86666 8 9.86666C6.99861 9.86666 6.18519 9.03 6.18519 8C6.18519 6.97 6.99861 6.13333 8 6.13333C9.00139 6.13333 9.81481 6.97 9.81481 8ZM11.3704 8C11.3704 6.97 12.1838 6.13333 13.1852 6.13333C14.1866 6.13333 15 6.97 15 8C15 9.03 14.1866 9.86666 13.1852 9.86666C12.1838 9.86666 11.3704 9.03 11.3704 8Z" />
+                </svg>
+              </button>
+            </div>
+            <a href="/#" class="group-hover:text-primary-500 font-medium text-gray-900 dark:text-white"> Shibarium Fight Club  #50 </a>
+            <div style="margin-top: 10px">
+              <small class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Total Raised <img src="assets/11865.png" class="mr-2 ml-2" style="width: 20px;">
+                <span class="text-gray-900 dark:text-white font-medium">876</span>
+              </small>
+              <div class="flex items-center justify-between">
+                <small class="flex items-center text-gray-700 dark:text-gray-400"> Participants <i class="ml-2 mr-2  fa-solid fa-users-viewfinder"></i>
+                  <span class="text-gray-900 dark:text-white">2399</span>
+                </small>
+                <small class="text-gray-700 dark:text-gray-400"> Ended: xx/xx/xxxx
+
+                  </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      
+    </div>
+    <div class="bg-white h-[140px] bg-cover bg-center dark:bg-dark" style="background-image: url('assets/img/images/base.png')">
+      <div class="container mx-auto w-full h-full flex flex-col items-center justify-center md:flex-row md:justify-between">
+        
+        <h6 class="my-4 text-gray-700 dark:text-white font-normal"> 
+          Never want to miss a sale? <br/>
+          
+        </h6>
+        <button class="px-11 py-2 md:py-4 mt-4 md:mt-0 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Join Our Community </button>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/others/plugins-core/splide.js"></script>
+  <!-- Page footer -->
+  <footer class="bg-white dark:bg-dark">
+    <div class="py-12 container mx-auto grid grid-cols-1 lg:grid-cols-6 gap-4">
+      <div class="md:col-span-2 w-full text-center md:text-start mx-auto md:mx-0" style="max-width: 314px">
+        <a href="#" class="flex items-center justify-center md:justify-start mr-10">
+          <img src="assets/img/logo/logorocket.gif" class="mr-3 h-11" alt="naw-nft" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> SHIBARIUM PAD </span>
+        </a>
+        <p class="my-4 text-gray-700 dark:text-white font-normal"> The fully decentralized protocol for launching new ideas </p>
+        <div class="mb-4 mt-9 border-b border-gray-300 dark:border-gray-700"></div>
+        <p class="py-1 font-medium text-gray-900 dark:text-white"> Sign up for our newsletter and get the latest news and updates. </p>
+        <div class="flex mt-3 mb-7 md:mb-0">
+          <input class="py-3 px-4 rounded-l-md w-full bg-white dark:bg-dark placeholder:text-gray-700 dark:placeholder:text-gray-600 dark:text-gray-600 border border-r-0 border-gray-300 dark:border-gray-700 focus:outline-none text-xs" placeholder="Type Here" />
+          <button class="px-5 py-2 rounded-r-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 mr-4"> Subscribe </button>
+        </div>
+      </div>
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1"> Links </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Twitter </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Telegram </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Blog </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Youtube </a>
+          </li>
+         
+        
+        </ul>
+      </div>
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1"> My Account </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> DAPP </a>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1"> Resources </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Medium </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Help </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Support </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> FAQs </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Terms & Conditions </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Privacy Policy </a>
+          </li>
+        </ul>
+      </div>
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1"> Company </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> About </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Apply for IDO </a>
+          </li>
+        </ul>
+       
+      </div>
+    </div>
+    <div class="border-b border-gray-300 dark:border-gray-700"></div>
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-center justify-between">
+        <small class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 dark:text-white font-normal"> Copyright © 2023 Shibarium Pad. All Rights Reserves </small>
+        <div class="pt-2 pb-4 md:py-9 w-full md:w-auto flex items-center justify-center">
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
+            <i class="ml-3 fa-brands fa-twitter"></i>
+          </a>
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
+            <i class="ml-3 fa-brands fa-telegram"></i>
+          </a>
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
+            <i class="ml-3 fa-brands fa-medium"></i>
+          </a>
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
+            <i class="ml-3 fa-brands fa-youtube"></i>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/jquery.pause.js" type="text/javascript"></script>
+  <script src="assets/js/jquery.easing.min.js" type="text/javascript"></script>
+  <script src="assets/js/jquery.marquee.js?v=3" type="text/javascript"></script>
+  <script>
+    $(function(){
+  var $mwo = $('.marquee-with-options');
+  $('.marquee').marquee();
+  $('.marquee-with-options').marquee({
+    //speed in milliseconds of the marquee
+    speed: 5000,
+    //gap in pixels between the tickers
+    gap: 50,
+    //gap in pixels between the tickers
+    delayBeforeStart: 0,
+    //'left' or 'right'
+    direction: 'left',
+    //true or false - should the marquee be duplicated to show an effect of continues flow
+    duplicated: true,
+    //on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
+    pauseOnHover: true
+  });
+
+  //Direction upward
+  $('.marquee-vert').marquee({
+    direction: 'up',
+    speed: 1500
+  });
+
+  //pause and resume links
+  $('.pause').click(function(e){
+    e.preventDefault();
+    $mwo.trigger('pause');
+  });
+  $('.resume').click(function(e){
+    e.preventDefault();
+    $mwo.trigger('resume');
+  });
+  //toggle
+  $('.toggle').hover(function(e){
+    $mwo.trigger('pause');
+  },function(){
+    $mwo.trigger('resume');
+  })
+  .click(function(e){
+    e.preventDefault();
+  })
+});
+
+
+
+///Preloading
+
+  </script>
+
+
+<script>
+  // The data/time we want to countdown to
+  var countDownDate = new Date("Feb 19, 2023 16:37:52").getTime();
+
+  // Run myfunc every second
+  var myfunc = setInterval(function() {
+
+  var now = new Date().getTime();
+  var timeleft = countDownDate - now;
+      
+  // Calculating the days, hours, minutes and seconds left
+  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+      
+  // Result is output to the specific element
+  document.getElementById("days").innerHTML = days + "d "
+  document.getElementById("hours").innerHTML = hours + "h " 
+  document.getElementById("mins").innerHTML = minutes + "m " 
+  document.getElementById("secs").innerHTML = seconds + "s " 
+      
+  // Display the message when countdown is over
+  if (timeleft < 0) {
+      clearInterval(myfunc);
+      document.getElementById("days").innerHTML = ""
+      document.getElementById("hours").innerHTML = "" 
+      document.getElementById("mins").innerHTML = ""
+      document.getElementById("secs").innerHTML = ""
+      document.getElementById("end").innerHTML = "TIME UP!!";
+  }
+  }, 1000);
+
+  
+  </script>
+  <script>
+    /// date 2
+setTimeout(function(){
+    // The data/time we want to countdown to
+  var countDownDate2 = new Date("02/19/2023 4:38 PM").getTime();
+
+// Run myfunc every second
+var myfunc2 = setInterval(function() {
+
+var currentDate = new Date().getTime();
+var timelefts = countDownDate2 - new Date().getTime();
+    
+// Calculating the days, hours, minutes and seconds left
+var dayss = Math.floor(timelefts / (1000 * 60 * 60 * 24));
+var hourss = Math.floor((timelefts % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutess = Math.floor((timelefts % (1000 * 60 * 60)) / (1000 * 60));
+var secondss = Math.floor((timelefts % (1000 * 60)) / 1000);
+
+// Result is output to the specific element
+$("#dayss").html( dayss + "d ")
+$("#hourss").html( hourss + "h " )
+$("#minss").html( minutess + "m " )
+$("#secss").html( secondss + "s " )
+    
+// // Display the message when countdown is over
+if (timelefts < 0) {
+    clearInterval(myfunc2);
+    document.getElementById("dayss").innerHTML = ""
+    document.getElementById("hourss").innerHTML = "" 
+    document.getElementById("minss").innerHTML = ""
+    document.getElementById("secss").innerHTML = ""
+    document.getElementById("ends").innerHTML = "TIME UP!!";
+}
+}, 1000);
+
+},2000)
+  </script>
+
+
+<script>
+CountDownTimer('02/19/2023 4:38 PM', 'countdowni');
+  CountDownTimer('02/19/2023 4:38 PM', 'countdown');
+  CountDownTimer('02/19/2023 4:38 PM', 'countdown2');
+  CountDownTimer('02/19/2023 4:38 PM', 'countdown3');
+  
+
+  function CountDownTimer(dt, id)
+  {
+      var end = new Date(dt);
+
+      var _second = 1000;
+      var _minute = _second * 60;
+      var _hour = _minute * 60;
+      var _day = _hour * 24;
+      var timer;
+
+      function showRemaining() {
+          var now = new Date();
+          var distance = end - now;
+          if (distance < 0) {
+
+              clearInterval(timer);
+              document.getElementById(id).innerHTML = 'EXPIRED!';
+
+              return;
+          }
+          var days = Math.floor(distance / _day);
+          var hours = Math.floor((distance % _day) / _hour);
+          var minutes = Math.floor((distance % _hour) / _minute);
+          var seconds = Math.floor((distance % _minute) / _second);
+
+          document.getElementById(id).innerHTML = `<div class="flex flex-col items-center justify-center">
+                  <p  id="" class="text-gray-900 font-semibold">${days}</p>
+                  <small class="text-gray-700 text-xs"> Days </small>
+                </div> <span>:</span>`;
+          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                  <p  id="" class="text-gray-900 font-semibold">${hours}</p>
+                  <small class="text-gray-700 text-xs"> Hours </small>
+                </div><span>:</span> `;;
+          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                  <p  id="" class="text-gray-900 font-semibold">${minutes}</p>
+                  <small class="text-gray-700 text-xs"> Minutes </small>
+                </div> <span>:</span>`;;
+          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                  <p  id="" class="text-gray-900 font-semibold">${seconds}</p>
+                  <small class="text-gray-700 text-xs"> Seconds </small>
+                </div> `;;
+      }
+
+      timer = setInterval(showRemaining, 1000);
+  }
+
+</script>
+
+
+</html>
