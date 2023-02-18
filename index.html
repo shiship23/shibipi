@@ -192,13 +192,13 @@
         </div>
         <ul class="flex flex-col transition-all duration-200 bg-transparent">
          <li class="py-2 px-6">
-            <a href="#" class="block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Home </a>
+            <a id="" href="#" class="home-btn block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Home </a>
           </li>
           <li class="py-2 px-6">
-            <a href="/contact" class="block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Whitepaper </a>
+            <a id="" href="/contact" class="whitepaper-btn block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Whitepaper </a>
           </li>
           <li class="py-2 px-6">
-            <a href="/" class="block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> How to buy </a>
+            <a id="" href="/" class="socials-btn block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> How to buy </a>
           </li>
           
           <li class="px-6">
@@ -231,7 +231,9 @@
             </div>
           </li>
           <li class="py-2 px-6">
-            <button type="button" class="text-white whitespace-nowrap text-sm px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md"> Connect Wallet </button>
+            
+            
+            <button  type="button" class="connectwallet-btn-zh text-white whitespace-nowrap text-sm px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md"> Connect Wallet </button>
           </li>
         </ul>
       </div>
@@ -248,17 +250,17 @@
       <div class="hidden justify-between items-center w-full lg:flex lg:w-auto">
         <ul class="flex items-center transition-all duration-200 bg-transparent flex-row">
           <li class="px-[18px]">
-            <a href="/" class="text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Home </a>
+            <a href="/" id="" class="home-btn text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Home </a>
           </li>
           <li class="px-[18px]">
-            <a href="/" class="text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Whitepaper </a>
+            <a href="/" class="whitepaper-btn text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Whitepaper </a>
           </li>
           <li class="px-[18px]">
-            <a href="/" class="text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> How to buy </a>
+            <a href="/" class=" howtobuy-btn text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> How to buy </a>
           </li>
           <li class="px-[18px]">
             <div data-action-type="hover" data-target-element="pages-dropdown" class="dropdown relative">
-              <button class="group flex justify-between items-center text-gray-900 font-normal  dark:text-white hover:text-primary-500 dark:hover:text-primary-500"> 
+              <button class="socials-btn group flex justify-between items-center text-gray-900 font-normal  dark:text-white hover:text-primary-500 dark:hover:text-primary-500"> 
                 Socials  <i class="fa-solid fa-caret-down ml-3"></i>
               </button>
               <div id="pages-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute top-5 transition-all h-full invisible opacity-0 z-0 pt-0">
@@ -292,11 +294,15 @@
       <div class="flex items-center">
         <ul class="flex items-center">
           <li class="mr-4 hidden lg:block">
-            <a style="    padding: 0.7rem;" href="#" class="text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg"> Connect Wallet  </a>
+            
+            <a style="    padding: 0.7rem;" href="#" class=" connectwallet-btn-zh text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg"> Connect Wallet  </a>
           </li>
           
           
-          <li>
+          <li style="display:flex">
+            <a href="javascript:void(0)" id="zh-translate">
+              <img style="width:30px" src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/China_flat.png" alt="">
+            </a>
             <button id="lightOrDarkMode" class="w-7 h-7 ml-4 border border-gray-300 dark:border-primary-300 rounded-full flex items-center justify-center">
               <svg class="block dark:hidden w-[12px]
 						h-[12px] fill-gray-700 dark:fill-primary-100" width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg">
@@ -326,33 +332,33 @@
     <div class="bg-[url('/assets/img/hero-bg/light-landing4.png')] dark:bg-[url('/assets/img/hero-bg/dark-landing4.png')] bg-no-repeat bg-[length:100%_100%] pt-20 md:pt-[120px]">
       <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center pb-[100px]">
         <div class="max-w-[490px] py-6 mx-auto md:mx-0  md:text-start">
-          <p class="text-primary-500 text-xs md:text-base font-normal"> LAUNCH PAD </p>
-          <h2 class="font-semibold text-2xl md:text-6xl text-gray-900 dark:text-white">  Get early access to the 
+          <p id="launch-pad" class="text-primary-500 text-xs md:text-base font-normal"> LAUNCH PAD </p>
+          <h2 id="get-early-access-header" class="font-semibold text-2xl md:text-6xl text-gray-900 dark:text-white">  Get early access to the 
             <span class="text-primary-500 bg-contain bg-no-repeat" style="
 							background-image: url('assets/img/logo/nft-text-bg2.png');
 						">  greatest projects </span>  on Shibarium.
           </h2>
-          <p class="font-normal text-xs md:text-base text-gray-700 dark:text-gray-400 py-3 md:py-6"> 
+          <p class="trustworty font-normal text-xs md:text-base text-gray-700 dark:text-gray-400 py-3 md:py-6"> 
             
             Trustworthy <b class="main-color">Shibarium Projects</b> that have undergone rigorous vetting. Backed by prominent individuals and influencers across the industry.
           </p>
             
           <div class="flex justify-center md:justify-start pt-1 md:pt-2 pb-4 md:pb-12">
-            <button class="px-4 md:px-8 py-2 md:py-4 rounded-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 mr-4"> Get Started </button>
-            <button class="px-4 md:px-8 py-2 md:py-4 rounded-md font-medium text-base flex items-center justify-center hover:bg-primary-25 bg-white border border-primary-500 dark:border-gray-700 text-gray-700 dark:text-white hover:text-primary-500 dark:bg-dark transition-colors duration-200 mr-4"> Create </button>
+            <button class="getstarted-btn px-4 md:px-8 py-2 md:py-4 rounded-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 mr-4"> Get Started </button>
+            <button class="create-btn px-4 md:px-8 py-2 md:py-4 rounded-md font-medium text-base flex items-center justify-center hover:bg-primary-25 bg-white border border-primary-500 dark:border-gray-700 text-gray-700 dark:text-white hover:text-primary-500 dark:bg-dark transition-colors duration-200 mr-4"> Create </button>
           </div>
           <div class="flex items-center justify-between pb-6 md:pb-0">
             <div>
               <h4 class="font-semibold text-xl md:text-4xl text-gray-900 dark:text-white"> 0 </h4>
-              <p class="font-normal text-xs md:text-base text-gray-700 dark:text-gray-400"> IDEAS FUNDED </p>
+              <p class="ideas-funded font-normal text-xs md:text-base text-gray-700 dark:text-gray-400"> IDEAS FUNDED </p>
             </div>
             <div>
               <h4 class="font-semibold text-xl md:text-4xl text-gray-900 dark:text-white"> 0 </h4>
-              <p class="font-normal text-xs md:text-base text-gray-700 dark:text-gray-400"> PROJECTS MKT CAP </p>
+              <p class="projects-mc font-normal text-xs md:text-base text-gray-700 dark:text-gray-400"> PROJECTS MKT CAP </p>
             </div>
             <div>
               <h4 class="font-semibold text-xl md:text-4xl text-gray-900 dark:text-white"> 0 </h4>
-              <p class="font-normal text-xs md:text-base text-gray-700 dark:text-gray-400"> UNIQUE PARTICIPANTS </p>
+              <p class=" unique-participants font-normal text-xs md:text-base text-gray-700 dark:text-gray-400"> UNIQUE PARTICIPANTS </p>
             </div>
           </div>
         </div>
@@ -385,16 +391,16 @@
                   <path d="M8 0C9.15 0 10.15 0.646875 10.6531 1.59687C11.6812 1.25312 12.8156 1.53 13.6562 2.34313C14.4688 3.15625 14.6906 4.31875 14.4031 5.34688C15.3531 5.85 16 6.85 16 8C16 9.15 15.3531 10.15 14.4031 10.6531C14.7187 11.6812 14.4688 12.8156 13.6562 13.6562C12.8156 14.4688 11.6812 14.6906 10.6531 14.4031C10.15 15.3531 9.15 16 8 16C6.85 16 5.85 15.3531 5.34688 14.4031C4.31875 14.7187 3.15625 14.4688 2.34313 13.6562C1.53 12.8156 1.28125 11.6812 1.59687 10.6531C0.646875 10.15 0 9.15 0 8C0 6.85 0.646875 5.85 1.59687 5.34688C1.25312 4.31875 1.53 3.15625 2.34313 2.34313C3.15625 1.53 4.31875 1.28125 5.34688 1.59687C5.85 0.646875 6.85 0 8 0ZM11.0031 7.00313C11.3219 6.7375 11.3219 6.2625 11.0031 5.96875C10.7375 5.67812 10.2625 5.67812 9.96875 5.96875L7 8.94063L5.75313 7.71875C5.4875 7.42812 5.0125 7.42812 4.71875 7.71875C4.42812 8.0125 4.42812 8.4875 4.71875 8.75313L6.46875 10.5031C6.7625 10.8219 7.2375 10.8219 7.50313 10.5031L11.0031 7.00313Z" />
                 </svg>
               </div>
-              <p class="text-gray-700 dark:text-gray-400 font-normal"> Starting : 19.02.2023 </p>
+              <p class="text-gray-700 dark:text-gray-400 font-normal"><span class="starting-text">Starting :</span> 19.02.2023 </p>
             </div>
             <a href="#">
               <h6 class="text-primary-500 my-3">Shibarium Fight Club #269</h6>
             </a>
             <p class="text-gray-700 dark:text-gray-400"> The First Cross-IP PVP game for Shibarium NFT Universe            </p>
             <div class="flex items-center justify-between mt-3">
-              <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Token Sale </button>
+              <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn token-sale-btn token-sale-btn token-sale-btn"> Token Sale </button>
               <div class="flex flex-col items-end">
-                <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Price per token <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"><span class="price-per-token"> Price per token</span> <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                     <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
                     <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
                     <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
@@ -404,7 +410,7 @@
                   </svg>
                   <span class="text-gray-900 dark:text-white font-medium">0.0001</span>
                 </p>
-                <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+                <small class="flex items-center text-gray-700 dark:text-gray-400"><span class="allocation-txt"> Allocation </span><svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                     <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#FCC5B2" />
                     <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#F0786C" />
                     <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#F0786C" />
@@ -425,7 +431,7 @@
       <div>
         <div class="text-center">
           
-          <p class="text-gray-700 dark:text-gray-400" style="text-transform: uppercase">
+          <p class="text-gray-700 dark:text-gray-400 raise-funds-text" style="text-transform: uppercase">
              Raise funds through the <b class="main-color"> Shibarium</b>  BLOCKCHAIN. 
              </p>
         </div>
@@ -435,26 +441,26 @@
             <a href="#">
               <h6 class="text-gray-900 dark:text-white my-1" style="font-size: 22px"> $0 </h6>
             </a>
-            <small class="text-gray-700 dark:text-gray-400 text-center"> TOTAL RAISED </small>
+            <small class="text-gray-700 dark:text-gray-400 text-center"> <span class="total-raised"> Total Raised</span> </small>
           </div>
           <div class="flex flex-col p-12 justify-center items-center bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
             <a href="#">
               <h6 class="text-gray-900 dark:text-white my-1" style="font-size: 22px"> 0 </h6>
             </a>
-            <small class="text-gray-700 dark:text-gray-400 text-center"> TOKENS FUNDED </small>
+            <small class="text-gray-700 dark:text-gray-400 text-center tokens-funded"> TOKENS FUNDED </small>
           </div>
           <div class="flex flex-col p-12 justify-center items-center bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
             <a href="#">
               <h6 class="text-gray-900 dark:text-white my-1" style="font-size: 22px"> $0
               </h6>
             </a>
-            <small class="text-gray-700 dark:text-gray-400 text-center"> TOTAL MKT CAP  </small>
+            <small class="text-gray-700 dark:text-gray-400 text-center total-mkt-cap"> TOTAL MKT CAP  </small>
           </div>
           <div class="flex flex-col p-12 justify-center items-center bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
             <a href="#">
               <h6 class="text-gray-900 dark:text-white my-1" style="font-size: 22px">0</h6>
             </a>
-            <small class="text-gray-700 dark:text-gray-400 text-center"> TOTAL PARTICIPANTS </small>
+            <small class="text-gray-700 dark:text-gray-400 text-center total-participants"> TOTAL PARTICIPANTS </small>
           </div>
           
           
@@ -652,7 +658,9 @@
 </style>
 <div class="container">
   <h4 class="flex text-gray-900 dark:text-white text-left"> 
-    Get Educated About <b class="main-color"> ShibariumPad </b> <span class="ml-5" style="font-size:1rem"><span > <a id="arrow"  href="#"> Learn About Us <i class="fa-solid fa-chevron-right"></i> </a></span></span></h4>
+    <span class="get-educated">   Get Educated About <b class="main-color"> ShibariumPad </b></span>
+     <span class="ml-5" style="font-size:1rem">
+      <span > <a id="arrow" class="learn-about-us"  href="#"> Learn About Us <i class="fa-solid fa-chevron-right"></i> </a></span></span></h4>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-7 pt-12 the-cardsS" >
       <div class="col-md-6">
       <div>
@@ -672,8 +680,8 @@
                       
                     </div>
           
-                    <h6 class="text-white py-2 font-light"> How to participate in SHIBARIUM PAD </h6>
-                    <p class="text-white py-2 font-light"> A good place to start is: what is Shibarim Pad?  </p>
+                    <h6 class="text-white py-2 font-light how-to-participate"> How to participate in SHIBARIUM PAD </h6>
+                    <p class="text-white py-2 font-light a-good-place-to"> A good place to start is: what is Shibarim Pad?  </p>
                     <div class="w-10 h-14 absolute top-4 right-4 " style="
                    
                   ">
@@ -714,7 +722,7 @@
         url(https://cdn.dribbble.com/users/3464678/screenshots/17504503/media/a2a6b32c0d7a6d86075261f58ef6c38f.png?compress=1&resize=1600x1200&vertical=top);
         height: 210px;
     ">
-          <p class="text-white font-normal text-lg pb-10">How to buy the Shibarim $SHIDO token?</p>
+          <p class="text-white font-normal text-lg pb-10 how-to-buy-art">How to buy the Shibarim $SHIDO token?</p>
         </div>
       </div>
      
@@ -735,7 +743,7 @@
                       
                     </div>
           
-                    <h6 class="text-white py-2 font-light pb-10"> What is an IDO <br/> (Initial Decentralized Offering)? </h6>
+                    <h6 class="text-white py-2 font-light pb-10 what-is-ido"> What is an IDO <br/> (Initial Decentralized Offering)? </h6>
                     
                    
                   </div>
@@ -804,9 +812,9 @@
     </section> -->
 
     <section  id="" class=" container  pb-[100px]  mx-auto" aria-labelledby="carousel-heading">
-      <h4 class="text-gray-900 dark:text-white text-left"> Upcoming  <span class="text-primary-500">Projects 
+      <h4 class="text-gray-900 dark:text-white text-left upcoming-projects"> Upcoming  <span class="text-primary-500">Projects 
       </span> </h4>
-      <p class="text-lg md:text-base text-gray-500">We bring in only the most successful projects.</p>
+      <p class="text-lg md:text-base text-gray-500 we-bring-most">We bring in only the most successful projects.</p>
       <div class=" grid grid-cols-1 lg:grid-cols-3 gap-7 pt-12">
         <div class="group p-4 relative bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
           <a href="#">
@@ -836,16 +844,16 @@
                 <path d="M8 0C9.15 0 10.15 0.646875 10.6531 1.59687C11.6812 1.25312 12.8156 1.53 13.6562 2.34313C14.4688 3.15625 14.6906 4.31875 14.4031 5.34688C15.3531 5.85 16 6.85 16 8C16 9.15 15.3531 10.15 14.4031 10.6531C14.7187 11.6812 14.4688 12.8156 13.6562 13.6562C12.8156 14.4688 11.6812 14.6906 10.6531 14.4031C10.15 15.3531 9.15 16 8 16C6.85 16 5.85 15.3531 5.34688 14.4031C4.31875 14.7187 3.15625 14.4688 2.34313 13.6562C1.53 12.8156 1.28125 11.6812 1.59687 10.6531C0.646875 10.15 0 9.15 0 8C0 6.85 0.646875 5.85 1.59687 5.34688C1.25312 4.31875 1.53 3.15625 2.34313 2.34313C3.15625 1.53 4.31875 1.28125 5.34688 1.59687C5.85 0.646875 6.85 0 8 0ZM11.0031 7.00313C11.3219 6.7375 11.3219 6.2625 11.0031 5.96875C10.7375 5.67812 10.2625 5.67812 9.96875 5.96875L7 8.94063L5.75313 7.71875C5.4875 7.42812 5.0125 7.42812 4.71875 7.71875C4.42812 8.0125 4.42812 8.4875 4.71875 8.75313L6.46875 10.5031C6.7625 10.8219 7.2375 10.8219 7.50313 10.5031L11.0031 7.00313Z" />
               </svg>
             </div>
-            <p class="text-gray-700 dark:text-gray-400 font-normal"> Starting : 19.02.2023 </p>
+            <p class="text-gray-700 dark:text-gray-400 font-normal"> <span class="starting-text">Starting :</span> 19.02.2023 </p>
           </div>
           <a href="#">
             <h6 class="text-primary-500 my-3">Shibarium Fight Club #269</h6>
           </a>
           <p class="text-gray-700 dark:text-gray-400"> The First Cross-IP PVP game for Shibarium NFT Universe            </p>
           <div class="flex items-center justify-between mt-3">
-            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Token Sale </button>
+            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn"> Token Sale </button>
             <div class="flex flex-col items-end">
-              <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Price per token <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+              <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> <span class="price-per-token"> Price per token</span> <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                   <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
                   <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
                   <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
@@ -855,7 +863,7 @@
                 </svg>
                 <span class="text-gray-900 dark:text-white font-medium">0.0001</span>
               </p>
-              <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+              <small class="flex items-center text-gray-700 dark:text-gray-400"> <span class="allocation-txt"> Allocation </span> <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                   <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#FCC5B2" />
                   <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#F0786C" />
                   <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#F0786C" />
@@ -896,16 +904,16 @@
                 <path d="M8 0C9.15 0 10.15 0.646875 10.6531 1.59687C11.6812 1.25312 12.8156 1.53 13.6562 2.34313C14.4688 3.15625 14.6906 4.31875 14.4031 5.34688C15.3531 5.85 16 6.85 16 8C16 9.15 15.3531 10.15 14.4031 10.6531C14.7187 11.6812 14.4688 12.8156 13.6562 13.6562C12.8156 14.4688 11.6812 14.6906 10.6531 14.4031C10.15 15.3531 9.15 16 8 16C6.85 16 5.85 15.3531 5.34688 14.4031C4.31875 14.7187 3.15625 14.4688 2.34313 13.6562C1.53 12.8156 1.28125 11.6812 1.59687 10.6531C0.646875 10.15 0 9.15 0 8C0 6.85 0.646875 5.85 1.59687 5.34688C1.25312 4.31875 1.53 3.15625 2.34313 2.34313C3.15625 1.53 4.31875 1.28125 5.34688 1.59687C5.85 0.646875 6.85 0 8 0ZM11.0031 7.00313C11.3219 6.7375 11.3219 6.2625 11.0031 5.96875C10.7375 5.67812 10.2625 5.67812 9.96875 5.96875L7 8.94063L5.75313 7.71875C5.4875 7.42812 5.0125 7.42812 4.71875 7.71875C4.42812 8.0125 4.42812 8.4875 4.71875 8.75313L6.46875 10.5031C6.7625 10.8219 7.2375 10.8219 7.50313 10.5031L11.0031 7.00313Z" />
               </svg>
             </div>
-            <p class="text-gray-700 dark:text-gray-400 font-normal"> Starting : 19.02.2023 </p>
+            <p class="text-gray-700 dark:text-gray-400 font-normal"> <span class="starting-text">Starting :</span> 19.02.2023 </p>
           </div>
           <a href="#">
             <h6 class="text-primary-500 my-3">Shibarium Fight Club #269</h6>
           </a>
           <p class="text-gray-700 dark:text-gray-400"> The First Cross-IP PVP game for Shibarium NFT Universe            </p>
           <div class="flex items-center justify-between mt-3">
-            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Token Sale </button>
+            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn"> Token Sale </button>
             <div class="flex flex-col items-end">
-              <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Price per token <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+              <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> <span class="price-per-token"> Price per token</span> <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                   <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
                   <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
                   <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
@@ -915,7 +923,7 @@
                 </svg>
                 <span class="text-gray-900 dark:text-white font-medium">0.0001</span>
               </p>
-              <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+              <small class="flex items-center text-gray-700 dark:text-gray-400"> <span class="allocation-txt"> Allocation </span> <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                   <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#FCC5B2" />
                   <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#F0786C" />
                   <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#F0786C" />
@@ -956,16 +964,16 @@
                 <path d="M8 0C9.15 0 10.15 0.646875 10.6531 1.59687C11.6812 1.25312 12.8156 1.53 13.6562 2.34313C14.4688 3.15625 14.6906 4.31875 14.4031 5.34688C15.3531 5.85 16 6.85 16 8C16 9.15 15.3531 10.15 14.4031 10.6531C14.7187 11.6812 14.4688 12.8156 13.6562 13.6562C12.8156 14.4688 11.6812 14.6906 10.6531 14.4031C10.15 15.3531 9.15 16 8 16C6.85 16 5.85 15.3531 5.34688 14.4031C4.31875 14.7187 3.15625 14.4688 2.34313 13.6562C1.53 12.8156 1.28125 11.6812 1.59687 10.6531C0.646875 10.15 0 9.15 0 8C0 6.85 0.646875 5.85 1.59687 5.34688C1.25312 4.31875 1.53 3.15625 2.34313 2.34313C3.15625 1.53 4.31875 1.28125 5.34688 1.59687C5.85 0.646875 6.85 0 8 0ZM11.0031 7.00313C11.3219 6.7375 11.3219 6.2625 11.0031 5.96875C10.7375 5.67812 10.2625 5.67812 9.96875 5.96875L7 8.94063L5.75313 7.71875C5.4875 7.42812 5.0125 7.42812 4.71875 7.71875C4.42812 8.0125 4.42812 8.4875 4.71875 8.75313L6.46875 10.5031C6.7625 10.8219 7.2375 10.8219 7.50313 10.5031L11.0031 7.00313Z" />
               </svg>
             </div>
-            <p class="text-gray-700 dark:text-gray-400 font-normal"> Starting : 19.02.2023 </p>
+            <p class="text-gray-700 dark:text-gray-400 font-normal"> <span class="starting-text">Starting :</span> 19.02.2023 </p>
           </div>
           <a href="#">
             <h6 class="text-primary-500 my-3">Shibarium Fight Club #269</h6>
           </a>
           <p class="text-gray-700 dark:text-gray-400"> The First Cross-IP PVP game for Shibarium NFT Universe            </p>
           <div class="flex items-center justify-between mt-3">
-            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Token Sale </button>
+            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn"> Token Sale </button>
             <div class="flex flex-col items-end">
-              <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Price per token <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+              <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> <span class="price-per-token"> Price per token</span> <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                   <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
                   <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265" />
                   <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265" />
@@ -975,7 +983,7 @@
                 </svg>
                 <span class="text-gray-900 dark:text-white font-medium">0.0001</span>
               </p>
-              <small class="flex items-center text-gray-700 dark:text-gray-400"> Allocation <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
+              <small class="flex items-center text-gray-700 dark:text-gray-400"> <span class="allocation-txt"> Allocation </span> <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                   <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#FCC5B2" />
                   <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#F0786C" />
                   <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#F0786C" />
@@ -989,7 +997,7 @@
           </div>
         </div>
       </div>
-      <button class="group px-8 py-4 mt-12 rounded-md font-medium text-base flex items-center justify-center hover:bg-primary-25 bg-white border border-primary-500 text-gray-700 dark:text-white hover:dark:text-primary-500 hover:text-primary-500 dark:bg-dark transition-colors duration-200 mx-auto"> See all <svg width="14" height="14" viewBox="0 0 16 16" class="fill-gray-700 dark:fill-white group-hover:fill-primary-500 ml-2">
+      <button class="group px-8 py-4 mt-12 rounded-md font-medium text-base flex items-center justify-center hover:bg-primary-25 bg-white border border-primary-500 text-gray-700 dark:text-white hover:dark:text-primary-500 hover:text-primary-500 dark:bg-dark transition-colors duration-200 mx-auto see-all"> See all <svg width="14" height="14" viewBox="0 0 16 16" class="fill-gray-700 dark:fill-white group-hover:fill-primary-500 ml-2">
           <path d="M15.7063 8.70625L11.7063 12.7063C11.3153 13.0972 10.6825 13.0966 10.2922 12.7063C9.90156 12.3156 9.90156 11.6828 10.2922 11.2922L12.5875 9H1C0.447187 9 0 8.55313 0 7.97188C0 7.39063 0.447187 7 1 7H12.5875L10.2944 4.70688C9.90375 4.31625 9.90375 3.68344 10.2944 3.29282C10.685 2.90219 11.3178 2.90219 11.7084 3.29282L15.7084 7.29282C16.0969 7.68438 16.0969 8.31563 15.7063 8.70625Z" />
         </svg>
       </button>
@@ -1000,7 +1008,7 @@
      
 
       <section class="pb-[100px] row-fluid">
-        <p class="text-center text-gray-700 dark:text-gray-400">  
+        <p class="text-center text-gray-700 dark:text-gray-400 assisting-txt">  
           ASSISTING THE MOST AMBITIOUS <b class="main-color"> SHIBARIUM </b> PROJECTS LAUNCH.
           </p>
         
@@ -1263,7 +1271,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1292,7 +1300,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1321,7 +1329,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1350,7 +1358,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1379,7 +1387,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1408,7 +1416,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1437,7 +1445,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1466,7 +1474,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1495,7 +1503,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1524,7 +1532,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1553,7 +1561,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1582,7 +1590,7 @@
                     </svg>
                     <span class="dark:text-white">2.11</span>
                   </small>
-                  <small class="text-gray-700 dark:text-gray-400"> Price Per Token: <span class="dark:text-white">0.0001</span>
+                  <small class="text-gray-700 dark:text-gray-400"> <span class="price-per-token"> Price per token</span>: <span class="dark:text-white">0.0001</span>
                   </small>
                 </div>
               </div>
@@ -1594,32 +1602,15 @@
           </svg>
         </button>
       </section> -->
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          var splide = new Splide("#upcomingProjects", {
-            type: "loop",
-            perPage: 3,
-            focus: "center",
-            pagination: false,
-            gap: "2rem",
-            padding: "2px",
-            breakpoints: {
-              768: {
-                perPage: 1,
-              },
-            },
-          });
-          splide.mount();
-        });
-      </script>
+
       
       <section class="container  pb-[100px]  mx-auto">
-        <h4 class="text-gray-900 dark:text-white text-center">
+        <h4 class="text-gray-900 dark:text-white text-center launched-projects-txt">
           <span class="text-primary-500">Launched </span> Projects
         </h4>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-7 pt-12">
           <div class="group p-4 relative bg-white dark:bg-dark border border-gray-300 dark:border-gray-800 rounded-lg shadow-outline hover:shadow-hover hover:outline hover:outline-2 hover:outline-primary-500">
-            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10"> Token Sale </button>
+            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10 token-sale-btn"> Token Sale </button>
             <button class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
               <svg width="18" height="18" viewBox="0 0 18 18">
                 <path d="M0 6.71134V6.50744C0 4.05002 1.77609 1.954 4.19766 1.55041C5.76914 1.28357 7.43203 1.80599 8.57812 2.95384L9 3.37502L9.39023 2.95384C10.568 1.80599 12.1992 1.28357 13.8023 1.55041C16.2246 1.954 18 4.05002 18 6.50744V6.71134C18 8.17033 17.3953 9.56603 16.3266 10.561L9.97383 16.4918C9.71016 16.7379 9.36211 16.875 9 16.875C8.63789 16.875 8.28984 16.7379 8.02617 16.4918L1.67309 10.561C0.605742 9.56603 1.05469e-05 8.17033 1.05469e-05 6.71134H0Z" fill="#585C7B" />
@@ -1643,22 +1634,22 @@
             </div>
             <a href="/#" class="group-hover:text-primary-500 font-medium text-gray-900 dark:text-white"> Shibarium Fight Club  #50 </a>
             <div style="margin-top: 10px">
-              <small class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Total Raised
+              <small class="flex items-center text-gray-700 dark:text-gray-400 mb-1"><span class="total-raised"> Total Raised</span>
                 <img src="assets/11865.png" class="mr-2 ml-2" style="width: 20px;">
                 <span class="text-gray-900 dark:text-white font-medium">123</span>
               </small>
               <div class="flex items-center justify-between">
-                <small class="flex items-center text-gray-700 dark:text-gray-400"> Participants <i class="ml-2 mr-2  fa-solid fa-users-viewfinder"></i>
+                <small class="flex items-center text-gray-700 dark:text-gray-400"> <span class="participants-txt"> Participants </span><i class="ml-2 mr-2  fa-solid fa-users-viewfinder"></i>
                   <span class="text-gray-900 dark:text-white">500</span>
                 </small>
-                <small class="text-gray-700 dark:text-gray-400"> Ended: xx/xx/xxxx
+                <small class="text-gray-700 dark:text-gray-400"> <span class="end-date">Ended:</span> xx/xx/xxxx
 
                   </small>
               </div>
             </div>
           </div>
           <div class="group p-4 relative bg-white dark:bg-dark border border-gray-300 dark:border-gray-800 rounded-lg shadow-outline hover:shadow-hover hover:outline hover:outline-2 hover:outline-primary-500">
-            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10"> Token Sale </button>
+            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10 token-sale-btn"> Token Sale </button>
             <button class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
               <svg width="18" height="18" viewBox="0 0 18 18">
                 <path d="M0 6.71134V6.50744C0 4.05002 1.77609 1.954 4.19766 1.55041C5.76914 1.28357 7.43203 1.80599 8.57812 2.95384L9 3.37502L9.39023 2.95384C10.568 1.80599 12.1992 1.28357 13.8023 1.55041C16.2246 1.954 18 4.05002 18 6.50744V6.71134C18 8.17033 17.3953 9.56603 16.3266 10.561L9.97383 16.4918C9.71016 16.7379 9.36211 16.875 9 16.875C8.63789 16.875 8.28984 16.7379 8.02617 16.4918L1.67309 10.561C0.605742 9.56603 1.05469e-05 8.17033 1.05469e-05 6.71134H0Z" fill="#585C7B" />
@@ -1682,23 +1673,23 @@
             </div>
             <a href="/#" class="group-hover:text-primary-500 font-medium text-gray-900 dark:text-white"> Shibarium Fight Club  #50 </a>
             <div style="margin-top: 10px">
-              <small class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Total Raised
+              <small class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> <span class="total-raised"> Total Raised</span>
                 <img src="assets/11865.png" class="mr-2 ml-2" style="width: 20px;">
                 <span class="text-gray-900 dark:text-white font-medium">431</span>
               </small>
               <div class="flex items-center justify-between">
-                <small class="flex items-center text-gray-700 dark:text-gray-400"> Participants 
+                <small class="flex items-center text-gray-700 dark:text-gray-400"> <span class="participants-txt"> Participants </span> 
                   <i class="ml-2 mr-2  fa-solid fa-users-viewfinder"></i>
                   <span class="text-gray-900 dark:text-white">744</span>
                 </small>
-                <small class="text-gray-700 dark:text-gray-400"> Ended: xx/xx/xxxx
+                <small class="text-gray-700 dark:text-gray-400"> <span class="end-date">Ended:</span> xx/xx/xxxx
 
                   </small>
               </div>
             </div>
           </div>
           <div class="group p-4 relative bg-white dark:bg-dark border border-gray-300 dark:border-gray-800 rounded-lg shadow-outline hover:shadow-hover hover:outline hover:outline-2 hover:outline-primary-500">
-            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10"> Token Sale </button>
+            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10 token-sale-btn"> Token Sale </button>
             <button class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
               <svg width="18" height="18" viewBox="0 0 18 18">
                 <path d="M0 6.71134V6.50744C0 4.05002 1.77609 1.954 4.19766 1.55041C5.76914 1.28357 7.43203 1.80599 8.57812 2.95384L9 3.37502L9.39023 2.95384C10.568 1.80599 12.1992 1.28357 13.8023 1.55041C16.2246 1.954 18 4.05002 18 6.50744V6.71134C18 8.17033 17.3953 9.56603 16.3266 10.561L9.97383 16.4918C9.71016 16.7379 9.36211 16.875 9 16.875C8.63789 16.875 8.28984 16.7379 8.02617 16.4918L1.67309 10.561C0.605742 9.56603 1.05469e-05 8.17033 1.05469e-05 6.71134H0Z" fill="#585C7B" />
@@ -1722,14 +1713,14 @@
             </div>
             <a href="/#" class="group-hover:text-primary-500 font-medium text-gray-900 dark:text-white"> Shibarium Fight Club  #50 </a>
             <div style="margin-top: 10px">
-              <small class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> Total Raised <img src="assets/11865.png" class="mr-2 ml-2" style="width: 20px;">
+              <small class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> <span class="total-raised"> Total Raised</span><img src="assets/11865.png" class="mr-2 ml-2" style="width: 20px;">
                 <span class="text-gray-900 dark:text-white font-medium">876</span>
               </small>
               <div class="flex items-center justify-between">
-                <small class="flex items-center text-gray-700 dark:text-gray-400"> Participants <i class="ml-2 mr-2  fa-solid fa-users-viewfinder"></i>
+                <small class="flex items-center text-gray-700 dark:text-gray-400"> <span class="participants-txt"> Participants </span> <i class="ml-2 mr-2  fa-solid fa-users-viewfinder"></i>
                   <span class="text-gray-900 dark:text-white">2399</span>
                 </small>
-                <small class="text-gray-700 dark:text-gray-400"> Ended: xx/xx/xxxx
+                <small class="text-gray-700 dark:text-gray-400"> <span class="end-date">Ended:</span> xx/xx/xxxx
 
                   </small>
               </div>
@@ -1745,11 +1736,11 @@
     <div class="bg-white h-[140px] bg-cover bg-center dark:bg-dark" style="background-image: url('assets/img/images/base.png')">
       <div class="container mx-auto w-full h-full flex flex-col items-center justify-center md:flex-row md:justify-between">
         
-        <h6 class="my-4 text-gray-700 dark:text-white font-normal"> 
+        <h6 class="my-4 text-gray-700 dark:text-white font-normal never-miss-sale"> 
           Never want to miss a sale? <br/>
           
         </h6>
-        <button class="px-11 py-2 md:py-4 mt-4 md:mt-0 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Join Our Community </button>
+        <button class="px-11 py-2 md:py-4 mt-4 md:mt-0 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 join-our-community"> Join Our Community </button>
       </div>
     </div>
   </div>
@@ -1762,16 +1753,16 @@
           <img src="assets/img/logo/logorocket.gif" class="mr-3 h-11" alt="naw-nft" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> SHIBARIUM PAD </span>
         </a>
-        <p class="my-4 text-gray-700 dark:text-white font-normal"> The fully decentralized protocol for launching new ideas </p>
+        <p class="my-4 text-gray-700 dark:text-white font-normal about-footer"> The fully decentralized protocol for launching new ideas </p>
         <div class="mb-4 mt-9 border-b border-gray-300 dark:border-gray-700"></div>
-        <p class="py-1 font-medium text-gray-900 dark:text-white"> Sign up for our newsletter and get the latest news and updates. </p>
+        <p class="py-1 font-medium text-gray-900 dark:text-white signup-for-newsletter"> Sign up for our newsletter and get the latest news and updates. </p>
         <div class="flex mt-3 mb-7 md:mb-0">
           <input class="py-3 px-4 rounded-l-md w-full bg-white dark:bg-dark placeholder:text-gray-700 dark:placeholder:text-gray-600 dark:text-gray-600 border border-r-0 border-gray-300 dark:border-gray-700 focus:outline-none text-xs" placeholder="Type Here" />
-          <button class="px-5 py-2 rounded-r-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 mr-4"> Subscribe </button>
+          <button class="px-5 py-2 rounded-r-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 mr-4 subscribe-txt"> Subscribe </button>
         </div>
       </div>
       <div class="md:col-span-1 py-1">
-        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1"> Links </p>
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 links"> Links </p>
         <ul class="text-gray-700 dark:text-white text-sm">
           <li class="py-1">
             <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Twitter </a>
@@ -1790,7 +1781,7 @@
         </ul>
       </div>
       <div class="md:col-span-1 py-1">
-        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1"> My Account </p>
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 my-account"> My Account </p>
         <ul class="text-gray-700 dark:text-white text-sm">
           <li class="py-1">
             <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> DAPP </a>
@@ -1799,36 +1790,36 @@
         </ul>
       </div>
       <div class="md:col-span-1 py-1">
-        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1"> Resources </p>
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 resources"> Resources </p>
         <ul class="text-gray-700 dark:text-white text-sm">
           <li class="py-1">
             <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Medium </a>
           </li>
           <li class="py-1">
-            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Help </a>
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 help"> Help </a>
           </li>
           <li class="py-1">
-            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Support </a>
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 support"> Support </a>
           </li>
           <li class="py-1">
-            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> FAQs </a>
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 faq"> FAQs </a>
           </li>
           <li class="py-1">
-            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Terms & Conditions </a>
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 terms"> Terms & Conditions </a>
           </li>
           <li class="py-1">
-            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Privacy Policy </a>
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 privacy"> Privacy Policy </a>
           </li>
         </ul>
       </div>
       <div class="md:col-span-1 py-1">
-        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1"> Company </p>
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 company"> Company </p>
         <ul class="text-gray-700 dark:text-white text-sm">
           <li class="py-1">
-            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> About </a>
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 about"> About </a>
           </li>
           <li class="py-1">
-            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Apply for IDO </a>
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 apply-for-ido"> Apply for IDO </a>
           </li>
         </ul>
        
@@ -1858,10 +1849,12 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/jquery.pause.js" type="text/javascript"></script>
-  <script src="assets/js/jquery.easing.min.js" type="text/javascript"></script>
+
   <script src="assets/js/jquery.marquee.js?v=3" type="text/javascript"></script>
   <script>
+
+
+
     $(function(){
   var $mwo = $('.marquee-with-options');
   $('.marquee').marquee();
@@ -2043,6 +2036,89 @@ if(window.location.host === 'shibariumpad.finance' && window.location.protocol =
   window.location.href = 'https://shibariumpad.finance'
 }
 </script>
+<script>
+var translations;
+setTimeout(function(){
+$.getJSON('./translations.json', function(data) {
+  translations = data;
 
+  var idsToTranslate = ['launch-pad','home-btn'];
+  $.each(idsToTranslate, function(index, value) {
+    var englishText = $('#' + value).html().trim();
+    var translatedText = translations[value];
+    if (translatedText !== undefined) {
+      $('#' + value).html(translatedText);
+    } else {
+      console.log("No translation found for '" + value + "'");
+    }
+  });
+
+  
+});
+
+},2000)
+
+setTimeout(function(){
+  console.log('INSIDE')
+
+},2000)
+
+$('#zh-translate').on('click',function(e){
+  
+  $("#launch-pad").html("主页面")
+  $('#get-early-access-header').html(`尽早获得<span class=\"text-primary-500 bg-contain bg-no-repeat\" style=\"background-image: url('assets/img/logo/nft-text-bg2.png');\">Shibarium</span>上最伟大的项目。`)
+  $(".home-btn").html("主页面")
+  $(".whitepaper-btn").html("白皮书")
+  $(".howtobuy-btn").html("如何购买")
+  $(".socials-btn").html(`社交网络 <i class="fa-solid fa-caret-down ml-3"></i>`)
+  $(".connectwallet-btn-zh").html("连接钱包")
+  $('.trustworty').html('值得信赖的<b class="main-color">Shibarium</b>项目，经过了严格的审查。由整个行业的知名人士和有影响力的人支持。')
+  $('.getstarted-btn').html('开始吧')
+  $('.create-btn').html('创建')
+  $('.ideas-funded').html('资助的想法')
+  $('.projects-mc').html('项目市值')
+  $('.unique-participants').html('独特的参与者')
+  $('.token-sale-btn').html('代币销售')
+  $('.price-per-token').html('每枚代币的价格');
+  $('.allocation-txt').html('拨款')
+  $('.starting-text').html('开始日期')
+  $('.raise-funds-text').html('通过<b class="main-color">Shibarium BLOCKCHAIN</b>筹集资金。')
+  $('.total-raised').html('筹集到的资金总额')
+  $('.tokens-funded').html('资助的托克斯');
+  $('.total-mkt-cap').html('总数：MKT CAP');
+$('.total-participants').html('参与者总数')
+$('.get-educated').html(`获得有关<b class="main-color">ShibariumPad的教育</b>。`)
+$('.learn-about-us').html('了解我们 <i class="fa-solid fa-chevron-right"></i>')
+$('.how-to-participate').html('如何参与SHIBARIUM PAD活动')
+$('.a-good-place-to').html('一个好的开始是：什么是Shibarim Pad？')
+$('.how-to-buy-art').html('如何购买Shibarim $SHIDO代币？')
+$('.what-is-ido').html('什么是IDO<br/>(初始分散式发行）？')
+$('.upcoming-projects').html('即将到来的<span class="text-primary-500">项目</span>')
+$('.we-bring-most').html('我们只引进最成功的项目。');
+$('.see-all').html('查看全部')
+$('.assisting-txt').html(`协助最热心的<b class="main-color">博物馆</b>项目启动。`)
+$('.launched-projects-txt').html('<span class="text-primary-500">推出的</span>项目')
+$('.participants-txt').html('参与者')
+$('.end-date').html('结束日期')
+$('.never-miss-sale').html('永远不想错过促销活动？')
+$('.join-our-community').html('加入我们的社区')
+$('.about-footer').html('推出新想法的完全去中心化的协议')
+$('.signup-for-newsletter').html('注册我们的通讯，获得最新的新闻和更新。')
+$('.subscribe-txt').html('订阅')
+$('.links').html('链接')
+$('.my-account').html('我的账户')
+$('.resources').html('资源')
+$('.company').html('公司')
+$('.help').html('帮助')
+$('.support').html('帮助')
+$('.faq').html('常见问题')
+$('.terms').html('条款和条件')
+$('.privacy').html('隐私政策')
+$('.about').html('关于我们')
+$('.apply-for-ido').html('申请加入IDO')
+
+})
+
+</script>
 
 </html>
