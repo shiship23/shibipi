@@ -6,23 +6,23 @@
   <title>  $SHIBP </title>
 
   <meta property="og:type" content="website">
-	<meta property="og:title" content="SHIBARIUMPAD.FINANCE">
+	<meta property="og:title" content="ShibariumPad">
 	
 	
 
 	<!-- SEO -->
 	
 	<meta name="author" content="Shibarium Pad">
-	<meta name="description" lang="en" content="SHIBARIUMPAD.FINANCE: The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem.">
+	<meta name="description" lang="en" content="Shibarium Pad: The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem.">
 	<meta name="keywords" lang="en" content="SHIBARIUMPAD, crypto, staking, rewards, SHIBARIUMPAD">
 	<meta name="date" content="2022-02-04T00:00:00+00:00">
 	<meta name="page-topic" content="SHIBARIUMPAD, crypto">
 
 
-  <meta name="description" content=" SHIBARIUMPAD.FINANCE: The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem." />
+  <meta name="description" content=" Shibarium Pad : The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem." />
   
   <meta name="twitter:title" content="$SHIBP">
-<meta name="twitter:description" content="SHIBARIUMPAD.FINANCE: The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem.">
+<meta name="twitter:description" content="Shibarium Pad : The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image:src" content="/cover.jpg">
 <meta property="og:video" content="/cover.mp4" />
@@ -176,6 +176,8 @@ background: #fcfcfc;
     width: 10%;
   }
 }
+
+
   </style>
 </head>
 
@@ -311,11 +313,91 @@ background: #fcfcfc;
             <a style="    padding: 0.7rem;" href="#" class=" connectwallet-btn-zh text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg"> Connect Wallet  </a>
           </li>
           
-          
+          <style>
+
+.toggle-inner input {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 5px;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.dark .dark\:border-gray-400 {
+  background-color: #fff;
+  border-color: #fff;
+}
+.dark .dark\:border-gray-4002 {
+  
+  border-color: #fff;
+}
+
+.custom-toggle {
+  position: absolute;
+    height: 13px;
+    width: 13px;
+    background-color: #db041b;
+    top: 1px;
+    left: 2px;
+    border-radius: 50%;
+    transition: 300ms all;
+}
+.toggle-inner .t-month, .toggle-inner .t-year {
+  position: absolute;
+    top: 7px;
+    transition: 300ms all;
+    margin-top: 7px;
+    left: 13px;
+}
+.toggle-inner .t-year {
+  left: unset;
+  right: -85px;
+  opacity: 0.5;
+}
+.active > .toggle-inner .t-month {
+  opacity: 0.5;
+}
+.active > .toggle-inner .t-year {
+  opacity: 1;
+}
+.toggle-inner input:checked + span {
+  left: 31px;
+}
+.toggle-inner {
+  width: 50px;
+    margin: 0 auto;
+    height: 17px;
+    border: 1px solid #e01e32;
+    border-radius: 25px;
+    position: relative;
+}
+
+.tab-content > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(94,110,191);
+	color: #000000;
+	height: 100vh;
+}
+          </style>
           <li style="display:flex">
+            <div class="toggle-inner dark:border-gray-4002">
+              <input id="ce-toggle" type="checkbox">
+              <span class="custom-toggle dark:border-gray-400"></span>
+              <span class="t-month font-normal text-xs md:text-base text-gray-700 dark:text-gray-400">CN</span>
+              
+            </div>
+            <!-- <a href="javascript:void(0)" id="en-translate">ENGLISH</a>
             <a href="javascript:void(0)" id="zh-translate">
+              
               <img style="width:30px" src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/China_flat.png" alt="">
-            </a>
+            </a> -->
             <button id="lightOrDarkMode" class="w-7 h-7 ml-4 border border-gray-300 dark:border-primary-300 rounded-full flex items-center justify-center">
               <svg class="block dark:hidden w-[12px]
 						h-[12px] fill-gray-700 dark:fill-primary-100" width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg">
@@ -345,8 +427,8 @@ background: #fcfcfc;
     <div class="bg-[url('/assets/img/hero-bg/light-landing4.png')] dark:bg-[url('/assets/img/hero-bg/dark-landing4.png')] bg-no-repeat bg-[length:100%_100%] pt-20 md:pt-[120px]">
       <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center pb-[100px]">
         <div class="max-w-[490px] py-6 mx-auto md:mx-0  md:text-start">
-          <p id="launch-pad" class="text-primary-500 text-xs md:text-base font-normal"> LAUNCH PAD </p>
-          <h2 id="get-early-access-header" class="font-semibold text-2xl md:text-6xl text-gray-900 dark:text-white">  Get early access to the 
+          <p id="" class="launch-pad text-primary-500 text-xs md:text-base font-normal"> LAUNCH PAD </p>
+          <h2 id="" class=" get-early-access-header font-semibold text-2xl md:text-6xl text-gray-900 dark:text-white">  Get early access to the 
             <span class="text-primary-500 bg-contain bg-no-repeat" style="
 							background-image: url('assets/img/logo/nft-text-bg2.png');
 						">  greatest projects </span>  on Shibarium.
@@ -1994,10 +2076,10 @@ if (timelefts < 0) {
 
 
 <script>
-CountDownTimer('02/19/2023 4:38 PM', 'countdowni');
-  CountDownTimer('02/19/2023 4:38 PM', 'countdown');
-  CountDownTimer('02/19/2023 4:38 PM', 'countdown2');
-  CountDownTimer('02/19/2023 4:38 PM', 'countdown3');
+CountDownTimer('02/26/2023 4:38 PM', 'countdowni');
+  CountDownTimer('02/26/2023 4:38 PM', 'countdown');
+  CountDownTimer('02/26/2023 4:38 PM', 'countdown2');
+  CountDownTimer('02/26/2023 4:38 PM', 'countdown3');
   
 
   function CountDownTimer(dt, id)
@@ -2076,10 +2158,10 @@ setTimeout(function(){
 
 },2000)
 
-$('#zh-translate').on('click',function(e){
+function chineeseLang(){
   
-  $("#launch-pad").html("主页面")
-  $('#get-early-access-header').html(`尽早获得<span class=\"text-primary-500 bg-contain bg-no-repeat\" style=\"background-image: url('assets/img/logo/nft-text-bg2.png');\">Shibarium</span>上最伟大的项目。`)
+  $(".launch-pad").html("主页面")
+  $('.get-early-access-header').html(`尽早获得<span class=\"text-primary-500 bg-contain bg-no-repeat\" style=\"background-image: url('assets/img/logo/nft-text-bg2.png');\">Shibarium</span>上最伟大的项目。`)
   $(".home-btn").html("主页面")
   $(".whitepaper-btn").html("白皮书")
   $(".howtobuy-btn").html("如何购买")
@@ -2129,9 +2211,85 @@ $('.terms').html('条款和条件')
 $('.privacy').html('隐私政策')
 $('.about').html('关于我们')
 $('.apply-for-ido').html('申请加入IDO')
+}
 
-})
 
+
+
+function englishLang(){
+  
+  $(".launch-pad").html("LAUNCH PAD")
+  $('.get-early-access-header').html(`Get early access to the <span class="text-primary-500 bg-contain bg-no-repeat" style="background-image: url('assets/img/logo/nft-text-bg2.png');">  greatest projects </span>  on Shibarium.`)
+  $(".home-btn").html("Home")
+  $(".whitepaper-btn").html("Whitepaper")
+  $(".howtobuy-btn").html("How to buy")
+  $(".socials-btn").html(`Socials <i class="fa-solid fa-caret-down ml-3"></i>`)
+  $(".connectwallet-btn-zh").html("Connect Wallet")
+  $('.trustworty').html(' Trustworthy <b class="main-color">Shibarium Projects</b> that have undergone rigorous vetting. Backed by prominent individuals and influencers across the industry.')
+  $('.getstarted-btn').html('Get Started')
+  $('.create-btn').html('Create')
+  $('.ideas-funded').html('IDEAS FUNDED')
+  $('.projects-mc').html('PROJECTS MKT CAP')
+  $('.unique-participants').html('UNIQUE PARTICIPANTS')
+  $('.token-sale-btn').html('Token Sale')
+  $('.price-per-token').html('Price per token');
+  $('.allocation-txt').html('Allocation')
+  $('.starting-text').html('Starting :')
+  $('.raise-funds-text').html('Raise funds through the <b class="main-color"> Shibarium</b>  BLOCKCHAIN. ')
+  $('.total-raised').html('Total Raised')
+  $('.tokens-funded').html('TOKENS FUNDED');
+  $('.total-mkt-cap').html('TOTAL MKT CAP');
+$('.total-participants').html('TOTAL PARTICIPANTS')
+$('.get-educated').html(`Get Educated About <b class="main-color"> ShibariumPad </b>`)
+$('.learn-about-us').html('Learn About Us <i class="fa-solid fa-chevron-right"></i>')
+$('.how-to-participate').html('How to participate in SHIBARIUM PAD')
+$('.a-good-place-to').html('A good place to start is: what is Shibarim Pad?')
+$('.how-to-buy-art').html('How to buy the Shibarim $SHIDO token?')
+$('.what-is-ido').html('What is an IDO <br/> (Initial Decentralized Offering)?')
+$('.upcoming-projects').html('Upcoming  <span class="text-primary-500">Projects</span>')
+$('.we-bring-most').html('We bring in only the most successful projects.');
+$('.see-all').html('See all')
+$('.assisting-txt').html(` ASSISTING THE MOST AMBITIOUS <b class="main-color"> SHIBARIUM </b> PROJECTS LAUNCH.`)
+$('.launched-projects-txt').html('<span class="text-primary-500">Launched </span> Projects')
+$('.participants-txt').html('Participants')
+$('.end-date').html('Ended:')
+$('.never-miss-sale').html(' Never want to miss a sale? ')
+$('.join-our-community').html('Join Our Community')
+$('.about-footer').html('The fully decentralized protocol for launching new ideas ')
+$('.signup-for-newsletter').html('Sign up for our newsletter and get the latest news and updates. ')
+$('.subscribe-txt').html('Subscribe')
+$('.links').html('Links')
+$('.my-account').html('My Account')
+$('.resources').html('Resources')
+$('.company').html('Company')
+$('.help').html('Help')
+$('.support').html('Support')
+$('.faq').html(`FAQs`)
+$('.terms').html('Terms & Conditions')
+$('.privacy').html('Privacy Policy')
+$('.about').html('About')
+$('.apply-for-ido').html('Apply for IDO')
+}
 </script>
+<script>
+  $('#ce-toggle').click(function(event) {
+   $('.plan-toggle-wrap').toggleClass('active');
+});
 
+$('#ce-toggle').change(function(){
+      if ($(this).is(':checked')) {
+        chineeseLang();
+        $('.t-month').html('CN')
+        console.log('CN')
+         
+      }
+      else{
+        englishLang();
+        $('.t-month').html('EN')
+        console.log('english')
+        
+      }
+
+    });
+</script>
 </html>
