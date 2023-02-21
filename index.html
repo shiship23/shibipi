@@ -425,9 +425,9 @@ background: #fcfcfc;
                                                         <p class="font-semibold text-gray-900 dark:text-gray-400"> My Wallet </p>
                                                         <div class="flex justify-between">
                                                           <div>
-                                                            <small class="text-gray-700 dark:text-gray-600 theUAddrr"></small>
+                                                            <small class="text-gray-700 dark:text-gray-600 theUAddrr"  data-wallet-user=""></small>
                                                           </div>
-                                                          <button style="padding: 2px 7px" class="rounded-md text-xs flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Copy </button>
+                                                          <button id="" style="padding: 2px 7px" class="copyUserAddrrBtn rounded-md text-xs flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Copy </button>
                                                         </div>
                                                       </div>
                                                       <div class="my-3 border-b border-gray-300"></div>
@@ -2625,7 +2625,7 @@ $('.apply-for-ido').html('Apply for ISO')
       }
       $('#userAddress').html('<span  class="connectwallet-btn-zh">' + truncateAddress(window.userAddress) + '</span>');
       $('.theUAddrr').html('<span>' + truncateAddress(window.userAddress) + '</span>');
-      
+      $('.theUAddrr').attr('data-wallet-user',window.userAddress)
       let getBalanceOfUser = await web3.eth.getBalance(window.userAddress);
       let cleanUB= toFixed(web3.utils.fromWei(getBalanceOfUser, 'ether'),3);
       $('.ubalance').html('' + cleanUB + ' ETH')
@@ -2754,7 +2754,28 @@ $('.apply-for-ido').html('Apply for ISO')
   }
 
   $('#preloader').animate({opacity: 0}, 1500);
+
+  let text = document.getElementsByClassName("copyUserAddrrBtn");
+    $(".copyUserAddrrBtn").on("click", async () => {
+      try {
+        text = $(".theUAddrr").attr("data-wallet-user");
+        await navigator.clipboard.writeText(text);
+        console.log("Content copied to clipboard");
+        // $('.theUAddrr > i').hide();
+        // $(".share-copy").html(
+        //   '<span style="color:#6f6eff" id="copied">copied</span>'
+        // );
+        $('.copyUserAddrrBtn').html('Copied');
+        setTimeout(function () {
+          $('.copyUserAddrrBtn').html('Copy');
+        }, 3000);
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+      }
+    });
+
    
+
 </script>
 
 </html>
