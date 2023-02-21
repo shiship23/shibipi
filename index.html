@@ -265,7 +265,7 @@ background: #fcfcfc;
 </head>
 
 <body class="bg-white dark:bg-gray-900 relative">
-  <div style="z-index: 1000" class="bg-gray-900" id="preloader">
+  <div style="z-index: 1000;" class="bg-gray-900"  id="preloader">
     <div id="loader">
       <img style="z-index:99" src="assets/img/logo/logorocket.gif" class="mr-3 h-6 sm:h-9" alt="shibp" />
     </div>
@@ -2753,7 +2753,8 @@ $('.apply-for-ido').html('Apply for ISO')
       return Math.floor(i * pow) / pow;
   }
 
-
+  $('#preloader').animate({opacity: 0}, 1000);
+   
 </script>
 
 </html>
