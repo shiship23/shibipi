@@ -47,6 +47,9 @@
   <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/plugin-css/splide.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/plugin-css/preloader.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"
+        integrity="sha512-5erpERW8MxcHDF7Xea9eBQPiRtxbse70pFcaHJuOhdEBQeAxGQjUwgJbuBDWve+xP/u5IoJbKjyJk50qCnMD7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
 
 .background-masker {
@@ -389,8 +392,14 @@ background: #fcfcfc;
       <div class="flex items-center">
         <ul class="flex items-center">
           <li class="mr-4 hidden lg:block">
-            
-            <a style="    padding: 0.7rem;" href="#" class=" connectwallet-btn-zh text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg"> Connect Wallet  </a>
+            <a href="javascrript:void(0)" id="userAddress" onclick="loginWithEth()"
+                                        style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2 connectwallet-btn-zh text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg"><span>
+                                            Connect Wallet</span></a>
+                                            <a href="javascrript:void(0)" onclick="logout()"
+                                            style="margin-bottom: 10px; display:none;font-weight: 900;" class="btnM2 btnLogout font-bold text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"><span>
+                                                Disconnect</span></a>
+                                                <span style="font-weight:900;color:#f30000;display:none" class="ubalance ml-2"></span>
+            <!-- <a style="   padding: 0.7rem; " href="#" class=" "> Connect Wallet  </a> -->
           </li>
           
           <style>
@@ -576,7 +585,7 @@ background: #fcfcfc;
             </a>
             <p class="text-gray-700 dark:text-gray-400"> The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem </p>
             <div class="flex items-center justify-between mt-3">
-              <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn token-sale-btn token-sale-btn token-sale-btn"> Token Sale </button>
+              <a href="/projects" class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn token-sale-btn token-sale-btn token-sale-btn"> Token Sale </a>
               <div class="flex flex-col items-end">
                 <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"><span class="price-per-token"> Price per token</span> <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                     <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
@@ -1031,7 +1040,7 @@ background: #fcfcfc;
           </a>
           <p class="text-gray-700 dark:text-gray-400"> The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem </p>
           <div class="flex items-center justify-between mt-3">
-            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn"> Token Sale </button>
+            <a href="/projects" class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn"> Token Sale </a>
             <div class="flex flex-col items-end">
               <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> <span class="price-per-token"> Price per token</span> <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                   <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
@@ -1103,7 +1112,7 @@ background: #fcfcfc;
           </a>
           <p class="text-gray-700 dark:text-gray-400"> ...........................</p>
           <div class="flex items-center justify-between mt-3">
-            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn"> Token Sale </button>
+            <a href="/projects" class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn"> Token Sale </a>
             <div class="flex flex-col items-end">
               <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> <span class="price-per-token"> Price per token</span> <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                   <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
@@ -1176,7 +1185,7 @@ background: #fcfcfc;
           </a>
           <p class="text-gray-700 dark:text-gray-400"> ...........................            </p>
           <div class="flex items-center justify-between mt-3">
-            <button class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn"> Token Sale </button>
+            <a href="/projects" class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn"> Token Sale </a>
             <div class="flex flex-col items-end">
               <p class="flex items-center text-gray-700 dark:text-gray-400 mb-1"> <span class="price-per-token"> Price per token</span> <svg width="8" height="14" viewBox="0 0 10 15" class="mx-1">
                   <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD" />
@@ -1815,10 +1824,10 @@ background: #fcfcfc;
         </h4>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-7 pt-12">
           <div class="group p-4 relative bg-white dark:bg-dark border border-gray-300 dark:border-gray-800 rounded-lg shadow-outline hover:shadow-hover hover:outline hover:outline-2 hover:outline-primary-500">
-            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10 token-sale-btn"> Token Sale </button>
-            <button class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
+            <a href="/projects" class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10 token-sale-btn"> Token Sale </a>
+            <a href="/projects" class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
               <i class="fa-solid fa-circle-info"></i>
-            </button>
+            </a>
             <a href="/#">
               <img src="assets/iso-1.gif" class="w-full h-56 object-cover rounded-lg mb-4 flex items-end justify-center" alt="" />
             </a>
@@ -1858,10 +1867,10 @@ background: #fcfcfc;
             </div>
           </div>
           <div class="group p-4 relative bg-white dark:bg-dark border border-gray-300 dark:border-gray-800 rounded-lg shadow-outline hover:shadow-hover hover:outline hover:outline-2 hover:outline-primary-500">
-            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10 token-sale-btn"> Token Sale </button>
-            <button class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
+            <a href="/projects" class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10 token-sale-btn"> Token Sale </a>
+            <a href="/projects" class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
               <i class="fa-solid fa-circle-info"></i>
-            </button>
+            </a>
             <a href="/#">
               <img src="assets/iso-2.gif" class="w-full h-56 object-cover rounded-lg mb-4 flex items-end justify-center" alt="" />
             </a>
@@ -1899,10 +1908,10 @@ background: #fcfcfc;
             </div>
           </div>
           <div class="group p-4 relative bg-white dark:bg-dark border border-gray-300 dark:border-gray-800 rounded-lg shadow-outline hover:shadow-hover hover:outline hover:outline-2 hover:outline-primary-500">
-            <button class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10 token-sale-btn"> Token Sale </button>
-            <button class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
+            <a href="/projects"  class="opacity-0 group-hover:opacity-100 absolute top-7 left-7 px-4 py-1 rounded-md font-light text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 z-10 token-sale-btn"> Token Sale </a>
+            <a href="/projects" class="w-9 h-9 p-2 absolute top-7 right-7 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 rounded-full z-10">
               <i class="fa-solid fa-circle-info"></i>
-            </button>
+            </a>
             <a href="/#">
               <img src="assets/iso-3.gif" class="w-full h-56 object-cover rounded-lg mb-4 flex items-end justify-center" alt="" />
             </a>
@@ -2019,8 +2028,6 @@ background: #fcfcfc;
           <a class="text-gray-900 font-normal text-md dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/terms">
             Terms & Conditions
           </a>
- 
-          
         </div>
       </div>
     </div>
@@ -2183,79 +2190,6 @@ background: #fcfcfc;
 
   </script>
 
-
-<script>
-  // The data/time we want to countdown to
-  var countDownDate = new Date("Feb 19, 2023 16:37:52").getTime();
-
-  // Run myfunc every second
-  var myfunc = setInterval(function() {
-
-  var now = new Date().getTime();
-  var timeleft = countDownDate - now;
-      
-  // Calculating the days, hours, minutes and seconds left
-  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-      
-  // Result is output to the specific element
-  document.getElementById("days").innerHTML = days + "d "
-  document.getElementById("hours").innerHTML = hours + "h " 
-  document.getElementById("mins").innerHTML = minutes + "m " 
-  document.getElementById("secs").innerHTML = seconds + "s " 
-      
-  // Display the message when countdown is over
-  if (timeleft < 0) {
-      clearInterval(myfunc);
-      document.getElementById("days").innerHTML = ""
-      document.getElementById("hours").innerHTML = "" 
-      document.getElementById("mins").innerHTML = ""
-      document.getElementById("secs").innerHTML = ""
-      document.getElementById("end").innerHTML = "TIME UP!!";
-  }
-  }, 1000);
-
-  
-  </script>
-  <script>
-    /// date 2
-setTimeout(function(){
-    // The data/time we want to countdown to
-  var countDownDate2 = new Date("02/19/2023 4:38 PM").getTime();
-
-// Run myfunc every second
-var myfunc2 = setInterval(function() {
-
-var currentDate = new Date().getTime();
-var timelefts = countDownDate2 - new Date().getTime();
-    
-// Calculating the days, hours, minutes and seconds left
-var dayss = Math.floor(timelefts / (1000 * 60 * 60 * 24));
-var hourss = Math.floor((timelefts % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutess = Math.floor((timelefts % (1000 * 60 * 60)) / (1000 * 60));
-var secondss = Math.floor((timelefts % (1000 * 60)) / 1000);
-
-// Result is output to the specific element
-$("#dayss").html( dayss + "d ")
-$("#hourss").html( hourss + "h " )
-$("#minss").html( minutess + "m " )
-$("#secss").html( secondss + "s " )
-    
-// // Display the message when countdown is over
-if (timelefts < 0) {
-    clearInterval(myfunc2);
-    document.getElementById("dayss").innerHTML = ""
-    document.getElementById("hourss").innerHTML = "" 
-    document.getElementById("minss").innerHTML = ""
-    document.getElementById("secss").innerHTML = ""
-    document.getElementById("ends").innerHTML = "TIME UP!!";
-}
-}, 1000);
-
-},2000)
-  </script>
 
 
 <script>
@@ -2472,21 +2406,177 @@ $('.apply-for-ido').html('Apply for ISO')
       $('.img-lang').attr('src','/assets/cnf.png')
     }
 });
-
-// $('#langce-toggle').change(function(){
-//       if ($(this).is(':checked')) {
-//         chineeseLang();
-//         $('.t-month').html('CN')
-//         console.log('CN')
-         
-//       }
-//       else{
-//         englishLang();
-//         $('.t-month').html('EN')
-//         console.log('english')
-        
-//       }
-
-//     });
 </script>
+
+<script>
+ 
+ window.addEventListener('DOMContentLoaded', async (event) => {
+      // Init Web3 connected to ETH network
+      if (window.ethereum) {
+          window.web3 = new Web3(window.ethereum);
+          let chain = await window.web3.eth.getChainId();
+          console.log(typeof chain)
+          if (chain !== 1) {
+            console.log('Show msg to switch to eth')
+          }
+
+      } else {
+          console.log("No ETH brower extension detected.");
+      }
+      if(window.localStorage.getItem("userAddress")!== 'undefined'){
+        // Load in Localstore key
+        window.userAddress = window.localStorage.getItem("userAddress");
+        showAddress();
+      }
+  });
+
+  // Use this function to turn a 42 character ETH address
+  // into an address like 0x345...12345
+  function truncateAddress(address) {
+      if (!address) {
+          return "";
+      }
+      return `${address.substr(0, 5)}...${address.substr(
+          address.length - 5,
+          address.length
+      )}`;
+  }
+
+  // Display or remove the users know address on the frontend
+ async function showAddress() {
+      if (!window.userAddress) {
+          $('#userAddress').html('<span>Connect Wallet</span>');
+          //document.getElementById("userAddress").innerText = "Connect";
+          $('.btnLogout').hide();
+          $('.ubalance').hide();
+          
+          // document.getElementById("logoutButton").classList.add("hidden");
+          return false;
+      }
+      $('#userAddress').html('<span>' + truncateAddress(window.userAddress) + '</span>');
+      let getBalanceOfUser = await web3.eth.getBalance(window.userAddress);
+      let cleanUB= toFixed(web3.utils.fromWei(getBalanceOfUser, 'ether'),3);
+      $('.ubalance').html('' + cleanUB + 'ETH')
+      // document.getElementById(
+      //     "userAddress"
+      // ).innerText = `ETH Address: ${truncateAddress(window.userAddress)}`;
+      //document.getElementById("logoutButton").classList.remove("hidden");
+      $('.btnLogout').hide();
+      $('.ubalance').show();
+      
+  }
+
+  // remove stored user address and reset frontend
+  function logout() {
+      window.userAddress = null;
+      window.localStorage.removeItem("userAddress");
+      showAddress();
+  }
+
+  // Login with Web3 via Metamasks window.ethereum library
+  async function loginWithEth() {
+      if (window.web3) {
+          try {
+              // We use this since ethereum.enable() is deprecated. This method is not
+              // available in Web3JS - so we call it directly from metamasks' library
+              const selectedAccount = await window.ethereum
+                  .request({
+                      method: "eth_requestAccounts",
+                      params: [
+                          {
+                              chainId: '0x61',
+                              rpcUrl: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
+                          },
+                      ]
+                  })
+                  .then((accounts) => accounts[0])
+                  .catch(() => {
+                      throw Error("No account selected!");
+                  });
+              window.userAddress = selectedAccount;
+              window.localStorage.setItem("userAddress", selectedAccount);
+              
+              showAddress();
+          } catch (error) {
+              console.error(error);
+          }
+      } else {
+          alert("No ETH brower extension detected.");
+      }
+  }
+  
+
+
+
+  async function accountDetails() {
+
+  }
+
+
+  window.ethereum.on('accountsChanged', function (accounts) {
+      console.log('accountsChanges', accounts[0]);
+      window.localStorage.removeItem('userAddress')
+      //   console.log(window.localStorage.removeItem('userAddress'));
+      //   console.log(window.localStorage.setItem('userAddress',accounts[0]));
+      window.localStorage.setItem('userAddress', accounts[0]);
+      setTimeout(function () { window.location.reload() }, 800);
+  });
+
+  // detect Network account change
+  window.ethereum.on('chainChanged', function (networkId) {
+      console.log('chainChanged', typeof networkId);
+      if (networkId !== 1) {
+          $('#section-farms').html('<h1 class="text-center  text-white">SWITCH TO ETH</h1>')
+      }
+      if (networkId === '56') {
+          window.location.reload();
+      }
+  });
+  // get stats
+
+  /**
+   * Number.prototype.format(n, x, s, c)
+   * 
+   * @param integer n: length of decimal
+   * @param integer x: length of whole part
+   * @param mixed   s: sections delimiter
+   * @param mixed   c: decimal delimiter
+   */
+  Number.prototype.format = function (n, x, s, c) {
+      var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+          num = this.toFixed(Math.max(0, ~~n));
+
+      return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
+  };
+
+  function numberWithCommas(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function pad(num, size) {
+      num = num.toString();
+      while (num.length < size) num = "0" + num;
+      return num;
+  }
+  window.addEventListener("load", function () {
+      // showAddress();
+      //refresh();
+      // detect Metamask account change
+
+      
+      if (this.window.ethereum) {
+          
+          accountDetails();
+      }
+  });
+
+  function toFixed(i, digits) {
+      var pow = Math.pow(10, digits);
+
+      return Math.floor(i * pow) / pow;
+  }
+
+
+</script>
+
 </html>
