@@ -395,7 +395,8 @@ background: #fcfcfc;
          
           <li class="mr-4 hidden lg:block">
             <a href="javascrript:void(0)" id="userAddress" onclick="loginWithEth()"
-                                        style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2 connectwallet-btn-zh connectwallet-btn-zh text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg"><span>
+                                        style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2  text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
+                                        <span class="connectwallet-btn-zh">
                                             Connect Wallet</span></a>
                                             <li class="profileDRPD" style="display:none;">
                                               <div data-action-type="click" data-target-element="profile-dropdown" class="dropdown relative">
@@ -2352,8 +2353,8 @@ function chineeseLang(){
   let walletBTNTXT = "连接钱包";
       if(window.localStorage.getItem("userAddress")!== 'undefined'){
           // Load in Localstore key
-          walletBTNTXT =truncateAddress(window.localStorage.getItem("userAddress"));
-          $(".connectwallet-btn-zh").html(walletBTNTXT)
+          
+          $(".connectwallet-btn-zh").html(truncateAddress(window.localStorage.getItem("userAddress")))
         }
         if(window.localStorage.getItem("userAddress")=== 'undefined'){
           
@@ -2421,8 +2422,8 @@ function englishLang(){
   let walletBTNTXT = "Connect Wallet";
       if(window.localStorage.getItem("userAddress")!== 'undefined'){
           // Load in Localstore key
-          walletBTNTXT = truncateAddress(window.localStorage.getItem("userAddress"));
-          $(".connectwallet-btn-zh").html(walletBTNTXT)
+          
+          $(".connectwallet-btn-zh").html(truncateAddress(window.localStorage.getItem("userAddress")))
         }
         if(window.localStorage.getItem("userAddress")=== 'undefined'){
           
@@ -2542,7 +2543,8 @@ $('.apply-for-ido').html('Apply for ISO')
   // Display or remove the users know address on the frontend
  async function showAddress() {
       if (!window.userAddress) {
-          $('#userAddress').html('<span>Connect Wallet</span>');
+        
+          $('#userAddress').html('<span class="connectwallet-btn-zh">Connect Wallet</span>');
           //document.getElementById("userAddress").innerText = "Connect";
           $('.btnLogout').hide();
           $('.ubalance').hide();
@@ -2552,7 +2554,7 @@ $('.apply-for-ido').html('Apply for ISO')
           // document.getElementById("logoutButton").classList.add("hidden");
           return false;
       }
-      $('#userAddress').html('<span>' + truncateAddress(window.userAddress) + '</span>');
+      $('#userAddress').html('<span  class="connectwallet-btn-zh">' + truncateAddress(window.userAddress) + '</span>');
       $('.theUAddrr').html('<span>' + truncateAddress(window.userAddress) + '</span>');
       
       let getBalanceOfUser = await web3.eth.getBalance(window.userAddress);
