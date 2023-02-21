@@ -328,11 +328,11 @@ background: #fcfcfc;
               </div>
             </div>
           </li>
-          <li class="py-2 px-6">
+          <!-- <li class="py-2 px-6">
             
             
             <button  type="button" class="connectwallet-btn-zh text-white whitespace-nowrap text-sm px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md"> Connect Wallet </button>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -391,17 +391,90 @@ background: #fcfcfc;
       </div>
       <div class="flex items-center">
         <ul class="flex items-center">
+          
+         
           <li class="mr-4 hidden lg:block">
             <a href="javascrript:void(0)" id="userAddress" onclick="loginWithEth()"
-                                        style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2 connectwallet-btn-zh text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg"><span>
+                                        style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2 connectwallet-btn-zh connectwallet-btn-zh text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg"><span>
                                             Connect Wallet</span></a>
-                                            <a href="javascrript:void(0)" onclick="logout()"
-                                            style="margin-bottom: 10px; display:none;font-weight: 900;" class="btnM2 btnLogout font-bold text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"><span>
-                                                Disconnect</span></a>
-                                                <span style="font-weight:900;color:#f30000;display:none" class="ubalance ml-2"></span>
+                                            <li class="profileDRPD" style="display:none;">
+                                              <div data-action-type="click" data-target-element="profile-dropdown" class="dropdown relative">
+                                                <img alt="" src="/pfp.png" class="w-7 h-7 ml-4 rounded-full outline outline-1 outline-white cursor-pointer" />
+                                                <div id="profile-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute -right-3 top-6 transition-all h-full invisible opacity-0 z-0 pt-0">
+                                                  <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 w-[216px] shadow-drop">
+                                                    <div class="absolute -top-3 right-2 overflow-hidden inline-block">
+                                                      <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                                                    </div>
+                                                    <div class="px-5 py-3 pt-7">
+                                                      <small class="text-primary-500">SHIBARIUM PAD</small>
+                                                      <div class="my-3 border-b border-gray-300"></div>
+                                                      <div class="flex items-center my-3">
+                                                        
+                                                        <div>
+                                                          <p class="font-semibold text-gray-900 dark:text-gray-400"> Balance </p>
+                                                          <small class="text-gray-700 dark:text-gray-600 ubalance">20.25 ETH</small>
+                                                        </div>
+                                                      </div>
+                                                      <div>
+                                                        <p class="font-semibold text-gray-900 dark:text-gray-400"> My Wallet </p>
+                                                        <div class="flex justify-between">
+                                                          <div>
+                                                            <small class="text-gray-700 dark:text-gray-600 theUAddrr"></small>
+                                                          </div>
+                                                          <button style="padding: 2px 7px" class="rounded-md text-xs flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Copy </button>
+                                                        </div>
+                                                      </div>
+                                                      <div class="my-3 border-b border-gray-300"></div>
+                                                      <ul>
+                                                      
+                                                        <li class="flex">
+                                                        
+                                                            <a href="javascrript:void(0)" onclick="logout()"
+                                                            style="margin-bottom: 10px; display:none;font-weight: 900;" class="btnM2 btnLogout  text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"><span>
+                                                                Disconnect</span></a>
+                                                        </li>
+                                                      </ul>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>
+                                           
+                                                <span style="font-weight:900;color:#f30000;display:none" class=" ml-2"></span>
+                                                <span style="font-weight:900;color:#f30000;display:none" class="shibpbalance ml-2 mr-2">0 $SHIBP</span>
+                                                
             <!-- <a style="   padding: 0.7rem; " href="#" class=" "> Connect Wallet  </a> -->
           </li>
-          
+          <li class="">
+            <div data-action-type="hover" data-target-element="network-dropdown" class="dropdown relative">
+              <button class=" group  text-sm flex justify-between items-center text-gray-900 font-normal  dark:text-white hover:text-primary-500 dark:hover:text-primary-500"> 
+                <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <svg width="10" height="16" viewBox="0 0 10 15" class="mx-1">
+                    <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD"></path>
+                    <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265"></path>
+                    <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265"></path>
+                    <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022"></path>
+                    <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B"></path>
+                    <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022"></path>
+                  </svg>   Ethereum  <i class="fa-solid fa-caret-down ml-3"></i></a>
+              </button>
+              <div id="network-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute top-5 transition-all h-full invisible opacity-0 z-0 pt-0">
+                <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 w-[216px] shadow-drop">
+                  <div class="absolute -top-3 left-4 overflow-hidden inline-block">
+                    <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                  </div>
+                  <ul class="py-2">
+                   
+                    <li>
+                      <a style="coloor:gray" aria-disabled="true" disabled href="/" class="group text-sm py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <img src="assets/11865.png" style="filter:grayscale(1);width:20px;margin-right:2px" alt="">  Shibarim  </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
           <style>
 
 .toggle-inner input {
@@ -475,7 +548,7 @@ background: #fcfcfc;
 	height: 100vh;
 }
           </style>
-          <li style="display:flex">
+          <li style="display:flex" class="ml-3">
             <a href="javascript:void(0)" id="langce-toggle"  class="t-month"><img style="width:28px" class="img-lang" data-language="en"  src="/assets//cnf.png" alt=""></a>
             <!-- <div class="toggle-inner dark:border-gray-4002">
               <input id="ce-toggle" type="checkbox">
@@ -2276,14 +2349,25 @@ setTimeout(function(){
 },2000)
 
 function chineeseLang(){
-  
+  let walletBTNTXT = "连接钱包";
+      if(window.localStorage.getItem("userAddress")!== 'undefined'){
+          // Load in Localstore key
+          walletBTNTXT =truncateAddress(window.localStorage.getItem("userAddress"));
+          $(".connectwallet-btn-zh").html(walletBTNTXT)
+        }
+        if(window.localStorage.getItem("userAddress")=== 'undefined'){
+          
+          walletBTNTXT = "连接钱包"; 
+          $(".connectwallet-btn-zh").html('连接钱包')
+        }
+   
   $(".launch-pad").html("主页面")
   $('.get-early-access-header').html(`尽早获得<span class=\"text-primary-500 bg-contain bg-no-repeat\" style=\"background-image: url('assets/img/logo/nft-text-bg2.png');\">Shibarium</span>上最伟大的项目。`)
   $(".home-btn").html("主页面")
   $(".whitepaper-btn").html("白皮书")
   $(".howtobuy-btn").html("如何购买")
   $(".socials-btn").html(`社交网络 <i class="fa-solid fa-caret-down ml-3"></i>`)
-  $(".connectwallet-btn-zh").html("连接钱包")
+  
   $('.trustworty').html('值得信赖的<b class="main-color">Shibarium</b>项目，经过了严格的审查。由整个行业的知名人士和有影响力的人支持。')
   $('.getstarted-btn').html('开始吧')
   $('.create-btn').html('应用')
@@ -2334,14 +2418,25 @@ $('.apply-for-ido').html('申请加入ISO')
 
 
 function englishLang(){
-  
+  let walletBTNTXT = "Connect Wallet";
+      if(window.localStorage.getItem("userAddress")!== 'undefined'){
+          // Load in Localstore key
+          walletBTNTXT = truncateAddress(window.localStorage.getItem("userAddress"));
+          $(".connectwallet-btn-zh").html(walletBTNTXT)
+        }
+        if(window.localStorage.getItem("userAddress")=== 'undefined'){
+          
+          walletBTNTXT = ""; 
+          $(".connectwallet-btn-zh").html('Connect Wallet')
+        }
+        
   $(".launch-pad").html("LAUNCH PAD")
   $('.get-early-access-header').html(`Get early access to the <span class="text-primary-500 bg-contain bg-no-repeat" style="background-image: url('assets/img/logo/nft-text-bg2.png');">  greatest projects </span>  on Shibarium.`)
   $(".home-btn").html("Home")
   $(".whitepaper-btn").html("Whitepaper")
   $(".howtobuy-btn").html("How to buy")
   $(".socials-btn").html(`Socials <i class="fa-solid fa-caret-down ml-3"></i>`)
-  $(".connectwallet-btn-zh").html("Connect Wallet")
+  
   $('.trustworty').html(' Trustworthy <b class="main-color">Shibarium Projects</b> that have undergone rigorous vetting. Backed by prominent individuals and influencers across the industry.')
   $('.getstarted-btn').html('Launch DAPP')
   $('.create-btn').html('Apply ISO')
@@ -2398,12 +2493,14 @@ $('.apply-for-ido').html('Apply for ISO')
       console.log('UKKKKK') 
       $('.img-lang').attr('data-language','cn')
       $('.img-lang').attr('src','/assets/enf.png')
+     
     }
    if(currentLang === "cn"){
       englishLang();    
       console.log('CHINNNA') 
       $('.img-lang').attr('data-language','en')
       $('.img-lang').attr('src','/assets/cnf.png')
+      
     }
 });
 </script>
@@ -2449,20 +2546,27 @@ $('.apply-for-ido').html('Apply for ISO')
           //document.getElementById("userAddress").innerText = "Connect";
           $('.btnLogout').hide();
           $('.ubalance').hide();
+          $('.shibpbalance').hide();
+          $('.profileDRPD').hide();
           
           // document.getElementById("logoutButton").classList.add("hidden");
           return false;
       }
       $('#userAddress').html('<span>' + truncateAddress(window.userAddress) + '</span>');
+      $('.theUAddrr').html('<span>' + truncateAddress(window.userAddress) + '</span>');
+      
       let getBalanceOfUser = await web3.eth.getBalance(window.userAddress);
       let cleanUB= toFixed(web3.utils.fromWei(getBalanceOfUser, 'ether'),3);
-      $('.ubalance').html('' + cleanUB + 'ETH')
+      $('.ubalance').html('' + cleanUB + ' ETH')
       // document.getElementById(
       //     "userAddress"
       // ).innerText = `ETH Address: ${truncateAddress(window.userAddress)}`;
       //document.getElementById("logoutButton").classList.remove("hidden");
-      $('.btnLogout').hide();
+      $('.btnLogout').show();
       $('.ubalance').show();
+      $('.shibpbalance').show();
+      $('.profileDRPD').show();
+      
       
   }
 
