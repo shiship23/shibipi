@@ -394,13 +394,16 @@ background: #fcfcfc;
           
          
           <li class="mr-4 hidden lg:block">
-            <a href="javascrript:void(0)" id="userAddress" onclick="loginWithEth()"
-                                        style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2  text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
+            <a href="javascrript:void(0)" id="userAddress " onclick="loginWithEth()"
+                                        style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2 uidADRNotConnected  text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
                                         <span class="connectwallet-btn-zh">
                                             Connect Wallet</span></a>
                                             <li class="profileDRPD" style="display:none;">
                                               <div data-action-type="click" data-target-element="profile-dropdown" class="dropdown relative">
-                                                <img alt="" src="/pfp.png" class="w-7 h-7 ml-4 rounded-full outline outline-1 outline-white cursor-pointer" />
+                                                <a href="javascrript:void(0)" id="userAddress" onclick="loginWithEth()"
+                                                style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2  text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
+                                                <span class="connectwallet-btn-zh">
+                                                    Connect Wallet</span></a>
                                                 <div id="profile-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute -right-3 top-6 transition-all h-full invisible opacity-0 z-0 pt-0">
                                                   <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 w-[216px] shadow-drop">
                                                     <div class="absolute -top-3 right-2 overflow-hidden inline-block">
@@ -442,10 +445,10 @@ background: #fcfcfc;
                                             </li>
                                             <span style="font-weight:900;color:#f30000;display:none" class=" ml-2"></span>
                                             
-                                            <li>
+                                            <li class="shibpbalance" style="display:none">
                                               <div data-action-type="click" data-target-element="notification-dropdown" class="dropdown relative">
                                                
-                                               <small style="cursor:pointer">   <span style="font-weight:900;color:#f30000;display:none" class="shibpbalance ml-2 mr-2">0 $SHIBP</span>
+                                               <small style="cursor:pointer">   <span style="font-weight:900;color:#f30000;" class=" ml-2 mr-2">0 $SHIBP</span>
                                                   <i class="fa-solid fa-caret-down "></i>
                                                 </small>
                                                 <div id="notification-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute -right-3 top-6 transition-all h-full invisible opacity-0 z-0 pt-0">
@@ -497,7 +500,7 @@ background: #fcfcfc;
                                                         <small class="text-gray-600 dark:text-gray-600 text-xs"> 0 </small>
                                                       </div>
                                                       <div class="flex items-center justify-between cursor-pointer border-t border-gray-200 dark:border-gray-800 pt-4 pb-3">
-                                                       <a href="/stake" class="  text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
+                                                       <a href="/stake" class=" mx-auto text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
                                                         Go to Dashboard
                                                        </a>
                                                       </div>
@@ -2632,6 +2635,7 @@ $('.apply-for-ido').html('Apply for ISO')
       $('.ubalance').show();
       $('.shibpbalance').show();
       $('.profileDRPD').show();
+      $('.uidADRNotConnected').hide()
       
       
   }
@@ -2640,6 +2644,7 @@ $('.apply-for-ido').html('Apply for ISO')
   function logout() {
       window.userAddress = null;
       window.localStorage.removeItem("userAddress");
+      $('.uidADRNotConnected').show()
       showAddress();
   }
 
