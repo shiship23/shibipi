@@ -43,7 +43,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/x-icon" href="assets/img/logo/Logo.png" />
   
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"
+        integrity="sha512-5erpERW8MxcHDF7Xea9eBQPiRtxbse70pFcaHJuOhdEBQeAxGQjUwgJbuBDWve+xP/u5IoJbKjyJk50qCnMD7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/plugin-css/splide.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/plugin-css/preloader.css" />
@@ -325,11 +327,11 @@ background: #fcfcfc;
               </div>
             </div>
           </li>
-          <li class="py-2 px-6">
+          <!-- <li class="py-2 px-6">
             
             
             <button  type="button" class="connectwallet-btn-zh text-white whitespace-nowrap text-sm px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md"> Connect Wallet </button>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -388,11 +390,158 @@ background: #fcfcfc;
       </div>
       <div class="flex items-center">
         <ul class="flex items-center">
-          <li class="mr-4 hidden lg:block">
-            
-            <a style="    padding: 0.7rem;" href="#" class=" connectwallet-btn-zh text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg"> Connect Wallet  </a>
-          </li>
           
+         
+          <li class="mr-4 hidden lg:block">
+            <a href="javascrript:void(0)" id="userAddress " onclick="loginWithEth()"
+                                        style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2 uidADRNotConnected  text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
+                                        <span class="connectwallet-btn-zh">
+                                            Connect Wallet</span></a>
+                                            <li class="profileDRPD" style="display:none;">
+                                              <div data-action-type="click" data-target-element="profile-dropdown" class="dropdown relative">
+                                                <a href="javascrript:void(0)" id="userAddress" onclick="loginWithEth()"
+                                                style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2  text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
+                                                <span class="connectwallet-btn-zh">
+                                                    Connect Wallet</span></a>
+                                                <div id="profile-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute -right-3 top-6 transition-all h-full invisible opacity-0 z-0 pt-0">
+                                                  <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 w-[216px] shadow-drop">
+                                                    <div class="absolute -top-3 right-2 overflow-hidden inline-block">
+                                                      <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                                                    </div>
+                                                    <div class="px-5 py-3 pt-7">
+                                                      <small class="text-primary-500">SHIBARIUM PAD</small>
+                                                      <div class="my-3 border-b border-gray-300"></div>
+                                                      <div class="flex items-center my-3">
+                                                        
+                                                        <div>
+                                                          <p class="font-semibold text-gray-900 dark:text-gray-400"> Balance </p>
+                                                          <small class="text-gray-700 dark:text-gray-600 ubalance">20.25 ETH</small>
+                                                        </div>
+                                                      </div>
+                                                      <div>
+                                                        <p class="font-semibold text-gray-900 dark:text-gray-400"> My Wallet </p>
+                                                        <div class="flex justify-between">
+                                                          <div>
+                                                            <small class="text-gray-700 dark:text-gray-600 theUAddrr"></small>
+                                                          </div>
+                                                          <button style="padding: 2px 7px" class="rounded-md text-xs flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Copy </button>
+                                                        </div>
+                                                      </div>
+                                                      <div class="my-3 border-b border-gray-300"></div>
+                                                      <ul>
+                                                      
+                                                        <li class="flex">
+                                                        
+                                                            <a href="javascrript:void(0)" onclick="logout()"
+                                                            style="margin-bottom: 10px; display:none;font-weight: 900;" class="btnM2 btnLogout  text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"><span>
+                                                                Disconnect</span></a>
+                                                        </li>
+                                                      </ul>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>
+                                            <span style="font-weight:900;color:#f30000;display:none" class=" ml-2"></span>
+                                            
+                                            <li class="shibpbalance" style="display:none">
+                                              <div data-action-type="click" data-target-element="notification-dropdown" class="dropdown relative">
+                                               
+                                               <small style="cursor:pointer">   <span style="font-weight:900;color:#f30000;" class=" ml-2 mr-2">0 $SHIBP</span>
+                                                  <i class="fa-solid fa-caret-down "></i>
+                                                </small>
+                                                <div id="notification-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute -right-3 top-6 transition-all h-full invisible opacity-0 z-0 pt-0">
+                                                  <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 md:w-[320px] shadow-drop">
+                                                    <div class="absolute -top-3 right-2 overflow-hidden inline-block">
+                                                      <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                                                    </div>
+                                                    <div class="p-4">
+                                                      <div class="flex items-center justify-between mb-2">
+                                                        <p class="text-md font-medium text-gray-900 dark:text-white"> Your SHIBP Power </p>
+                                                        
+                                                      </div>
+                                                      <div class="flex items-center justify-between cursor-pointer border-t border-gray-200 dark:border-gray-800 pt-4 pb-3">
+                                                        <div class="flex items-center">
+                                                         
+                                                          <div>
+                                                            <p class="text-gray-900 dark:text-white text-sm font-normal"> SHIBP Staked
+
+                                                               <span class="text-gray-600 dark:text-gray-600"></span>
+                                                            </p>
+                                                            <p class="text-primary-500 text-sm font-normal"> </p>
+                                                          </div>
+                                                        </div>
+                                                        <small class="text-gray-600 dark:text-gray-600 text-xs"> 0 </small>
+                                                      </div>
+                                                      <div class="flex items-center justify-between cursor-pointer border-t border-gray-200 dark:border-gray-800 pt-4 pb-3">
+                                                        <div class="flex items-center">
+                                                         
+                                                          <div>
+                                                            <p class="text-gray-900 dark:text-white text-sm font-normal"> SHIBP Deposited
+
+                                                               <span class="text-gray-600 dark:text-gray-600"></span>
+                                                            </p>
+                                                            <p class="text-primary-500 text-sm font-normal"> </p>
+                                                          </div>
+                                                        </div>
+                   
+                                                        <small class="text-gray-600 dark:text-gray-600 text-xs"> 0 </small>
+                                                      </div>
+                                                      <div class="flex items-center justify-between cursor-pointer border-t border-gray-200 dark:border-gray-800 pt-4">
+                                                        <div class="flex items-center">
+                                                          
+                                                          <div>
+                                                            <p class="text-primary-500 dark:text-white text-sm font-normal"> Total SHIBP Power <span class="text-gray-600 dark:text-gray-600">  </span>
+                                                            </p>
+                                                            <p class="text-gray-600 dark:text-gray-600 text-sm font-normal">  </p>
+                                                          </div>
+                                                        </div>
+                                                        <small class="text-gray-600 dark:text-gray-600 text-xs"> 0 </small>
+                                                      </div>
+                                                      <div class="flex items-center justify-between cursor-pointer border-t border-gray-200 dark:border-gray-800 pt-4 pb-3">
+                                                       <a href="/stake" class=" mx-auto text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
+                                                        Go to Dashboard
+                                                       </a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>
+                                              
+                                                
+            <!-- <a style="   padding: 0.7rem; " href="#" class=" "> Connect Wallet  </a> -->
+          </li>
+          <li class="">
+            <div data-action-type="hover" data-target-element="network-dropdown" class="dropdown relative">
+              <button class=" group  text-sm flex justify-between items-center text-gray-900 font-normal  dark:text-white hover:text-primary-500 dark:hover:text-primary-500"> 
+                <a href="javascript:void(0)" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <svg width="10" height="16" viewBox="0 0 10 15" class="mx-1">
+                    <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD"></path>
+                    <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265"></path>
+                    <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265"></path>
+                    <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022"></path>
+                    <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B"></path>
+                    <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022"></path>
+                  </svg>   Ethereum  <i class="fa-solid fa-caret-down ml-3"></i></a>
+              </button>
+              <div id="network-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute top-5 transition-all h-full invisible opacity-0 z-0 pt-0">
+                <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 w-[216px] shadow-drop">
+                  <div class="absolute -top-3 left-4 overflow-hidden inline-block">
+                    <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                  </div>
+                  <ul class="py-2">
+                   
+                    <li>
+                      <a style="coloor:gray" aria-disabled="true" disabled href="javascript:void(0)" class="group text-sm py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <img src="assets/11865.png" style="filter:grayscale(1);width:20px;margin-right:2px" alt="">  Shibarim  </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
           <style>
 
 .toggle-inner input {
@@ -466,7 +615,7 @@ background: #fcfcfc;
 	height: 100vh;
 }
           </style>
-          <li style="display:flex">
+          <li style="display:flex" class="ml-3">
             <a href="javascript:void(0)" id="langce-toggle"  class="t-month"><img style="width:28px" class="img-lang" data-language="en"  src="/assets//cnf.png" alt=""></a>
             <!-- <div class="toggle-inner dark:border-gray-4002">
               <input id="ce-toggle" type="checkbox">
@@ -503,6 +652,7 @@ background: #fcfcfc;
       </div>
     </div>
   </nav>
+  
   
   
   <div class="bg-gray-25 dark:bg-gray-900 relative">
@@ -1050,5 +1200,208 @@ $('.apply-for-ido').html('Apply for ISO')
 //       }
 
 //     });
+</script>
+
+<script>
+  $('.img-lang').click(function(event) {
+    
+    let currentLang  = $('.img-lang').attr('data-language')
+    console.log('????',currentLang) 
+    if(currentLang === "en"){
+      chineeseLang();
+      console.log('UKKKKK') 
+      $('.img-lang').attr('data-language','cn')
+      $('.img-lang').attr('src','/assets/enf.png')
+     
+    }
+   if(currentLang === "cn"){
+      englishLang();    
+      console.log('CHINNNA') 
+      $('.img-lang').attr('data-language','en')
+      $('.img-lang').attr('src','/assets/cnf.png')
+      
+    }
+});
+</script>
+
+<script>
+ 
+ window.addEventListener('DOMContentLoaded', async (event) => {
+      // Init Web3 connected to ETH network
+      if (window.ethereum) {
+          window.web3 = new Web3(window.ethereum);
+          let chain = await window.web3.eth.getChainId();
+          console.log(typeof chain)
+          if (chain !== 1) {
+            console.log('Show msg to switch to eth')
+          }
+
+      } else {
+          console.log("No ETH brower extension detected.");
+      }
+      if(window.localStorage.getItem("userAddress")!== 'undefined'){
+        // Load in Localstore key
+        window.userAddress = window.localStorage.getItem("userAddress");
+        showAddress();
+      }
+  });
+
+  // Use this function to turn a 42 character ETH address
+  // into an address like 0x345...12345
+  function truncateAddress(address) {
+      if (!address) {
+          return "";
+      }
+      return `${address.substr(0, 5)}...${address.substr(
+          address.length - 5,
+          address.length
+      )}`;
+  }
+
+  // Display or remove the users know address on the frontend
+ async function showAddress() {
+      if (!window.userAddress) {
+        
+          $('#userAddress').html('<span class="connectwallet-btn-zh">Connect Wallet</span>');
+          //document.getElementById("userAddress").innerText = "Connect";
+          $('.btnLogout').hide();
+          $('.ubalance').hide();
+          $('.shibpbalance').hide();
+          $('.profileDRPD').hide();
+          
+          // document.getElementById("logoutButton").classList.add("hidden");
+          return false;
+      }
+      $('#userAddress').html('<span  class="connectwallet-btn-zh">' + truncateAddress(window.userAddress) + '</span>');
+      $('.theUAddrr').html('<span>' + truncateAddress(window.userAddress) + '</span>');
+      
+      let getBalanceOfUser = await web3.eth.getBalance(window.userAddress);
+      let cleanUB= toFixed(web3.utils.fromWei(getBalanceOfUser, 'ether'),3);
+      $('.ubalance').html('' + cleanUB + ' ETH')
+      // document.getElementById(
+      //     "userAddress"
+      // ).innerText = `ETH Address: ${truncateAddress(window.userAddress)}`;
+      //document.getElementById("logoutButton").classList.remove("hidden");
+      $('.btnLogout').show();
+      $('.ubalance').show();
+      $('.shibpbalance').show();
+      $('.profileDRPD').show();
+      $('.uidADRNotConnected').hide()
+      
+      
+  }
+
+  // remove stored user address and reset frontend
+  function logout() {
+      window.userAddress = null;
+      window.localStorage.removeItem("userAddress");
+      $('.uidADRNotConnected').show()
+      showAddress();
+  }
+
+  // Login with Web3 via Metamasks window.ethereum library
+  async function loginWithEth() {
+      if (window.web3) {
+          try {
+              // We use this since ethereum.enable() is deprecated. This method is not
+              // available in Web3JS - so we call it directly from metamasks' library
+              const selectedAccount = await window.ethereum
+                  .request({
+                      method: "eth_requestAccounts",
+                      params: [
+                          {
+                              chainId: '0x61',
+                              rpcUrl: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
+                          },
+                      ]
+                  })
+                  .then((accounts) => accounts[0])
+                  .catch(() => {
+                      throw Error("No account selected!");
+                  });
+              window.userAddress = selectedAccount;
+              window.localStorage.setItem("userAddress", selectedAccount);
+              
+              showAddress();
+          } catch (error) {
+              console.error(error);
+          }
+      } else {
+          alert("No ETH brower extension detected.");
+      }
+  }
+  
+
+
+
+  async function accountDetails() {
+
+  }
+
+
+  window.ethereum.on('accountsChanged', function (accounts) {
+      console.log('accountsChanges', accounts[0]);
+      window.localStorage.removeItem('userAddress')
+      //   console.log(window.localStorage.removeItem('userAddress'));
+      //   console.log(window.localStorage.setItem('userAddress',accounts[0]));
+      window.localStorage.setItem('userAddress', accounts[0]);
+      setTimeout(function () { window.location.reload() }, 800);
+  });
+
+  // detect Network account change
+  window.ethereum.on('chainChanged', function (networkId) {
+      console.log('chainChanged', typeof networkId);
+      if (networkId !== 1) {
+          $('#section-farms').html('<h1 class="text-center  text-white">SWITCH TO ETH</h1>')
+      }
+      if (networkId === '56') {
+          window.location.reload();
+      }
+  });
+  // get stats
+
+  /**
+   * Number.prototype.format(n, x, s, c)
+   * 
+   * @param integer n: length of decimal
+   * @param integer x: length of whole part
+   * @param mixed   s: sections delimiter
+   * @param mixed   c: decimal delimiter
+   */
+  Number.prototype.format = function (n, x, s, c) {
+      var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+          num = this.toFixed(Math.max(0, ~~n));
+
+      return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
+  };
+
+  function numberWithCommas(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function pad(num, size) {
+      num = num.toString();
+      while (num.length < size) num = "0" + num;
+      return num;
+  }
+  window.addEventListener("load", function () {
+      // showAddress();
+      //refresh();
+      // detect Metamask account change
+
+      
+      if (this.window.ethereum) {
+          
+          accountDetails();
+      }
+  });
+
+  function toFixed(i, digits) {
+      var pow = Math.pow(10, digits);
+
+      return Math.floor(i * pow) / pow;
+  }
+
+
 </script>
 </html>
