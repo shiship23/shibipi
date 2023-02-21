@@ -149,8 +149,11 @@ background: #ea0d17;
 ::-webkit-scrollbar-thumb {
 background: #fcfcfc;
 }
+.dark:text-green-900{
+  color: #acf557 !important;
+}
     .text-green-900{
-      color: #acf557;
+      color: #acf557 !important;
     }
        .marquee,
       .marquee-with-options,
@@ -919,7 +922,7 @@ background: #fcfcfc;
                     </div>
           
                     <h6 class="text-white py-2 font-light pb-10 what-is-ido"> 
-                      What is an ISO <br/> (Initial Shibarium Offering)?
+                      What is an ISO? <br/> (Initial Shibarium Offering)
                        </h6>
                     
                    
@@ -1225,7 +1228,7 @@ background: #fcfcfc;
                       <p  style="    filter: blur(4px);color: rgba(0, 0, 0, 0);"  class="font-medium text-lg flex items-center text-gray-900 dark:text-white mr-2">
                         Lorem ipsum todor
                       </p>
-                      <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white">   +130% </span>
+                      <small class="text-gray-700 dark:text-gray-400">  <span class="text-green-900 font-medium dark:text-white dark:text-green-900">   +130% </span>
                       </small>
                     </div>
                   </div>
@@ -1958,13 +1961,81 @@ background: #fcfcfc;
   <script src="assets/js/others/plugins-core/splide.js"></script>
   <!-- Page footer -->
   <footer class="bg-white dark:bg-dark">
+    <div class="w-100 w-full text-center">
+      <a href="#" class="flex items-center justify-center md:justify-start mr-10" style="
+    display: block;
+    margin: 0 auto;
+">
+        <img src="assets/img/logo/logorocket.gif" class="mr-3 h-11" alt="naw-nft" style="
+    display: block;
+    margin: 0 auto;
+    height: 5.5rem;
+">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white main-color" style="
+    font-size: 2.5rem;
+"> SHIBARIUM PAD </span>
+      </a>
+      <p class="my-4 text-gray-700 dark:text-white font-normal about-footer" style="
+    font-size: 2rem;
+"> The ultimate Shibarium launchpad. </p>
+    </div>
+    <div class="text-center mb-10 pb-5" style="
+    max-width: 400px;
+    margin: 0 auto;
+">
+      
+      <div style="
+    text-align: center;
+" class="">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-5 links mt-20">  Where to find us? </p>
+        <ul class="text-gray-700 dark:text-white text-sm flex text-center mx-auto" style="
+    display: flex;
+    justify-content: space-around;
+">
+          <li class="py-1" style="
+">
+            <a href="#" class=" text-xl block hover:text-gray-900 dark:hover:text-gray-400">
+              <i class="ml-3 fa-brands fa-twitter"></i> Twitter </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class=" text-xl block hover:text-gray-900 dark:hover:text-gray-400"> 
+              <i class="ml-3 fa-brands fa-telegram"></i>
+              Telegram </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class=" text-xl block hover:text-gray-900 dark:hover:text-gray-400"><i class="ml-3 fa-solid fa-blog mr-2"></i>  Blog </a>
+          </li>
+         
+         
+        
+        </ul>
+      </div>
+    </div>
+    <div class="border-b border-gray-300 dark:border-gray-700"></div>
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-center justify-between">
+        <small class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 dark:text-white font-normal"> Copyright © 2023 Shibarium Pad. All Rights Reserves </small>
+        <div class="pt-2 pb-4 md:py-9 w-full md:w-auto flex items-center justify-center">
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/terms">
+            Terms
+          </a>
+ 
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+    <!-- <footer class="bg-white dark:bg-dark">
+    <div class="w-100 w-full">
+      <a href="#" class="flex items-center justify-center md:justify-start mr-10">
+        <img src="assets/img/logo/logorocket.gif" class="mr-3 h-11" alt="naw-nft" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white main-color"> SHIBARIUM PAD </span>
+      </a>
+      <p class="my-4 text-gray-700 dark:text-white font-normal about-footer"> The ultimate Shibarium launchpad. </p>
+    </div>
     <div class="py-12 container mx-auto grid grid-cols-1 lg:grid-cols-6 gap-4">
       <div class="md:col-span-2 w-full text-center md:text-start mx-auto md:mx-0" style="max-width: 314px">
-        <a href="#" class="flex items-center justify-center md:justify-start mr-10">
-          <img src="assets/img/logo/logorocket.gif" class="mr-3 h-11" alt="naw-nft" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> SHIBARIUM PAD </span>
-        </a>
-        <p class="my-4 text-gray-700 dark:text-white font-normal about-footer"> The fully decentralized protocol for launching new ideas </p>
+       
         <div class="mb-4 mt-9 border-b border-gray-300 dark:border-gray-700"></div>
         <p class="py-1 font-medium text-gray-900 dark:text-white signup-for-newsletter"> Sign up for our newsletter and get the latest news and updates. </p>
         <div class="flex mt-3 mb-7 md:mb-0">
@@ -1973,7 +2044,7 @@ background: #fcfcfc;
         </div>
       </div>
       <div class="md:col-span-1 py-1">
-        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 links"> Links </p>
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 links">  Where to find us? </p>
         <ul class="text-gray-700 dark:text-white text-sm">
           <li class="py-1">
             <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Twitter </a>
@@ -1984,9 +2055,7 @@ background: #fcfcfc;
           <li class="py-1">
             <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Blog </a>
           </li>
-          <li class="py-1">
-            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Youtube </a>
-          </li>
+         
          
         
         </ul>
@@ -1999,7 +2068,7 @@ background: #fcfcfc;
           </li>
           
         </ul>
-      </div>
+      </div> 
       <div class="md:col-span-1 py-1">
         <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 resources"> Resources </p>
         <ul class="text-gray-700 dark:text-white text-sm">
@@ -2048,16 +2117,14 @@ background: #fcfcfc;
             <i class="ml-3 fa-brands fa-telegram"></i>
           </a>
           <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
-            <i class="ml-3 fa-brands fa-medium"></i>
+            <i class="ml-3 fa-solid fa-blog mr-2"></i> 
           </a>
-          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
-            <i class="ml-3 fa-brands fa-youtube"></i>
-          </a>
+         
           
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="assets/js/main.js"></script>
 
@@ -2303,7 +2370,7 @@ $('.learn-about-us').html('了解我们 <i class="fa-solid fa-chevron-right"></i
 $('.how-to-participate').html('如何参与SHIBARIUM PAD活动')
 $('.a-good-place-to').html('一个好的开始是：什么是Shibarim Pad？')
 $('.how-to-buy-art').html('如何购买Shibarim $SHIDO代币？')
-$('.what-is-ido').html('什么是ISO<br/>(初始分散式发行）？')
+$('.what-is-ido').html('什么是ISO?<br/>(初始分散式发行）')
 $('.upcoming-projects').html('即将到来的<span class="text-primary-500">项目</span>')
 $('.we-bring-most').html('我们只引进最成功的项目。');
 $('.see-all').html('查看全部')
@@ -2361,7 +2428,7 @@ $('.learn-about-us').html('Learn About Us <i class="fa-solid fa-chevron-right"><
 $('.how-to-participate').html('How to participate in SHIBARIUM PAD')
 $('.a-good-place-to').html('A good place to start is: what is Shibarim Pad?')
 $('.how-to-buy-art').html('How to buy the Shibarim $SHIDO token?')
-$('.what-is-ido').html('What is an IDO <br/> (Initial Decentralized Offering)?')
+$('.what-is-ido').html('What is an ISO? <br/> (Initial Shibarium Offering)')
 $('.upcoming-projects').html('Upcoming  <span class="text-primary-500">Projects</span>')
 $('.we-bring-most').html('We bring in only the most successful projects.');
 $('.see-all').html('See all')
@@ -2371,10 +2438,10 @@ $('.participants-txt').html('Participants')
 $('.end-date').html('Ended:')
 $('.never-miss-sale').html(' Never want to miss a sale? ')
 $('.join-our-community').html('Join Our Community')
-$('.about-footer').html('The fully decentralized protocol for launching new ideas ')
+$('.about-footer').html('The ultimate Shibarium launchpad. ')
 $('.signup-for-newsletter').html('Sign up for our newsletter and get the latest news and updates. ')
 $('.subscribe-txt').html('Subscribe')
-$('.links').html('Links')
+$('.links').html(' Where to find us?')
 $('.my-account').html('My Account')
 $('.resources').html('Resources')
 $('.company').html('Company')

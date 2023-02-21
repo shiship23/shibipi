@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <title>  $SHIBP </title>
+
+  <meta property="og:type" content="website">
+	<meta property="og:title" content="ShibariumPad">
+	
+	
+
+	<!-- SEO -->
+	
+	<meta name="author" content="Shibarium Pad">
+	<meta name="description" lang="en" content="Shibarium Pad: The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem.">
+	<meta name="keywords" lang="en" content="SHIBARIUMPAD, crypto, staking, rewards, SHIBARIUMPAD">
+	<meta name="date" content="2022-02-04T00:00:00+00:00">
+	<meta name="page-topic" content="SHIBARIUMPAD, crypto">
+
+
+  <meta name="description" content=" Shibarium Pad : The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem." />
+  
+  <meta name="twitter:title" content="$SHIBP">
+<meta name="twitter:description" content="Shibarium Pad : The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="/cover.jpg">
+<meta property="og:video" content="/cover.mp4" />
+<meta property="og:video:type" content="video/mp4" />
+<meta property="twitter:video" content="/cover.mp4" />
+<meta property="twitter:video:type" content="video/mp4" />
+  <meta name="copyright" content="Copyright Shibarium Pad 2023. All Rights Reserved." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/x-icon" href="assets/img/logo/Logo.png" />
+  
+
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/plugin-css/splide.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/plugin-css/preloader.css" />
+  <style>
+
+.background-masker {
+  background-color: #fff;
+  position: absolute;
+}
+
+.btn-divide-left {
+  top: 0;
+  left: 25%;
+  height: 100%;
+  width: 5%;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0
+  }
+  100% {
+    background-position: 800px 0
+  }
+}
+
+.animated-background {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #fd7676;
+  background: linear-gradient(to right, #fd7676 8%, #ff9e12 18%, #fd7676 33%);
+  background-size: 800px 104px;
+  height: 25px;
+  position: relative;
+}
+
+.static-background {
+  background-color: #f6f7f8;
+  background-size: 800px 104px;
+  height: 70px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.shared-dom {
+  width: 800px;
+  height: 110px;
+}
+.sub-rect {
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin: 20px 20px 20px 0;
+}
+.pure-background {
+  background-color: #eee;
+}
+
+.css-dom:empty {
+  width: 280px;
+  height: 220px;
+  border-radius: 6px;
+  box-shadow: 0 10px 45px rgba(0, 0, 0, .2);
+  background-repeat: no-repeat;
+  
+  background-image:
+    radial-gradient(circle 16px, lightgray 99%, transparent 0),
+    linear-gradient(lightgray, lightgray),
+    linear-gradient(lightgray, lightgray),
+    linear-gradient(lightgray, lightgray),
+    linear-gradient(lightgray, lightgray),
+    linear-gradient(#fff, #fff); 
+  
+  background-size:
+    32px 32px,
+    200px 32px,
+    180px 32px,
+    230px 16px,
+    100% 40px,
+    280px 100%;
+  
+  background-position:
+    24px 30px,
+    66px 30px,
+    24px 90px,
+    24px 142px,
+    0 180px,
+    0 0;
+}
+    /* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: #ea0d17;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #fcfcfc;
+}
+.dark:text-green-900{
+  color: #acf557 !important;
+}
+    .text-green-900{
+      color: #acf557 !important;
+    }
+       .marquee,
+      .marquee-with-options,
+      .marquee-vert-before,
+      .marquee-vert {
+        width: 100%;
+        overflow: hidden;
+        /* border:1px solid #ccc; */
+        
+      }
+      .js-marquee{
+        display: flex;
+      }
+      .text-lg{
+        font-size: 1.425rem;
+      }
+      .hover\:text-primary-500:hover {
+    --tw-text-opacity: 1;
+    color: rgb(223 29 50 / var(--tw-text-opacity));
+    
+    opacity: 1;
+    /* border: 2px solid #fea40a; */
+}
+      .content {
+  /* max-width: 800px; */
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.content p {
+  position: relative;
+  font-family: Monospace;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  transition: color 500ms ease-in 500ms;
+}
+.the-cardsS{
+  width: 100%;margin:0 0 0 0rem
+}
+@media (max-width: 500px) {
+  /* … */
+  .the-cardsS{
+  width: 100%;margin:0 0 0 0rem
+}
+}
+.content p:before, .content p:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 500ms ease-out;
+}
+.content p:before {
+  width: 100%;
+  opacity: 1;
+  background: repeating-linear-gradient(to bottom, white, transparent 1px, rgba(238, 238, 238, 0.5) 1px, rgba(238, 238, 238, 0.5) 27px, transparent 27px, white 28px);
+}
+.content p:after {
+  width: 10%;
+  opacity: 0.5;
+  filter: blur(20px);
+  background: repeating-linear-gradient(to bottom, white, transparent 1px, #dddddd 1px, #dddddd 27px, transparent 27px, white 28px);
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeholder;
+  animation-timing-function: linear;
+}
+.content p.fade {
+  color: black;
+}
+.content p.fade:before, .content p.fade:after {
+  opacity: 0;
+}
+.main-color{
+  color: #df1d32;
+}
+
+@keyframes placeholder {
+  0% {
+    left: -10%;
+    width: 10%;
+  }
+  25% {
+    width: 20%;
+  }
+  50% {
+    width: 35%;
+  }
+  75% {
+    width: 60%;
+  }
+  100% {
+    left: 110%;
+    width: 10%;
+  }
+}
+
+
+  </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 relative">
+  <div style="z-index: 1000" class="bg-gray-900" id="preloader">
+    <div id="loader"></div>
+  </div>
+  <nav data-navbar-version="v1" data-position-style="sticky" class="navbar bg-transparent transition-all duration-200 z-50 py-2">
+    <div data-placement="left" data-drawer-width="220px" data-drawer-name="mobile-navbar" class="drawer shadow-hover fixed top-0 h-screen z-[100] overflow-hidden transition-all duration-300 w-0">
+      <div class="w-[220px] h-full overflow-y-auto bg-white dark:bg-dark">
+        <div class="p-4 flex items-center justify-between">
+          <div class="relative max-w-[206px] w-full">
+            <a href="/" class="flex items-center mr-2">
+              <img src="assets/img/logo/logorocket.gif" class="mr-3 h-6 sm:h-9" alt="naw-nft" />
+            
+            </a>
+            
+          </div>
+          <div class="block ml-4">
+            <button data-target-drawer="mobile-navbar" class="drawer-handler w-9 h-9 p-2 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 dark:bg-gray-500/5 dark:hover:bg-gray-500/10 rounded-full">
+              <svg class="w-4 h-4 fill-gray-700
+                  dark:fill-gray-500" width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg">
+                <path d="M13.705 12.4677C14.0563 12.8182 14.0563 13.3867 13.705 13.7372C13.3536 14.0876 12.7835 14.0876 12.4321 13.7372L8.00061 9.28477L3.53765 13.7357C3.18628 14.0861 2.61618 14.0861 2.26477 13.7357C1.91336 13.3852 1.91339 12.8167 2.26477 12.4662L6.72923 8.01683L2.26353 3.53227C1.91216 3.18185 1.91216 2.61329 2.26353 2.26283C2.6149 1.91237 3.185 1.91241 3.53641 2.26283L8.00061 6.74889L12.4636 2.29799C12.8149 1.94757 13.385 1.94757 13.7365 2.29799C14.0879 2.64841 14.0878 3.21697 13.7365 3.56743L9.27199 8.01683L13.705 12.4677Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <ul class="flex flex-col transition-all duration-200 bg-transparent">
+         <li class="py-2 px-6">
+            <a id="" href="#" class="home-btn block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Home </a>
+          </li>
+          <li class="py-2 px-6">
+            <a id="" href="/contact" class="whitepaper-btn block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Whitepaper </a>
+          </li>
+          <li class="py-2 px-6">
+            <a id="" href="/" class="howtobuy-btn block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> How to buy </a>
+          </li>
+          
+          <li class="px-6">
+            <div data-active-type="single" class="accordion w-full overflow-hidden">
+              <div class="py-2">
+                <input id="Pages" type="checkbox" class="collapse hidden" />
+                <label for="Pages" class="collapse-label group flex items-center justify-between cursor-pointer text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500 socials-btn"> Socials
+                   <svg data-active-rotate="rotate-90" class="collapse-label-icon w-2 h-2 fill-gray-600
+            group-hover:fill-primary-500" width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg">
+                    <path d="M6.38875 1.41411L11.9887 7.00577C12.2644 7.31813 12.4 7.67889 12.4 8.00004C12.4 8.3212 12.2633 8.72067 11.9898 8.99563L6.38984 14.5873C5.98927 14.9901 5.38753 15.1108 4.86384 14.8927C4.34016 14.6747 4 14.2384 4 13.6313V2.40838C4 1.83909 4.34042 1.32524 4.86406 1.10703C5.38771 0.888818 5.99062 1.01068 6.38875 1.41411Z" />
+                  </svg>
+                </label>
+              </div>
+              <div class="accordion-content py-2 max-h-0 transition-all duration-200">
+                <ul>
+                  <li>
+                    <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                      <i class="ml-3 fa-brands fa-telegram mr-2"></i>   Telegram  </a>
+                  </li>
+                  <li>
+                    <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                      <i class="ml-3 fa-brands fa-twitter mr-2"></i>    Twitter  </a>
+                  </li>
+                  <li>
+                    <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                      <i class="ml-3 fa-solid fa-blog mr-2"></i>    Blog  </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="py-2 px-6">
+            
+            
+            <button  type="button" class="connectwallet-btn-zh text-white whitespace-nowrap text-sm px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md"> Connect Wallet </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+     <div class="container flex justify-between items-center mx-auto">
+      <div class="navLink flex items-center">
+        <a href="/" class="flex items-center mr-2">
+          <img src="assets/img/logo/logorocket.gif" class="mr-3 h-6 sm:h-9" alt="naw-nft" />
+          <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white" style="color:#f30000"> SHIBARIUM PAD </span>
+        </a>
+       
+      </div>
+      
+      <div class="hidden justify-between items-center w-full lg:flex lg:w-auto">
+        <ul class="flex items-center transition-all duration-200 bg-transparent flex-row">
+          <li class="px-[18px]">
+            <a href="/" id="" class="home-btn text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Home </a>
+          </li>
+          <li class="px-[18px]">
+            <a href="/" class="whitepaper-btn text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Whitepaper </a>
+          </li>
+          <li class="px-[18px]">
+            <a href="/" class=" howtobuy-btn text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> How to buy </a>
+          </li>
+          <li class="px-[18px]">
+            <div data-action-type="hover" data-target-element="pages-dropdown" class="dropdown relative">
+              <button class="socials-btn group flex justify-between items-center text-gray-900 font-normal  dark:text-white hover:text-primary-500 dark:hover:text-primary-500"> 
+                Socials  <i class="fa-solid fa-caret-down ml-3"></i>
+              </button>
+              <div id="pages-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute top-5 transition-all h-full invisible opacity-0 z-0 pt-0">
+                <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 w-[216px] shadow-drop">
+                  <div class="absolute -top-3 left-4 overflow-hidden inline-block">
+                    <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                  </div>
+                  <ul class="py-2">
+                    <li>
+                      <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <i class="ml-3 fa-brands fa-telegram mr-2"></i>   Telegram  </a>
+                    </li>
+                    <li>
+                      <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <i class="ml-3 fa-brands fa-twitter mr-2"></i>    Twitter  </a>
+                    </li>
+                    <li>
+                      <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <i class="ml-3 fa-solid fa-blog mr-2"></i>    Blog  </a>
+                    </li>
+                   
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+         
+         
+        </ul>
+      </div>
+      <div class="flex items-center">
+        <ul class="flex items-center">
+          <li class="mr-4 hidden lg:block">
+            
+            <a style="    padding: 0.7rem;" href="#" class=" connectwallet-btn-zh text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg"> Connect Wallet  </a>
+          </li>
+          
+          <style>
+
+.toggle-inner input {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 5px;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.dark .dark\:border-gray-400 {
+  background-color: #fff;
+  border-color: #fff;
+}
+.dark .dark\:border-gray-4002 {
+  
+  border-color: #fff;
+}
+
+.custom-toggle {
+  position: absolute;
+    height: 13px;
+    width: 13px;
+    background-color: #db041b;
+    top: 1px;
+    left: 2px;
+    border-radius: 50%;
+    transition: 300ms all;
+}
+.toggle-inner .t-month, .toggle-inner .t-year {
+  position: absolute;
+    top: 7px;
+    transition: 300ms all;
+    margin-top: 7px;
+    left: 13px;
+}
+.toggle-inner .t-year {
+  left: unset;
+  right: -85px;
+  opacity: 0.5;
+}
+.active > .toggle-inner .t-month {
+  opacity: 0.5;
+}
+.active > .toggle-inner .t-year {
+  opacity: 1;
+}
+.toggle-inner input:checked + span {
+  left: 31px;
+}
+.toggle-inner {
+  width: 50px;
+    margin: 0 auto;
+    height: 17px;
+    border: 1px solid #e01e32;
+    border-radius: 25px;
+    position: relative;
+}
+
+.tab-content > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(94,110,191);
+	color: #000000;
+	height: 100vh;
+}
+          </style>
+          <li style="display:flex">
+            <a href="javascript:void(0)" id="langce-toggle"  class="t-month"><img style="width:28px" class="img-lang" data-language="en"  src="/assets//cnf.png" alt=""></a>
+            <!-- <div class="toggle-inner dark:border-gray-4002">
+              <input id="ce-toggle" type="checkbox">
+              <span class="custom-toggle dark:border-gray-400"></span>
+              <span class="t-month font-normal text-xs md:text-base text-gray-700 dark:text-gray-400">
+                
+              </span>
+              
+            </div> -->
+            <!-- <a href="javascript:void(0)" id="en-translate">ENGLISH</a>
+            <a href="javascript:void(0)" id="zh-translate">
+              
+              <img style="width:30px" src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/China_flat.png" alt="">
+            </a> -->
+            <button id="lightOrDarkMode" class="w-7 h-7 ml-4 border border-gray-300 dark:border-primary-300 rounded-full flex items-center justify-center">
+              <svg class="block dark:hidden w-[12px]
+						h-[12px] fill-gray-700 dark:fill-primary-100" width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg">
+                <path d="M11.5915 13.0556C7.75928 13.0556 4.65887 9.925 4.65887 6.05556C4.65887 4.13056 5.42916 2.38056 6.68088 1.11667C3.44567 1.71945 1 4.55834 1 8C1 11.8694 4.10041 15 7.9326 15C9.85832 15 11.5915 14.2028 12.8432 12.9389C12.4388 13.0167 12.0344 13.0556 11.5915 13.0556Z" />
+                <path d="M12.6891 4.675L14.1141 5.43333L13.8445 3.83889L15 2.69167L13.4016 2.45833L12.6891 1L11.9766 2.45833L10.3782 2.69167L11.5337 3.83889L11.2641 5.43333L12.6891 4.675Z" />
+                <path d="M9.03026 8.91389L9.97387 9.4L9.80055 8.33055L10.5708 7.57222L9.51169 7.41666L9.03026 6.44444L8.54883 7.41666L7.48969 7.57222L8.25997 8.33055L8.08666 9.4L9.03026 8.91389Z" />
+              </svg>
+              <svg class="hidden dark:block w-[12px]
+						h-[12px] fill-gray-700 dark:fill-primary-100" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M224 80V32c0-17.7 14.3-32 32-32s32 14.3 32 32V80c0 17.7-14.3 32-32 32s-32-14.3-32-32zM352 256c0 53-43 96-96 96s-96-43-96-96s43-96 96-96s96 43 96 96zM0 256c0-17.7 14.3-32 32-32H80c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm432-32h48c17.7 0 32 14.3 32 32s-14.3 32-32 32H432c-17.7 0-32-14.3-32-32s14.3-32 32-32zM256 512c-17.7 0-32-14.3-32-32V432c0-17.7 14.3-32 32-32s32 14.3 32 32v48c0 17.7-14.3 32-32 32zM73.4 438.6c-12.5-12.5-12.5-32.8 0-45.3l32-32c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-32 32c-12.5 12.5-32.8 12.5-45.3 0zm288-333.3l32-32c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-32 32c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3zm77.3 333.3c-12.5 12.5-32.8 12.5-45.3 0l-32-32c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l32 32c12.5 12.5 12.5 32.8 0 45.3zm-333.3-288l-32-32c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l32 32c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0z" />
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <button data-target-drawer="mobile-navbar" class="drawer-handler flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden">
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="https://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div class="bg-gray-25 dark:bg-gray-900 relative">
+    <div class="h-[272px] bg-no-repeat bg-cover bg-center pt-[30px] flex items-center justify-center" style="background-image: url('')">
+        <div class="text-center">
+            <h6 class="text-gray-900 font-semibold text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500">Terms and Conditions</h6>
+           
+          </div>
+    </div>
+    <div class="container mx-auto pt-12 pb-[100px]">
+      <div class="max-w-[996px] mx-auto">
+        <div class="mb-12">
+          <h6 class="text-lg text-gray-700 dark:text-gray-400 mb-3"> Last Updated: Feb 21, 2023 </h6>
+     
+        </div>
+        <div class="mb-12">
+          <h6 class="text-[22px] text-gray-900 dark:text-white mb-4"> LEGAL DISCLAIMER </h6>
+          
+          <p class="text-gray-700 dark:text-gray-400 text-justify mb-3"> 
+
+            None of the information on this website should be construed as providing legal or financial advice. 
+            Please note there are always risks associated with smart contracts. 
+            Please use at your own risk. SHIB Token is not a registered broker, 
+            analyst or investment advisor. If you are willing to, or have purchased SHIB, you agree that you are not purchasing a security or investment. The SHIB team can not be held liable for any losses or taxes you may incur. You also agree that the team is presenting the token as it was launched. Do conduct your own due diligence and consult your financial advisor before making any investment decisions.
+
+          </p>
+         
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/others/plugins-core/splide.js"></script>
+  <!-- Page footer -->
+  <footer class="bg-white dark:bg-dark">
+    <div class="w-100 w-full text-center">
+      <a href="#" class="flex items-center justify-center md:justify-start mr-10" style="
+    display: block;
+    margin: 0 auto;
+">
+        <img src="assets/img/logo/logorocket.gif" class="mr-3 h-11" alt="naw-nft" style="
+    display: block;
+    margin: 0 auto;
+    height: 5.5rem;
+">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white main-color" style="
+    font-size: 2.5rem;
+"> SHIBARIUM PAD </span>
+      </a>
+      <p class="my-4 text-gray-700 dark:text-white font-normal about-footer" style="
+    font-size: 2rem;
+"> The ultimate Shibarium launchpad. </p>
+    </div>
+    <div class="text-center mb-10 pb-5" style="
+    max-width: 400px;
+    margin: 0 auto;
+">
+      
+      <div style="
+    text-align: center;
+" class="">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-5 links mt-20">  Where to find us? </p>
+        <ul class="text-gray-700 dark:text-white text-sm flex text-center mx-auto" style="
+    display: flex;
+    justify-content: space-around;
+">
+          <li class="py-1" style="
+">
+            <a href="#" class=" text-xl block hover:text-gray-900 dark:hover:text-gray-400">
+              <i class="ml-3 fa-brands fa-twitter"></i> Twitter </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class=" text-xl block hover:text-gray-900 dark:hover:text-gray-400"> 
+              <i class="ml-3 fa-brands fa-telegram"></i>
+              Telegram </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class=" text-xl block hover:text-gray-900 dark:hover:text-gray-400"><i class="ml-3 fa-solid fa-blog mr-2"></i>  Blog </a>
+          </li>
+         
+         
+        
+        </ul>
+      </div>
+    </div>
+    <div class="border-b border-gray-300 dark:border-gray-700"></div>
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-center justify-between">
+        <small class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 dark:text-white font-normal"> Copyright © 2023 Shibarium Pad. All Rights Reserves </small>
+        <div class="pt-2 pb-4 md:py-9 w-full md:w-auto flex items-center justify-center">
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
+            Terms
+          </a>
+ 
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+    <!-- <footer class="bg-white dark:bg-dark">
+    <div class="w-100 w-full">
+      <a href="#" class="flex items-center justify-center md:justify-start mr-10">
+        <img src="assets/img/logo/logorocket.gif" class="mr-3 h-11" alt="naw-nft" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white main-color"> SHIBARIUM PAD </span>
+      </a>
+      <p class="my-4 text-gray-700 dark:text-white font-normal about-footer"> The ultimate Shibarium launchpad. </p>
+    </div>
+    <div class="py-12 container mx-auto grid grid-cols-1 lg:grid-cols-6 gap-4">
+      <div class="md:col-span-2 w-full text-center md:text-start mx-auto md:mx-0" style="max-width: 314px">
+       
+        <div class="mb-4 mt-9 border-b border-gray-300 dark:border-gray-700"></div>
+        <p class="py-1 font-medium text-gray-900 dark:text-white signup-for-newsletter"> Sign up for our newsletter and get the latest news and updates. </p>
+        <div class="flex mt-3 mb-7 md:mb-0">
+          <input class="py-3 px-4 rounded-l-md w-full bg-white dark:bg-dark placeholder:text-gray-700 dark:placeholder:text-gray-600 dark:text-gray-600 border border-r-0 border-gray-300 dark:border-gray-700 focus:outline-none text-xs" placeholder="Type Here" />
+          <button class="px-5 py-2 rounded-r-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 mr-4 subscribe-txt"> Subscribe </button>
+        </div>
+      </div>
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 links">  Where to find us? </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Twitter </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Telegram </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Blog </a>
+          </li>
+         
+         
+        
+        </ul>
+      </div>
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 my-account"> My Account </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> DAPP </a>
+          </li>
+          
+        </ul>
+      </div> 
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 resources"> Resources </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Medium </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 help"> Help </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 support"> Support </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 faq"> FAQs </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 terms"> Terms & Conditions </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 privacy"> Privacy Policy </a>
+          </li>
+        </ul>
+      </div>
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 company"> Company </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 about"> About </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 apply-for-ido"> Apply for ISO </a>
+          </li>
+        </ul>
+       
+      </div>
+    </div>
+    <div class="border-b border-gray-300 dark:border-gray-700"></div>
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-center justify-between">
+        <small class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 dark:text-white font-normal"> Copyright © 2023 Shibarium Pad. All Rights Reserves </small>
+        <div class="pt-2 pb-4 md:py-9 w-full md:w-auto flex items-center justify-center">
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
+            <i class="ml-3 fa-brands fa-twitter"></i>
+          </a>
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
+            <i class="ml-3 fa-brands fa-telegram"></i>
+          </a>
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
+            <i class="ml-3 fa-solid fa-blog mr-2"></i> 
+          </a>
+         
+          
+        </div>
+      </div>
+    </div>
+  </footer> -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/jquery.marquee.js?v=3" type="text/javascript"></script>
+  <script>
+
+
+
+    $(function(){
+  var $mwo = $('.marquee-with-options');
+  $('.marquee').marquee();
+  $('.marquee-with-options').marquee({
+    //speed in milliseconds of the marquee
+    speed: 5000,
+    //gap in pixels between the tickers
+    gap: 50,
+    //gap in pixels between the tickers
+    delayBeforeStart: 0,
+    //'left' or 'right'
+    direction: 'left',
+    //true or false - should the marquee be duplicated to show an effect of continues flow
+    duplicated: true,
+    //on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
+    pauseOnHover: true
+  });
+
+  //Direction upward
+  $('.marquee-vert').marquee({
+    direction: 'up',
+    speed: 1500
+  });
+
+  //pause and resume links
+  $('.pause').click(function(e){
+    e.preventDefault();
+    $mwo.trigger('pause');
+  });
+  $('.resume').click(function(e){
+    e.preventDefault();
+    $mwo.trigger('resume');
+  });
+  //toggle
+  $('.toggle').hover(function(e){
+    $mwo.trigger('pause');
+  },function(){
+    $mwo.trigger('resume');
+  })
+  .click(function(e){
+    e.preventDefault();
+  })
+});
+
+
+
+///Preloading
+
+  </script>
+
+
+<script>
+  // The data/time we want to countdown to
+  var countDownDate = new Date("Feb 19, 2023 16:37:52").getTime();
+
+  // Run myfunc every second
+  var myfunc = setInterval(function() {
+
+  var now = new Date().getTime();
+  var timeleft = countDownDate - now;
+      
+  // Calculating the days, hours, minutes and seconds left
+  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+      
+  // Result is output to the specific element
+  document.getElementById("days").innerHTML = days + "d "
+  document.getElementById("hours").innerHTML = hours + "h " 
+  document.getElementById("mins").innerHTML = minutes + "m " 
+  document.getElementById("secs").innerHTML = seconds + "s " 
+      
+  // Display the message when countdown is over
+  if (timeleft < 0) {
+      clearInterval(myfunc);
+      document.getElementById("days").innerHTML = ""
+      document.getElementById("hours").innerHTML = "" 
+      document.getElementById("mins").innerHTML = ""
+      document.getElementById("secs").innerHTML = ""
+      document.getElementById("end").innerHTML = "TIME UP!!";
+  }
+  }, 1000);
+
+  
+  </script>
+  <script>
+    /// date 2
+setTimeout(function(){
+    // The data/time we want to countdown to
+  var countDownDate2 = new Date("02/19/2023 4:38 PM").getTime();
+
+// Run myfunc every second
+var myfunc2 = setInterval(function() {
+
+var currentDate = new Date().getTime();
+var timelefts = countDownDate2 - new Date().getTime();
+    
+// Calculating the days, hours, minutes and seconds left
+var dayss = Math.floor(timelefts / (1000 * 60 * 60 * 24));
+var hourss = Math.floor((timelefts % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutess = Math.floor((timelefts % (1000 * 60 * 60)) / (1000 * 60));
+var secondss = Math.floor((timelefts % (1000 * 60)) / 1000);
+
+// Result is output to the specific element
+$("#dayss").html( dayss + "d ")
+$("#hourss").html( hourss + "h " )
+$("#minss").html( minutess + "m " )
+$("#secss").html( secondss + "s " )
+    
+// // Display the message when countdown is over
+if (timelefts < 0) {
+    clearInterval(myfunc2);
+    document.getElementById("dayss").innerHTML = ""
+    document.getElementById("hourss").innerHTML = "" 
+    document.getElementById("minss").innerHTML = ""
+    document.getElementById("secss").innerHTML = ""
+    document.getElementById("ends").innerHTML = "TIME UP!!";
+}
+}, 1000);
+
+},2000)
+  </script>
+
+
+<script>
+CountDownTimer('02/26/2023 4:38 PM', 'countdowni');
+ CountDownTimer('02/26/2023 4:38 PM', 'countdown');
+  // CountDownTimer('02/26/2023 4:38 PM', 'countdown2');
+  // CountDownTimer('02/26/2023 4:38 PM', 'countdown3');
+  
+
+  function CountDownTimer(dt, id)
+  {
+      var end = new Date(dt);
+
+      var _second = 1000;
+      var _minute = _second * 60;
+      var _hour = _minute * 60;
+      var _day = _hour * 24;
+      var timer;
+
+      function showRemaining() {
+          var now = new Date();
+          var distance = end - now;
+          if (distance < 0) {
+
+              clearInterval(timer);
+              document.getElementById(id).innerHTML = 'EXPIRED!';
+
+              return;
+          }
+          var days = Math.floor(distance / _day);
+          var hours = Math.floor((distance % _day) / _hour);
+          var minutes = Math.floor((distance % _hour) / _minute);
+          var seconds = Math.floor((distance % _minute) / _second);
+
+          document.getElementById(id).innerHTML = `<div class="flex flex-col items-center justify-center">
+                  <p  id="" class="text-gray-900 font-semibold">${days}</p>
+                  <small class="text-gray-700 text-xs"> Days </small>
+                </div> <span>:</span>`;
+          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                  <p  id="" class="text-gray-900 font-semibold">${hours}</p>
+                  <small class="text-gray-700 text-xs"> Hours </small>
+                </div><span>:</span> `;;
+          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                  <p  id="" class="text-gray-900 font-semibold">${minutes}</p>
+                  <small class="text-gray-700 text-xs"> Minutes </small>
+                </div> <span>:</span>`;;
+          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                  <p  id="" class="text-gray-900 font-semibold">${seconds}</p>
+                  <small class="text-gray-700 text-xs"> Seconds </small>
+                </div> `;;
+      }
+
+      timer = setInterval(showRemaining, 1000);
+  }
+if(window.location.host === 'shibariumpad.finance' && window.location.protocol === 'http:'){
+  window.location.href = 'https://shibariumpad.finance'
+}
+</script>
+<script>
+var translations;
+setTimeout(function(){
+$.getJSON('./translations.json', function(data) {
+  translations = data;
+
+  var idsToTranslate = ['launch-pad','home-btn'];
+  $.each(idsToTranslate, function(index, value) {
+    var englishText = $('#' + value).html().trim();
+    var translatedText = translations[value];
+    if (translatedText !== undefined) {
+      $('#' + value).html(translatedText);
+    } else {
+      console.log("No translation found for '" + value + "'");
+    }
+  });
+
+  
+});
+
+},2000)
+
+setTimeout(function(){
+  console.log('INSIDE')
+
+},2000)
+
+function chineeseLang(){
+  
+  $(".launch-pad").html("主页面")
+  $('.get-early-access-header').html(`尽早获得<span class=\"text-primary-500 bg-contain bg-no-repeat\" style=\"background-image: url('assets/img/logo/nft-text-bg2.png');\">Shibarium</span>上最伟大的项目。`)
+  $(".home-btn").html("主页面")
+  $(".whitepaper-btn").html("白皮书")
+  $(".howtobuy-btn").html("如何购买")
+  $(".socials-btn").html(`社交网络 <i class="fa-solid fa-caret-down ml-3"></i>`)
+  $(".connectwallet-btn-zh").html("连接钱包")
+  $('.trustworty').html('值得信赖的<b class="main-color">Shibarium</b>项目，经过了严格的审查。由整个行业的知名人士和有影响力的人支持。')
+  $('.getstarted-btn').html('开始吧')
+  $('.create-btn').html('应用')
+  $('.ideas-funded').html('资助的想法')
+  $('.projects-mc').html('项目市值')
+  $('.unique-participants').html('独特的参与者')
+  $('.token-sale-btn').html('代币销售')
+  $('.price-per-token').html('每枚代币的价格');
+  $('.allocation-txt').html('拨款')
+  $('.starting-text').html('开始日期')
+  $('.raise-funds-text').html('通过<b class="main-color">Shibarium BLOCKCHAIN</b>筹集资金。')
+  $('.total-raised').html('筹集到的资金总额')
+  $('.tokens-funded').html('资助的托克斯');
+  $('.total-mkt-cap').html('总数：MKT CAP');
+$('.total-participants').html('参与者总数')
+$('.get-educated').html(`获得有关<b class="main-color">ShibariumPad的教育</b>。`)
+$('.learn-about-us').html('了解我们 <i class="fa-solid fa-chevron-right"></i>')
+$('.how-to-participate').html('如何参与SHIBARIUM PAD活动')
+$('.a-good-place-to').html('一个好的开始是：什么是Shibarim Pad？')
+$('.how-to-buy-art').html('如何购买Shibarim $SHIDO代币？')
+$('.what-is-ido').html('什么是ISO?<br/>(初始分散式发行）')
+$('.upcoming-projects').html('即将到来的<span class="text-primary-500">项目</span>')
+$('.we-bring-most').html('我们只引进最成功的项目。');
+$('.see-all').html('查看全部')
+$('.assisting-txt').html(`协助最热心的<b class="main-color">博物馆</b>项目启动。`)
+$('.launched-projects-txt').html('<span class="text-primary-500">推出的</span>项目')
+$('.participants-txt').html('参与者')
+$('.end-date').html('结束日期')
+$('.never-miss-sale').html('永远不想错过促销活动？')
+$('.join-our-community').html('加入我们的社区')
+$('.about-footer').html('推出新想法的完全去中心化的协议')
+$('.signup-for-newsletter').html('注册我们的通讯，获得最新的新闻和更新。')
+$('.subscribe-txt').html('订阅')
+$('.links').html('链接')
+$('.my-account').html('我的账户')
+$('.resources').html('资源')
+$('.company').html('公司')
+$('.help').html('帮助')
+$('.support').html('帮助')
+$('.faq').html('常见问题')
+$('.terms').html('条款和条件')
+$('.privacy').html('隐私政策')
+$('.about').html('关于我们')
+$('.apply-for-ido').html('申请加入ISO')
+}
+
+
+
+
+function englishLang(){
+  
+  $(".launch-pad").html("LAUNCH PAD")
+  $('.get-early-access-header').html(`Get early access to the <span class="text-primary-500 bg-contain bg-no-repeat" style="background-image: url('assets/img/logo/nft-text-bg2.png');">  greatest projects </span>  on Shibarium.`)
+  $(".home-btn").html("Home")
+  $(".whitepaper-btn").html("Whitepaper")
+  $(".howtobuy-btn").html("How to buy")
+  $(".socials-btn").html(`Socials <i class="fa-solid fa-caret-down ml-3"></i>`)
+  $(".connectwallet-btn-zh").html("Connect Wallet")
+  $('.trustworty').html(' Trustworthy <b class="main-color">Shibarium Projects</b> that have undergone rigorous vetting. Backed by prominent individuals and influencers across the industry.')
+  $('.getstarted-btn').html('Launch DAPP')
+  $('.create-btn').html('Apply ISO')
+  $('.ideas-funded').html('IDEAS FUNDED')
+  $('.projects-mc').html('PROJECTS MKT CAP')
+  $('.unique-participants').html('UNIQUE PARTICIPANTS')
+  $('.token-sale-btn').html('Token Sale')
+  $('.price-per-token').html('Price per token');
+  $('.allocation-txt').html('Allocation')
+  $('.starting-text').html('Starting :')
+  $('.raise-funds-text').html('Raise funds through the <b class="main-color"> Shibarium</b>  BLOCKCHAIN. ')
+  $('.total-raised').html('Total Raised')
+  $('.tokens-funded').html('TOKENS FUNDED');
+  $('.total-mkt-cap').html('TOTAL MKT CAP');
+$('.total-participants').html('TOTAL PARTICIPANTS')
+$('.get-educated').html(`Get Educated About <b class="main-color"> ShibariumPad </b>`)
+$('.learn-about-us').html('Learn About Us <i class="fa-solid fa-chevron-right"></i>')
+$('.how-to-participate').html('How to participate in SHIBARIUM PAD')
+$('.a-good-place-to').html('A good place to start is: what is Shibarim Pad?')
+$('.how-to-buy-art').html('How to buy the Shibarim $SHIDO token?')
+$('.what-is-ido').html('What is an ISO? <br/> (Initial Shibarium Offering)')
+$('.upcoming-projects').html('Upcoming  <span class="text-primary-500">Projects</span>')
+$('.we-bring-most').html('We bring in only the most successful projects.');
+$('.see-all').html('See all')
+$('.assisting-txt').html(` ASSISTING THE MOST AMBITIOUS <b class="main-color"> SHIBARIUM </b> PROJECTS LAUNCH.`)
+$('.launched-projects-txt').html('<span class="text-primary-500">Launched </span> Projects')
+$('.participants-txt').html('Participants')
+$('.end-date').html('Ended:')
+$('.never-miss-sale').html(' Never want to miss a sale? ')
+$('.join-our-community').html('Join Our Community')
+$('.about-footer').html('The ultimate Shibarium launchpad. ')
+$('.signup-for-newsletter').html('Sign up for our newsletter and get the latest news and updates. ')
+$('.subscribe-txt').html('Subscribe')
+$('.links').html(' Where to find us?')
+$('.my-account').html('My Account')
+$('.resources').html('Resources')
+$('.company').html('Company')
+$('.help').html('Help')
+$('.support').html('Support')
+$('.faq').html(`FAQs`)
+$('.terms').html('Terms & Conditions')
+$('.privacy').html('Privacy Policy')
+$('.about').html('About')
+$('.apply-for-ido').html('Apply for ISO')
+}
+</script>
+<script>
+  $('.img-lang').click(function(event) {
+    
+    let currentLang  = $('.img-lang').attr('data-language')
+    console.log('????',currentLang) 
+    if(currentLang === "en"){
+      chineeseLang();
+      console.log('UKKKKK') 
+      $('.img-lang').attr('data-language','cn')
+      $('.img-lang').attr('src','/assets/enf.png')
+    }
+   if(currentLang === "cn"){
+      englishLang();    
+      console.log('CHINNNA') 
+      $('.img-lang').attr('data-language','en')
+      $('.img-lang').attr('src','/assets/cnf.png')
+    }
+});
+
+// $('#langce-toggle').change(function(){
+//       if ($(this).is(':checked')) {
+//         chineeseLang();
+//         $('.t-month').html('CN')
+//         console.log('CN')
+         
+//       }
+//       else{
+//         englishLang();
+//         $('.t-month').html('EN')
+//         console.log('english')
+        
+//       }
+
+//     });
+</script>
+</html>
