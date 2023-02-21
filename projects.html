@@ -506,9 +506,9 @@ background: #fcfcfc;
   
   
   <div class="bg-gray-25 dark:bg-gray-900 relative">
-    <div class="h-[272px] bg-no-repeat bg-cover bg-center pt-[30px] flex items-center justify-center" style="background-image: url('')">
+    <div style="height:120px" class=" bg-no-repeat bg-cover bg-center pt-[30px] flex items-center justify-center" style="background-image: url('')">
         <div class="text-center">
-            <h6 class="text-gray-900 font-semibold text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500">Projects</h6>
+            
            
           </div>
     </div>
@@ -612,16 +612,42 @@ background: #fcfcfc;
                 <option value="value3"> Finished </option>
               </select>
             </div>
-            <div class="relative w-full mb-5 md:mb-0 mx-7">
-                <svg class="w-[10px] h-[10px] absolute top-0 bottom-0 right-3 my-auto fill-gray-900 dark:fill-gray-400" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.99953 13C7.74367 13 7.48768 12.9023 7.29269 12.707L1.29296 6.70703C0.902348 6.31641 0.902348 5.68359 1.29296 5.29297C1.68356 4.90234 2.31635 4.90234 2.70696 5.29297L7.99953 10.5875L13.293 5.29375C13.6837 4.90312 14.3164 4.90312 14.707 5.29375C15.0977 5.68437 15.0977 6.31719 14.707 6.70781L8.70731 12.7078C8.51201 12.9031 8.25577 13 7.99953 13Z" />
-                </svg>
-                <select name="select" class="py-3 px-[18px] w-full rounded-[4px] text-gray-900 dark:text-gray-400 bg-white dark:bg-dark border border-gray-300 dark:border-gray-700 focus:outline-none appearance-none shadow-input">
-                  <option selected disabled class="hidden" value=""> Select Chain </option>
-                  <option value="value2">All Chain</option>
-                  <option value="value2"> Ethereum </option>
-                  <option value="value3"> Shibarium </option>
-                </select>
+            <div class="relative w-full mb-5 md:mb-0 ">
+                <ul class="flex items-center transition-all duration-200 bg-transparent flex-row">
+              
+                    <li class="px-[18px]">
+                        <div data-action-type="hover" data-target-element="network-dropdown" class="dropdown relative relative ml-10  mb-5 md:mb-0 mx-7 py-1  rounded-[4px] text-gray-900 dark:text-gray-400 bg-white dark:bg-dark border border-gray-300 dark:border-gray-700 shadow-input">
+                            <button class=" group  text-sm flex justify-between items-center text-gray-900 font-normal  dark:text-white hover:text-primary-500 dark:hover:text-primary-500"> 
+                              <a href="/" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                                <svg width="10" height="16" viewBox="0 0 10 15" class="mx-1">
+                                  <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD"></path>
+                                  <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265"></path>
+                                  <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265"></path>
+                                  <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022"></path>
+                                  <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B"></path>
+                                  <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022"></path>
+                                </svg>   Ethereum  <i class="fa-solid fa-caret-down ml-3"></i></a>
+                            </button>
+                            <div id="network-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute top-5 transition-all h-full invisible opacity-0 z-0 pt-0">
+                              <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 w-[216px] shadow-drop">
+                                <div class="absolute -top-3 left-4 overflow-hidden inline-block">
+                                  <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                                </div>
+                                <ul class="py-2">
+                                 
+                                  <li>
+                                    <a style="coloor:gray" aria-disabled="true" disabled href="/" class="group text-sm py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                                      <img src="assets/11865.png" style="filter:grayscale(1);width:20px;margin-right:2px" alt="">  Shibarim  </a>
+                                  </li>
+                                  
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                    </li>
+                   
+                   
+                  </ul>
               </div>
           </div>
           <div class="bg-white overflow-x-auto dark:bg-dark rounded-[4px] border border-gray-300 dark:border-gray-700">
@@ -662,124 +688,6 @@ background: #fcfcfc;
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="group hover:bg-primary-25 dark:hover:bg-gray-800 border-b hover:border-primary-200 dark:border-gray-700 dark:hover:border-primary-500">
-                    <th scope="row" class="py-2 px-6 font-medium">01</th>
-                    <td class="py-3 px-6">
-                      <div class="flex items-center">
-                        <img src="/assets/img/logo/logorocket.gif" class="w-10 h-10 mr-3 object-cover " alt="">
-                        <span class="group-hover:text-primary-500"> SHIBARIUM PAD - $SHIBP  </span>
-                      </div>
-                    </td>
-                    <td class="py-3 px-6 ">XXXX</td>
-                    <td class="py-3 px-6">
-                      <div class="flex items-center">
-                        <svg class="block dark:hidden w-[13px] h-[13px] fill-gray-700 dark:fill-gray-400" width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD"></path>
-                          <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265"></path>
-                          <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265"></path>
-                          <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022"></path>
-                          <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B"></path>
-                          <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022"></path>
-                        </svg>
-                        <svg class="hidden dark:block w-[13px] h-[13px] fill-gray-700 dark:fill-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.01196 7.5L7.6766 0V2.7439V5.4878L3.01196 7.5Z" fill="#9397AD"></path>
-                          <path d="M12.3412 7.5L7.67655 0V5.4878L12.3412 7.5Z" fill="#D4D7E5"></path>
-                          <path d="M7.6766 5.48781L3.01196 7.5L7.6766 10.1524V5.48781Z" fill="#D4D7E5"></path>
-                          <path d="M7.67655 5.48785L12.3412 7.50005L7.67655 10.1525V5.48785Z" fill="white"></path>
-                          <path d="M7.67656 10.9915L3 8.41464L7.67656 15V10.9915Z" fill="#D4D7E5"></path>
-                          <path d="M7.67659 10.9916L12.3531 8.41467L7.67659 15V10.9916Z" fill="white"></path>
-                        </svg>
-                        <span>XXXX</span>
-                      </div>
-                    </td>
-                    
-                    <td class="py-3 px-6">
-                      <div class="flex items-center">
-                        <svg class="block dark:hidden w-[13px] h-[13px] fill-gray-700 dark:fill-gray-400" width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD"></path>
-                          <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265"></path>
-                          <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265"></path>
-                          <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022"></path>
-                          <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B"></path>
-                          <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022"></path>
-                        </svg>
-                        <svg class="hidden dark:block w-[13px] h-[13px] fill-gray-700 dark:fill-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.01196 7.5L7.6766 0V2.7439V5.4878L3.01196 7.5Z" fill="#9397AD"></path>
-                          <path d="M12.3412 7.5L7.67655 0V5.4878L12.3412 7.5Z" fill="#D4D7E5"></path>
-                          <path d="M7.6766 5.48781L3.01196 7.5L7.6766 10.1524V5.48781Z" fill="#D4D7E5"></path>
-                          <path d="M7.67655 5.48785L12.3412 7.50005L7.67655 10.1525V5.48785Z" fill="white"></path>
-                          <path d="M7.67656 10.9915L3 8.41464L7.67656 15V10.9915Z" fill="#D4D7E5"></path>
-                          <path d="M7.67659 10.9916L12.3531 8.41467L7.67659 15V10.9916Z" fill="white"></path>
-                        </svg>
-                        <span>XXXX</span>
-                      </div>
-                    </td>
-
-                    <td class="py-3 px-6 text-success-500">XXX%</td>
-                    <td class="py-3 px-6">26.02.2023</td>
-                    <td class="py-3 px-6">
-                        ETH
-                    </td>
-                  </tr>
-                  <tr class="group hover:bg-primary-25 dark:hover:bg-gray-800 border-b hover:border-primary-200 dark:border-gray-700 dark:hover:border-primary-500">
-                    <th scope="row" class="py-2 px-6 font-medium">01</th>
-                    <td class="py-3 px-6">
-                      <div class="flex items-center">
-                        <img src="/assets/11865.png" class="w-10 h-10 mr-3 object-cover " alt="">
-                        <span class="group-hover:text-primary-500"> XXX XXXXX - $XXX </span>
-                      </div>
-                    </td>
-                    <td class="py-3 px-6 ">XXXX</td>
-                    <td class="py-3 px-6">
-                      <div class="flex items-center">
-                        <svg class="block dark:hidden w-[13px] h-[13px] fill-gray-700 dark:fill-gray-400" width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD"></path>
-                          <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265"></path>
-                          <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265"></path>
-                          <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022"></path>
-                          <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B"></path>
-                          <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022"></path>
-                        </svg>
-                        <svg class="hidden dark:block w-[13px] h-[13px] fill-gray-700 dark:fill-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.01196 7.5L7.6766 0V2.7439V5.4878L3.01196 7.5Z" fill="#9397AD"></path>
-                          <path d="M12.3412 7.5L7.67655 0V5.4878L12.3412 7.5Z" fill="#D4D7E5"></path>
-                          <path d="M7.6766 5.48781L3.01196 7.5L7.6766 10.1524V5.48781Z" fill="#D4D7E5"></path>
-                          <path d="M7.67655 5.48785L12.3412 7.50005L7.67655 10.1525V5.48785Z" fill="white"></path>
-                          <path d="M7.67656 10.9915L3 8.41464L7.67656 15V10.9915Z" fill="#D4D7E5"></path>
-                          <path d="M7.67659 10.9916L12.3531 8.41467L7.67659 15V10.9916Z" fill="white"></path>
-                        </svg>
-                        <span>XXXX</span>
-                      </div>
-                    </td>
-                    
-                    <td class="py-3 px-6">
-                      <div class="flex items-center">
-                        <svg class="block dark:hidden w-[13px] h-[13px] fill-gray-700 dark:fill-gray-400" width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD"></path>
-                          <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265"></path>
-                          <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265"></path>
-                          <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022"></path>
-                          <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B"></path>
-                          <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022"></path>
-                        </svg>
-                        <svg class="hidden dark:block w-[13px] h-[13px] fill-gray-700 dark:fill-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.01196 7.5L7.6766 0V2.7439V5.4878L3.01196 7.5Z" fill="#9397AD"></path>
-                          <path d="M12.3412 7.5L7.67655 0V5.4878L12.3412 7.5Z" fill="#D4D7E5"></path>
-                          <path d="M7.6766 5.48781L3.01196 7.5L7.6766 10.1524V5.48781Z" fill="#D4D7E5"></path>
-                          <path d="M7.67655 5.48785L12.3412 7.50005L7.67655 10.1525V5.48785Z" fill="white"></path>
-                          <path d="M7.67656 10.9915L3 8.41464L7.67656 15V10.9915Z" fill="#D4D7E5"></path>
-                          <path d="M7.67659 10.9916L12.3531 8.41467L7.67659 15V10.9916Z" fill="white"></path>
-                        </svg>
-                        <span>XXXX</span>
-                      </div>
-                    </td>
-
-                    <td class="py-3 px-6 text-success-500">XXX%</td>
-                    <td class="py-3 px-6">26.02.2023</td>
-                    <td class="py-3 px-6">
-                        SHIB
-                    </td>
-                  </tr>
                   
                   
                   
