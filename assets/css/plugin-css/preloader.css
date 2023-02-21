@@ -15,7 +15,7 @@
 	margin: -75px 0 0 -75px;
 	border-radius: 50%;
 	border: 3px solid transparent;
-	border-top-color: #fea40a;
+	border: 2px solid #fea40a;
 	animation: spin 2s linear infinite;
 }
 #loader:before {
@@ -27,7 +27,7 @@
 	bottom: 5px;
 	border-radius: 50%;
 	border: 3px solid transparent;
-	border-top-color: #df1d32;
+	/* border-top-color: #df1d32; */
 	animation: spin 3s linear infinite;
 }
 #loader:after {
@@ -39,7 +39,7 @@
 	bottom: 15px;
 	border-radius: 50%;
 	border: 3px solid transparent;
-	border-top-color: #ac323e;
+	/* border-top-color: #ac323e; */
 	animation: spin 1.5s linear infinite;
 }
 @keyframes spin {
