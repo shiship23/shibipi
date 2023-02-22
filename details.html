@@ -622,8 +622,8 @@ background: #fcfcfc;
   
   display: none;
 }
-.tabs.active {
-  background-color: #d9d9d9;
+.tabs.inactive {
+  background-color: #d9d9d9 !important;
 }
 .tabcontent.visible {
   display: block;
@@ -769,8 +769,8 @@ background: #fcfcfc;
         <div class="container mx-auto pt-[106px]">
             <div class="mb-4 p-[6px] flex justify-between bg-gray-50 dark:bg-gray-800 rounded-md">
                 <ul class="flex">
-                    <li><a href="#tab_1" class="tabs active px-12 py-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-md flex items-center justify-center transition-colors duration-200 mr-7">Description</a></li>
-                    <li><a href="#tab_2" class="tabs px-12 py-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-md flex items-center justify-center transition-colors duration-200 mr-7">Token Sale</a></li>
+                    <li><a href="#tab_1" class="tabs  tabone active px-12 py-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-md flex items-center justify-center transition-colors duration-200 mr-7">Description</a></li>
+                    <li><a href="#tab_2" class="tabs  tabtwo inactive  px-12 py-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-md flex items-center justify-center transition-colors duration-200 mr-7">Token Sale</a></li>
                   </ul>
                  
                
@@ -1613,15 +1613,25 @@ $('.apply-for-ido').html('Apply for ISO')
       for (var j = 0; j < tabContents.length; j++) {
         var tabContent = tabContents[j];
         tabContent.classList.remove('visible');
-        tabButtons[j].classList.remove('active');
+        tabButtons[j].classList.remove('inactive');
         if (tabContent.id === id) {
           tabContent.classList.add('visible');
+          console.log('tab is active')
+          tabButtons[j].classList.remove('inactive');
         }
       }
 
-      this.classList.add('active');
+      this.classList.add('inactive');
     });
   }
 
+$('.tabone').on('click',function(){
+    $('.tabone').removeClass('inactive')
+    $('.tabtwo').addClass('inactive')
+})
+$('.tabtwo').on('click',function(){
+    $('.tabtwo').removeClass('inactive')
+    $('.tabone').addClass('inactive')
+})
 </script>
 </html>
