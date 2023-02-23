@@ -726,7 +726,7 @@ background: #fcfcfc;
             <a href="#">
               <h6 class="text-primary-500 my-3">Shibarium Pad #001</h6>
             </a>
-            <p class="text-gray-700 dark:text-gray-400"> The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem </p>
+            <p class="text-gray-700 dark:text-gray-400 ultimate-title"> The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem </p>
             <div class="flex items-center justify-between mt-3">
               <a href="/details" class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn token-sale-btn token-sale-btn token-sale-btn"> Token Sale </a>
               <div class="flex flex-col items-end">
@@ -2403,16 +2403,16 @@ setTimeout(function(){
 
 function chineeseLang(){
   let walletBTNTXT = "连接钱包";
-      if(window.localStorage.getItem("userAddress")!== null){
-          // Load in Localstore key
-          console.log('SETTED')
-          $(".connectwallet-btn-zh").html(truncateAddress(window.localStorage.getItem("userAddress")))
-        }
-        if(window.localStorage.getItem("userAddress")=== null){
-          console.log('NOT DEFINED CN')
-          walletBTNTXT = "连接钱包"; 
-          $(".connectwallet-btn-zh").html('连接钱包')
-        }
+    if(window.localStorage.getItem("userAddress")!== null || window.localStorage.getItem("userAddress")!== 'undefined'){
+        // Load in Localstore key
+        console.log('SETTED')
+        $(".connectwallet-btn-zh").html(truncateAddress(window.localStorage.getItem("userAddress")))
+      }
+      if(window.localStorage.getItem("userAddress")=== null || window.localStorage.getItem("userAddress")=== 'undefined' ){
+        console.log('NOT DEFINED CN')
+        walletBTNTXT = "连接钱包"; 
+        $(".connectwallet-btn-zh").html('连接钱包')
+      }
    
   $(".launch-pad").html("主页面")
   $('.get-early-access-header').html(`尽早获得<span class=\"text-primary-500 bg-contain bg-no-repeat\" style=\"background-image: url('assets/img/logo/nft-text-bg2.png');\">Shibarium</span>上最伟大的项目。`)
@@ -2441,7 +2441,7 @@ $('.learn-about-us').html('了解我们 <i class="fa-solid fa-chevron-right"></i
 $('.how-to-participate').html('如何参与SHIBARIUM PAD活动')
 $('.a-good-place-to').html('一个好的开始是：什么是Shibarim Pad？')
 $('.how-to-buy-art').html('如何购买Shibarim $SHIBP代币？')
-$('.what-is-ido').html('什么是ISO?<br/>(初始分散式发行）')
+$('.what-is-ido').html('什么是ISO？<br/>（首次Shibarium发行）。')
 $('.upcoming-projects').html('即将到来的<span class="text-primary-500">项目</span>')
 $('.we-bring-most').html('我们只引进最成功的项目。');
 $('.see-all').html('查看全部')
@@ -2454,7 +2454,7 @@ $('.join-our-community').html('加入我们的社区')
 $('.about-footer').html('推出新想法的完全去中心化的协议')
 $('.signup-for-newsletter').html('注册我们的通讯，获得最新的新闻和更新。')
 $('.subscribe-txt').html('订阅')
-$('.links').html('链接')
+$('.links').html('在哪里可以找到我们？')
 $('.my-account').html('我的账户')
 $('.resources').html('资源')
 $('.company').html('公司')
@@ -2465,6 +2465,7 @@ $('.terms').html('条款和条件')
 $('.privacy').html('隐私政策')
 $('.about').html('关于我们')
 $('.apply-for-ido').html('申请加入ISO')
+//  $('.ultimate-title').html('专门为<br/> Shibarium生态系统设计的终极发射台。')
 }
 
 
@@ -2472,12 +2473,12 @@ $('.apply-for-ido').html('申请加入ISO')
 
 function englishLang(){
   let walletBTNTXT = "Connect Wallet";
-      if(window.localStorage.getItem("userAddress")!== null){
+      if(window.localStorage.getItem("userAddress")!== null ||  window.localStorage.getItem("userAddress")!== 'undefined'){
           // Load in Localstore key
           
           $(".connectwallet-btn-zh").html(truncateAddress(window.localStorage.getItem("userAddress")))
         }
-        if(window.localStorage.getItem("userAddress")=== null){
+        if(window.localStorage.getItem("userAddress")=== null ||  window.localStorage.getItem("userAddress")=== 'undefined'){
           
           walletBTNTXT = ""; 
           $(".connectwallet-btn-zh").html('Connect Wallet')
@@ -2534,6 +2535,7 @@ $('.terms').html('Terms & Conditions')
 $('.privacy').html('Privacy Policy')
 $('.about').html('About')
 $('.apply-for-ido').html('Apply for ISO')
+// $('.ultimate-title').html('The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem')
 }
 </script>
 <script>
