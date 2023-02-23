@@ -416,17 +416,17 @@ background: #fcfcfc;
                                                       <div class="flex items-center my-3">
                                                         
                                                         <div>
-                                                          <p class="font-semibold text-gray-900 dark:text-gray-400"> Balance </p>
+                                                          <p class="font-semibold text-gray-900 dark:text-gray-400 u-balance"> Balance </p>
                                                           <small class="text-gray-700 dark:text-gray-600 ubalance">20.25 ETH</small>
                                                         </div>
                                                       </div>
                                                       <div>
-                                                        <p class="font-semibold text-gray-900 dark:text-gray-400"> My Wallet </p>
+                                                        <p class="font-semibold text-gray-900 dark:text-gray-400 u-wallet"> My Wallet </p>
                                                         <div class="flex justify-between">
                                                           <div>
                                                             <small class="text-gray-700 dark:text-gray-600 theUAddrr"></small>
                                                           </div>
-                                                          <button style="padding: 2px 7px" class="rounded-md text-xs flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Copy </button>
+                                                          <button style="padding: 2px 7px" class="rounded-md text-xs flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 u-copy"> Copy </button>
                                                         </div>
                                                       </div>
                                                       <div class="my-3 border-b border-gray-300"></div>
@@ -435,7 +435,7 @@ background: #fcfcfc;
                                                         <li class="flex">
                                                         
                                                             <a href="javascrript:void(0)" onclick="logout()"
-                                                            style="margin-bottom: 10px; display:none;font-weight: 900;" class="btnM2 btnLogout  text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"><span>
+                                                            style="margin-bottom: 10px; display:none;font-weight: 900;" class="u-disconnect btnM2 btnLogout  text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"><span>
                                                                 Disconnect</span></a>
                                                         </li>
                                                       </ul>
@@ -665,9 +665,9 @@ background: #fcfcfc;
           </div>
     </div>
     <div class="container mx-auto pt-20 pb-[100px]">
-      <h6 class="text-gray-900 text-center font-semibold text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500">COMING SOON</h6>
+      <h6 class="text-gray-900 text-center csoon font-semibold text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500">COMING SOON</h6>
       <a href="/">
-        <button class="mt-12 mx-auto px-[30px] py-[15px] rounded-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Back to Home </button>
+        <button class="mt-12 mx-auto px-[30px] py-[15px] rounded-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 backhome"> Back to Home </button>
       </a>
     </div>
   </div>
@@ -730,11 +730,11 @@ background: #fcfcfc;
       <div class="flex flex-wrap items-center justify-between">
         <small class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 dark:text-white font-normal"> Copyright © 2023 Shibarium Pad. All Rights Reserves </small>
         <div class="pt-2 pb-4 md:py-9 w-full md:w-auto flex items-center justify-center">
-          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/terms">
+          <a class="terms text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/terms">
             Terms & Conditions
           </a>
  
-          <a class="ml-3 text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/privacy">
+          <a class=" privacy ml-3 text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/privacy">
             Privacy Policy
           </a>
  
@@ -1060,14 +1060,26 @@ setTimeout(function(){
 },2000)
 
 function chineeseLang(){
-  
+  let walletBTNTXT = "连接钱包";
+    if(window.localStorage.getItem("userAddress")!== null || window.localStorage.getItem("userAddress")!== 'undefined'){
+        // Load in Localstore key
+        console.log('SETTED')
+        $(".connectwallet-btn-zh").html(truncateAddress(window.localStorage.getItem("userAddress")))
+      }
+      if(window.localStorage.getItem("userAddress")=== null || window.localStorage.getItem("userAddress")=== 'undefined' ){
+        console.log('NOT DEFINED CN')
+        walletBTNTXT = "连接钱包"; 
+        $(".connectwallet-btn-zh").html('连接钱包')
+      }
+   
+  $('.backhome').html('返回主页面');
   $(".launch-pad").html("主页面")
   $('.get-early-access-header').html(`尽早获得<span class=\"text-primary-500 bg-contain bg-no-repeat\" style=\"background-image: url('assets/img/logo/nft-text-bg2.png');\">Shibarium</span>上最伟大的项目。`)
   $(".home-btn").html("主页面")
   $(".whitepaper-btn").html("白皮书")
   $(".howtobuy-btn").html("如何购买")
   $(".socials-btn").html(`社交网络 <i class="fa-solid fa-caret-down ml-3"></i>`)
-  $(".connectwallet-btn-zh").html("连接钱包")
+  
   $('.trustworty').html('值得信赖的<b class="main-color">Shibarium</b>项目，经过了严格的审查。由整个行业的知名人士和有影响力的人支持。')
   $('.getstarted-btn').html('开始吧')
   $('.create-btn').html('应用')
@@ -1101,7 +1113,7 @@ $('.join-our-community').html('加入我们的社区')
 $('.about-footer').html('推出新想法的完全去中心化的协议')
 $('.signup-for-newsletter').html('注册我们的通讯，获得最新的新闻和更新。')
 $('.subscribe-txt').html('订阅')
-$('.links').html('链接')
+$('.links').html('在哪里可以找到我们？')
 $('.my-account').html('我的账户')
 $('.resources').html('资源')
 $('.company').html('公司')
@@ -1112,20 +1124,43 @@ $('.terms').html('条款和条件')
 $('.privacy').html('隐私政策')
 $('.about').html('关于我们')
 $('.apply-for-ido').html('申请加入ISO')
+$('.csoon').html('即将到来')
+$('.u-disconnect').html('断开连接');
+$('.u-copy').html('断开连接');
+$('.u-wallet').html('我的钱包');
+$('.u-balance').html('平衡');
+
 }
 
 
 
 
 function englishLang(){
-  
+
+$('.u-disconnect').html('Disconnect');
+$('.u-copy').html('Copy');
+$('.u-wallet').html('My Wallet>');
+$('.u-balance').html('Balance');
+  let walletBTNTXT = "Connect Wallet";
+      if(window.localStorage.getItem("userAddress")!== null ||  window.localStorage.getItem("userAddress")!== 'undefined'){
+          // Load in Localstore key
+          
+          $(".connectwallet-btn-zh").html(truncateAddress(window.localStorage.getItem("userAddress")))
+        }
+        if(window.localStorage.getItem("userAddress")=== null ||  window.localStorage.getItem("userAddress")=== 'undefined'){
+          
+          walletBTNTXT = ""; 
+          $(".connectwallet-btn-zh").html('Connect Wallet')
+        }
+        
+  $('.backhome').html('Back to Home');
   $(".launch-pad").html("LAUNCH PAD")
   $('.get-early-access-header').html(`Get early access to the <span class="text-primary-500 bg-contain bg-no-repeat" style="background-image: url('assets/img/logo/nft-text-bg2.png');">  greatest projects </span>  on Shibarium.`)
   $(".home-btn").html("Home")
   $(".whitepaper-btn").html("Whitepaper")
   $(".howtobuy-btn").html("How to buy")
   $(".socials-btn").html(`Socials <i class="fa-solid fa-caret-down ml-3"></i>`)
-  $(".connectwallet-btn-zh").html("Connect Wallet")
+  
   $('.trustworty').html(' Trustworthy <b class="main-color">Shibarium Projects</b> that have undergone rigorous vetting. Backed by prominent individuals and influencers across the industry.')
   $('.getstarted-btn').html('Launch DAPP')
   $('.create-btn').html('Apply ISO')
@@ -1170,6 +1205,7 @@ $('.terms').html('Terms & Conditions')
 $('.privacy').html('Privacy Policy')
 $('.about').html('About')
 $('.apply-for-ido').html('Apply for ISO')
+$('.csoon').html('COMING SOON')
 }
 </script>
 <script>
@@ -1208,27 +1244,6 @@ $('.apply-for-ido').html('Apply for ISO')
 //     });
 </script>
 
-<script>
-  $('.img-lang').click(function(event) {
-    
-    let currentLang  = $('.img-lang').attr('data-language')
-    console.log('????',currentLang) 
-    if(currentLang === "en"){
-      chineeseLang();
-      console.log('UKKKKK') 
-      $('.img-lang').attr('data-language','cn')
-      $('.img-lang').attr('src','/assets/enf.png')
-     
-    }
-   if(currentLang === "cn"){
-      englishLang();    
-      console.log('CHINNNA') 
-      $('.img-lang').attr('data-language','en')
-      $('.img-lang').attr('src','/assets/cnf.png')
-      
-    }
-});
-</script>
 
 <script>
  
@@ -1408,6 +1423,26 @@ $('.apply-for-ido').html('Apply for ISO')
       return Math.floor(i * pow) / pow;
   }
   $('#preloader').animate({opacity: 0}, 1500);
+
+  let text = document.getElementsByClassName("copyUserAddrrBtn");
+    $(".copyUserAddrrBtn").on("click", async () => {
+      try {
+        text = $(".theUAddrr").attr("data-wallet-user");
+        await navigator.clipboard.writeText(text);
+        console.log("Content copied to clipboard");
+        // $('.theUAddrr > i').hide();
+        // $(".share-copy").html(
+        //   '<span style="color:#6f6eff" id="copied">copied</span>'
+        // );
+        $('.copyUserAddrrBtn').html('Copied');
+        setTimeout(function () {
+          $('.copyUserAddrrBtn').html('Copy');
+        }, 3000);
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+      }
+    });
+
 
 
 </script>

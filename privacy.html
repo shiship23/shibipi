@@ -416,17 +416,17 @@ background: #fcfcfc;
                                                       <div class="flex items-center my-3">
                                                         
                                                         <div>
-                                                          <p class="font-semibold text-gray-900 dark:text-gray-400"> Balance </p>
+                                                          <p class="font-semibold text-gray-900 dark:text-gray-400 u-balance u-balance"> Balance </p>
                                                           <small class="text-gray-700 dark:text-gray-600 ubalance">20.25 ETH</small>
                                                         </div>
                                                       </div>
                                                       <div>
-                                                        <p class="font-semibold text-gray-900 dark:text-gray-400"> My Wallet </p>
+                                                        <p class="font-semibold text-gray-900 dark:text-gray-400 u-wallet u-wallet"> My Wallet </p>
                                                         <div class="flex justify-between">
                                                           <div>
                                                             <small class="text-gray-700 dark:text-gray-600 theUAddrr"></small>
                                                           </div>
-                                                          <button style="padding: 2px 7px" class="rounded-md text-xs flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Copy </button>
+                                                          <button style="padding: 2px 7px" class="rounded-md text-xs flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 u-copy"> Copy </button>
                                                         </div>
                                                       </div>
                                                       <div class="my-3 border-b border-gray-300"></div>
@@ -435,7 +435,7 @@ background: #fcfcfc;
                                                         <li class="flex">
                                                         
                                                             <a href="javascrript:void(0)" onclick="logout()"
-                                                            style="margin-bottom: 10px; display:none;font-weight: 900;" class="btnM2 btnLogout  text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"><span>
+                                                            style="margin-bottom: 10px; display:none;font-weight: 900;" class="btnM2 btnLogout  text-gray-900 font-normal u-disconnect  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"><span>
                                                                 Disconnect</span></a>
                                                         </li>
                                                       </ul>
@@ -660,18 +660,18 @@ background: #fcfcfc;
   <div class="bg-gray-25 dark:bg-gray-900 relative">
     <div class="h-[272px] bg-no-repeat bg-cover bg-center pt-[30px] flex items-center justify-center" style="background-image: url('')">
         <div class="text-center">
-            <h6 class="text-gray-900 font-semibold text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500">Privacy Policy</h6>
+            <h6 class="text-gray-900 font-semibold text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500 privacy">Privacy Policy</h6>
            
           </div>
     </div>
     <div class="container mx-auto pt-12 pb-[100px]">
       <div class="max-w-[996px] mx-auto">
         <div class="mb-12">
-          <h6 class="text-lg text-gray-700 dark:text-gray-400 mb-3"> Last Updated: Feb 21, 2023 </h6>
+          <h6 class="text-lg text-gray-700 dark:text-gray-400 mb-3 last-update"> Last Updated: Feb 21, 2023 </h6>
      
         </div>
       
-        
+        <div class="privacy-p">
         
         <p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Privacy Policy</p>
 
@@ -830,7 +830,7 @@ background: #fcfcfc;
         <p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Updates to this Privacy Policy</p>
         
         <p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance may review, change and update this Privacy Policy to reflect our current practices and obligations. We will publish our current Privacy Policy on our website at www.ShibariumPad.finance and the changes will take effect at the time of publishing. You should review this privacy policy regularly and remain familiar with its terms.</p>
-         
+    </div>
       </div>
     </div>
   </div>
@@ -893,11 +893,11 @@ background: #fcfcfc;
       <div class="flex flex-wrap items-center justify-between">
         <small class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 dark:text-white font-normal"> Copyright © 2023 Shibarium Pad. All Rights Reserves </small>
         <div class="pt-2 pb-4 md:py-9 w-full md:w-auto flex items-center justify-center">
-            <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/terms">
+            <a class="terms text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/terms">
                 Terms & Conditions
               </a>
      
-              <a class="ml-3 text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/privacy">
+              <a class="privacy ml-3 text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/privacy">
                 Privacy Policy
               </a>
      
@@ -1066,172 +1066,127 @@ background: #fcfcfc;
   </script>
 
 
-<script>
-  // The data/time we want to countdown to
-  var countDownDate = new Date("Feb 19, 2023 16:37:52").getTime();
-
-  // Run myfunc every second
-  var myfunc = setInterval(function() {
-
-  var now = new Date().getTime();
-  var timeleft = countDownDate - now;
-      
-  // Calculating the days, hours, minutes and seconds left
-  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-      
-  // Result is output to the specific element
-  document.getElementById("days").innerHTML = days + "d "
-  document.getElementById("hours").innerHTML = hours + "h " 
-  document.getElementById("mins").innerHTML = minutes + "m " 
-  document.getElementById("secs").innerHTML = seconds + "s " 
-      
-  // Display the message when countdown is over
-  if (timeleft < 0) {
-      clearInterval(myfunc);
-      document.getElementById("days").innerHTML = ""
-      document.getElementById("hours").innerHTML = "" 
-      document.getElementById("mins").innerHTML = ""
-      document.getElementById("secs").innerHTML = ""
-      document.getElementById("end").innerHTML = "TIME UP!!";
-  }
-  }, 1000);
-
-  
-  </script>
-  <script>
-    /// date 2
-setTimeout(function(){
-    // The data/time we want to countdown to
-  var countDownDate2 = new Date("02/19/2023 4:38 PM").getTime();
-
-// Run myfunc every second
-var myfunc2 = setInterval(function() {
-
-var currentDate = new Date().getTime();
-var timelefts = countDownDate2 - new Date().getTime();
-    
-// Calculating the days, hours, minutes and seconds left
-var dayss = Math.floor(timelefts / (1000 * 60 * 60 * 24));
-var hourss = Math.floor((timelefts % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutess = Math.floor((timelefts % (1000 * 60 * 60)) / (1000 * 60));
-var secondss = Math.floor((timelefts % (1000 * 60)) / 1000);
-
-// Result is output to the specific element
-$("#dayss").html( dayss + "d ")
-$("#hourss").html( hourss + "h " )
-$("#minss").html( minutess + "m " )
-$("#secss").html( secondss + "s " )
-    
-// // Display the message when countdown is over
-if (timelefts < 0) {
-    clearInterval(myfunc2);
-    document.getElementById("dayss").innerHTML = ""
-    document.getElementById("hourss").innerHTML = "" 
-    document.getElementById("minss").innerHTML = ""
-    document.getElementById("secss").innerHTML = ""
-    document.getElementById("ends").innerHTML = "TIME UP!!";
-}
-}, 1000);
-
-},2000)
-  </script>
-
 
 <script>
-CountDownTimer('02/26/2023 4:38 PM', 'countdowni');
- CountDownTimer('02/26/2023 4:38 PM', 'countdown');
-  // CountDownTimer('02/26/2023 4:38 PM', 'countdown2');
-  // CountDownTimer('02/26/2023 4:38 PM', 'countdown3');
-  
-
-  function CountDownTimer(dt, id)
-  {
-      var end = new Date(dt);
-
-      var _second = 1000;
-      var _minute = _second * 60;
-      var _hour = _minute * 60;
-      var _day = _hour * 24;
-      var timer;
-
-      function showRemaining() {
-          var now = new Date();
-          var distance = end - now;
-          if (distance < 0) {
-
-              clearInterval(timer);
-              document.getElementById(id).innerHTML = 'EXPIRED!';
-
-              return;
-          }
-          var days = Math.floor(distance / _day);
-          var hours = Math.floor((distance % _day) / _hour);
-          var minutes = Math.floor((distance % _hour) / _minute);
-          var seconds = Math.floor((distance % _minute) / _second);
-
-          document.getElementById(id).innerHTML = `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${days}</p>
-                  <small class="text-gray-700 text-xs"> Days </small>
-                </div> <span>:</span>`;
-          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${hours}</p>
-                  <small class="text-gray-700 text-xs"> Hours </small>
-                </div><span>:</span> `;;
-          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${minutes}</p>
-                  <small class="text-gray-700 text-xs"> Minutes </small>
-                </div> <span>:</span>`;;
-          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${seconds}</p>
-                  <small class="text-gray-700 text-xs"> Seconds </small>
-                </div> `;;
-      }
-
-      timer = setInterval(showRemaining, 1000);
-  }
 if(window.location.host === 'shibariumpad.finance' && window.location.protocol === 'http:'){
   window.location.href = 'https://shibariumpad.finance'
 }
 </script>
 <script>
-var translations;
-setTimeout(function(){
-$.getJSON('./translations.json', function(data) {
-  translations = data;
-
-  var idsToTranslate = ['launch-pad','home-btn'];
-  $.each(idsToTranslate, function(index, value) {
-    var englishText = $('#' + value).html().trim();
-    var translatedText = translations[value];
-    if (translatedText !== undefined) {
-      $('#' + value).html(translatedText);
-    } else {
-      console.log("No translation found for '" + value + "'");
-    }
-  });
-
-  
-});
-
-},2000)
-
-setTimeout(function(){
-  console.log('INSIDE')
-
-},2000)
 
 function chineeseLang(){
-  
+    let walletBTNTXT = "连接钱包";
+    if(window.localStorage.getItem("userAddress")!== null || window.localStorage.getItem("userAddress")!== 'undefined'){
+        // Load in Localstore key
+        console.log('SETTED')
+        $(".connectwallet-btn-zh").html(truncateAddress(window.localStorage.getItem("userAddress")))
+      }
+      if(window.localStorage.getItem("userAddress")=== null || window.localStorage.getItem("userAddress")=== 'undefined' ){
+        console.log('NOT DEFINED CN')
+        walletBTNTXT = "连接钱包"; 
+        $(".connectwallet-btn-zh").html('连接钱包')
+      }
+   
+    $('.last-update').html('最后更新。2023年2月21日')
+    $('.privacy-p').html(`<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">隐私政策</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">这里提供的是ShibariumPad（ShibariumPad.finance的所有者和经营者）的隐私政策。本隐私政策描述了ShibariumPad.finance将如何管理最终用户的个人信息，这些信息是我们在您使用ShibariumPad.finance、使用我们位于https://ShibariumPad.finance 的网站和任何 &quot;ShibariumPad &quot;品牌的网页或网站，包括任何由我们拥有和/或经营的平板电脑或移动电话应用程序时或我们与您进行其他交易时收集的。ShibariumPad致力于确保我们收集到的有关您的个人信息得到保护，并按照《隐私法》和本隐私政策的规定使用、储存和披露。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">网站使用</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">在使用本网站时，您同意接受本隐私政策条款的约束。ShibariumPad.finance可能会定期审查隐私政策，并保留在任何时候通过在网站上公布此类变更来酌情改变隐私政策的权利。更改将在网站上公布后立即生效。最终用户在张贴后继续使用本网站将构成您对这些变化的接受。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">本隐私政策不适用于与本网站链接的、ShibariumPad.finance无法控制的网站。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">个人信息</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance可能向您收集的个人信息的种类是。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">姓名</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">电子邮件地址</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">个人提交的偏好</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">位置数据</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">IP地址</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">收集目的</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance将只通过合法和公平的方式收集您的个人信息，而不是以侵入性的方式来运营其服务，并向您提供以下信息。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">如果您希望订阅ShibariumPad.finance的每周通讯或其他营销通讯。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">为了向您介绍ShibariumPad的技术进展情况。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">为了向作为用户的您提供服务。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">为安全目的和遵守我们的法律义务而识别您的用户身份。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">为升级和提高您在网站或电话中的体验，或为适应您的需求而定制或开发信息、服务或产品，这可能包括市场调查和开展促销活动。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">通过电子邮件、短信或电话与您沟通，向您介绍我们认为您可能感兴趣的产品或服务。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">通过人口统计分析、数据库的统计分析来创建有关用户的汇总数据，以提供给潜在的和现有的ShibariumPad持有人，并使ShibariumPad.finance的业务运作更加有效。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">为了遵守ShibariumPad.finance的法律和法定义务。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">如果ShibariumPad.finance有理由怀疑已经、正在或可能从事与我们的职能和活动有关的非法活动或性质严重的不当行为，则用于采取适当的行动。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">为了建立、行使或维护任何法律索赔。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">&nbsp;</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">管理工作申请。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">您可以选择以匿名的方式与我们打交道，或者使用假名，除非我们与无法识别的个人打交道是不可行的，或者法律规定我们只能与已识别的个人打交道。此外，如果您不向ShibariumPad.finance提供我们所要求的个人信息，我们可能无法处理您成为用户的请求，无法向您提供我们的服务，也无法对您的询问或投诉作出回应。ShibariumPad.finance可能收集的个人信息的例子包括您的姓名、电子邮件地址、电话号码、您的出生日期、其他验证信息，如您的服务使用活动。成为用户或选择向ShibariumPad.finance提供个人信息，即表示您同意ShibariumPad.finance为上述目的收集、使用和披露您的个人信息。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">直接营销和选择退出</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">我们有时会使用您的个人信息来通知您有关ShibariumPad.finance的产品或服务，或有关ShibariumPad.finance认为您可能感兴趣或有好处的促销活动。我们可能会通过电子邮件、短信、电话或邮件的方式进行。如果您不再希望收到来自ShibariumPad.finance的所有或任何特定形式的营销或促销材料，您可以在任何时候通过电子邮件与我们联系，support@ShibariumPad.finance，我们将尽快满足您的要求。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">我们可能会不时地就您的ShibariumPad.finance帐户的管理和行政问题与您联系。这些联系可以通过注册为用户时记录的任何一种联系方式进行。此类通信不会影响您对直接营销通信的选择加入或选择退出状态。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">对您的个人信息的管理</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance将采取一切合理的措施，确保其收集、使用或披露的个人信息是正确的，并存储在安全的环境中，只有被授权的人才能访问。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance将在不再需要用于APP允许的任何目的（包括我们的法律或运营义务）时，销毁或永久取消我们所持有的个人信息的身份。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">个人信息的安全</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">您承认，在互联网上的数据传输是不完全安全的。因此，ShibariumPad.finance不保证您传输给它的任何信息的安全性。您传输给ShibariumPad.finance的任何信息都是由您自己承担风险的。但是，一旦ShibariumPad.finance收到您的传输信息，ShibariumPad.finance将采取合理的措施来保护您的个人信息不被滥用、丢失和未经授权的访问、修改和披露，包括使用密码保护系统和数据库以及安全套接字层（SSL）技术。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance的雇员、代理人和承包商必须对用户的个人信息和交易行为进行保密。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">在公告板上张贴的信息或在社会媒体环境中交流的信息（例如，Facebook、Twitter、聊天室）会成为公共信息。ShibariumPad.finance不能保证这类披露信息的安全性。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">我们认真对待排除儿童访问我们的服务的责任。我们不接受他们为访问或使用本服务而提供的信息。然而，家长或监护人最终有责任监督其子女的互联网活动，包括在适当情况下使用互联网筛选软件。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">请记住，当你完成在网站上的时间后，一定要注销你的账户。如果你与他人共用一台电脑，这一点尤其重要。你要对你自己的电脑、移动设备或任何其他用于访问网站的手机的安全和访问负责。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">最终，你要对维护你的用户名、密码和任何账户信息的保密性负全责。在使用互联网和我们的网站时，请务必小心。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">访问个人信息</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">您可以通过联系我们（support@ShibariumPad.finance）来访问ShibariumPad.finance收集的个人信息。如果可能的话，我们会在合理的时间内按照您要求的方式让您访问您的个人信息。如果我们拒绝您的请求或不能以您所要求的方式给予您访问，我们将尽我们所能通过其他方式满足您的要求。在APP规定的某些情况下，包括可能对其他个人的隐私产生不合理影响的情况下，我们可能不需要让您访问您的个人信息。如果我们因这些原因而拒绝访问，我们将以书面形式告知您拒绝的原因，以及您可利用的投诉机制。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">网站的使用</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">通过使用本网站，您同意ShibariumPad.finance根据本隐私政策所解释的基础来收集和处理您的个人信息。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">本隐私政策的更新</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance可能会审查、修改和更新本隐私政策，以反映我们当前的做法和义务。我们将在我们的网站上公布我们当前的隐私政策，网址是：www.ShibariumPad.finance，这些变化将在公布时生效。您应定期查看本隐私政策并熟悉其条款。</p>
+`)
   $(".launch-pad").html("主页面")
   $('.get-early-access-header').html(`尽早获得<span class=\"text-primary-500 bg-contain bg-no-repeat\" style=\"background-image: url('assets/img/logo/nft-text-bg2.png');\">Shibarium</span>上最伟大的项目。`)
   $(".home-btn").html("主页面")
   $(".whitepaper-btn").html("白皮书")
   $(".howtobuy-btn").html("如何购买")
   $(".socials-btn").html(`社交网络 <i class="fa-solid fa-caret-down ml-3"></i>`)
-  $(".connectwallet-btn-zh").html("连接钱包")
+  
   $('.trustworty').html('值得信赖的<b class="main-color">Shibarium</b>项目，经过了严格的审查。由整个行业的知名人士和有影响力的人支持。')
   $('.getstarted-btn').html('开始吧')
   $('.create-btn').html('应用')
@@ -1276,20 +1231,42 @@ $('.terms').html('条款和条件')
 $('.privacy').html('隐私政策')
 $('.about').html('关于我们')
 $('.apply-for-ido').html('申请加入ISO')
+
+$('.u-disconnect').html('断开连接');
+$('.u-copy').html('断开连接');
+$('.u-wallet').html('我的钱包');
+$('.u-balance').html('平衡');
 }
 
 
 
 
 function englishLang(){
-  
+
+
+$('.u-disconnect').html('Disconnect');
+$('.u-copy').html('Copy');
+$('.u-wallet').html('My Wallet>');
+$('.u-balance').html('Balance');
+    let walletBTNTXT = "Connect Wallet";
+      if(window.localStorage.getItem("userAddress")!== null ||  window.localStorage.getItem("userAddress")!== 'undefined'){
+          // Load in Localstore key
+          
+          $(".connectwallet-btn-zh").html(truncateAddress(window.localStorage.getItem("userAddress")))
+        }
+        if(window.localStorage.getItem("userAddress")=== null ||  window.localStorage.getItem("userAddress")=== 'undefined'){
+          
+          walletBTNTXT = ""; 
+          $(".connectwallet-btn-zh").html('Connect Wallet')
+        }
+    $('.last-update').html('Last Updated. February 21, 2023')
   $(".launch-pad").html("LAUNCH PAD")
   $('.get-early-access-header').html(`Get early access to the <span class="text-primary-500 bg-contain bg-no-repeat" style="background-image: url('assets/img/logo/nft-text-bg2.png');">  greatest projects </span>  on Shibarium.`)
   $(".home-btn").html("Home")
   $(".whitepaper-btn").html("Whitepaper")
   $(".howtobuy-btn").html("How to buy")
   $(".socials-btn").html(`Socials <i class="fa-solid fa-caret-down ml-3"></i>`)
-  $(".connectwallet-btn-zh").html("Connect Wallet")
+  
   $('.trustworty').html(' Trustworthy <b class="main-color">Shibarium Projects</b> that have undergone rigorous vetting. Backed by prominent individuals and influencers across the industry.')
   $('.getstarted-btn').html('Launch DAPP')
   $('.create-btn').html('Apply ISO')
@@ -1334,6 +1311,163 @@ $('.terms').html('Terms & Conditions')
 $('.privacy').html('Privacy Policy')
 $('.about').html('About')
 $('.apply-for-ido').html('Apply for ISO')
+$('.privacy-p').html(`  <p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Privacy Policy</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Herein is provided the privacy policy of ShibariumPad (owner and operator of ShibariumPad.finance) This Privacy Policy describes how ShibariumPad.finance will manage end user&rsquo;s personal information which we collect as a result of your use of ShibariumPad.finance, your use of our websites located at https://ShibariumPad.finance and any pages or websites under the &#39;ShibariumPad&#39; brand including any tablet or mobile phone applications that are owned and/or operated by us or whenever we otherwise deal with you. ShibariumPad is committed to ensuring that the personal information we collect about you is protected and is used, stored and disclosed in accordance with the Privacy Act and this Privacy Policy.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Website Use</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">In using the website, you agree to be bound by the terms of this Privacy Policy. ShibariumPad.finance may review the Privacy Policy periodically and reserves the right to change the Privacy Policy at any time at its discretion by posting such changes on the website. Changes will be effective immediately when posted on the website. The end users&rsquo; continued use of the website following posting will constitute your acceptance of those changes.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">This Privacy Policy will not apply to websites which are linked to the website and over which ShibariumPad.finance has no control.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Personal Information</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">The kinds of Personal Information that ShibariumPad.finance may collect from you is:</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Name</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Email address</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Personally submitted preferences</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Location data</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">IP address</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Collection Purposes</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance will collect your Personal Information only by lawful and fair means and not in an intrusive way to operate its Service, and to provide you with the following information:</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">If you wish to subscribe to ShibariumPad.finance&#39;s weekly newsletter or other marketing communications.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">To update you on technical progress of ShibariumPad.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">To provide services to you as a User.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">To identify you as a User for security purposes and to comply with our legal obligations.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">To upgrade and enhance your experience within the website or over the telephone, or to tailor or develop information, services or products to suit your needs which may include market research and conducting promotions.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">To tell you about our products or services that we think may be of interest to you by communicating with you via email, SMS or telephone.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">To create aggregate data about Users through demographic profiling, statistical analysis of the database to provide to potential and existing ShibariumPad holders, and to allow for more efficient operation of ShibariumPad.finance&rsquo;s business.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">To comply with ShibariumPad.finance&rsquo;s legal and statutory obligations.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">For taking appropriate action if ShibariumPad.finance has reason to suspect that unlawful activity or misconduct of a serious nature has been, is being or may be engaged in that relates to our functions and activities.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">To establish, exercise or defend any legal claims.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Manage job applications.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">You may choose to deal with us on an anonymous basis or to use a pseudonym unless it is not practicable for us to deal with individuals who we cannot identify or we are required by law to only deal with identified individuals. Also, if you do not provide ShibariumPad.finance with the Personal Information we request, we may be unable to process your request to become a User, provide you with our services or respond to your enquiry or complaint. Examples of Personal Information that may be collected by ShibariumPad.finance include your name, email address, telephone numbers, your date of birth, other verification information such as your Service usage activities. By becoming a User or otherwise choosing to provide ShibariumPad.finance with Personal Information you consent to ShibariumPad.finance collecting, using and disclosing your Personal Information for the above purposes.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Direct Marketing and Opting Out</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Occasionally we may use your Personal Information to inform you about ShibariumPad.finance&#39;s products or services or about promotional activities which ShibariumPad.finance believes may be of interest or of benefit to you. We may do this via email, SMS, telephone or mail. If you no longer wish to receive marketing or promotional material from ShibariumPad.finance at all or in any particular form, you may contact us at any time by email to support@ShibariumPad.finance with your request with which we will comply as soon as is practical.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">From time to time we may contact you in relation to the management and administration of your ShibariumPad.finance account. These communications can be via any of the modes of contact recorded when registering as a User. Such communication does not affect your opt-in or opt-out status for direct marketing communications.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Management of your Personal Information</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance will take all reasonable steps to ensure that the Personal Information which it collects, uses or discloses is correct and is stored in a secure environment which is accessed only by authorised persons.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance will destroy or permanently de-identify the Personal Information we hold when it is no longer required for any purpose permitted under the APPs including our legal or operational obligations.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Security of Personal Information</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">You acknowledge that no data transmission over the Internet is totally secure. Accordingly, ShibariumPad.finance does not warrant the security of any information which you transmit to it. Any information which you transmit to ShibariumPad.finance is transmitted at your own risk. However, once ShibariumPad.finance receives your transmission, ShibariumPad.finance will take reasonable steps to protect your Personal Information from misuse, loss and unauthorised access, modification and disclosure including by using password protected systems and databases and Secure Socket Layer (SSL) technology.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance&rsquo;s employees, agents and contractors are required to maintain the confidentiality of Users&rsquo; Personal Information and trading behaviour.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Information posted on bulletin boards or communicated within a social media environment (for example, Facebook, Twitter, Chat Rooms) becomes public information. ShibariumPad.finance cannot guarantee the security of this type of disclosed information.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">We take seriously the responsibility to exclude children from access to our services. We will not accept their information for the purposes of accessing or using the Service. It is however, ultimately the responsibility of parents or guardians to monitor their children&rsquo;s Internet activities including where appropriate by using Internet screening software.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Remember to always log out of your account when you have completed your time on the website. This is particularly important if you share a computer with another person. You are responsible for the security of and access to your own computer, mobile device or any other handset used to access the website.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Ultimately, you are solely responsible for maintaining the secrecy of your username, password and any account information. Please be careful whenever using the Internet and our website.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Access to Personal Information</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">You may access the Personal Information collected by ShibariumPad.finance by contacting us at support@ShibariumPad.finance. We will give you access to your Personal Information in the manner requested if that is possible and within a reasonable period. If we refuse your request or cannot give you access in the manner you have requested, we will do what we can to meet your requirements by other means. We may not be required to give you access to your Personal Information in certain circumstances which are set out in the APPs including where it may have an unreasonable impact on other individual&#39;s privacy. If we refuse access for such reasons, we will advise you in writing of the refusal and our reasons and the complaint mechanisms available to you.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Use of Website</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">By using this website, you agree to ShibariumPad.finance collecting and processing your Personal Information on the basis explained in this Privacy Policy.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Updates to this Privacy Policy</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad.finance may review, change and update this Privacy Policy to reflect our current practices and obligations. We will publish our current Privacy Policy on our website at www.ShibariumPad.finance and the changes will take effect at the time of publishing. You should review this privacy policy regularly and remain familiar with its terms.</p>`)
 }
 </script>
 <script>
@@ -1371,28 +1505,6 @@ $('.apply-for-ido').html('Apply for ISO')
 
 //     });
 </script>
-
-<script>
-    $('.img-lang').click(function(event) {
-      
-      let currentLang  = $('.img-lang').attr('data-language')
-      console.log('????',currentLang) 
-      if(currentLang === "en"){
-        chineeseLang();
-        console.log('UKKKKK') 
-        $('.img-lang').attr('data-language','cn')
-        $('.img-lang').attr('src','/assets/enf.png')
-       
-      }
-     if(currentLang === "cn"){
-        englishLang();    
-        console.log('CHINNNA') 
-        $('.img-lang').attr('data-language','en')
-        $('.img-lang').attr('src','/assets/cnf.png')
-        
-      }
-  });
-  </script>
   
   <script>
    
@@ -1573,6 +1685,25 @@ $('.apply-for-ido').html('Apply for ISO')
     }
   
     $('#preloader').animate({opacity: 0}, 1500);
+
+    let text = document.getElementsByClassName("copyUserAddrrBtn");
+    $(".copyUserAddrrBtn").on("click", async () => {
+      try {
+        text = $(".theUAddrr").attr("data-wallet-user");
+        await navigator.clipboard.writeText(text);
+        console.log("Content copied to clipboard");
+        // $('.theUAddrr > i').hide();
+        // $(".share-copy").html(
+        //   '<span style="color:#6f6eff" id="copied">copied</span>'
+        // );
+        $('.copyUserAddrrBtn').html('Copied');
+        setTimeout(function () {
+          $('.copyUserAddrrBtn').html('Copy');
+        }, 3000);
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+      }
+    });
 
   </script>
 </html>

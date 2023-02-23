@@ -660,16 +660,17 @@ background: #fcfcfc;
   <div class="bg-gray-25 dark:bg-gray-900 relative">
     <div class="h-[272px] bg-no-repeat bg-cover bg-center pt-[30px] flex items-center justify-center" style="background-image: url('')">
         <div class="text-center">
-            <h6 class="text-gray-900 font-semibold text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500">Terms and Conditions</h6>
+            <h6 class="text-gray-900 font-semibold text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500 terms-lang">Terms and Conditions</h6>
            
           </div>
     </div>
     <div class="container mx-auto pt-12 pb-[100px]">
-      <div class="max-w-[996px] mx-auto">
-        <div class="mb-12">
-          <h6 class="text-lg text-gray-700 dark:text-gray-400 mb-3"> Last Updated: Feb 21, 2023 </h6>
+      <div class="max-w-[996px] mx-auto terms-holder">
+        <div class="mb-12 ">
+          <h6 class="text-lg text-gray-700 dark:text-gray-400 mb-3 last-update"> Last Updated: Feb 21, 2023 </h6>
      
         </div>
+        <div class="terms-paragraphs">
         <p class="text-gray-700 dark:text-gray-400 text-justify mb-3">This end user agreement (the &quot;Agreement&quot;) should be read by you (the &quot;User&quot; or &quot;you&quot;) in its entirety prior to your use of ShibariumPad&#39;s service or products. Be aware that this Agreement constitutes a legally binding agreement between you and ShibariumPad (referred to herein as &quot;ShibariumPad&quot;, &quot;us&quot; or &quot;we&quot;) which owns and operates the website on the Internet and the Service at www.ShibariumPad.finance (the &quot;Service&quot;). You consent to adhering to all the terms set forth in this Agreement when/if you are provided with an &ldquo;I Agree&rdquo; button and clicking on it.</p>
 
         
@@ -837,7 +838,7 @@ background: #fcfcfc;
         
         
         <p class="text-gray-700 dark:text-gray-400 text-justify mb-3">THE USER WARRANTS THAT IT IS AWARE OF THE VOLATILE NATURE OF CRYPTOCURRENCIES, AND HOLDS ShibariumPad HARMLESS FOR ANY LOSS OR DAMAGES ARISING FROM SUCH VOLATILITY</p>
-        
+    </div>
       </div>
     </div>
   </div>
@@ -900,11 +901,11 @@ background: #fcfcfc;
       <div class="flex flex-wrap items-center justify-between">
         <small class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 dark:text-white font-normal"> Copyright © 2023 Shibarium Pad. All Rights Reserves </small>
         <div class="pt-2 pb-4 md:py-9 w-full md:w-auto flex items-center justify-center">
-            <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/terms">
+            <a class="terms text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/terms">
                 Terms & Conditions
               </a>
      
-              <a class="ml-3 text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/privacy">
+              <a class="privacy ml-3 text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/privacy">
                 Privacy Policy
               </a>
      
@@ -1075,130 +1076,13 @@ background: #fcfcfc;
 
 <script>
   // The data/time we want to countdown to
-  var countDownDate = new Date("Feb 19, 2023 16:37:52").getTime();
-
-  // Run myfunc every second
-  var myfunc = setInterval(function() {
-
-  var now = new Date().getTime();
-  var timeleft = countDownDate - now;
-      
-  // Calculating the days, hours, minutes and seconds left
-  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-      
-  // Result is output to the specific element
-  document.getElementById("days").innerHTML = days + "d "
-  document.getElementById("hours").innerHTML = hours + "h " 
-  document.getElementById("mins").innerHTML = minutes + "m " 
-  document.getElementById("secs").innerHTML = seconds + "s " 
-      
-  // Display the message when countdown is over
-  if (timeleft < 0) {
-      clearInterval(myfunc);
-      document.getElementById("days").innerHTML = ""
-      document.getElementById("hours").innerHTML = "" 
-      document.getElementById("mins").innerHTML = ""
-      document.getElementById("secs").innerHTML = ""
-      document.getElementById("end").innerHTML = "TIME UP!!";
-  }
-  }, 1000);
 
   
-  </script>
-  <script>
-    /// date 2
-setTimeout(function(){
-    // The data/time we want to countdown to
-  var countDownDate2 = new Date("02/19/2023 4:38 PM").getTime();
-
-// Run myfunc every second
-var myfunc2 = setInterval(function() {
-
-var currentDate = new Date().getTime();
-var timelefts = countDownDate2 - new Date().getTime();
-    
-// Calculating the days, hours, minutes and seconds left
-var dayss = Math.floor(timelefts / (1000 * 60 * 60 * 24));
-var hourss = Math.floor((timelefts % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutess = Math.floor((timelefts % (1000 * 60 * 60)) / (1000 * 60));
-var secondss = Math.floor((timelefts % (1000 * 60)) / 1000);
-
-// Result is output to the specific element
-$("#dayss").html( dayss + "d ")
-$("#hourss").html( hourss + "h " )
-$("#minss").html( minutess + "m " )
-$("#secss").html( secondss + "s " )
-    
-// // Display the message when countdown is over
-if (timelefts < 0) {
-    clearInterval(myfunc2);
-    document.getElementById("dayss").innerHTML = ""
-    document.getElementById("hourss").innerHTML = "" 
-    document.getElementById("minss").innerHTML = ""
-    document.getElementById("secss").innerHTML = ""
-    document.getElementById("ends").innerHTML = "TIME UP!!";
-}
-}, 1000);
-
-},2000)
   </script>
 
 
 <script>
-CountDownTimer('02/26/2023 4:38 PM', 'countdowni');
- CountDownTimer('02/26/2023 4:38 PM', 'countdown');
-  // CountDownTimer('02/26/2023 4:38 PM', 'countdown2');
-  // CountDownTimer('02/26/2023 4:38 PM', 'countdown3');
-  
 
-  function CountDownTimer(dt, id)
-  {
-      var end = new Date(dt);
-
-      var _second = 1000;
-      var _minute = _second * 60;
-      var _hour = _minute * 60;
-      var _day = _hour * 24;
-      var timer;
-
-      function showRemaining() {
-          var now = new Date();
-          var distance = end - now;
-          if (distance < 0) {
-
-              clearInterval(timer);
-              document.getElementById(id).innerHTML = 'EXPIRED!';
-
-              return;
-          }
-          var days = Math.floor(distance / _day);
-          var hours = Math.floor((distance % _day) / _hour);
-          var minutes = Math.floor((distance % _hour) / _minute);
-          var seconds = Math.floor((distance % _minute) / _second);
-
-          document.getElementById(id).innerHTML = `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${days}</p>
-                  <small class="text-gray-700 text-xs"> Days </small>
-                </div> <span>:</span>`;
-          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${hours}</p>
-                  <small class="text-gray-700 text-xs"> Hours </small>
-                </div><span>:</span> `;;
-          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${minutes}</p>
-                  <small class="text-gray-700 text-xs"> Minutes </small>
-                </div> <span>:</span>`;;
-          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${seconds}</p>
-                  <small class="text-gray-700 text-xs"> Seconds </small>
-                </div> `;;
-      }
-
-      timer = setInterval(showRemaining, 1000);
-  }
 if(window.location.host === 'shibariumpad.finance' && window.location.protocol === 'http:'){
   window.location.href = 'https://shibariumpad.finance'
 }
@@ -1232,47 +1116,134 @@ setTimeout(function(){
 
 function chineeseLang(){
   
-  $(".launch-pad").html("主页面")
-  $('.get-early-access-header').html(`尽早获得<span class=\"text-primary-500 bg-contain bg-no-repeat\" style=\"background-image: url('assets/img/logo/nft-text-bg2.png');\">Shibarium</span>上最伟大的项目。`)
   $(".home-btn").html("主页面")
   $(".whitepaper-btn").html("白皮书")
   $(".howtobuy-btn").html("如何购买")
   $(".socials-btn").html(`社交网络 <i class="fa-solid fa-caret-down ml-3"></i>`)
   $(".connectwallet-btn-zh").html("连接钱包")
-  $('.trustworty').html('值得信赖的<b class="main-color">Shibarium</b>项目，经过了严格的审查。由整个行业的知名人士和有影响力的人支持。')
-  $('.getstarted-btn').html('开始吧')
-  $('.create-btn').html('应用')
-  $('.ideas-funded').html('资助的想法')
-  $('.projects-mc').html('项目市值')
-  $('.unique-participants').html('独特的参与者')
-  $('.token-sale-btn').html('代币销售')
-  $('.price-per-token').html('每枚代币的价格');
-  $('.allocation-txt').html('拨款')
-  $('.starting-text').html('开始日期')
-  $('.raise-funds-text').html('通过<b class="main-color">Shibarium BLOCKCHAIN</b>筹集资金。')
-  $('.total-raised').html('筹集到的资金总额')
-  $('.tokens-funded').html('资助的托克斯');
-  $('.total-mkt-cap').html('总数：MKT CAP');
-$('.total-participants').html('参与者总数')
-$('.get-educated').html(`获得有关<b class="main-color">ShibariumPad的教育</b>。`)
-$('.learn-about-us').html('了解我们 <i class="fa-solid fa-chevron-right"></i>')
-$('.how-to-participate').html('如何参与SHIBARIUM PAD活动')
-$('.a-good-place-to').html('一个好的开始是：什么是Shibarim Pad？')
-$('.how-to-buy-art').html('如何购买Shibarim $SHIDO代币？')
-$('.what-is-ido').html('什么是ISO?<br/>(初始分散式发行）')
-$('.upcoming-projects').html('即将到来的<span class="text-primary-500">项目</span>')
-$('.we-bring-most').html('我们只引进最成功的项目。');
-$('.see-all').html('查看全部')
-$('.assisting-txt').html(`协助最热心的<b class="main-color">博物馆</b>项目启动。`)
-$('.launched-projects-txt').html('<span class="text-primary-500">推出的</span>项目')
-$('.participants-txt').html('参与者')
-$('.end-date').html('结束日期')
-$('.never-miss-sale').html('永远不想错过促销活动？')
-$('.join-our-community').html('加入我们的社区')
-$('.about-footer').html('推出新想法的完全去中心化的协议')
+  $('.terms-lang').html('条款和条件')
+  $('.terms-paragraphs').html(`<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">在您使用ShibariumPad的服务或产品之前，您（&quot;用户 &quot;或 &quot;您&quot;）应完整地阅读本最终用户协议（&quot;本协议&quot;）。请注意，本协议构成您与ShibariumPad（在此称为 &quot;ShibariumPad&quot;、&quot;我们 &quot;或 &quot;我们&quot;）之间具有法律约束力的协议，ShibariumPad拥有并经营互联网上的网站以及www.ShibariumPad.finance（&quot;服务&quot;）。当/如果向您提供 &quot;我同意 &quot;按钮并点击它时，您同意遵守本协议中规定的所有条款。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1. 许可的授予</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1.1. ShibariumPad授予用户非独家的、个人的、不可转让的权利，使其能够在您的个人电脑或其他接入互联网的设备上使用本服务，以获取和使用ShibariumPad.finance网站上提供和描述的服务（该网站及其所有功能合称为 &quot;本服务&quot;），但须遵守本协议中的条款和条件。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1.2. 本服务不适用于(i)未成年人和未满18岁的个人，(ii)在其特定管辖区可被视为未成年人或未达到成年年龄的个人(iii)从任何管辖区访问或使用本服务是非法的个人。ShibariumPad没有能力核实本服务在每个司法管辖区的合法性，因此完全由用户来决定他们对本服务的使用是否合法。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1.3. ShibariumPad及其许可人是本服务和代码、技术、组织和结构、架构的所有权利的唯一持有人，包括版权、商业秘密、知识产权和其他权利。您不得：(a)复制、创造衍生作品、分发、出版、反向工程、反编译、反汇编、修改或翻译ShibariumPad网站或本服务；或(b)以任何方式使用适用法律或法规禁止的本服务（上述各项在此定义为 &quot;未经授权的使用&quot;）。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1.4 ShibariumPad保留任何和所有隐含的或其他的权利，这些权利在此没有明确授予用户，并保留对服务的所有权利、所有权和利益。您同意，您将对因您实施任何未经授权的使用而引起的或与之相关的任何损害、费用或开支承担全部责任。您应在发现任何人实施任何未经授权的使用时立即通知ShibariumPad，并应在ShibariumPad根据您在这方面提供的信息进行的任何调查中提供合理协助。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1.5. ShibariumPad &quot;一词、其域名和任何其他商标，或ShibariumPad作为服务的一部分所使用的服务标志（&quot;商标&quot;），均由ShibariumPad独家拥有。此外，网站上的所有内容，包括但不限于图像、图片、图形、照片、动画、视频、音乐、音频和文本（&quot;网站内容&quot;）均属于ShibariumPad，并受到版权和/或其他知识产权或其他权利的保护。您在此承认，通过使用本服务，您没有获得对网站内容和/或商标或其任何部分的权利。在任何情况下，未经ShibariumPad的事先书面同意，您不得使用网站内容和/或商标。此外，您同意不做任何会损害或可能损害ShibariumPad的权利，包括知识产权的事情。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">2. 无担保</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">2.1. ShibariumPad拒绝提供与本服务有关的任何和所有明示或暗示的保证，本服务是 &quot;按原样 &quot;提供给您的，我们对其质量、适用性、完整性或准确性不作任何保证或陈述。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">2.2. 无论ShibariumPad如何努力，ShibariumPad都不保证服务不会中断、及时或无错误，也不保证缺陷会得到纠正。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">3. 授权/服务条款</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">您同意在ShibariumPad.finance网站上提供和描述的服务规则。ShibariumPad保留对本服务的发布、维护和关闭的所有权力。ShibariumPad的管理层对任何服务的使用或争议的解决所作出的决定是最终的，并且不接受审查或上诉。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4. 您的陈述和保证</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">在您使用本服务之前以及在持续的基础上，您陈述、保证、承诺并同意</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.1. 在使用本服务时，存在丢失加密货币和其他有价值资金的风险，ShibariumPad对任何此类损失不承担任何责任。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.2. 您对本服务的使用由您自行选择，自行决定并承担风险。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.3. 您对您通过使用本服务所交易的加密货币可能需要支付的任何适用税款负全责。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.5. 您访问和使用本服务所需的电信网络、区块链网络（如ShibariumPad和以太坊）和互联网接入服务完全不受ShibariumPad的控制，ShibariumPad对任何中断、迟缓、容量限制或其他影响上述的缺陷不承担任何责任；以及</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.6 您(i)年满18周岁，(ii)在您的司法管辖区达到成年年龄，(iii)您从合法的司法管辖区访问本服务，(iv)您不是政治人物（PEP），也不在任何美国或欧盟的制裁名单或恐怖主义金融观察名单上，以及(v)如果您进入这些名单之一或将您的住所改为禁止的司法管辖区，您会立即通知ShibariumPad。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.7 您保证，如果您发现可能导致对服务的利用或其他来自ShibariumPad的资金损失的漏洞或错误，您有责任及时通知ShibariumPad，Support@ShibariumPad.finance。此外，任何试图利用这种被发现的漏洞或错误来获取非法经济利益的行为都是非法的，并在本协议中被严格禁止。ShibariumPad保留对任何以非法方式利用或试图利用本服务的人在法律最大范围内进行起诉的权利。此类利用或漏洞应以负责任的方式披露，并对support@ShibariumPad.finance，而不是其他实体严格保密。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">5. 禁止的用途</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">5.1. 个人使用。本服务仅用于用户的个人使用。用户只允许为个人用途使用本服务，不得创建多个账户，包括出于串通和/或滥用服务的目的。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">5.2 漏洞和错误。本服务按原样提供，任何对本服务的利用或程序逻辑和/或代码的错误（bug）构成禁止使用和对本协议的重大违反。用户根据本条款以这种方式挪用的任何资金将被视为无效，并成为ShibariumPad的直接财产，没有任何限制。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">5.3 司法管辖区。位于美国、朝鲜、伊朗、委内瑞拉或任何其他禁止使用本服务的管辖区（&quot;禁止管辖区&quot;）的人或其居民不得利用本服务。为避免疑问，上述对来自禁止管辖区的服务限制同样适用于位于禁止管辖区的其他国家的居民和公民。任何位于禁止管辖区或限制管辖区的人试图规避使用限制，都是对本协议的违反。规避的企图包括但不限于操纵ShibariumPad用于识别您的位置的信息以及向ShibariumPad提供有关您的位置或居住地的虚假或误导性信息。位于被禁止的司法管辖区的人在本服务上的任何和所有款项（包括加密货币）都是无效的，可被没收或由ShibariumPad自行决定退还给该人。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">6. 了解你的客户（&quot;KYC&quot;）和反洗钱（AML）政策</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad是一个无权限和完全去中心化的代币销售、掉期和去中心化交易所的平台。作为一家软件开发公司，ShibariumPad在默认情况下没有执行KYC的作用，但是我们为使用ShibariumPad的筹款实体提供此类工具，以便对其用户执行，如果实体选择这样做。使用本服务的筹款实体对ShibariumPad上的KYC/AML工具的使用，完全由上述实体自行决定。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">虽然ShibariumPad不保证任何代币（包括根据任何适用的证券法是否被视为证券或金融工具）、代币销售或ShibariumPad上面的筹款活动的优点、合法性或司法性质，但我们仍然理解一些代币项目需要对其代币销售参与者进行KYC/AML。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">因此，在筹款实体和/或主管监管机构的唯一要求下。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad有权在任何时候要求提供其认为必要的任何KYC文件以确定用户的身份和位置。ShibariumPad保留在充分确定身份之前限制服务和付款的权利。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad还保留向第三方分享所提交的KYC信息和文件的权利，以验证所提交信息的真实性，并且最终用户（您）通过使用本服务同意这一点。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad有权没收任何和所有被发现违反相关和适用的反洗钱（AML）和打击恐怖主义融资（CFT）法律和法规的资金，并在必要时与主管当局合作。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">遵守AML和制裁。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad明确禁止并拒绝将本服务用于任何形式的非法活动，包括洗钱、恐怖主义融资或违反贸易制裁，这与各司法管辖区的法律、法规和规范一致。为此，本服务不提供给任何政治人物（PEP）名单上的个人或实体，或受任何美国、欧盟或其他全球制裁或观察名单的限制。通过使用本服务，终端用户声明并保证他们不在任何此类名单上。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">7. 违法行为</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">7.1. 在不损害任何其他权利的情况下，如果用户全部或部分违反本协议的任何规定，ShibariumPad保留采取其认为合适的行动的权利，包括终止本协议或与用户签订的任何其他协议和/或对该用户采取法律行动。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">7.2. 您同意完全赔偿ShibariumPad及其股东、董事、代理人和雇员，并使其免受由于以下原因而引起的所有索赔、要求、责任、损害、损失、成本和费用，包括法律费用和任何其他费用，无论如何引起。(i) 您违反本协议的全部或部分内容；(ii) 您违反任何法律或任何第三方权利；以及(iii) 您使用本服务。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">8. 限制和责任</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">8.1. 在任何情况下，包括疏忽，ShibariumPad都不对因使用（或误用）本服务而造成的任何特殊的、偶然的、直接的、间接的或后果性的损害（包括但不限于商业利润的损失、业务中断、商业信息的损失或任何其他金钱损失）负责，即使ShibariumPad事先已知道有可能发生这种损害。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">8.2. 本协议中的任何内容都不能排除或限制ShibariumPadr对因其疏忽造成的死亡或人身伤害的责任。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">9. 争议</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">如果用户希望提出投诉，请与ShibariumPad的客户服务团队联系：Support@ShibariumPad.finance。如果任何争议没有得到满意的解决，您可以在下文规定的法律管辖范围内寻求补救措施。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">10. 修订</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad有权在任何时候更新或修改本协议或其任何部分，或以其他方式改变本服务，而无需通知，并且在发布后您将受到该修订协议的约束。因此，我们鼓励您检查当时有效的协议版本中的条款和条件。您继续使用本服务应被视为证明您同意对协议的任何修订。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">11. 管辖法律</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">本协议及与之相关的任何事项应受英属维尔京群岛法律的管辖，并按照该法律进行解释。您不可撤销地同意，在不违反以下规定的情况下，英属维尔京群岛的法院对有关本协议及其产生的任何事项的任何索赔、争议或分歧具有专属管辖权，并不可撤销地放弃其可能反对在这些法院提起诉讼的任何权利，或声称该诉讼是在不方便的法院提起的，或这些法院不具有管辖权。本条款不应限制ShibariumPad在任何其他有管辖权的法院对您提起诉讼的权利，在任何一个或多个司法管辖区提起诉讼也不妨碍在任何其他司法管辖区提起诉讼，无论是否同时进行，只要该其他司法管辖区的法律允许。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">12. 可分割性</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">如果本协议的某项规定在任何司法管辖区是或成为非法的、无效的或不可执行的，这不应影响本协议的任何其他规定在该司法管辖区的有效性或可执行性，或本协议的该规定或任何其他规定在其他司法管辖区的有效性或可执行性。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">13. 转让</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad保留在任何时候转让本协议的全部或部分内容的权利，恕不另行通知。用户不得转让其在本协议下的任何权利或义务。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14. 其他事项</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14.1. ShibariumPad对任何违反本协议规定的行为的放弃（包括ShibariumPad未能要求严格地、字面地履行或遵守本协议的任何规定），在任何情况下都不应被解释为对随后违反该规定或违反本协议的任何其他规定的放弃。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14.2. 本协议中的任何内容都不能为非本协议缔约方的任何第三方创造或赋予任何权利或其他利益。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14.3. 本协议中的任何内容都不应在您和ShibariumPad之间建立或被视为建立伙伴关系、代理、信托安排、信托关系或合资企业。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14.4. ShibariumPad可以转让、转移、抵押、分许可或以任何其他方式处理本协议，或将本协议下的任何权利和义务分包给任何其他方。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14.5. 本协议构成您与ShibariumPad之间关于本服务的全部谅解和协议，并取代您与ShibariumPad之间先前的任何协议、谅解或安排。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">15. 加密货币</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">加密货币的价值会因市场情况而发生很大的波动。</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">用户保证其了解加密货币的波动性，并保证ShibariumPad不承担由这种波动性引起的任何损失或损害。</p>
+`)
+ $('.never-miss-sale').html('永远不想错过促销活动？')
+ $('.join-our-community').html('加入我们的社区')
+ $('.about-footer').html('推出新想法的完全去中心化的协议')
 $('.signup-for-newsletter').html('注册我们的通讯，获得最新的新闻和更新。')
 $('.subscribe-txt').html('订阅')
-$('.links').html('链接')
+$('.links').html('在哪里可以找到我们？')
 $('.my-account').html('我的账户')
 $('.resources').html('资源')
 $('.company').html('公司')
@@ -1280,6 +1251,7 @@ $('.help').html('帮助')
 $('.support').html('帮助')
 $('.faq').html('常见问题')
 $('.terms').html('条款和条件')
+$('.last-update').html('最后更新。2023年2月21日')
 $('.privacy').html('隐私政策')
 $('.about').html('关于我们')
 $('.apply-for-ido').html('申请加入ISO')
@@ -1289,42 +1261,180 @@ $('.apply-for-ido').html('申请加入ISO')
 
 
 function englishLang(){
-  
-  $(".launch-pad").html("LAUNCH PAD")
-  $('.get-early-access-header').html(`Get early access to the <span class="text-primary-500 bg-contain bg-no-repeat" style="background-image: url('assets/img/logo/nft-text-bg2.png');">  greatest projects </span>  on Shibarium.`)
+    $('.terms-lang').html('Terms and Conditions')
   $(".home-btn").html("Home")
   $(".whitepaper-btn").html("Whitepaper")
   $(".howtobuy-btn").html("How to buy")
+  $('.last-update').html('Last Updated. February 21, 2023')
   $(".socials-btn").html(`Socials <i class="fa-solid fa-caret-down ml-3"></i>`)
   $(".connectwallet-btn-zh").html("Connect Wallet")
-  $('.trustworty').html(' Trustworthy <b class="main-color">Shibarium Projects</b> that have undergone rigorous vetting. Backed by prominent individuals and influencers across the industry.')
-  $('.getstarted-btn').html('Launch DAPP')
-  $('.create-btn').html('Apply ISO')
-  $('.ideas-funded').html('IDEAS FUNDED')
-  $('.projects-mc').html('PROJECTS MKT CAP')
-  $('.unique-participants').html('UNIQUE PARTICIPANTS')
-  $('.token-sale-btn').html('Token Sale')
-  $('.price-per-token').html('Price per token');
-  $('.allocation-txt').html('Allocation')
-  $('.starting-text').html('Starting :')
-  $('.raise-funds-text').html('Raise funds through the <b class="main-color"> Shibarium</b>  BLOCKCHAIN. ')
-  $('.total-raised').html('Total Raised')
-  $('.tokens-funded').html('TOKENS FUNDED');
-  $('.total-mkt-cap').html('TOTAL MKT CAP');
-$('.total-participants').html('TOTAL PARTICIPANTS')
-$('.get-educated').html(`Get Educated About <b class="main-color"> ShibariumPad </b>`)
-$('.learn-about-us').html('Learn About Us <i class="fa-solid fa-chevron-right"></i>')
-$('.how-to-participate').html('How to participate in SHIBARIUM PAD')
-$('.a-good-place-to').html('A good place to start is: what is Shibarim Pad?')
-$('.how-to-buy-art').html('How to buy the Shibarim $SHIDO token?')
-$('.what-is-ido').html('What is an ISO? <br/> (Initial Shibarium Offering)')
-$('.upcoming-projects').html('Upcoming  <span class="text-primary-500">Projects</span>')
-$('.we-bring-most').html('We bring in only the most successful projects.');
-$('.see-all').html('See all')
-$('.assisting-txt').html(` ASSISTING THE MOST AMBITIOUS <b class="main-color"> SHIBARIUM </b> PROJECTS LAUNCH.`)
-$('.launched-projects-txt').html('<span class="text-primary-500">Launched </span> Projects')
-$('.participants-txt').html('Participants')
-$('.end-date').html('Ended:')
+ $('.terms-paragraphs').html(` <p class="text-gray-700 dark:text-gray-400 text-justify mb-3">This end user agreement (the &quot;Agreement&quot;) should be read by you (the &quot;User&quot; or &quot;you&quot;) in its entirety prior to your use of ShibariumPad&#39;s service or products. Be aware that this Agreement constitutes a legally binding agreement between you and ShibariumPad (referred to herein as &quot;ShibariumPad&quot;, &quot;us&quot; or &quot;we&quot;) which owns and operates the website on the Internet and the Service at www.ShibariumPad.finance (the &quot;Service&quot;). You consent to adhering to all the terms set forth in this Agreement when/if you are provided with an &ldquo;I Agree&rdquo; button and clicking on it.</p>
+
+        
+        
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1. Grant of License</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1.1. ShibariumPad grants the User a non-exclusive, personal, non-transferable right to use the Service on your personal computer or other device that accesses the Internet in order to access and use the services available and described on the ShibariumPad.finance website (the website and all its functionality together being the &quot;Service&quot;), subject to the terms and conditions contained herein.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1.2. The Service is not for use by (i) minors and individuals under the age of 18 years, (ii) individuals who can be considered minors or under the age of majority adulthood in their specific jurisdiction(s) (iii) individuals accessing or using the Service from any jurisdiction in which it is illegal to do so. ShibariumPad does not have the ability to verify the legality of the Service in every jurisdiction, therefore it is entirely up to the User to determine whether or not their use of the Service is lawful.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1.3. ShibariumPad and its licensors are the sole holders of all rights in and to the Service and code, technology, organization and structure, architecture, including copyright, trade secrets, intellectual property and other rights. You may not: (a) copy, create derivative works, distribute, publish, reverse engineer, decompile, disassemble, modify, or translate the ShibariumPad website or the Service; or (b) use the Service that in any way is prohibited by applicable laws or regulations (each of the above herein defined as an &quot;Unauthorized Use&quot;).</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1.4 ShibariumPad reserves any and all rights implied or otherwise, which are not expressly granted to the User hereunder and retain all rights, title and interest in and to the Service. You agree that you will be solely liable for any damage, costs or expenses arising out of or in connection with the commission by you of any Unauthorized Use. You shall notify ShibariumPad immediately upon becoming aware of the commission by any person of any Unauthorized Use and shall provide ShibariumPad with reasonable assistance with any investigations it conducts in light of the information provided by you in this respect.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">1.5. The term &quot;ShibariumPad&quot;, its domain names and any other trade marks, or service marks used by ShibariumPad as part of the Service (the &quot;Trade Marks&quot;), are solely owned by ShibariumPad. In addition, all content on the website, including, but not limited to, the images, pictures, graphics, photographs, animations, videos, music, audio and text (the &quot;Site Content&quot;) belongs to ShibariumPad and is protected by copyright and/or other intellectual property or other rights. You hereby acknowledge that by using the Service, you obtain no rights in the Site Content and/or the Trade Marks, or any part thereof. Under no circumstances may you use the Site Content and/or the Trade Marks without ShibariumPad&#39;s prior written consent. Additionally, you agree not to do anything that will harm or potentially harm the rights, including the intellectual property rights of ShibariumPad.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">2. No Warranties</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">2.1. ShibariumPad disclaims any and all warranties, expressed or implied, in connection with the service which is provided to you &quot;as is&quot; and we provide you with no warranty or representation whatsoever regarding its quality, fitness for purpose, completeness or accuracy.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">2.2. Regardless of ShibariumPad&#39;s efforts, ShibariumPad makes no warranty that the service will be uninterrupted, timely or error-free, or that defects will be corrected.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">3. Authority/Terms of Service</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">You agree to the rules of the Service provided and described on the ShibariumPad.finance website. ShibariumPad retains all authority over the issuing, maintenance, and closing of the Service. The decision of ShibariumPad&#39;s management, concerning any use of the Service, or dispute resolution, is final and shall not be open to review or appeal.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4. Your Representations and Warranties</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Prior to your use of the Service and on an ongoing basis you represent, warrant, covenant and agree that:</p>
+
+
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.1. there is a risk of losing cryptocurrency &amp; other funds of value when using the Service and ShibariumPad has no responsibility to you for any such loss;</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.2. your use of the Service is at your sole option, discretion and risk;</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.3. you are solely responsible for any applicable taxes which may be payable on cryptocurrency traded or transacted by you through your using the Service;</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.5. the telecommunications networks, blockchain networks (such as ShibariumPad and Ethereum) and Internet access services required for you to access and use the Service are entirely beyond the control of ShibariumPad and ShibariumPad shall have no liability whatsoever for any outages, slowness, capacity constraints or other deficiencies affecting the same; and</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.6. you are (i) aged 18 or over, (ii) you are of the age of majority in your jurisdiction, (iii) you are accessing the Service from a jurisdiction in which it is legal to do so, (iv) you are not a Politically Exposed Person (PEP) nor are you on any U.S. or EU Sanctions lists or terrorism finance watchlists, and (v) that you will inform ShibariumPad immediately if you enter onto one of these lists or change your residence to a prohibited jurisdiction.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">4.7 You warrant that should you discover a bug or error that may lead to an exploit of the Service or other loss of funds from ShibariumPad, you have the responsibility to notify ShibariumPad at Support@ShibariumPad.finance in a timely manner. Furthermore, any attempt by you to use such a discovered exploit or bug for illicit financial gain is illegal and strictly prohibited under this Agreement. ShibariumPad reserves the right to prosecute to the fullest extent of the law anyone who exploits or attempts to exploit the Service in an unlawful manner. Such exploits or bugs should be disclosed in a responsible manner and in strict confidence with support@ShibariumPad.finance and no other entity.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">5. Prohibited Uses</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">5.1. PERSONAL USE. The Service is intended solely for the User&rsquo;s personal use. The User is only allowed to use the Service for personal use, and may not create multiple accounts, including for the purpose of collusion and/or abuse of service.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">5.2 EXPLOITS &amp; BUGS. The Service is provided as is, and any exploitation of the Service or errors in program logic and/or code (bugs) constitutes a Prohibited Use and a material breach of this Agreement. Any funds the user may misappropriate in this manner pursuant to this clause shall be considered void and the immediate property of ShibariumPad, without limit.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">5.3 JURISDICTIONS. Persons located in or residents of the United States, North Korea, Iran, Venezuela or any other jurisdiction in which it is prohibited from using the Service (the &rdquo;Prohibited Jurisdictions&rdquo;) are not permitted to make use of the Service. For the avoidance of doubt, the foregoing restrictions on Service from Prohibited Jurisdictions applies equally to residents and citizens of other nations while located in a Prohibited Jurisdiction. Any attempt to circumvent the restrictions on usage by any persons located in a Prohibited Jurisdiction or Restricted Jurisdiction, is a breach of this Agreement. An attempt at circumvention includes, but is not limited to, manipulating the information used by ShibariumPad to identify your location and providing ShibariumPad with false or misleading information regarding your location or place of residence. Any and all monies (including cryptocurrencies) of a person located in a Prohibited Jurisdiction on the Service are VOID, and can be confiscated or may be returned to the person at ShibariumPad&#39;s sole discretion.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">6. Know your Customer (&ldquo;KYC&rdquo;) and Anti-Money Laundering (AML) Policy</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad is a permissionless and fully decentralised platform for token sales, swaps, and decentralized exchange. As a software development company, ShibariumPad has no role in enforcing KYC by default, however we do provide such tools for fundraising entities using ShibariumPad to enforce on their users, if the entities choose to do so. The use of KYC/AML tools on ShibariumPad by fundraising entities using the Service is completely at the discretion of said entities.</p>
+
+
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Although ShibariumPad makes no warranty as to the merit, legality or juridical nature of any token (including whether or not it is considered a security or financial instrument under any applicable Securities Laws), token sale or fundraiser on top of ShibariumPad, we nonetheless understand the need of some token projects to require KYC/AML on their token sale participants.</p>
+
+
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">Therefore, and at the sole behest of fundraising entities and/or competent regulatory authorities:</p>
+
+
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad reserves the right, at any time, to ask for any KYC documentation it deems necessary to determine the identity and location of a User. ShibariumPad reserves the right to restrict service and payment until identity is sufficiently determined.</p>
+
+
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad further reserves the right to share submitted KYC information and documentation to 3rd parties to verify the authenticity of submitted information, and the end user (you) agree to this by using the Service.</p>
+
+
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad reserves the right to confiscate any and all funds that are found to be in violation of relevant and applicable anti-money laundering (AML) and countering terrorism financing (CFT) laws and regulations, and to cooperate with the competent authorities when and if necessary.</p>
+
+
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">AML &amp; SANCTIONS COMPLIANCE.</p>
+
+
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad expressly prohibits and rejects the use of the Service for any form of illicit activity, including money laundering, terrorist financing or trade sanctions violations, consistent with various jurisdictions&rsquo; laws, regulations and norms. To that end, the Service is not offered to individuals or entities on any Politically Exposed Persons (PEP) lists, or subject to any United States, European Union, or other global sanctions or watch lists. By using the Service, end users represent and warrant that they are not on any such lists.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">7. Breach</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">7.1. Without prejudice to any other rights, if a User breaches in whole or in part any provision contained herein, ShibariumPad reserves the right to take such action as it sees fit, including terminating this Agreement or any other agreement in place with the User and/or taking legal action against such User.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">7.2. You agree to fully indemnify, defend and hold harmless ShibariumPad and its shareholders, directors, agents and employees from and against all claims, demands, liabilities, damages, losses, costs and expenses, including legal fees and any other charges whatsoever, howsoever caused, that may arise as a result of: (i) your breach of this Agreement, in whole or in part; (ii) violation by you of any law or any third party rights; and (iii) use by you of the Service.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">8. Limitations and Liability</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">8.1. Under no circumstances, including negligence, shall ShibariumPad be liable for any special, incidental, direct, indirect or consequential damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or any other pecuniary loss) arising out of the use (or misuse) of the Service even if ShibariumPad had prior knowledge of the possibility of such damages.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">8.2. Nothing in this Agreement shall exclude or limit ShibariumPadr&#39;s liability for death or personal injury resulting from its negligence.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">9. Disputes</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">If a User wishes to make a complaint, please contact ShibariumPad&#39;s customer service team at Support@ShibariumPad.finance. Should any dispute not be resolved to your satisfaction you may pursue remedies in the governing law jurisdiction set forth below.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">10. Amendment</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad reserves the right to update or modify this Agreement or any part thereof at any time or otherwise change the Service without notice and you will be bound by such amended Agreement upon posting. Therefore, we encourage you to check the terms and conditions contained in the version of the Agreement in force at such time. Your continued use of the Service shall be deemed to attest to your agreement to any amendments to the Agreement.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">11. Governing Law</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">The Agreement and any matters relating hereto shall be governed by, and construed in accordance with, the laws of the British Virgin Islands. You irrevocably agree that, subject as provided below, the courts of the British Virgin Islands shall have exclusive jurisdiction in relation to any claim, dispute or difference concerning the Agreement and any matter arising therefrom and irrevocably waive any right that it may have to object to an action being brought in those courts, or to claim that the action has been brought in an inconvenient forum, or that those courts do not have jurisdiction. Nothing in this clause shall limit the right of ShibariumPad to take proceedings against you in any other court of competent jurisdiction, nor shall the taking of proceedings in any one or more jurisdictions preclude the taking of proceedings in any other jurisdictions, whether concurrently or not, to the extent permitted by the law of such other jurisdiction.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">12. Severability</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">If a provision of this Agreement is or becomes illegal, invalid or unenforceable in any jurisdiction, that shall not affect the validity or enforceability in that jurisdiction of any other provision hereof or the validity or enforceability in other jurisdictions of that or any other provision hereof.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">13. Assignment</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">ShibariumPad reserves the right to assign this agreement, in whole or in part, at any time without notice. The User may not assign any of his/her rights or obligations under this Agreement.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14. Miscellaneous</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14.1. No waiver by ShibariumPad of any breach of any provision of this Agreement (including the failure of ShibariumPad to require strict and literal performance of or compliance with any provision of this Agreement) shall in any way be construed as a waiver of any subsequent breach of such provision or of any breach of any other provision of this Agreement.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14.2. Nothing in this Agreement shall create or confer any rights or other benefits in favour of any third parties not party to this Agreement.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14.3. Nothing in this Agreement shall create or be deemed to create a partnership, agency, trust arrangement, fiduciary relationship or joint venture between you and ShibariumPad.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14.4. ShibariumPad may assign, transfer, charge, sub-license, or deal in any other manner with this Agreement, or sub-contract any of its rights and obligations under this Agreement, to any other party.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">14.5. This Agreement constitutes the entire understanding and agreement between you and ShibariumPad regarding the Service and supersedes any prior agreement, understanding, or arrangement between you and ShibariumPad.</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">15. Cryptocurrency</p>
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">CRYPTOCURRENCY VALUES CAN FLUCTUATE GREATLY IN VALUE DEPENDING ON MARKET CONDITIONS.</p>
+
+
+
+<p class="text-gray-700 dark:text-gray-400 text-justify mb-3">THE USER WARRANTS THAT IT IS AWARE OF THE VOLATILE NATURE OF CRYPTOCURRENCIES, AND HOLDS ShibariumPad HARMLESS FOR ANY LOSS OR DAMAGES ARISING FROM SUCH VOLATILITY</p>`)
 $('.never-miss-sale').html(' Never want to miss a sale? ')
 $('.join-our-community').html('Join Our Community')
 $('.about-footer').html('The ultimate Shibarium launchpad. ')
@@ -1379,26 +1489,7 @@ $('.apply-for-ido').html('Apply for ISO')
 //     });
 </script>
 
-<script>
-    $('.img-lang').click(function(event) {
-      
-      let currentLang  = $('.img-lang').attr('data-language')
-      console.log('????',currentLang) 
-      if(currentLang === "en"){
-        chineeseLang();
-        console.log('UKKKKK') 
-        $('.img-lang').attr('data-language','cn')
-        $('.img-lang').attr('src','/assets/enf.png')
-       
-      }
-     if(currentLang === "cn"){
-        englishLang();    
-        console.log('CHINNNA') 
-        $('.img-lang').attr('data-language','en')
-        $('.img-lang').attr('src','/assets/cnf.png')
-        
-      }
-  });
+
   </script>
   
   <script>
@@ -1580,6 +1671,25 @@ $('.apply-for-ido').html('Apply for ISO')
     }
   
     $('#preloader').animate({opacity: 0}, 1500);
+
+    let text = document.getElementsByClassName("copyUserAddrrBtn");
+    $(".copyUserAddrrBtn").on("click", async () => {
+      try {
+        text = $(".theUAddrr").attr("data-wallet-user");
+        await navigator.clipboard.writeText(text);
+        console.log("Content copied to clipboard");
+        // $('.theUAddrr > i').hide();
+        // $(".share-copy").html(
+        //   '<span style="color:#6f6eff" id="copied">copied</span>'
+        // );
+        $('.copyUserAddrrBtn').html('Copied');
+        setTimeout(function () {
+          $('.copyUserAddrrBtn').html('Copy');
+        }, 3000);
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+      }
+    });
 
   </script>
 </html>

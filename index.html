@@ -417,17 +417,17 @@ background: #fcfcfc;
                                                       <div class="flex items-center my-3">
                                                         
                                                         <div>
-                                                          <p class="font-semibold text-gray-900 dark:text-gray-400"> Balance </p>
-                                                          <small class="text-gray-700 dark:text-gray-600 ubalance">20.25 ETH</small>
+                                                          <p class="font-semibold text-gray-900 dark:text-gray-400 u-balance"> Balance </p>
+                                                          <small class="text-gray-700 dark:text-gray-600 ubalance"> ETH</small>
                                                         </div>
                                                       </div>
                                                       <div>
-                                                        <p class="font-semibold text-gray-900 dark:text-gray-400"> My Wallet </p>
+                                                        <p class="font-semibold text-gray-900 dark:text-gray-400 u-wallet"> My Wallet </p>
                                                         <div class="flex justify-between">
                                                           <div>
                                                             <small class="text-gray-700 dark:text-gray-600 theUAddrr"  data-wallet-user=""></small>
                                                           </div>
-                                                          <button id="" style="padding: 2px 7px" class="copyUserAddrrBtn rounded-md text-xs flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200"> Copy </button>
+                                                          <button id="" style="padding: 2px 7px" class="copyUserAddrrBtn rounded-md text-xs flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 u-copy"> Copy </button>
                                                         </div>
                                                       </div>
                                                       <div class="my-3 border-b border-gray-300"></div>
@@ -436,7 +436,7 @@ background: #fcfcfc;
                                                         <li class="flex">
                                                         
                                                             <a href="javascrript:void(0)" onclick="logout()"
-                                                            style="margin-bottom: 10px; display:none;font-weight: 900;" class="btnM2 btnLogout  text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"><span>
+                                                            style="margin-bottom: 10px; display:none;font-weight: 900;" class="u-disconnect btnM2 btnLogout  text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"><span>
                                                                 Disconnect</span></a>
                                                         </li>
                                                       </ul>
@@ -692,7 +692,7 @@ background: #fcfcfc;
             </div>
           </div>
         </div>
-        <div class="md:max-w-[482px] md:ml-auto">
+        <div class="md:max-w-[482px] md:ml-auto w-full">
           <div class="group p-4 relative bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover">
             <a href="#">
               <div class="w-full h-[300px] bg-cover bg-center relative rounded-lg mb-4 flex items-end justify-center" style="background-image: url(assets/Ninja5.jpg);    background-repeat: no-repeat;background-position: top;  background-color: #f70200;">
@@ -1203,7 +1203,8 @@ background: #fcfcfc;
                <p id="hours"></p>
                <p id="mins"></p>
                <p id="secs"></p> -->
-               <div style="    display: contents;" id=""><div class="flex flex-col items-center justify-center">
+               <div style="    display: contents;" class="time-str" id="">
+                <div class="flex flex-col items-center justify-center">
                 <p id="" class="text-gray-900 font-semibold">x</p>
                 <small class="text-gray-700 text-xs"> Days </small>
               </div> <span>:</span><div class="flex flex-col items-center justify-center">
@@ -1215,7 +1216,8 @@ background: #fcfcfc;
               </div> <span>:</span><div class="flex flex-col items-center justify-center">
                 <p id="" class="text-gray-900 font-semibold">x</p>
                 <small class="text-gray-700 text-xs"> Seconds </small>
-              </div> </div>
+              </div>
+             </div>
               </div>
             </div>
           </a>
@@ -1276,7 +1278,8 @@ background: #fcfcfc;
                <p id="mins"></p>
                <p id="secs"></p> -->
                <!-- <div style="    display: contents;" id="countdown3"></div> -->
-               <div style="    display: contents;" id=""><div class="flex flex-col items-center justify-center">
+               <div style="    display: contents;" class="time-str" id="">
+                <div class="flex flex-col items-center justify-center">
                 <p id="" class="text-gray-900 font-semibold">x</p>
                 <small class="text-gray-700 text-xs"> Days </small>
               </div> <span>:</span><div class="flex flex-col items-center justify-center">
@@ -2349,23 +2352,47 @@ CountDownTimer('02/28/2023 11:59 AM', 'countdowni');
           var hours = Math.floor((distance % _day) / _hour);
           var minutes = Math.floor((distance % _hour) / _minute);
           var seconds = Math.floor((distance % _minute) / _second);
+          let currentLang  = $('.img-lang').attr('data-language')
+   
+   if(currentLang === "en"){
+       document.getElementById(id).innerHTML = `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${days}</p>
+                 <small class="text-gray-700 text-xs"> Days </small>
+               </div> <span>:</span>`;
+         document.getElementById(id).innerHTML += `<div class="flex ml-5 flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${hours}</p>
+                 <small class="text-gray-700 text-xs"> Hours </small>
+               </div><span>:</span> `;;
+         document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${minutes}</p>
+                 <small class="text-gray-700 text-xs"> Minutes </small>
+               </div> <span>:</span>`;;
+         document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${seconds}</p>
+                 <small class="text-gray-700 text-xs"> Seconds </small>
+               </div> `;;
+   }
+  if(currentLang === "cn"){
+   document.getElementById(id).innerHTML = `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${days}</p>
+                 <small class="text-gray-700 text-xs"> 天数 </small>
+               </div> <span>:</span>`;
+         document.getElementById(id).innerHTML += `<div class="flex ml-5 flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${hours}</p>
+                 <small class="text-gray-700 text-xs"> 小时 </small>
+               </div><span>:</span> `;;
+         document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${minutes}</p>
+                 <small class="text-gray-700 text-xs"> 会议记录 </small>
+               </div> <span>:</span>`;;
+         document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${seconds}</p>
+                 <small class="text-gray-700 text-xs"> 秒钟 </small>
+               </div> `;;
+   }
 
-          document.getElementById(id).innerHTML = `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${days}</p>
-                  <small class="text-gray-700 text-xs"> Days </small>
-                </div> <span>:</span>`;
-          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${hours}</p>
-                  <small class="text-gray-700 text-xs"> Hours </small>
-                </div><span>:</span> `;;
-          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${minutes}</p>
-                  <small class="text-gray-700 text-xs"> Minutes </small>
-                </div> <span>:</span>`;;
-          document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
-                  <p  id="" class="text-gray-900 font-semibold">${seconds}</p>
-                  <small class="text-gray-700 text-xs"> Seconds </small>
-                </div> `;;
+       
+   
       }
 
       timer = setInterval(showRemaining, 1000);
@@ -2465,13 +2492,37 @@ $('.terms').html('条款和条件')
 $('.privacy').html('隐私政策')
 $('.about').html('关于我们')
 $('.apply-for-ido').html('申请加入ISO')
-//  $('.ultimate-title').html('专门为<br/> Shibarium生态系统设计的终极发射台。')
+  $('.ultimate-title').html('专门为Shibarium生态系统设计的终极发射台。')
+  $('.time-str').html(`    <div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> 天数 </small>
+              </div> <span>:</span><div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x </p>
+                <small class="text-gray-700 text-xs"> 小时 </small>
+              </div><span>:</span> <div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> 会议记录 </small>
+              </div> <span>:</span><div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> 秒钟 </small>
+              </div>`)
+$('.u-disconnect').html('断开连接');
+$('.u-copy').html('断开连接');
+$('.u-wallet').html('我的钱包');
+$('.u-balance').html('平衡');
+
+
 }
 
 
 
 
 function englishLang(){
+  $('.u-disconnect').html('Disconnect');
+$('.u-copy').html('Copy');
+$('.u-wallet').html('My Wallet>');
+$('.u-balance').html('Balance');
+
   let walletBTNTXT = "Connect Wallet";
       if(window.localStorage.getItem("userAddress")!== null ||  window.localStorage.getItem("userAddress")!== 'undefined'){
           // Load in Localstore key
@@ -2490,7 +2541,19 @@ function englishLang(){
   $(".whitepaper-btn").html("Whitepaper")
   $(".howtobuy-btn").html("How to buy")
   $(".socials-btn").html(`Socials <i class="fa-solid fa-caret-down ml-3"></i>`)
-  
+  $('.time-str').html(`    <div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> Days </small>
+              </div> <span>:</span><div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x </p>
+                <small class="text-gray-700 text-xs"> Hours </small>
+              </div><span>:</span> <div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> Minutes </small>
+              </div> <span>:</span><div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> Seconds </small>
+              </div>`)
   $('.trustworty').html(' Trustworthy <b class="main-color">Shibarium Projects</b> that have undergone rigorous vetting. Backed by prominent individuals and influencers across the industry.')
   $('.getstarted-btn').html('Launch DAPP')
   $('.create-btn').html('Apply ISO')
@@ -2535,7 +2598,7 @@ $('.terms').html('Terms & Conditions')
 $('.privacy').html('Privacy Policy')
 $('.about').html('About')
 $('.apply-for-ido').html('Apply for ISO')
-// $('.ultimate-title').html('The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem')
+$('.ultimate-title').html('The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem')
 }
 </script>
 <script>
