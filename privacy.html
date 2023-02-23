@@ -1721,5 +1721,33 @@ $('.privacy-p').html(`  <p class="text-gray-700 dark:text-gray-400 text-justify 
       $('.img-lang').attr('src','/assets/enf.png')
     }
 
+    $('#lightOrDarkMode').on('click',function(){
+  let mode = window.localStorage.getItem('mode');
+  let theMode= $('#lightOrDarkMode').attr('data-mode')
+
+  if(theMode === 'light'){
+      window.localStorage.setItem('mode',theMode)
+      $('#lightOrDarkMode').attr('data-mode','dark')
+      window.localStorage.setItem('mode','dark')
+      $('body').addClass('dark');
+    }else if(theMode === 'dark'){
+      window.localStorage.setItem('mode',theMode)
+      $('#lightOrDarkMode').attr('data-mode','light')
+      window.localStorage.setItem('mode','light')
+      $('body').removeClass('dark');;   
+    }
+  
+})
+if(window.localStorage.getItem('mode') === null || window.localStorage.getItem('mode') === 'undefined'){
+        window.localStorage.setItem('mode','light')
+    }else if(window.localStorage.getItem('mode') === 'light'){
+      window.localStorage.setItem('mode','light')
+      $('body').removeClass('dark');;   
+    
+    }else if(window.localStorage.getItem('mode') === 'dark'){
+      window.localStorage.setItem('mode','dark')
+      $('body').addClass('dark');
+    }
+    
   </script>
 </html>

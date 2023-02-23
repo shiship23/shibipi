@@ -633,7 +633,7 @@ background: #fcfcfc;
               
               <img style="width:30px" src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/China_flat.png" alt="">
             </a> -->
-            <button id="lightOrDarkMode" class="w-7 h-7 ml-4 border border-gray-300 dark:border-primary-300 rounded-full flex items-center justify-center">
+            <button id="lightOrDarkMode" data-mode="light" class="w-7 h-7 ml-4 border border-gray-300 dark:border-primary-300 rounded-full flex items-center justify-center">
               <svg class="block dark:hidden w-[12px]
 						h-[12px] fill-gray-700 dark:fill-primary-100" width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg">
                 <path d="M11.5915 13.0556C7.75928 13.0556 4.65887 9.925 4.65887 6.05556C4.65887 4.13056 5.42916 2.38056 6.68088 1.11667C3.44567 1.71945 1 4.55834 1 8C1 11.8694 4.10041 15 7.9326 15C9.85832 15 11.5915 14.2028 12.8432 12.9389C12.4388 13.0167 12.0344 13.0556 11.5915 13.0556Z" />
@@ -1159,7 +1159,7 @@ background: #fcfcfc;
           <a href="#">
             <h6 class="text-primary-500 my-3">Shibarium Pad  #001</h6>
           </a>
-          <p class="text-gray-700 dark:text-gray-400"> The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem </p>
+          <p class="text-gray-700 dark:text-gray-400 ultimate-title"> The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem </p>
           <div class="flex items-center justify-between mt-3">
             <a href="/details" class="px-8 py-2 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 token-sale-btn"> Token Sale </a>
             <div class="flex flex-col items-end">
@@ -2842,6 +2842,34 @@ $('.ultimate-title').html('The Ultimate Launchpad Designed Exclusively For The S
       $('.img-lang').attr('src','/assets/enf.png')
     }
 
+$('#lightOrDarkMode').on('click',function(){
+  let mode = window.localStorage.getItem('mode');
+  let theMode= $('#lightOrDarkMode').attr('data-mode')
+
+  if(theMode === 'light'){
+      window.localStorage.setItem('mode',theMode)
+      $('#lightOrDarkMode').attr('data-mode','dark')
+      window.localStorage.setItem('mode','dark')
+      $('body').addClass('dark');
+    }else if(theMode === 'dark'){
+      window.localStorage.setItem('mode',theMode)
+      $('#lightOrDarkMode').attr('data-mode','light')
+      window.localStorage.setItem('mode','light')
+      $('body').removeClass('dark');;   
+    }
+  
+})
+if(window.localStorage.getItem('mode') === null || window.localStorage.getItem('mode') === 'undefined'){
+        window.localStorage.setItem('mode','light')
+    }else if(window.localStorage.getItem('mode') === 'light'){
+      window.localStorage.setItem('mode','light')
+      $('body').removeClass('dark');;   
+    
+    }else if(window.localStorage.getItem('mode') === 'dark'){
+      window.localStorage.setItem('mode','dark')
+      $('body').addClass('dark');
+    }
+    
 </script>
 
 </html>
