@@ -1182,12 +1182,16 @@ $('.apply-for-ido').html('Apply for ISO')
       console.log('UKKKKK') 
       $('.img-lang').attr('data-language','cn')
       $('.img-lang').attr('src','/assets/enf.png')
+      window.localStorage.setItem('lang','cn')
+     
     }
    if(currentLang === "cn"){
       englishLang();    
       console.log('CHINNNA') 
       $('.img-lang').attr('data-language','en')
       $('.img-lang').attr('src','/assets/cnf.png')
+      window.localStorage.setItem('lang','en')
+      
     }
 });
 
@@ -1208,27 +1212,6 @@ $('.apply-for-ido').html('Apply for ISO')
 //     });
 </script>
 
-<script>
-  $('.img-lang').click(function(event) {
-    
-    let currentLang  = $('.img-lang').attr('data-language')
-    console.log('????',currentLang) 
-    if(currentLang === "en"){
-      chineeseLang();
-      console.log('UKKKKK') 
-      $('.img-lang').attr('data-language','cn')
-      $('.img-lang').attr('src','/assets/enf.png')
-     
-    }
-   if(currentLang === "cn"){
-      englishLang();    
-      console.log('CHINNNA') 
-      $('.img-lang').attr('data-language','en')
-      $('.img-lang').attr('src','/assets/cnf.png')
-      
-    }
-});
-</script>
 
 <script>
  
@@ -1409,6 +1392,19 @@ $('.apply-for-ido').html('Apply for ISO')
   }
   $('#preloader').animate({opacity: 0}, 1500);
 
+  if(window.localStorage.getItem('lang') === null || window.localStorage.getItem('lang') === 'undefined'){
+        window.localStorage.setItem('lang','en')
+    }else if(window.localStorage.getItem('lang') === 'en'){
+        englishLang();    
+      console.log('CHINNNA') 
+      $('.img-lang').attr('data-language','en')
+      $('.img-lang').attr('src','/assets/cnf.png')
+    }else if(window.localStorage.getItem('lang') === 'cn'){
+        chineeseLang();
+      console.log('UKKKKK') 
+      $('.img-lang').attr('data-language','cn')
+      $('.img-lang').attr('src','/assets/enf.png')
+    }
 
 </script>
 </html>

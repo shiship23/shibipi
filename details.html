@@ -1618,15 +1618,18 @@ $('.title-1').html('Shibarium Pad is the perfect launchpad for the Shibarium eco
       console.log('UKKKKK') 
       $('.img-lang').attr('data-language','cn')
       $('.img-lang').attr('src','/assets/enf.png')
+      window.localStorage.setItem('lang','cn')
+     
     }
    if(currentLang === "cn"){
       englishLang();    
       console.log('CHINNNA') 
       $('.img-lang').attr('data-language','en')
       $('.img-lang').attr('src','/assets/cnf.png')
+      window.localStorage.setItem('lang','en')
+      
     }
 });
-
 // $('#langce-toggle').change(function(){
 //       if ($(this).is(':checked')) {
 //         chineeseLang();
@@ -1875,5 +1878,20 @@ $('.tabtwo').on('click',function(){
     $('.tabtwo').removeClass('inactive')
     $('.tabone').addClass('inactive')
 })
+
+if(window.localStorage.getItem('lang') === null || window.localStorage.getItem('lang') === 'undefined'){
+        window.localStorage.setItem('lang','en')
+    }else if(window.localStorage.getItem('lang') === 'en'){
+        englishLang();    
+      console.log('CHINNNA') 
+      $('.img-lang').attr('data-language','en')
+      $('.img-lang').attr('src','/assets/cnf.png')
+    }else if(window.localStorage.getItem('lang') === 'cn'){
+        chineeseLang();
+      console.log('UKKKKK') 
+      $('.img-lang').attr('data-language','cn')
+      $('.img-lang').attr('src','/assets/enf.png')
+    }
+
 </script>
 </html>
