@@ -682,7 +682,7 @@ background: #fcfcfc;
         </div>
         <div class="col-span-2 md:col-span-1">
           <p class="text-gray-900 dark:text-white  text-lg mb-1 launch-time">Launch Time</p>
-          <div class="max-w-[284px] w-full h-14 px-4 py-2 flex items-center justify-between bg-white dark:bg-dark border border-gray-300 dark:border-gray-700 rounded-xl">
+          <div style="background-color:white !important;" class="max-w-[284px] w-full h-14 px-4 py-2 flex items-center justify-between bg-white dark:bg-dark border border-gray-300 dark:border-gray-700 rounded-xl">
            
             <div class="flex text-lg" style="    background: white !important;    width: 100%;display: contents;" id="countdowni"></div>       
           </div>
@@ -708,11 +708,11 @@ background: #fcfcfc;
                   </div>
                   <div class="p-3 text-center border border-gray-300 dark:border-gray-700 rounded-[4px]">
                     <p class="text-xs font-normal text-gray-700 dark:text-gray-400 blockchain-t"> Blockchain: </p>
-                    <small class="font-medium text-gray-900 dark:text-white mt-1"> Etherium </small>
+                    <small class="font-medium text-gray-900 dark:text-white mt-1"> Ethereum</small>
                   </div>
                   <div class="p-3 text-center border border-gray-300 dark:border-gray-700 rounded-[4px]">
                     <p class="text-xs font-normal text-gray-700 dark:text-gray-400 contract-addrrr"> Contract Address: </p>
-                    <small class="font-medium text-gray-900 dark:text-white mt-1"> 0xbce3...307e </small>
+                    <small class="font-medium text-gray-900 dark:text-white mt-1"> To Be Revealed </small>
                   </div>
                   <div class="p-3 text-center border border-gray-300 dark:border-gray-700 rounded-[4px]">
                     <p class="text-xs font-normal text-gray-700 dark:text-gray-400 token-id"> Token ID: </p>
@@ -812,10 +812,10 @@ background: #fcfcfc;
                       </p>
                       <div class="flex items-center justify-center">
                         <small class="text-gray-700 dark:text-gray-400 socials">Socials:</small>
-                        <a href="https://t.me/ShibariumPad" target="_new" >
+                        <a href="https://t.me/ShibariumPad" class="text-gray-700 dark:text-gray-400" target="_new" >
                             <i class="ml-3 fa-brands fa-telegram"></i>
                         </a>
-                        <a href="https://twitter.com/ShibariumPadETH" target="_new"  >
+                        <a href="https://twitter.com/ShibariumPadETH" class="text-gray-700 dark:text-gray-400" target="_new"  >
                             <i class="ml-3 fa-brands fa-twitter"></i>
                         </a>
                         
@@ -885,7 +885,7 @@ background: #fcfcfc;
                                 </div>
                                 <div class="flex items-center justify-between group px-4 py-3 border-b hover:bg-primary-25 hover:border-primary-500 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 dark:hover:border-primary-500 cursor-pointer">
                                 <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> Contract </small>
-                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> TBA</b> </small>
+                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> To Be Revealed</b> </small>
                                 </div>
                           </div>
                         </div>
@@ -1204,79 +1204,6 @@ if(window.location.host === 'shibariumpad.finance' && window.location.protocol =
   </script>
 
 
-<script>
-  // The data/time we want to countdown to
-  var countDownDate = new Date("Feb 19, 2023 16:37:52").getTime();
-
-  // Run myfunc every second
-  var myfunc = setInterval(function() {
-
-  var now = new Date().getTime();
-  var timeleft = countDownDate - now;
-      
-  // Calculating the days, hours, minutes and seconds left
-  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-      
-  // Result is output to the specific element
-  document.getElementById("days").innerHTML = days + "d "
-  document.getElementById("hours").innerHTML = hours + "h " 
-  document.getElementById("mins").innerHTML = minutes + "m " 
-  document.getElementById("secs").innerHTML = seconds + "s " 
-      
-  // Display the message when countdown is over
-  if (timeleft < 0) {
-      clearInterval(myfunc);
-      document.getElementById("days").innerHTML = ""
-      document.getElementById("hours").innerHTML = "" 
-      document.getElementById("mins").innerHTML = ""
-      document.getElementById("secs").innerHTML = ""
-      document.getElementById("end").innerHTML = "TIME UP!!";
-  }
-  }, 1000);
-
-  
-  </script>
-  <script>
-    /// date 2
-setTimeout(function(){
-    // The data/time we want to countdown to
-  var countDownDate2 = new Date("02/19/2023 4:38 PM").getTime();
-
-// Run myfunc every second
-var myfunc2 = setInterval(function() {
-
-var currentDate = new Date().getTime();
-var timelefts = countDownDate2 - new Date().getTime();
-    
-// Calculating the days, hours, minutes and seconds left
-var dayss = Math.floor(timelefts / (1000 * 60 * 60 * 24));
-var hourss = Math.floor((timelefts % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutess = Math.floor((timelefts % (1000 * 60 * 60)) / (1000 * 60));
-var secondss = Math.floor((timelefts % (1000 * 60)) / 1000);
-
-// Result is output to the specific element
-$("#dayss").html( dayss + "d ")
-$("#hourss").html( hourss + "h " )
-$("#minss").html( minutess + "m " )
-$("#secss").html( secondss + "s " )
-    
-// // Display the message when countdown is over
-if (timelefts < 0) {
-    clearInterval(myfunc2);
-    document.getElementById("dayss").innerHTML = ""
-    document.getElementById("hourss").innerHTML = "" 
-    document.getElementById("minss").innerHTML = ""
-    document.getElementById("secss").innerHTML = ""
-    document.getElementById("ends").innerHTML = "TIME UP!!";
-}
-}, 1000);
-
-},2000)
-  </script>
-
 
 <script>
 
@@ -1489,7 +1416,7 @@ function englishLang(){
                                 </div>
                                 <div class="flex items-center justify-between group px-4 py-3 border-b hover:bg-primary-25 hover:border-primary-500 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 dark:hover:border-primary-500 cursor-pointer">
                                 <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> Contract </small>
-                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> TBA</b> </small>
+                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> To Be Revealed</b> </small>
                                 </div>`)
     $('.description-t-2').html(`<p class="text-gray-700 dark:text-gray-400 mt-5"> 
                                 - Our team is steadfast in their belief that great achievements require significant time, patience, and dedication.
