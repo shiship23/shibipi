@@ -962,6 +962,7 @@ background: #fcfcfc;
     <div class="container mx-auto">
       <div class="flex flex-wrap items-center justify-between">
         <small class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 dark:text-white font-normal"> Copyright © 2023 Shibarium Pad. All Rights Reserves </small>
+        <a class="text-gray-700 dark:text-white text-center mx-auto" href="mailto:hello@shibariumpad.finance">hello[at]shibariumpad.finance</a> 
         <div class="pt-2 pb-4 md:py-9 w-full md:w-auto flex items-center justify-center">
           <a class="terms text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/terms">
             Terms & Conditions
@@ -1133,14 +1134,14 @@ background: #fcfcfc;
       // If CURRENT TIME is GREATER THAN event ENDING TIME, display...
       if ( currentTime > eventEndTime && event.elapsed ) {
         $(this).html(''
-          + '<p style="color:red">Notice after the event has ENDED.</p>'
+          + '<p style="color:red">.</p>'
         ).parent().addClass('disabled');
         // Stop the Countdown
         $(this).countdown('stop');
       // If event has ENDED and is still IN PROGRESS, display...
       } else if ( event.elapsed ) {
         $(this).html(''
-          + '<p style="color:green">Notice while the event is IN PROGRESS.</p>'
+          + '<p style="color:green"></p>'
         ).parent().addClass('disabled');
       // Display COUNTDOWN to event...
       } else {
