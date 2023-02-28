@@ -2369,19 +2369,19 @@ background: #fcfcfc;
     $clock.countdown(countdownTo.toDate(), { elapse: true } ).on('update.countdown', function(event) {
       // Clock Countdown HTML Ouptut
       var output = `
-<div class="time seconds flex flex-col items-center justify-center"><span class="count">%S</span> <span class="label">sec%!S</span></div>`;
+<div class="time seconds flex flex-col items-center justify-center"><span class="count ">%S</span> <span class="label text-gray-700 text-xs">sec%!S</span></div>`;
       // Add number of MINUTES left
-      if ( event.offset.totalMinutes > 0 ) {
-        output = '<div class="time minutes flex flex-col items-center justify-center"><span class="count">%M</span> <span class="label">min%!M</span></div>' + output;
-      }
+      //if ( event.offset.totalMinutes > 0 ) {
+        output = '<div class="time minutes flex flex-col items-center justify-center"><span class="count">%M</span> <span class="label text-gray-700 text-xs">min%!M</span></div>' + output;
+      //}
       // Add number of HOURS left
-      if ( event.offset.totalHours > 0 ) {
-        output = '<div class="time hours flex flex-col items-center justify-center"><span class="count">%H</span> <span class="label">hr%!H</span></div>' + output;
-      }
+      //if ( event.offset.totalHours > 0 ) {
+        output = '<div class="time hours flex flex-col items-center justify-center"><span class="count">%H</span> <span class="label text-gray-700 text-xs">hr%!H</span></div>' + output;
+      //}
       // Add number of DAYS left
-      if ( event.offset.totalDays > 0 ) {
-        output = '<div class="time days flex flex-col items-center justify-center"><span class="count">%-D</span> <span class="label">day%!D</span></div>' + output;
-      }
+      //if ( event.offset.totalDays > 0 ) {
+        output = '<div class="time days flex flex-col items-center justify-center"><span class="count">%-D</span> <span class="label text-gray-700 text-xs">day%!D</span></div>' + output;
+      //}
 
       // Get CURRENT TIME in the event's timezone
       var currentTime = moment().tz(eventTimeZone);
