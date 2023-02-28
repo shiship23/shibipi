@@ -692,7 +692,7 @@ background: #fcfcfc;
                 data-countdown-timezone="Europe/Berlin"></div>
             </div>
                     
-            <!-- <div class="flex text-lg" style="    background: white !important;    width: 100%;display: contents;" id="countdowni"></div>        -->
+            
           </div>
           <div class="max-w-[484px] w-full">
             <h4 class="mt-4 mb-2 text-gray-900 dark:text-white"> <b class="main-color">  Shibarium Pad</b> #001 </h4>
@@ -777,8 +777,8 @@ background: #fcfcfc;
         <div class="container mx-auto pt-[106px]">
             <div class="mb-4 p-[6px] flex justify-between bg-gray-50 dark:bg-gray-800 rounded-md">
                 <ul class="flex">
-                    <li><a href="#tab_1" class="tabs  tabone active px-12 py-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-md flex items-center justify-center transition-colors duration-200 mr-7 description-t">Description</a></li>
-                    <li><a href="#tab_2" class="tabs  tabtwo inactive  px-12 py-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-md flex items-center justify-center transition-colors duration-200 mr-7 token-sale-t">Token Sale</a></li>
+                    <li><a href="javascript:void(0)" class="tabs  tabone active px-12 py-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-md flex items-center justify-center transition-colors duration-200 mr-7 description-t">Description</a></li>
+                    <li><a href="javascript:void(0)" class="tabs  tabtwo inactive  px-12 py-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-md flex items-center justify-center transition-colors duration-200 mr-7 token-sale-t">Token Sale</a></li>
                   </ul>
                  
                
@@ -879,17 +879,17 @@ background: #fcfcfc;
                                 </div>
                                 <div class="flex items-center justify-between group px-4 py-3 border-b hover:bg-primary-25 hover:border-primary-500 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 dark:hover:border-primary-500 cursor-pointer">
                                 <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> Sale Start Time </small>
-                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> Tuesday 28/2/2023 at 10 UTC.</b> </small>
+                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> 28/2/2023 @ 13:00 UTC</b> </small>
                                 </div>
                                 <div class="flex items-center justify-between group px-4 py-3 border-b hover:bg-primary-25 hover:border-primary-500 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 dark:hover:border-primary-500 cursor-pointer">
                                 <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> Initial Market Cap
 
                                 </small>
-                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400 bold"><b> TBA</b> </small>
+                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400 bold"><b> 10K</b> </small>
                                 </div>
                                 <div class="flex items-center justify-between group px-4 py-3 border-b hover:bg-primary-25 hover:border-primary-500 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 dark:hover:border-primary-500 cursor-pointer">
                                 <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> Initial Token Circulation </small>
-                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> TBA</b> </small>
+                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> 3 Million</b> </small>
                                 </div>
                                 <div class="flex items-center justify-between group px-4 py-3 border-b hover:bg-primary-25 hover:border-primary-500 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 dark:hover:border-primary-500 cursor-pointer">
                                 <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> Contract </small>
@@ -1134,7 +1134,7 @@ background: #fcfcfc;
       // If CURRENT TIME is GREATER THAN event ENDING TIME, display...
       if ( currentTime > eventEndTime && event.elapsed ) {
         $(this).html(''
-          + '<p style="color:red">.</p>'
+          + '<p class="text-gray-900 dark:text-gray-900"><a class="text-gray-900 dark:text-gray-900" target="_new" href="https://etherscan.io/token/0xc90906d45046059221e908de5cc8fcfaca859235">0xc9090....859235</a></p>'
         ).parent().addClass('disabled');
         // Stop the Countdown
         $(this).countdown('stop');
@@ -1226,7 +1226,7 @@ CountDownTimer('02/28/2023 11:59 AM', 'countdowni');
           if (distance < 0) {
 
               clearInterval(timer);
-              document.getElementById(id).innerHTML = 'EXPIRED!';
+              // document.getElementById(id).innerHTML = 'EXPIRED!';
 
               return;
           }
@@ -1292,6 +1292,22 @@ if(window.location.host === 'shibariumpad.finance' && window.location.protocol =
 
 </script>
 <script>
+
+$('.tabone').on('click',function(){
+    $('.tabone').removeClass('inactive')
+    $('.tabtwo').addClass('inactive')
+    $('#tab_2').removeClass('visible')
+    $('#tab_1').addClass('visible')
+})
+$('.tabtwo').on('click',function(){
+  console.log('tab 2')
+  
+    $('.tabtwo').removeClass('inactive')
+    $('.tabone').addClass('inactive')
+    $('#tab_1').removeClass('visible')
+    $('#tab_2').addClass('visible')
+})
+
 var translations;
 setTimeout(function(){
 $.getJSON('./translations.json', function(data) {
@@ -1485,17 +1501,17 @@ function englishLang(){
                                 </div>
                                 <div class="flex items-center justify-between group px-4 py-3 border-b hover:bg-primary-25 hover:border-primary-500 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 dark:hover:border-primary-500 cursor-pointer">
                                 <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> Sale Start Time </small>
-                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> Tuesday 28/2/2023 at 10 UTC.</b> </small>
+                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> 28/2/2023 @ 13:00 UTC</b> </small>
                                 </div>
                                 <div class="flex items-center justify-between group px-4 py-3 border-b hover:bg-primary-25 hover:border-primary-500 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 dark:hover:border-primary-500 cursor-pointer">
                                 <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> Initial Market Cap
 
                                 </small>
-                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400 bold"><b> TBA</b> </small>
+                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400 bold"><b> 10K</b> </small>
                                 </div>
                                 <div class="flex items-center justify-between group px-4 py-3 border-b hover:bg-primary-25 hover:border-primary-500 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 dark:hover:border-primary-500 cursor-pointer">
                                 <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> Initial Token Circulation </small>
-                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> TBA</b> </small>
+                                <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> <b> 3 Million</b> </small>
                                 </div>
                                 <div class="flex items-center justify-between group px-4 py-3 border-b hover:bg-primary-25 hover:border-primary-500 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 dark:hover:border-primary-500 cursor-pointer">
                                 <small class="text-gray-700 dark:text-gray-400 group-hover:text-primary-400"> Contract </small>
@@ -1857,37 +1873,29 @@ $('.title-1').html('Shibarium Pad is the perfect launchpad for the Shibarium eco
       }
     });
 
-  const tabButtons = document.querySelectorAll('.tabs');
-  const tabContents = document.querySelectorAll('.tabcontent');
+  // const tabButtons = document.querySelectorAll('.tabs');
+  // const tabContents = document.querySelectorAll('.tabcontent');
 
-  for (var i = 0; i < tabButtons.length; i++) {
-    tabButtons[i].addEventListener('click', function(e) {
-      e.preventDefault(); // cancela
-      var id = this.hash.replace('#', '');
+  // for (var i = 0; i < tabButtons.length; i++) {
+  //   tabButtons[i].addEventListener('click', function(e) {
+  //     e.preventDefault(); // cancela
+  //     var id = this.hash.replace('#', '');
 
-      for (var j = 0; j < tabContents.length; j++) {
-        var tabContent = tabContents[j];
-        tabContent.classList.remove('visible');
-        tabButtons[j].classList.remove('inactive');
-        if (tabContent.id === id) {
-          tabContent.classList.add('visible');
-          console.log('tab is active')
-          tabButtons[j].classList.remove('inactive');
-        }
-      }
+  //     for (var j = 0; j < tabContents.length; j++) {
+  //       var tabContent = tabContents[j];
+  //       tabContent.classList.remove('visible');
+  //       tabButtons[j].classList.remove('inactive');
+  //       if (tabContent.id === id) {
+  //         tabContent.classList.add('visible');
+  //         console.log('tab is active')
+  //         tabButtons[j].classList.remove('inactive');
+  //       }
+  //     }
 
-      this.classList.add('inactive');
-    });
-  }
+  //     this.classList.add('inactive');
+  //   });
+  // }
 
-$('.tabone').on('click',function(){
-    $('.tabone').removeClass('inactive')
-    $('.tabtwo').addClass('inactive')
-})
-$('.tabtwo').on('click',function(){
-    $('.tabtwo').removeClass('inactive')
-    $('.tabone').addClass('inactive')
-})
 
 if(window.localStorage.getItem('lang') === null || window.localStorage.getItem('lang') === 'undefined'){
         window.localStorage.setItem('lang','en')
