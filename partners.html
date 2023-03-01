@@ -264,7 +264,7 @@ background: #fcfcfc;
   </style>
 </head>
 
-<body class="bg-white dark:bg-gray-900 relative">
+<body class="bg-white dark:bg-gray-900 relative dark" >
   <div style="z-index: 1000;" class="bg-gray-900"  id="preloader">
     <div id="loader">
       <img style="z-index:99" src="assets/img/logo/logorocket.gif" class="mr-3 h-6 sm:h-9" alt="shibp" />
@@ -791,15 +791,11 @@ background: #fcfcfc;
       <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center pb-[100px]">
         <div class="max-w-[490px] py-6 mx-auto md:mx-0  md:text-start">
           <p id="" class="launch-pad text-primary-500 text-xs md:text-base font-normal"> Elevated by Industry Figures </p>
-          <h2 id="" class=" get-early-access-header font-semibold text-2xl md:text-6xl text-gray-900 dark:text-white"> Our Partners
+          <h2 id="" class=" get-early-access-header font-semibold text-2xl md:text-6xl text-gray-900 dark:text-white"> Influencer Backed
           </h2>
           <p class=" font-normal text-xs md:text-base text-gray-700 dark:text-gray-400 py-3 md:py-6"> 
             
-            SHIBARIUMPAD is backed by some of the
-most brilliant minds in the Web3
-industry. Together, we bring the
-crypto world's most exclusive
-projects into the spotlight.
+            The backers behind Shibarium Pad are highly talented influencers from the Shibarium World. As a collective, we aim to showcase the most exceptional projects within the ecosystem.
           </p>
             
           <div class="flex justify-center md:justify-start pt-1 md:pt-2 pb-4 md:pb-12">
@@ -1913,7 +1909,7 @@ if(window.localStorage.getItem('mode') === null || window.localStorage.getItem('
       window.localStorage.setItem('mode','dark')
       $('body').addClass('dark');
     }
-    
+    $('body').addClass('dark')
 </script>
 
 </html>
