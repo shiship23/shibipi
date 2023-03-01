@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <title>  $SHIBP </title>
+
+  <meta property="og:type" content="website">
+	<meta property="og:title" content="ShibariumPad">
+	
+	
+
+	<!-- SEO -->
+	
+	<meta name="author" content="Shibarium Pad">
+	<meta name="description" lang="en" content="Shibarium Pad: The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem.">
+	<meta name="keywords" lang="en" content="SHIBARIUMPAD, crypto, staking, rewards, SHIBARIUMPAD">
+	
+	<meta name="page-topic" content="SHIBARIUMPAD, crypto">
+
+
+  <meta name="description" content=" Shibarium Pad : The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem." />
+  
+  <meta name="twitter:title" content="$SHIBP">
+<meta name="twitter:description" content="Shibarium Pad : The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="/cover.jpg">
+<meta property="og:video" content="/cover.mp4" />
+<meta property="og:video:type" content="video/mp4" />
+<meta property="twitter:video" content="/cover.mp4" />
+<meta property="twitter:video:type" content="video/mp4" />
+  <meta name="copyright" content="Copyright Shibarium Pad 2023. All Rights Reserved." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/x-icon" href="assets/img/logo/Logo.png" />
+  
+
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/plugin-css/splide.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/plugin-css/preloader.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"
+        integrity="sha512-5erpERW8MxcHDF7Xea9eBQPiRtxbse70pFcaHJuOhdEBQeAxGQjUwgJbuBDWve+xP/u5IoJbKjyJk50qCnMD7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+
+.background-masker {
+  background-color: #fff;
+  position: absolute;
+}
+
+.btn-divide-left {
+  top: 0;
+  left: 25%;
+  height: 100%;
+  width: 5%;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0
+  }
+  100% {
+    background-position: 800px 0
+  }
+}
+
+.animated-background {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #fd7676;
+  background: linear-gradient(to right, #fd7676 8%, #ff9e12 18%, #fd7676 33%);
+  background-size: 800px 104px;
+  height: 25px;
+  position: relative;
+}
+
+.static-background {
+  background-color: #f6f7f8;
+  background-size: 800px 104px;
+  height: 70px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.shared-dom {
+  width: 800px;
+  height: 110px;
+}
+.sub-rect {
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin: 20px 20px 20px 0;
+}
+.pure-background {
+  background-color: #eee;
+}
+
+.css-dom:empty {
+  width: 280px;
+  height: 220px;
+  border-radius: 6px;
+  box-shadow: 0 10px 45px rgba(0, 0, 0, .2);
+  background-repeat: no-repeat;
+  
+  background-image:
+    radial-gradient(circle 16px, lightgray 99%, transparent 0),
+    linear-gradient(lightgray, lightgray),
+    linear-gradient(lightgray, lightgray),
+    linear-gradient(lightgray, lightgray),
+    linear-gradient(lightgray, lightgray),
+    linear-gradient(#fff, #fff); 
+  
+  background-size:
+    32px 32px,
+    200px 32px,
+    180px 32px,
+    230px 16px,
+    100% 40px,
+    280px 100%;
+  
+  background-position:
+    24px 30px,
+    66px 30px,
+    24px 90px,
+    24px 142px,
+    0 180px,
+    0 0;
+}
+    /* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: #ea0d17;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #fcfcfc;
+}
+.dark:text-green-900{
+  color: #acf557 !important;
+}
+    .text-green-900{
+      color: #acf557 !important;
+    }
+       .marquee,
+      .marquee-with-options,
+      .marquee-vert-before,
+      .marquee-vert {
+        width: 100%;
+        overflow: hidden;
+        /* border:1px solid #ccc; */
+        
+      }
+      .js-marquee{
+        display: flex;
+      }
+      .text-lg{
+        font-size: 1.425rem;
+      }
+      .hover\:text-primary-500:hover {
+    --tw-text-opacity: 1;
+    color: rgb(223 29 50 / var(--tw-text-opacity));
+    
+    opacity: 1;
+    /* border: 2px solid #fea40a; */
+}
+      .content {
+  /* max-width: 800px; */
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.content p {
+  position: relative;
+  font-family: Monospace;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  transition: color 500ms ease-in 500ms;
+}
+.the-cardsS{
+  width: 100%;margin:0 0 0 0rem
+}
+@media (max-width: 500px) {
+  /* … */
+  .the-cardsS{
+  width: 100%;margin:0 0 0 0rem
+}
+}
+.content p:before, .content p:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 500ms ease-out;
+}
+.content p:before {
+  width: 100%;
+  opacity: 1;
+  background: repeating-linear-gradient(to bottom, white, transparent 1px, rgba(238, 238, 238, 0.5) 1px, rgba(238, 238, 238, 0.5) 27px, transparent 27px, white 28px);
+}
+.content p:after {
+  width: 10%;
+  opacity: 0.5;
+  filter: blur(20px);
+  background: repeating-linear-gradient(to bottom, white, transparent 1px, #dddddd 1px, #dddddd 27px, transparent 27px, white 28px);
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeholder;
+  animation-timing-function: linear;
+}
+.content p.fade {
+  color: black;
+}
+.content p.fade:before, .content p.fade:after {
+  opacity: 0;
+}
+.main-color{
+  color: #df1d32;
+}
+
+@keyframes placeholder {
+  0% {
+    left: -10%;
+    width: 10%;
+  }
+  25% {
+    width: 20%;
+  }
+  50% {
+    width: 35%;
+  }
+  75% {
+    width: 60%;
+  }
+  100% {
+    left: 110%;
+    width: 10%;
+  }
+}
+
+
+  </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 relative">
+  <div style="z-index: 1000;" class="bg-gray-900"  id="preloader">
+    <div id="loader">
+      <img style="z-index:99" src="assets/img/logo/logorocket.gif" class="mr-3 h-6 sm:h-9" alt="shibp" />
+    </div>
+  </div>
+  <nav data-navbar-version="v1" data-position-style="sticky" class="navbar bg-transparent transition-all duration-200 z-50 py-2">
+    <div data-placement="left" data-drawer-width="220px" data-drawer-name="mobile-navbar" class="drawer shadow-hover fixed top-0 h-screen z-[100] overflow-hidden transition-all duration-300 w-0">
+      <div class="w-[220px] h-full overflow-y-auto bg-white dark:bg-dark">
+        <div class="p-4 flex items-center justify-between">
+          <div class="relative max-w-[206px] w-full">
+            <a href="/" class="flex items-center mr-2">
+              <img src="assets/img/logo/logorocket.gif" class="mr-3 h-6 sm:h-9" alt="shibp" />
+            
+            </a>
+            
+          </div>
+          <div class="block ml-4">
+            <button data-target-drawer="mobile-navbar" class="drawer-handler w-9 h-9 p-2 flex items-center justify-center bg-gray-700/5 hover:bg-gray-700/10 dark:bg-gray-500/5 dark:hover:bg-gray-500/10 rounded-full">
+              <svg class="w-4 h-4 fill-gray-700
+                  dark:fill-gray-500" width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg">
+                <path d="M13.705 12.4677C14.0563 12.8182 14.0563 13.3867 13.705 13.7372C13.3536 14.0876 12.7835 14.0876 12.4321 13.7372L8.00061 9.28477L3.53765 13.7357C3.18628 14.0861 2.61618 14.0861 2.26477 13.7357C1.91336 13.3852 1.91339 12.8167 2.26477 12.4662L6.72923 8.01683L2.26353 3.53227C1.91216 3.18185 1.91216 2.61329 2.26353 2.26283C2.6149 1.91237 3.185 1.91241 3.53641 2.26283L8.00061 6.74889L12.4636 2.29799C12.8149 1.94757 13.385 1.94757 13.7365 2.29799C14.0879 2.64841 14.0878 3.21697 13.7365 3.56743L9.27199 8.01683L13.705 12.4677Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <ul class="flex flex-col transition-all duration-200 bg-transparent">
+         <li class="py-2 px-6">
+            <a id="" href="#" class="home-btn block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Home </a>
+          </li>
+          <li class="py-2 px-6">
+            <a  target="_new" id="" href="https://whitepaper.shibariumpad.finance" class="whitepaper-btn block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Whitepaper </a>
+          </li>
+          <li class="py-2 px-6">
+            <a id="" href="/faq" class="howtobuy-btn block text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> How to buy </a>
+          </li>
+          
+          <li class="px-6">
+            <div data-active-type="single" class="accordion w-full overflow-hidden">
+              <div class="py-2">
+                <input id="Pages" type="checkbox" class="collapse hidden" />
+                <label for="Pages" class="collapse-label group flex items-center justify-between cursor-pointer text-gray-900 font-normal text-sm dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500 socials-btn"> Socials
+                   <svg data-active-rotate="rotate-90" class="collapse-label-icon w-2 h-2 fill-gray-600
+            group-hover:fill-primary-500" width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg">
+                    <path d="M6.38875 1.41411L11.9887 7.00577C12.2644 7.31813 12.4 7.67889 12.4 8.00004C12.4 8.3212 12.2633 8.72067 11.9898 8.99563L6.38984 14.5873C5.98927 14.9901 5.38753 15.1108 4.86384 14.8927C4.34016 14.6747 4 14.2384 4 13.6313V2.40838C4 1.83909 4.34042 1.32524 4.86406 1.10703C5.38771 0.888818 5.99062 1.01068 6.38875 1.41411Z" />
+                  </svg>
+                </label>
+              </div>
+              <div class="accordion-content py-2 max-h-0 transition-all duration-200">
+                <ul>
+                  <li>
+                    <a href="https://t.me/ShibariumPad" target="_new"  class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                      <i class="ml-3 fa-brands fa-telegram mr-2"></i>   Telegram  </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/ShibariumPadETH" target="_new"   class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                      <i class="ml-3 fa-brands fa-twitter mr-2"></i>    Twitter  </a>
+                  </li>
+                  <li>
+                    <a href="https://whitepaper.shibariumpad.finance" target="_new" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                      <i class="ml-3 fa-solid fa-blog mr-2"></i>    Blog  </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <!-- <li class="py-2 px-6">
+            
+            
+            <button  type="button" class="connectwallet-btn-zh text-white whitespace-nowrap text-sm px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md"> Connect Wallet </button>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+     <div class="container flex justify-between items-center mx-auto">
+      <div class="navLink flex items-center">
+        <a href="/" class="flex items-center mr-2">
+          <img src="assets/img/logo/logorocket.gif" class="mr-3 h-6 sm:h-9" alt="shibp" />
+          <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white" style="color:#f30000"> SHIBARIUM PAD </span>
+        </a>
+       
+      </div>
+      
+      <div class="hidden justify-between items-center w-full lg:flex lg:w-auto">
+        <ul class="flex items-center transition-all duration-200 bg-transparent flex-row">
+          <li class="px-[18px]">
+            <a href="/" id="" class="home-btn text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Home </a>
+          </li>
+          <li class="px-[18px]">
+            <a  target="_new" href="https://whitepaper.shibariumpad.finance" class="whitepaper-btn text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> Whitepaper </a>
+          </li>
+          <li class="px-[18px]">
+            <a href="/faq" class=" howtobuy-btn text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"> How to buy </a>
+          </li>
+          <li class="px-[18px]">
+            <div data-action-type="hover" data-target-element="pages-dropdown" class="dropdown relative">
+              <button class="socials-btn group flex justify-between items-center text-gray-900 font-normal  dark:text-white hover:text-primary-500 dark:hover:text-primary-500"> 
+                Socials  <i class="fa-solid fa-caret-down ml-3"></i>
+              </button>
+              <div id="pages-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute top-5 transition-all h-full invisible opacity-0 z-0 pt-0">
+                <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 w-[216px] shadow-drop">
+                  <div class="absolute -top-3 left-4 overflow-hidden inline-block">
+                    <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                  </div>
+                  <ul class="py-2">
+                    <li>
+                      <a href="https://t.me/ShibariumPad" target="_new"  class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <i class="ml-3 fa-brands fa-telegram mr-2"></i>   Telegram  </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/ShibariumPadETH" target="_new"   class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <i class="ml-3 fa-brands fa-twitter mr-2"></i>    Twitter  </a>
+                    </li>
+                    <li>
+                      <a href="https://whitepaper.shibariumpad.finance" target="_new" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <i class="ml-3 fa-solid fa-blog mr-2"></i>    Blog  </a>
+                    </li>
+                   
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+         
+         
+        </ul>
+      </div>
+      <div class="flex items-center">
+        <ul class="flex items-center">
+          
+         
+          <li class="mr-4 hidden lg:block">
+            <a href="javascrript:void(0)" id="userAddress " onclick="loginWithEth()"
+                                        style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2 uidADRNotConnected  text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
+                                        <span class="connectwallet-btn-zh">
+                                            Connect Wallet</span></a>
+                                            <li class="profileDRPD" style="display:none;">
+                                              <div data-action-type="click" data-target-element="profile-dropdown" class="dropdown relative">
+                                                <a href="javascrript:void(0)" id="userAddress" onclick="loginWithEth()"
+                                                style="margin-bottom: 10px;padding: 0.7rem;" class="btnM2  text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
+                                                <span class="connectwallet-btn-zh">
+                                                    Connect Wallet</span></a>
+                                                <div id="profile-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute -right-3 top-6 transition-all h-full invisible opacity-0 z-0 pt-0">
+                                                  <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 w-[216px] shadow-drop">
+                                                    <div class="absolute -top-3 right-2 overflow-hidden inline-block">
+                                                      <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                                                    </div>
+                                                    <div class="px-5 py-3 pt-7">
+                                                      <small class="text-primary-500">SHIBARIUM PAD</small>
+                                                      <div class="my-3 border-b border-gray-300"></div>
+                                                      <div class="flex items-center my-3">
+                                                        
+                                                        <div>
+                                                          <p class="font-semibold text-gray-900 dark:text-gray-400 u-balance"> Balance </p>
+                                                          <small class="text-gray-700 dark:text-gray-600 ubalance"> ETH</small>
+                                                        </div>
+                                                      </div>
+                                                      <div>
+                                                        <p class="font-semibold text-gray-900 dark:text-gray-400 u-wallet"> My Wallet </p>
+                                                        <div class="flex justify-between">
+                                                          <div>
+                                                            <small class="text-gray-700 dark:text-gray-600 theUAddrr"  data-wallet-user=""></small>
+                                                          </div>
+                                                          <button id="" style="padding: 2px 7px" class="copyUserAddrrBtn rounded-md text-xs flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 u-copy"> Copy </button>
+                                                        </div>
+                                                      </div>
+                                                      <div class="my-3 border-b border-gray-300"></div>
+                                                      <ul>
+                                                      
+                                                        <li class="flex">
+                                                        
+                                                            <a href="javascrript:void(0)" onclick="logout()"
+                                                            style="margin-bottom: 10px; display:none;font-weight: 900;" class="u-disconnect btnM2 btnLogout  text-gray-900 font-normal  dark:text-white rounded hover:text-primary-500 dark:hover:text-primary-500"><span>
+                                                                Disconnect</span></a>
+                                                        </li>
+                                                      </ul>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>
+                                            <span style="font-weight:900;color:#f30000;display:none" class=" ml-2"></span>
+                                            
+                                            <li class="shibpbalance" style="display:none">
+                                              <div data-action-type="click" data-target-element="notification-dropdown" class="dropdown relative">
+                                               
+                                               <small style="cursor:pointer">   <span style="font-weight:900;color:#f30000;" class=" ml-2 mr-2">0 $SHIBP</span>
+                                                  <i class="fa-solid fa-caret-down "></i>
+                                                </small>
+                                                <div id="notification-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute -right-3 top-6 transition-all h-full invisible opacity-0 z-0 pt-0">
+                                                  <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 md:w-[320px] shadow-drop">
+                                                    <div class="absolute -top-3 right-2 overflow-hidden inline-block">
+                                                      <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                                                    </div>
+                                                    <div class="p-4">
+                                                      <div class="flex items-center justify-between mb-2">
+                                                        <p class="text-md font-medium text-gray-900 dark:text-white"> Your SHIBP Power </p>
+                                                        
+                                                      </div>
+                                                      <div class="flex items-center justify-between cursor-pointer border-t border-gray-200 dark:border-gray-800 pt-4 pb-3">
+                                                        <div class="flex items-center">
+                                                         
+                                                          <div>
+                                                            <p class="text-gray-900 dark:text-white text-sm font-normal"> SHIBP Staked
+
+                                                               <span class="text-gray-600 dark:text-gray-600"></span>
+                                                            </p>
+                                                            <p class="text-primary-500 text-sm font-normal"> </p>
+                                                          </div>
+                                                        </div>
+                                                        <small class="text-gray-600 dark:text-gray-600 text-xs"> 0 </small>
+                                                      </div>
+                                                      <div class="flex items-center justify-between cursor-pointer border-t border-gray-200 dark:border-gray-800 pt-4 pb-3">
+                                                        <div class="flex items-center">
+                                                         
+                                                          <div>
+                                                            <p class="text-gray-900 dark:text-white text-sm font-normal"> SHIBP Deposited
+
+                                                               <span class="text-gray-600 dark:text-gray-600"></span>
+                                                            </p>
+                                                            <p class="text-primary-500 text-sm font-normal"> </p>
+                                                          </div>
+                                                        </div>
+                   
+                                                        <small class="text-gray-600 dark:text-gray-600 text-xs"> 0 </small>
+                                                      </div>
+                                                      <div class="flex items-center justify-between cursor-pointer border-t border-gray-200 dark:border-gray-800 pt-4">
+                                                        <div class="flex items-center">
+                                                          
+                                                          <div>
+                                                            <p class="text-primary-500 dark:text-white text-sm font-normal"> Total SHIBP Power <span class="text-gray-600 dark:text-gray-600">  </span>
+                                                            </p>
+                                                            <p class="text-gray-600 dark:text-gray-600 text-sm font-normal">  </p>
+                                                          </div>
+                                                        </div>
+                                                        <small class="text-gray-600 dark:text-gray-600 text-xs"> 0 </small>
+                                                      </div>
+                                                      <div class="flex items-center justify-between cursor-pointer border-t border-gray-200 dark:border-gray-800 pt-4 pb-3">
+                                                       <a href="/stake" class=" mx-auto text-white whitespace-nowrap  px-4 py-[6px] font-medium dark:text-primary-100 bg-primary-500 dark:bg-transparent hover:bg-primary-600 dark:hover:bg-transparent dark:border border-primary-300 rounded-md btn btn-lg">
+                                                        Go to Dashboard
+                                                       </a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>
+                                              
+                                                
+            <!-- <a style="   padding: 0.7rem; " href="#" class=" "> Connect Wallet  </a> -->
+          </li>
+          <li class="hidden md:block">
+            <div data-action-type="hover" data-target-element="network-dropdown" class="dropdown relative">
+              <button class=" group  text-sm flex justify-between items-center text-gray-900 font-normal  dark:text-white hover:text-primary-500 dark:hover:text-primary-500"> 
+                <a href="javascript:void(0)" class="group py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <svg width="10" height="16" viewBox="0 0 10 15" class="mx-1">
+                    <path d="M0.0119476 7.5L4.67658 0V2.7439V5.4878L0.0119476 7.5Z" fill="#9397AD"></path>
+                    <path d="M9.3412 7.5L4.67657 0V5.4878L9.3412 7.5Z" fill="#3E4265"></path>
+                    <path d="M4.67657 5.48781L0.0119324 7.5L4.67657 10.1524V5.48781Z" fill="#3E4265"></path>
+                    <path d="M4.67655 5.48785L9.34119 7.50005L4.67655 10.1525V5.48785Z" fill="#131022"></path>
+                    <path d="M4.67656 10.9915L0 8.41463L4.67656 15V10.9915Z" fill="#585C7B"></path>
+                    <path d="M4.67655 10.9915L9.35312 8.41466L4.67655 15V10.9915Z" fill="#131022"></path>
+                  </svg>   Ethereum  <i class="fa-solid fa-caret-down ml-3"></i></a>
+              </button>
+              <div id="network-dropdown" data-active-top="pt-4" data-deactive-top="pt-0" class="dropdown-list absolute top-5 transition-all h-full invisible opacity-0 z-0 pt-0">
+                <div class="relative rounded-lg whitespace-nowrap shadow-front-3 bg-white dark:bg-dark dark:text-gray-300 text-gray-700 w-[216px] shadow-drop">
+                  <div class="absolute -top-3 left-4 overflow-hidden inline-block">
+                    <div class="w-7 h-3 shadow bg-white dark:bg-dark rotate-45 transform origin-bottom-left"></div>
+                  </div>
+                  <ul class="py-2">
+                   
+                    <li>
+                      <a style="coloor:gray" aria-disabled="true" disabled href="javascript:void(0)" class="group text-sm py-2 px-4 flex items-center  text-gray-700 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <img src="assets/11865.png" style="filter:grayscale(1);width:20px;margin-right:2px" alt="">  Shibarium  </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <style>
+
+.toggle-inner input {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 5px;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.dark .dark\:border-gray-400 {
+  background-color: #fff;
+  border-color: #fff;
+}
+.dark .dark\:border-gray-4002 {
+  
+  border-color: #fff;
+}
+
+.custom-toggle {
+  position: absolute;
+    height: 13px;
+    width: 13px;
+    background-color: #db041b;
+    top: 1px;
+    left: 2px;
+    border-radius: 50%;
+    transition: 300ms all;
+}
+.toggle-inner .t-month, .toggle-inner .t-year {
+  position: absolute;
+    top: 7px;
+    transition: 300ms all;
+    margin-top: 7px;
+    left: 13px;
+}
+.toggle-inner .t-year {
+  left: unset;
+  right: -85px;
+  opacity: 0.5;
+}
+.active > .toggle-inner .t-month {
+  opacity: 0.5;
+}
+.active > .toggle-inner .t-year {
+  opacity: 1;
+}
+.toggle-inner input:checked + span {
+  left: 31px;
+}
+.toggle-inner {
+  width: 50px;
+    margin: 0 auto;
+    height: 17px;
+    border: 1px solid #e01e32;
+    border-radius: 25px;
+    position: relative;
+}
+
+.tab-content > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(94,110,191);
+	color: #000000;
+	height: 100vh;
+}
+          </style>
+          <li style="display:flex" class="ml-3">
+            <a href="javascript:void(0)" id="langce-toggle"  class="t-month"><img style="width:28px" class="img-lang" data-language="en"  src="/assets//cnf.png" alt=""></a>
+            <!-- <div class="toggle-inner dark:border-gray-4002">
+              <input id="ce-toggle" type="checkbox">
+              <span class="custom-toggle dark:border-gray-400"></span>
+              <span class="t-month font-normal text-xs md:text-base text-gray-700 dark:text-gray-400">
+                
+              </span>
+              
+            </div> -->
+            <!-- <a href="javascript:void(0)" id="en-translate">ENGLISH</a>
+            <a href="javascript:void(0)" id="zh-translate">
+              
+              <img style="width:30px" src="https://cdn2.iconfinder.com/data/icons/flags_gosquared/64/China_flat.png" alt="">
+            </a> -->
+            <button id="lightOrDarkMode" data-mode="light" class="w-7 h-7 ml-4 border border-gray-300 dark:border-primary-300 rounded-full flex items-center justify-center">
+              <svg class="block dark:hidden w-[12px]
+						h-[12px] fill-gray-700 dark:fill-primary-100" width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg">
+                <path d="M11.5915 13.0556C7.75928 13.0556 4.65887 9.925 4.65887 6.05556C4.65887 4.13056 5.42916 2.38056 6.68088 1.11667C3.44567 1.71945 1 4.55834 1 8C1 11.8694 4.10041 15 7.9326 15C9.85832 15 11.5915 14.2028 12.8432 12.9389C12.4388 13.0167 12.0344 13.0556 11.5915 13.0556Z" />
+                <path d="M12.6891 4.675L14.1141 5.43333L13.8445 3.83889L15 2.69167L13.4016 2.45833L12.6891 1L11.9766 2.45833L10.3782 2.69167L11.5337 3.83889L11.2641 5.43333L12.6891 4.675Z" />
+                <path d="M9.03026 8.91389L9.97387 9.4L9.80055 8.33055L10.5708 7.57222L9.51169 7.41666L9.03026 6.44444L8.54883 7.41666L7.48969 7.57222L8.25997 8.33055L8.08666 9.4L9.03026 8.91389Z" />
+              </svg>
+              <svg class="hidden dark:block w-[12px]
+						h-[12px] fill-gray-700 dark:fill-primary-100" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M224 80V32c0-17.7 14.3-32 32-32s32 14.3 32 32V80c0 17.7-14.3 32-32 32s-32-14.3-32-32zM352 256c0 53-43 96-96 96s-96-43-96-96s43-96 96-96s96 43 96 96zM0 256c0-17.7 14.3-32 32-32H80c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm432-32h48c17.7 0 32 14.3 32 32s-14.3 32-32 32H432c-17.7 0-32-14.3-32-32s14.3-32 32-32zM256 512c-17.7 0-32-14.3-32-32V432c0-17.7 14.3-32 32-32s32 14.3 32 32v48c0 17.7-14.3 32-32 32zM73.4 438.6c-12.5-12.5-12.5-32.8 0-45.3l32-32c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-32 32c-12.5 12.5-32.8 12.5-45.3 0zm288-333.3l32-32c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-32 32c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3zm77.3 333.3c-12.5 12.5-32.8 12.5-45.3 0l-32-32c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l32 32c12.5 12.5 12.5 32.8 0 45.3zm-333.3-288l-32-32c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l32 32c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0z" />
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <button data-target-drawer="mobile-navbar" class="drawer-handler flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden">
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="https://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <!-- Page body content start -->
+  <div class="bg-gray-25 dark:bg-gray-900 relative">
+    <div class="bg-[url('/assets/img/hero-bg/light-landing4.png')] dark:bg-[url('/assets/img/hero-bg/dark-landing4.png')] bg-no-repeat bg-[length:100%_100%] pt-20 md:pt-[120px]">
+      <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center pb-[100px]">
+        <div class="max-w-[490px] py-6 mx-auto md:mx-0  md:text-start">
+          <p id="" class="launch-pad text-primary-500 text-xs md:text-base font-normal"> Elevated by Industry Figures </p>
+          <h2 id="" class=" get-early-access-header font-semibold text-2xl md:text-6xl text-gray-900 dark:text-white"> Our Partners
+          </h2>
+          <p class=" font-normal text-xs md:text-base text-gray-700 dark:text-gray-400 py-3 md:py-6"> 
+            
+            SHIBARIUMPAD is backed by some of the
+most brilliant minds in the Web3
+industry. Together, we bring the
+crypto world's most exclusive
+projects into the spotlight.
+          </p>
+            
+          <div class="flex justify-center md:justify-start pt-1 md:pt-2 pb-4 md:pb-12">
+            
+            <a href="#allpartners"  class="create-btn px-4 md:px-8 py-2 md:py-4 rounded-md font-medium text-base flex items-center justify-center hover:bg-primary-25 bg-white border border-primary-500 dark:border-gray-700 text-gray-700 dark:text-white hover:text-primary-500 dark:bg-dark transition-colors duration-200 mr-4"> See All</a>
+          </div>
+          
+        </div>
+        <div class="flex gap-4 md:gap-8">
+          
+          <div class="flex flex-col gap-4 md:gap-8 pt-10 md:pt-16 w-full">
+            <a href="https://twitter.com/ShibariumGems" target="_blank">   <img src="https://pbs.twimg.com/profile_images/1625858305775259649/NTp36Q3z_400x400.jpg" class="w-full h-40 md:h-[278px] rounded-lg object-cover" alt="" /></a>
+            <a href="https://twitter.com/ShibaInuHodler" target="_blank">  <img src="https://pbs.twimg.com/profile_images/1620742764508987393/_nLpQUCj_400x400.jpg" class="w-full h-40 md:h-[278px] rounded-lg object-cover" alt="" /></a>
+          </div>
+          <div class="flex flex-col gap-4 md:gap-8 pb-10 md:pb-16 w-full">
+            <a href="https://twitter.com/DogecoinRide/" target="_blank">  <img src="https://pbs.twimg.com/profile_images/1599572292597682177/eZ3gHdMV_400x400.jpg" class="w-full h-40 md:h-[278px] rounded-lg object-cover" alt="" /></a>
+              <a href="https://twitter.com/shibaarmy2021" target="_blank">  <img src="https://pbs.twimg.com/profile_images/1606460066361528320/ExbexWx0_400x400.jpg" class="w-full h-40 md:h-[278px] rounded-lg object-cover" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+
+    <div class="bg-gray-25 dark:bg-gray-900 relative" id="allpartners" >
+      <div class="bg-[url('/assets/img/hero-bg/light-landing2.png')] dark:bg-[url('/assets/img/hero-bg/dark-landing2.png')] bg-no-repeat bg-[length:100%_100%] pt-[80px]">
+        <div class="container mx-auto pb-[100px]">
+          <div class="max-w-[494px] mx-auto text-center" >
+            
+          </div>
+          <section class="pb-[100px]">
+            <h4 class="text-gray-900 dark:text-white text-center"> Top <span class="text-primary-500">Partners</span>
+            </h4>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-7 py-12">
+              <div>
+                <a href="https://twitter.com/ShibariumGems" target="_new">
+                  <div class="bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                    <div class="flex items-center">
+                      <img alt="" src="https://pbs.twimg.com/profile_images/1625858305775259649/NTp36Q3z_400x400.jpg" class="w-20 outline outline-1 outline-white">
+                      <div style="
+    text-align: center;
+">
+                        <p class="font-medium text-lg text-gray-900 dark:text-white w-full"> Shibarium
+                          @ShibariumGems 
+                        </p>
+                        <small class="text-gray-700 dark:text-gray-400"><span class="text-gray-900 font-medium dark:text-white">148.5K Followers</span>
+                        </small>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </a>
+              </div>
+              <div>
+                <a href="https://twitter.com/ShibaInuHodler" target="_new">
+                  <div class="bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                    <div class="flex items-center">
+                      <img alt="" src="https://pbs.twimg.com/profile_images/1620742764508987393/_nLpQUCj_400x400.jpg" class="w-20 outline outline-1 outline-white">
+                      <div style="
+                          text-align: center;
+                        ">
+                        <p class="font-medium text-lg text-gray-900 dark:text-white w-full"> 
+                          SHIB HODLER
+                          @ShibaInuHodler
+                        </p>
+                        <small class="text-gray-700 dark:text-gray-400"><span class="text-gray-900 font-medium dark:text-white">396.7K Followers</span>
+                        </small>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </a>
+              </div>
+              <div>
+                <a href="https://twitter.com/DogecoinRide" target="_new">
+                  <div class="bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                    <div class="flex items-center">
+                      <img alt="" src="https://pbs.twimg.com/profile_images/1599572292597682177/eZ3gHdMV_400x400.jpg" class="w-20 outline outline-1 outline-white">
+                      <div style="
+                          text-align: center;
+                        ">
+                        <p class="font-medium text-lg text-gray-900 dark:text-white w-full"> 
+                          DogeCoin Ride
+                          @DogecoinRide
+                        </p>
+                        <small class="text-gray-700 dark:text-gray-400"><span class="text-gray-900 font-medium dark:text-white">512K Followers</span>
+                        </small>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </a>
+              </div>
+              <div>
+                <a href="https://twitter.com/shibaarmy2021" target="_new">
+                  <div class="bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                    <div class="flex items-center">
+                      <img alt="" src="https://pbs.twimg.com/profile_images/1606460066361528320/ExbexWx0_400x400.jpg" class="w-20 outline outline-1 outline-white">
+                      <div style="
+                          text-align: center;
+                        ">
+                        <p class="font-medium text-lg text-gray-900 dark:text-white w-full"> 
+                          SHIB ARMY
+                          @ShibaArmy2021
+                        </p>
+                        <small class="text-gray-700 dark:text-gray-400"><span class="text-gray-900 font-medium dark:text-white">476.7K Followers</span>
+                        </small>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </a>
+              </div>
+              <div>
+                <a href="https://twitter.com/SHIBRUMOURGEMS" target="_new">
+                  <div class="bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                    <div class="flex items-center">
+                      <img alt="" src="https://pbs.twimg.com/profile_images/1619954950578245633/d3KJVfM0_400x400.jpg" class="w-20 outline outline-1 outline-white">
+                      <div style="
+                          text-align: center;
+                        ">
+                        <p class="font-medium text-lg text-gray-900 dark:text-white w-full"> 
+                          Shibarium
+                          @SHIBRUMOURGEMS
+                        </p>
+                        <small class="text-gray-700 dark:text-gray-400"><span class="text-gray-900 font-medium dark:text-white">82.6K Followers</span>
+                        </small>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </a>
+              </div>
+              <div>
+                <a href="https://twitter.com/SHIB__World" target="_new">
+                  <div class="bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                    <div class="flex items-center">
+                      <img alt="" src="https://pbs.twimg.com/profile_images/1619033630822596608/f-SXkaOt_400x400.jpg" class="w-20 outline outline-1 outline-white">
+                      <div style="
+                          text-align: center;
+                        ">
+                        <p class="font-medium text-lg text-gray-900 dark:text-white w-full"> 
+                          SHIB World🔥 🚀
+                          @SHIB__World
+                        </p>
+                        <small class="text-gray-700 dark:text-gray-400"><span class="text-gray-900 font-medium dark:text-white">51.4K Followers</span>
+                        </small>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </a>
+              </div>
+              <div>
+                <a href="https://twitter.com/gemexplorer7" target="_new">
+                  <div class="bg-white dark:bg-dark rounded-lg outline outline-1 hover:outline-2 outline-gray-300 hover:outline-primary-500 dark:hover:outline-primary-500 dark:outline-gray-800 shadow-outline hover:shadow-hover flex items-cente justify-between p-5">
+                    <div class="flex items-center">
+                      <img alt="" src="https://pbs.twimg.com/profile_images/1623311678652686337/nEAMUzn4_400x400.jpg" class="w-20 outline outline-1 outline-white">
+                      <div style="
+                          text-align: center;
+                        ">
+                        <p class="font-medium text-lg text-gray-900 dark:text-white w-full"> 
+                          Gēmēxplorēr 💎
+                          @Gemexplorer7
+                        </p>
+                        <small class="text-gray-700 dark:text-gray-400"><span class="text-gray-900 font-medium dark:text-white">3,609 Followers</span>
+                        </small>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+          
+        </div>
+      </div>
+      
+      
+    </div>
+ 
+
+  
+   
+    <div class="bg-white h-[140px] bg-cover bg-center dark:bg-dark" style="background-image: url('assets/img/images/base.png')">
+      <div class="container mx-auto w-full h-full flex flex-col items-center justify-center md:flex-row md:justify-between">
+        
+        <h6 class="my-4 text-gray-700 dark:text-white font-normal never-miss-sale"> 
+          Never want to miss a sale? <br/>
+          
+        </h6>
+        <a href="https://t.me/ShibariumPad" target="_new" class="px-11 py-2 md:py-4 mt-4 md:mt-0 rounded-md font-normal text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 join-our-community"> Join Our Community </a>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/others/plugins-core/splide.js"></script>
+  <!-- Page footer -->
+  <footer class="bg-white dark:bg-dark">
+    <div class="w-100 w-full text-center">
+      <a href="#" class="flex items-center justify-center md:justify-start mr-10" style="
+    display: block;
+    margin: 0 auto;
+">
+        <img src="assets/img/logo/logorocket.gif" class="mr-3 h-11" alt="shibp" style="
+    display: block;
+    margin: 0 auto;
+    height: 5.5rem;
+">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white main-color" style="
+    font-size: 2.5rem;
+"> SHIBARIUM PAD </span>
+      </a>
+      <p class="my-4 text-gray-700 dark:text-white font-normal about-footer" style="
+    font-size: 2rem;
+"> The Ultimate Shibarium launchpad. </p>
+    </div>
+    <div class="text-center mb-10 pb-5" style="
+    max-width: 400px;
+    margin: 0 auto;
+">
+      
+      <div style="
+    text-align: center;
+" class="">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-5 links mt-20">  Where to find us? </p>
+        <ul class="text-gray-700 dark:text-white text-sm flex text-center mx-auto" style="
+    display: flex;
+    justify-content: space-around;
+">
+          <li class="py-1" style="
+">
+            <a href="https://twitter.com/ShibariumPadETH" target="_new"   class=" text-xl block hover:text-gray-900 dark:hover:text-gray-400">
+              <i class="ml-3 fa-brands fa-twitter"></i> Twitter </a>
+          </li>
+          <li class="py-1">
+            <a href="https://t.me/ShibariumPad" target="_new"  class=" text-xl block hover:text-gray-900 dark:hover:text-gray-400"> 
+              <i class="ml-3 fa-brands fa-telegram"></i>
+              Telegram </a>
+          </li>
+          <li class="py-1">
+            <a href="https://whitepaper.shibariumpad.finance/" target="_new" class=" text-xl block hover:text-gray-900 dark:hover:text-gray-400"><i class="ml-3 fa-solid fa-blog mr-2"></i>  Blog </a>
+          </li>
+         
+         
+        
+        </ul>
+      </div>
+    </div>
+    <div class="border-b border-gray-300 dark:border-gray-700"></div>
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-center justify-between">
+        <small class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 dark:text-white font-normal"> Copyright © 2023 Shibarium Pad. All Rights Reserves </small>
+        <a class="text-gray-700 dark:text-white text-center mx-auto" href="mailto:hello@shibariumpad.finance">hello[at]shibariumpad.finance</a> 
+        <div class="pt-2 pb-4 md:py-9 w-full md:w-auto flex items-center justify-center">
+          <a class="terms text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/terms">
+            Terms & Conditions
+          </a>
+ 
+          <a class="privacy ml-3 text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="/privacy">
+            Privacy Policy
+          </a>
+          <br/>
+         
+        </div>
+       
+      </div>
+    </div>
+  </footer>
+    <!-- <footer class="bg-white dark:bg-dark">
+    <div class="w-100 w-full">
+      <a href="#" class="flex items-center justify-center md:justify-start mr-10">
+        <img src="assets/img/logo/logorocket.gif" class="mr-3 h-11" alt="shibp" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white main-color"> SHIBARIUM PAD </span>
+      </a>
+      <p class="my-4 text-gray-700 dark:text-white font-normal about-footer"> The ultimate Shibarium launchpad. </p>
+    </div>
+    <div class="py-12 container mx-auto grid grid-cols-1 lg:grid-cols-6 gap-4">
+      <div class="md:col-span-2 w-full text-center md:text-start mx-auto md:mx-0" style="max-width: 314px">
+       
+        <div class="mb-4 mt-9 border-b border-gray-300 dark:border-gray-700"></div>
+        <p class="py-1 font-medium text-gray-900 dark:text-white signup-for-newsletter"> Sign up for our newsletter and get the latest news and updates. </p>
+        <div class="flex mt-3 mb-7 md:mb-0">
+          <input class="py-3 px-4 rounded-l-md w-full bg-white dark:bg-dark placeholder:text-gray-700 dark:placeholder:text-gray-600 dark:text-gray-600 border border-r-0 border-gray-300 dark:border-gray-700 focus:outline-none text-xs" placeholder="Type Here" />
+          <button class="px-5 py-2 rounded-r-md font-medium text-base flex items-center justify-center bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-200 mr-4 subscribe-txt"> Subscribe </button>
+        </div>
+      </div>
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 links">  Where to find us? </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Twitter </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Telegram </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Blog </a>
+          </li>
+         
+         
+        
+        </ul>
+      </div>
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 my-account"> My Account </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> DAPP </a>
+          </li>
+          
+        </ul>
+      </div> 
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 resources"> Resources </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400"> Medium </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 help"> Help </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 support"> Support </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 faq"> FAQs </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 terms"> Terms & Conditions </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 privacy"> Privacy Policy </a>
+          </li>
+        </ul>
+      </div>
+      <div class="md:col-span-1 py-1">
+        <p class="text-lg font-semibold text-gray-900 dark:text-white mb-1 company"> Company </p>
+        <ul class="text-gray-700 dark:text-white text-sm">
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 about"> About </a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="block hover:text-gray-900 dark:hover:text-gray-400 apply-for-ido"> Apply for ISO </a>
+          </li>
+        </ul>
+       
+      </div>
+    </div>
+    <div class="border-b border-gray-300 dark:border-gray-700"></div>
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-center justify-between">
+        <small class="pt-4 pb-2 md:py-9 text-center w-full md:w-auto text-gray-700 dark:text-white font-normal"> Copyright © 2023 Shibarium Pad. All Rights Reserves </small>
+        <div class="pt-2 pb-4 md:py-9 w-full md:w-auto flex items-center justify-center">
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
+            <i class="ml-3 fa-brands fa-twitter"></i>
+          </a>
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
+            <i class="ml-3 fa-brands fa-telegram"></i>
+          </a>
+          <a class="text-gray-900 font-normal text-sm dark:text-white hover:text-primary-500 dark:hover:text-primary-500" href="#">
+            <i class="ml-3 fa-solid fa-blog mr-2"></i> 
+          </a>
+         
+          
+        </div>
+      </div>
+    </div>
+  </footer> -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/jquery.marquee.js?v=3" type="text/javascript"></script>
+  <script>
+
+
+
+    $(function(){
+  var $mwo = $('.marquee-with-options');
+  $('.marquee').marquee();
+  $('.marquee-with-options').marquee({
+    //speed in milliseconds of the marquee
+    speed: 5000,
+    //gap in pixels between the tickers
+    gap: 50,
+    //gap in pixels between the tickers
+    delayBeforeStart: 0,
+    //'left' or 'right'
+    direction: 'left',
+    //true or false - should the marquee be duplicated to show an effect of continues flow
+    duplicated: true,
+    //on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
+    pauseOnHover: true
+  });
+
+  //Direction upward
+  $('.marquee-vert').marquee({
+    direction: 'up',
+    speed: 1500
+  });
+
+  //pause and resume links
+  $('.pause').click(function(e){
+    e.preventDefault();
+    $mwo.trigger('pause');
+  });
+  $('.resume').click(function(e){
+    e.preventDefault();
+    $mwo.trigger('resume');
+  });
+  //toggle
+  $('.toggle').hover(function(e){
+    $mwo.trigger('pause');
+  },function(){
+    $mwo.trigger('resume');
+  })
+  .click(function(e){
+    e.preventDefault();
+  })
+});
+
+
+
+///Preloading
+
+  </script>
+
+
+<!-- jQuery.countdown -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+
+<!-- MomentJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data-2012-2022.min.js"></script>
+
+<script>
+
+  // ID of the element to add the Countdown Clock to
+  var $clockElement = $('[data-countdown]');
+
+  $clockElement.each( function() {
+
+    // Read data from HTML attributes to store in vars
+    var $clock = $(this),
+      // Event STARTING time
+      eventStart = $(this).data('countdownStart'),
+      // Event ENDING time
+      eventEnd = $(this).data('countdownEnd'),
+      // Event TIMEZONE
+      eventTimeZone = $(this).data('countdownTimezone');
+
+    // CONVERT eventEnd to MOMENT.JS FORMAT to compare with current time later on.
+    var eventEndTime = moment.tz(eventEnd, eventTimeZone);
+
+    // Time to COUNTDOWN TO
+    var countdownTo = moment.tz(eventStart, eventTimeZone);
+
+    $clock.countdown(countdownTo.toDate(), { elapse: true } ).on('update.countdown', function(event) {
+      // Clock Countdown HTML Ouptut
+      var output = `
+<div class="time seconds flex flex-col items-center justify-center"><span class="count ">%S</span> <span class="label text-gray-700 text-xs">sec%!S</span></div>`;
+      // Add number of MINUTES left
+      //if ( event.offset.totalMinutes > 0 ) {
+        output = '<div class="time minutes flex flex-col items-center justify-center"><span class="count">%M</span> <span class="label text-gray-700 text-xs">min%!M</span></div>' + output;
+      //}
+      // Add number of HOURS left
+      //if ( event.offset.totalHours > 0 ) {
+        output = '<div class="time hours flex flex-col items-center justify-center"><span class="count">%H</span> <span class="label text-gray-700 text-xs">hr%!H</span></div>' + output;
+      //}
+      // Add number of DAYS left
+      //if ( event.offset.totalDays > 0 ) {
+        output = '<div class="time days flex flex-col items-center justify-center"><span class="count">%-D</span> <span class="label text-gray-700 text-xs">day%!D</span></div>' + output;
+      //}
+
+      // Get CURRENT TIME in the event's timezone
+      var currentTime = moment().tz(eventTimeZone);
+
+      // If CURRENT TIME is GREATER THAN event ENDING TIME, display...
+      if ( currentTime > eventEndTime && event.elapsed ) {
+        $(this).html(''
+          + '<p style="color:black"><a target="_new" href="https://etherscan.io/token/0xc90906d45046059221e908de5cc8fcfaca859235">0xc9090....859235</a></p>'
+        ).parent().addClass('disabled');
+        // Stop the Countdown
+        $(this).countdown('stop');
+      // If event has ENDED and is still IN PROGRESS, display...
+      } else if ( event.elapsed ) {
+        $(this).html(''
+          + '<p style="color:green"></p>'
+        ).parent().addClass('disabled');
+      // Display COUNTDOWN to event...
+      } else {
+        $(this).html( event.strftime(output) );
+      }
+
+    });
+
+  });
+
+</script>
+
+<script>
+CountDownTimer('02/28/2023 11:59 AM', 'countdowni');
+ CountDownTimer('02/28/2023 11:59 AM', 'countdown');
+  // CountDownTimer('02/26/2023 4:38 PM', 'countdown2');
+  // CountDownTimer('02/26/2023 4:38 PM', 'countdown3');
+  
+
+  function CountDownTimer(dt, id)
+  {
+      var end = new Date(dt);
+
+      var _second = 1000;
+      var _minute = _second * 60;
+      var _hour = _minute * 60;
+      var _day = _hour * 24;
+      var timer;
+
+      function showRemaining() {
+          var now = new Date();
+          var distance = end - now;
+          if (distance < 0) {
+
+              clearInterval(timer);
+              document.getElementById(id).innerHTML = 'EXPIRED!';
+
+              return;
+          }
+          var days = Math.floor(distance / _day);
+          var hours = Math.floor((distance % _day) / _hour);
+          var minutes = Math.floor((distance % _hour) / _minute);
+          var seconds = Math.floor((distance % _minute) / _second);
+          let currentLang  = $('.img-lang').attr('data-language')
+   
+   if(currentLang === "en"){
+       document.getElementById(id).innerHTML = `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${days}</p>
+                 <small class="text-gray-700 text-xs"> Days </small>
+               </div> <span>:</span>`;
+         document.getElementById(id).innerHTML += `<div class="flex ml-5 flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${hours}</p>
+                 <small class="text-gray-700 text-xs"> Hours </small>
+               </div><span>:</span> `;;
+         document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${minutes}</p>
+                 <small class="text-gray-700 text-xs"> Minutes </small>
+               </div> <span>:</span>`;;
+         document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${seconds}</p>
+                 <small class="text-gray-700 text-xs"> Seconds </small>
+               </div> `;;
+   }
+  if(currentLang === "cn"){
+   document.getElementById(id).innerHTML = `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${days}</p>
+                 <small class="text-gray-700 text-xs"> 天数 </small>
+               </div> <span>:</span>`;
+         document.getElementById(id).innerHTML += `<div class="flex ml-5 flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${hours}</p>
+                 <small class="text-gray-700 text-xs"> 小时 </small>
+               </div><span>:</span> `;;
+         document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${minutes}</p>
+                 <small class="text-gray-700 text-xs"> 会议记录 </small>
+               </div> <span>:</span>`;;
+         document.getElementById(id).innerHTML += `<div class="flex flex-col items-center justify-center">
+                 <p  id="" class="text-gray-900  font-semibold">${seconds}</p>
+                 <small class="text-gray-700 text-xs"> 秒钟 </small>
+               </div> `;;
+   }
+
+       
+   
+      }
+
+      timer = setInterval(showRemaining, 1000);
+  }
+if(window.location.host === 'shibariumpad.finance' && window.location.protocol === 'http:'){
+  window.location.href = 'https://shibariumpad.finance'
+}
+</script>
+<script>
+var translations;
+setTimeout(function(){
+$.getJSON('./translations.json', function(data) {
+  translations = data;
+
+  var idsToTranslate = ['launch-pad','home-btn'];
+  $.each(idsToTranslate, function(index, value) {
+    var englishText = $('#' + value).html().trim();
+    var translatedText = translations[value];
+    if (translatedText !== undefined) {
+      $('#' + value).html(translatedText);
+    } else {
+      console.log("No translation found for '" + value + "'");
+    }
+  });
+
+  
+});
+
+},2000)
+
+setTimeout(function(){
+  console.log('INSIDE')
+
+},2000)
+
+function chineeseLang(){
+  let walletBTNTXT = "连接钱包";
+    if(window.localStorage.getItem("userAddress")!== null || window.localStorage.getItem("userAddress")!== 'undefined'){
+        // Load in Localstore key
+        console.log('SETTED')
+        $(".connectwallet-btn-zh").html(truncateAddress(window.localStorage.getItem("userAddress")))
+      }
+      if(window.localStorage.getItem("userAddress")=== null || window.localStorage.getItem("userAddress")=== 'undefined' ){
+        console.log('NOT DEFINED CN')
+        walletBTNTXT = "连接钱包"; 
+        $(".connectwallet-btn-zh").html('连接钱包')
+      }
+   
+  $(".launch-pad").html("主页面")
+  $('.get-early-access-header').html(`尽早获得<span class=\"text-primary-500 bg-contain bg-no-repeat\" style=\"background-image: url('assets/img/logo/nft-text-bg2.png');\">Shibarium</span>上最伟大的项目。`)
+  $(".home-btn").html("主页面")
+  $(".whitepaper-btn").html("白皮书")
+  $(".howtobuy-btn").html("如何购买")
+  $(".socials-btn").html(`社交网络 <i class="fa-solid fa-caret-down ml-3"></i>`)
+  
+  $('.trustworty').html('值得信赖的<b class="main-color">Shibarium</b>项目，经过了严格的审查。由整个行业的知名人士和有影响力的人支持。')
+  $('.getstarted-btn').html('开始吧')
+  $('.create-btn').html('应用')
+  $('.ideas-funded').html('资助的想法')
+  $('.projects-mc').html('项目市值')
+  $('.unique-participants').html('独特的参与者')
+  $('.token-sale-btn').html('代币销售')
+  $('.price-per-token').html('每枚代币的价格');
+  $('.allocation-txt').html('拨款')
+  $('.starting-text').html('开始日期')
+  $('.raise-funds-text').html('通过<b class="main-color">Shibarium BLOCKCHAIN</b>筹集资金。')
+  $('.total-raised').html('筹集到的资金总额')
+  $('.tokens-funded').html('资助的托克斯');
+  $('.total-mkt-cap').html('总数：MKT CAP');
+$('.total-participants').html('参与者总数')
+$('.get-educated').html(`获得有关<b class="main-color">ShibariumPad的教育</b>。`)
+$('.learn-about-us').html('了解我们 <i class="fa-solid fa-chevron-right"></i>')
+$('.how-to-participate').html('如何参与SHIBARIUM PAD活动')
+$('.a-good-place-to').html('一个好的开始是：什么是Shibarium Pad？')
+$('.how-to-buy-art').html('如何购买Shibarium $SHIBP代币？')
+$('.what-is-ido').html('什么是ISO？<br/>（首次Shibarium发行）。')
+$('.upcoming-projects').html('即将到来的<span class="text-primary-500">项目</span>')
+$('.we-bring-most').html('我们只引进最成功的项目。');
+$('.see-all').html('查看全部')
+$('.assisting-txt').html(`协助最热心的<b class="main-color">博物馆</b>项目启动。`)
+$('.launched-projects-txt').html('<span class="text-primary-500">推出的</span>项目')
+$('.participants-txt').html('参与者')
+$('.end-date').html('结束日期')
+$('.never-miss-sale').html('永远不想错过促销活动？')
+$('.join-our-community').html('加入我们的社区')
+$('.about-footer').html('推出新想法的完全去中心化的协议')
+$('.signup-for-newsletter').html('注册我们的通讯，获得最新的新闻和更新。')
+$('.subscribe-txt').html('订阅')
+$('.links').html('在哪里可以找到我们？')
+$('.my-account').html('我的账户')
+$('.resources').html('资源')
+$('.company').html('公司')
+$('.help').html('帮助')
+$('.support').html('帮助')
+$('.faq').html('常见问题')
+$('.terms').html('条款和条件')
+$('.privacy').html('隐私政策')
+$('.about').html('关于我们')
+$('.apply-for-ido').html('申请加入ISO')
+  $('.ultimate-title').html('专门为Shibarium生态系统设计的终极发射台。')
+  $('.time-str').html(`    <div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> 天数 </small>
+              </div> <span>:</span><div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x </p>
+                <small class="text-gray-700 text-xs"> 小时 </small>
+              </div><span>:</span> <div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> 会议记录 </small>
+              </div> <span>:</span><div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> 秒钟 </small>
+              </div>`)
+$('.u-disconnect').html('断开连接');
+$('.u-copy').html('断开连接');
+$('.u-wallet').html('我的钱包');
+$('.u-balance').html('平衡');
+$('.buy-here').html('在此购买')
+
+}
+
+
+
+
+function englishLang(){
+  $('.buy-here').html('Buy Here')
+  $('.u-disconnect').html('Disconnect');
+$('.u-copy').html('Copy');
+$('.u-wallet').html('My Wallet>');
+$('.u-balance').html('Balance');
+
+  let walletBTNTXT = "Connect Wallet";
+      if(window.localStorage.getItem("userAddress")!== null ||  window.localStorage.getItem("userAddress")!== 'undefined'){
+          // Load in Localstore key
+          
+          $(".connectwallet-btn-zh").html(truncateAddress(window.localStorage.getItem("userAddress")))
+        }
+        if(window.localStorage.getItem("userAddress")=== null ||  window.localStorage.getItem("userAddress")=== 'undefined'){
+          
+          walletBTNTXT = ""; 
+          $(".connectwallet-btn-zh").html('Connect Wallet')
+        }
+        
+  $(".launch-pad").html("LAUNCH PAD")
+  $('.get-early-access-header').html(`Get early access to the <span class="text-primary-500 bg-contain bg-no-repeat" style="background-image: url('assets/img/logo/nft-text-bg2.png');">  greatest projects </span>  on Shibarium.`)
+  $(".home-btn").html("Home")
+  $(".whitepaper-btn").html("Whitepaper")
+  $(".howtobuy-btn").html("How to buy")
+  $(".socials-btn").html(`Socials <i class="fa-solid fa-caret-down ml-3"></i>`)
+  $('.time-str').html(`    <div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> Days </small>
+              </div> <span>:</span><div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x </p>
+                <small class="text-gray-700 text-xs"> Hours </small>
+              </div><span>:</span> <div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> Minutes </small>
+              </div> <span>:</span><div class="flex flex-col items-center justify-center">
+                <p id="" class="text-gray-900 font-semibold">x</p>
+                <small class="text-gray-700 text-xs"> Seconds </small>
+              </div>`)
+  $('.trustworty').html(' Trustworthy <b class="main-color">Shibarium Projects</b> that have undergone rigorous vetting. Backed by prominent individuals and influencers across the industry.')
+  $('.getstarted-btn').html('Launch DAPP')
+  $('.create-btn').html('Apply ISO')
+  $('.ideas-funded').html('IDEAS FUNDED')
+  $('.projects-mc').html('PROJECTS MKT CAP')
+  $('.unique-participants').html('UNIQUE PARTICIPANTS')
+  $('.token-sale-btn').html('Token Sale')
+  $('.price-per-token').html('Price per token');
+  $('.allocation-txt').html('Allocation')
+  $('.starting-text').html('Starting :')
+  $('.raise-funds-text').html('Raise funds through the <b class="main-color"> Shibarium</b>  BLOCKCHAIN. ')
+  $('.total-raised').html('Total Raised')
+  $('.tokens-funded').html('TOKENS FUNDED');
+  $('.total-mkt-cap').html('TOTAL MKT CAP');
+$('.total-participants').html('TOTAL PARTICIPANTS')
+$('.get-educated').html(`Get Educated About <b class="main-color"> ShibariumPad </b>`)
+$('.learn-about-us').html('Learn About Us <i class="fa-solid fa-chevron-right"></i>')
+$('.how-to-participate').html('How to participate in SHIBARIUM PAD')
+$('.a-good-place-to').html('A good place to start is: what is Shibarium Pad?')
+$('.how-to-buy-art').html('How to buy the Shibarium $SHIBP token?')
+$('.what-is-ido').html('What is an ISO? <br/> (Initial Shibarium Offering)')
+$('.upcoming-projects').html('Upcoming  <span class="text-primary-500">Projects</span>')
+$('.we-bring-most').html('We bring in only the most successful projects.');
+$('.see-all').html('See all')
+$('.assisting-txt').html(` ASSISTING THE MOST AMBITIOUS <b class="main-color"> SHIBARIUM </b> PROJECTS LAUNCH.`)
+$('.launched-projects-txt').html('<span class="text-primary-500">Launched </span> Projects')
+$('.participants-txt').html('Participants')
+$('.end-date').html('Ended:')
+$('.never-miss-sale').html(' Never want to miss a sale? ')
+$('.join-our-community').html('Join Our Community')
+$('.about-footer').html('The Ultimate Shibarium launchpad. ')
+$('.signup-for-newsletter').html('Sign up for our newsletter and get the latest news and updates. ')
+$('.subscribe-txt').html('Subscribe')
+$('.links').html(' Where to find us?')
+$('.my-account').html('My Account')
+$('.resources').html('Resources')
+$('.company').html('Company')
+$('.help').html('Help')
+$('.support').html('Support')
+$('.faq').html(`FAQs`)
+$('.terms').html('Terms & Conditions')
+$('.privacy').html('Privacy Policy')
+$('.about').html('About')
+$('.apply-for-ido').html('Apply for ISO')
+$('.ultimate-title').html('The Ultimate Launchpad Designed Exclusively For The Shibarium Ecosystem')
+}
+</script>
+<script>
+      
+   
+
+      $('.img-lang').click(function(event) {
+    
+    let currentLang  = $('.img-lang').attr('data-language')
+    console.log('????',currentLang) 
+    if(currentLang === "en"){
+      chineeseLang();
+      console.log('UKKKKK') 
+      $('.img-lang').attr('data-language','cn')
+      $('.img-lang').attr('src','/assets/enf.png')
+      window.localStorage.setItem('lang','cn')
+     
+    }
+   if(currentLang === "cn"){
+      englishLang();    
+      console.log('CHINNNA') 
+      $('.img-lang').attr('data-language','en')
+      $('.img-lang').attr('src','/assets/cnf.png')
+      window.localStorage.setItem('lang','en')
+      
+    }
+});
+</script>
+
+<script>
+ 
+ window.addEventListener('DOMContentLoaded', async (event) => {
+      // Init Web3 connected to ETH network
+      if (window.ethereum) {
+          window.web3 = new Web3(window.ethereum);
+          let chain = await window.web3.eth.getChainId();
+          console.log(typeof chain)
+          if (chain !== 1) {
+            console.log('Show msg to switch to eth')
+          }
+
+      } else {
+          console.log("No ETH brower extension detected.");
+      }
+      if(window.localStorage.getItem("userAddress")!== 'undefined'){
+        // Load in Localstore key
+        window.userAddress = window.localStorage.getItem("userAddress");
+        showAddress();
+      }
+  });
+
+  // Use this function to turn a 42 character ETH address
+  // into an address like 0x345...12345
+  function truncateAddress(address) {
+      if (!address) {
+          return "";
+      }
+      return `${address.substr(0, 5)}...${address.substr(
+          address.length - 5,
+          address.length
+      )}`;
+  }
+
+  // Display or remove the users know address on the frontend
+ async function showAddress() {
+      if (!window.userAddress) {
+        
+          $('#userAddress').html('<span class="connectwallet-btn-zh">Connect Wallet</span>');
+          //document.getElementById("userAddress").innerText = "Connect";
+          $('.btnLogout').hide();
+          $('.ubalance').hide();
+          $('.shibpbalance').hide();
+          $('.profileDRPD').hide();
+          
+          // document.getElementById("logoutButton").classList.add("hidden");
+          return false;
+      }
+      $('#userAddress').html('<span  class="connectwallet-btn-zh">' + truncateAddress(window.userAddress) + '</span>');
+      $('.theUAddrr').html('<span>' + truncateAddress(window.userAddress) + '</span>');
+      $('.theUAddrr').attr('data-wallet-user',window.userAddress)
+      let getBalanceOfUser = await web3.eth.getBalance(window.userAddress);
+      let cleanUB= toFixed(web3.utils.fromWei(getBalanceOfUser, 'ether'),3);
+      $('.ubalance').html('' + cleanUB + ' ETH')
+      // document.getElementById(
+      //     "userAddress"
+      // ).innerText = `ETH Address: ${truncateAddress(window.userAddress)}`;
+      //document.getElementById("logoutButton").classList.remove("hidden");
+      $('.btnLogout').show();
+      $('.ubalance').show();
+      $('.shibpbalance').show();
+      $('.profileDRPD').show();
+      $('.uidADRNotConnected').hide()
+      
+      
+  }
+
+  // remove stored user address and reset frontend
+  function logout() {
+      window.userAddress = null;
+      window.localStorage.removeItem("userAddress");
+      $('.uidADRNotConnected').show()
+      showAddress();
+  }
+
+  // Login with Web3 via Metamasks window.ethereum library
+  async function loginWithEth() {
+      if (window.web3) {
+          try {
+              // We use this since ethereum.enable() is deprecated. This method is not
+              // available in Web3JS - so we call it directly from metamasks' library
+              const selectedAccount = await window.ethereum
+                  .request({
+                      method: "eth_requestAccounts",
+                      params: [
+                          {
+                              chainId: '0x61',
+                              rpcUrl: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
+                          },
+                      ]
+                  })
+                  .then((accounts) => accounts[0])
+                  .catch(() => {
+                      throw Error("No account selected!");
+                  });
+              window.userAddress = selectedAccount;
+              window.localStorage.setItem("userAddress", selectedAccount);
+              
+              showAddress();
+          } catch (error) {
+              console.error(error);
+          }
+      } else {
+          alert("No ETH brower extension detected.");
+      }
+  }
+  
+
+
+
+  async function accountDetails() {
+
+  }
+
+
+  window.ethereum.on('accountsChanged', function (accounts) {
+      console.log('accountsChanges', accounts[0]);
+      window.localStorage.removeItem('userAddress')
+      //   console.log(window.localStorage.removeItem('userAddress'));
+      //   console.log(window.localStorage.setItem('userAddress',accounts[0]));
+      window.localStorage.setItem('userAddress', accounts[0]);
+      setTimeout(function () { window.location.reload() }, 800);
+  });
+
+  // detect Network account change
+  window.ethereum.on('chainChanged', function (networkId) {
+      console.log('chainChanged', typeof networkId);
+      if (networkId !== 1) {
+          $('#section-farms').html('<h1 class="text-center  text-white">SWITCH TO ETH</h1>')
+      }
+      if (networkId === '56') {
+          window.location.reload();
+      }
+  });
+  // get stats
+
+  /**
+   * Number.prototype.format(n, x, s, c)
+   * 
+   * @param integer n: length of decimal
+   * @param integer x: length of whole part
+   * @param mixed   s: sections delimiter
+   * @param mixed   c: decimal delimiter
+   */
+  Number.prototype.format = function (n, x, s, c) {
+      var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+          num = this.toFixed(Math.max(0, ~~n));
+
+      return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
+  };
+
+  function numberWithCommas(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function pad(num, size) {
+      num = num.toString();
+      while (num.length < size) num = "0" + num;
+      return num;
+  }
+  window.addEventListener("load", function () {
+      // showAddress();
+      //refresh();
+      // detect Metamask account change
+
+      
+      if (this.window.ethereum) {
+          
+          accountDetails();
+      }
+  });
+
+  function toFixed(i, digits) {
+      var pow = Math.pow(10, digits);
+
+      return Math.floor(i * pow) / pow;
+  }
+
+  $('#preloader').animate({opacity: 0}, 1500);
+
+  let text = document.getElementsByClassName("copyUserAddrrBtn");
+    $(".copyUserAddrrBtn").on("click", async () => {
+      try {
+        text = $(".theUAddrr").attr("data-wallet-user");
+        await navigator.clipboard.writeText(text);
+        console.log("Content copied to clipboard");
+        // $('.theUAddrr > i').hide();
+        // $(".share-copy").html(
+        //   '<span style="color:#6f6eff" id="copied">copied</span>'
+        // );
+        $('.copyUserAddrrBtn').html('Copied');
+        setTimeout(function () {
+          $('.copyUserAddrrBtn').html('Copy');
+        }, 3000);
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+      }
+    });
+
+   
+    if(window.localStorage.getItem('lang') === null || window.localStorage.getItem('lang') === 'undefined'){
+        window.localStorage.setItem('lang','en')
+    }else if(window.localStorage.getItem('lang') === 'en'){
+        englishLang();    
+      console.log('CHINNNA') 
+      $('.img-lang').attr('data-language','en')
+      $('.img-lang').attr('src','/assets/cnf.png')
+    }else if(window.localStorage.getItem('lang') === 'cn'){
+        chineeseLang();
+      console.log('UKKKKK') 
+      $('.img-lang').attr('data-language','cn')
+      $('.img-lang').attr('src','/assets/enf.png')
+    }
+
+$('#lightOrDarkMode').on('click',function(){
+  let mode = window.localStorage.getItem('mode');
+  let theMode= $('#lightOrDarkMode').attr('data-mode')
+
+  if(theMode === 'light'){
+      window.localStorage.setItem('mode',theMode)
+      $('#lightOrDarkMode').attr('data-mode','dark')
+      window.localStorage.setItem('mode','dark')
+      $('body').addClass('dark');
+    }else if(theMode === 'dark'){
+      window.localStorage.setItem('mode',theMode)
+      $('#lightOrDarkMode').attr('data-mode','light')
+      window.localStorage.setItem('mode','light')
+      $('body').removeClass('dark');;   
+    }
+  
+})
+if(window.localStorage.getItem('mode') === null || window.localStorage.getItem('mode') === 'undefined'){
+        window.localStorage.setItem('mode','light')
+    }else if(window.localStorage.getItem('mode') === 'light'){
+      window.localStorage.setItem('mode','light')
+      $('body').removeClass('dark');;   
+    
+    }else if(window.localStorage.getItem('mode') === 'dark'){
+      window.localStorage.setItem('mode','dark')
+      $('body').addClass('dark');
+    }
+    
+</script>
+
+</html>
