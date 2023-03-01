@@ -261,6 +261,132 @@ background: #fcfcfc;
 }
 
 
+
+
+.nft {
+  user-select: none;
+  max-width: 300px;
+  /* margin: 5rem auto; */
+  border: 1px solid #ffffff22;
+  background-color: #282c34;
+  background: linear-gradient(0deg, #282c34 0%, rgba(17, 0, 32, 0.5) 100%);
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: 0.7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  transition: 0.5s all;
+}
+.nft hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #88888855;
+  margin-top: 0;
+}
+.nft ins {
+  text-decoration: none;
+}
+.nft .main {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 1rem;
+}
+.nft .main .tokenImage {
+  border-radius: 0.5rem;
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.nft .main .description {
+  margin: 0.5rem 0;
+  color: #a89ec9;
+}
+.nft .main .tokenInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nft .main .tokenInfo .price {
+  display: flex;
+  align-items: center;
+  color: #ee83e5;
+  font-weight: 700;
+}
+.nft .main .tokenInfo .price ins {
+  margin-left: -0.3rem;
+  margin-right: 0.5rem;
+}
+.nft .main .tokenInfo .duration {
+  display: flex;
+  align-items: center;
+  color: #a89ec9;
+  margin-right: 0.2rem;
+}
+.nft .main .tokenInfo .duration ins {
+  margin: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.nft .main .creator {
+  display: flex;
+  align-items: center;
+  margin-top: 0.2rem;
+  margin-bottom: -0.3rem;
+}
+.nft .main .creator ins {
+  color: #a89ec9;
+  text-decoration: none;
+}
+.nft .main .creator .wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffffff22;
+  padding: 0.3rem;
+  margin: 0;
+  margin-right: 0.5rem;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 4px #000000aa;
+}
+.nft .main .creator .wrapper img {
+  border-radius: 100%;
+  border: 1px solid #ffffff22;
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  margin: 0;
+}
+.nft ::before {
+  position: fixed;
+  content: "";
+  box-shadow: 0 0 100px 40px #ffffff08;
+  top: -10%;
+  left: -100%;
+  transform: rotate(-45deg);
+  height: 60rem;
+  transition: 0.7s all;
+}
+.nft:hover {
+  border: 1px solid #ffffff44;
+  box-shadow: 0 7px 50px 10px #000000aa;
+  transform: scale(1.015);
+  filter: brightness(1.3);
+}
+.nft:hover ::before {
+  filter: brightness(0.5);
+  top: -100%;
+  left: 200%;
+}
+
+.bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bg h1 {
+  font-size: 20rem;
+  filter: opacity(0.5);
+}
   </style>
 </head>
 
@@ -1971,7 +2097,111 @@ background: #fcfcfc;
         </button>
       </section> -->
 
-      
+      <div class="bg-gray-25 dark:bg-gray-900 relative">
+        <div class="bg-[url('/assets/img/hero-bg/light-landing4.png')] dark:bg-[url('/assets/img/hero-bg/dark-landing4.png')] bg-no-repeat bg-[length:100%_100%] pt-20 md:pt-[120px]">
+          <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center pb-[100px]">
+            <div class="max-w-[490px] py-6 mx-auto md:mx-0  md:text-start">
+              <p id="" class="launch-pad text-primary-500 text-xs md:text-base font-normal"> Elevated by Industry Figures </p>
+              <h2 id="" class=" get-early-access-header font-semibold text-2xl md:text-6xl text-gray-900 dark:text-white"> Our Partners
+              </h2>
+              <p class=" font-normal text-xs md:text-base text-gray-700 dark:text-gray-400 py-3 md:py-6"> 
+                
+                SHIBARIUMPAD is backed by some of the
+    most brilliant minds in the Web3
+    industry. Together, we bring the
+    crypto world's most exclusive
+    projects into the spotlight.
+              </p>
+                
+              <div class="flex justify-center md:justify-start pt-1 md:pt-2 pb-4 md:pb-12">
+                
+                <a href="/partners#allpartners"  class="create-btn px-4 md:px-8 py-2 md:py-4 rounded-md font-medium text-base flex items-center justify-center hover:bg-primary-25 bg-white border border-primary-500 dark:border-gray-700 text-gray-700 dark:text-white hover:text-primary-500 dark:bg-dark transition-colors duration-200 mr-4"> See All</a>
+              </div>
+              
+            </div>
+            <div class="flex gap-4 md:gap-8">
+              
+              <div class="flex flex-col gap-4 md:gap-8 pt-10 md:pt-16 w-full">
+                <a href="https://twitter.com/ShibariumGems" target="_blank">  
+                  <div class="nft">
+                    <div class='main'>
+                      <img class='tokenImage' src="https://pbs.twimg.com/profile_images/1625858305775259649/NTp36Q3z_400x400.jpg" alt="" />
+                      <div class='tokenInfo text-center'>
+                        <div class="text-white">
+                          <ins>Shibarium | @ShibariumGems</ins>
+                        </div>
+                      </div>
+                      <hr />
+                      <div class='creator'>
+                        <p><ins>148.5K Followers</ins> </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://twitter.com/ShibaInuHodler" target="_blank">  
+                  <div class="nft">
+                    <div class='main'>
+                      <img class='tokenImage' src="https://pbs.twimg.com/profile_images/1620742764508987393/_nLpQUCj_400x400.jpg" alt="" />
+                      <div class='tokenInfo text-center'>
+                        <div class="text-white">
+                          <ins>SHIB HODLER | @ShibaInuHodler</ins>
+                        </div>
+                      </div>
+                      <hr />
+                      <div class='creator'>
+                        <p><ins>396.7K Followers</ins> </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <!-- <a href="https://twitter.com/ShibariumGems" target="_blank">   <img src="https://pbs.twimg.com/profile_images/1625858305775259649/NTp36Q3z_400x400.jpg" class="w-full h-40 md:h-[278px] rounded-lg object-cover" alt="" /></a>
+                <a href="https://twitter.com/ShibaInuHodler" target="_blank">  <img src="https://pbs.twimg.com/profile_images/1620742764508987393/_nLpQUCj_400x400.jpg" class="w-full h-40 md:h-[278px] rounded-lg object-cover" alt="" /></a> -->
+              </div>
+              <div class="flex flex-col gap-4 md:gap-8 pb-10 md:pb-16 w-full">
+                <!-- <a href="https://twitter.com/DogecoinRide/" target="_blank">  <img src="https://pbs.twimg.com/profile_images/1599572292597682177/eZ3gHdMV_400x400.jpg" class="w-full h-40 md:h-[278px] rounded-lg object-cover" alt="" /></a>
+                  <a href="https://twitter.com/shibaarmy2021" target="_blank">  <img src="https://pbs.twimg.com/profile_images/1606460066361528320/ExbexWx0_400x400.jpg" class="w-full h-40 md:h-[278px] rounded-lg object-cover" alt="" /></a> -->
+                  <a href="https://twitter.com/DogecoinRide/" target="_blank">  
+                    <div class="nft">
+                      <div class='main'>
+                        <img class='tokenImage' src="https://pbs.twimg.com/profile_images/1599572292597682177/eZ3gHdMV_400x400.jpg" alt="" />
+                        <div class='tokenInfo text-center'>
+                          <div class="text-white">
+                            <ins>DogeCoin Ride | @DogecoinRide</ins>
+                          </div>
+                        </div>
+                        <hr />
+                        <div class='creator'>
+                          <p><ins>512K Followers</ins> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="https://twitter.com/shibaarmy2021" target="_blank">  
+                    <div class="nft">
+                      <div class='main'>
+                        <img class='tokenImage' src="https://pbs.twimg.com/profile_images/1606460066361528320/ExbexWx0_400x400.jpg" alt="" />
+                        <div class='tokenInfo text-center'>
+                          <div class="text-white">
+                            <ins>SHIB ARMY | @ShibaArmy2021</ins>
+                          </div>
+                        </div>
+                        <hr />
+                        <div class='creator'>
+                          <p><ins>476.7K Followers</ins> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+       
+    
+       
+
+      </div>
       <section class="container  pb-[100px]  mx-auto">
         <h4 class="text-gray-900 dark:text-white text-center launched-projects-txt">
           <span class="text-primary-500">Launched </span> Projects
