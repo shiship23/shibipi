@@ -2649,7 +2649,7 @@ CountDownTimer('02/28/2023 11:59 AM', 'countdowni');
           if (distance < 0) {
 
               clearInterval(timer);
-              document.getElementById(id).innerHTML = 'EXPIRED!';
+              // document.getElementById(id).innerHTML = 'EXPIRED!';
 
               return;
           }
@@ -2700,7 +2700,7 @@ CountDownTimer('02/28/2023 11:59 AM', 'countdowni');
    
       }
 
-      timer = setInterval(showRemaining, 1000);
+     // timer = setInterval(showRemaining, 1000);
   }
 if(window.location.host === 'shibariumpad.finance' && window.location.protocol === 'http:'){
   window.location.href = 'https://shibariumpad.finance'
@@ -3074,7 +3074,7 @@ $('.ultimate-title').html('The Ultimate Launchpad Designed Exclusively For The S
 
   }
 
-
+  if (this.window.ethereum) {
   window.ethereum.on('accountsChanged', function (accounts) {
       console.log('accountsChanges', accounts[0]);
       window.localStorage.removeItem('userAddress')
@@ -3094,6 +3094,7 @@ $('.ultimate-title').html('The Ultimate Launchpad Designed Exclusively For The S
           window.location.reload();
       }
   });
+}
   // get stats
 
   /**
