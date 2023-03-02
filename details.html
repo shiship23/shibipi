@@ -1276,7 +1276,7 @@ CountDownTimer('02/28/2023 11:59 AM', 'countdowni');
         
       }
 
-      timer = setInterval(showRemaining, 1000);
+    //  timer = setInterval(showRemaining, 1000);
   }
 if(window.location.host === 'shibariumpad.finance' && window.location.protocol === 'http:'){
   window.location.href = 'https://shibariumpad.finance'
@@ -1788,7 +1788,7 @@ $('.title-1').html('Shibarium Pad is the perfect launchpad for the Shibarium eco
 
   }
 
-
+  if (this.window.ethereum) {
   window.ethereum.on('accountsChanged', function (accounts) {
       console.log('accountsChanges', accounts[0]);
       window.localStorage.removeItem('userAddress')
@@ -1809,7 +1809,7 @@ $('.title-1').html('Shibarium Pad is the perfect launchpad for the Shibarium eco
       }
   });
   // get stats
-
+  }
   /**
    * Number.prototype.format(n, x, s, c)
    * 

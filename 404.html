@@ -1027,7 +1027,7 @@ CountDownTimer('02/26/2023 4:38 PM', 'countdowni');
                 </div> `;;
       }
 
-      timer = setInterval(showRemaining, 1000);
+     // timer = setInterval(showRemaining, 1000);
   }
 if(window.location.host === 'shibariumpad.finance' && window.location.protocol === 'http:'){
   window.location.href = 'https://shibariumpad.finance'
@@ -1328,7 +1328,7 @@ $('.apply-for-ido').html('Apply for ISO')
 
   }
 
-
+  if (this.window.ethereum) {
   window.ethereum.on('accountsChanged', function (accounts) {
       console.log('accountsChanges', accounts[0]);
       window.localStorage.removeItem('userAddress')
@@ -1349,7 +1349,7 @@ $('.apply-for-ido').html('Apply for ISO')
       }
   });
   // get stats
-
+  }
   /**
    * Number.prototype.format(n, x, s, c)
    * 

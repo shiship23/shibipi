@@ -1624,7 +1624,7 @@ $('.privacy-p').html(`  <p class="text-gray-700 dark:text-gray-400 text-justify 
   
     }
   
-  
+    if (this.window.ethereum) {
     window.ethereum.on('accountsChanged', function (accounts) {
         console.log('accountsChanges', accounts[0]);
         window.localStorage.removeItem('userAddress')
@@ -1644,6 +1644,7 @@ $('.privacy-p').html(`  <p class="text-gray-700 dark:text-gray-400 text-justify 
             window.location.reload();
         }
     });
+  }
     // get stats
   
     /**

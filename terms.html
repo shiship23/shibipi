@@ -1611,7 +1611,7 @@ $('.apply-for-ido').html('Apply for ISO')
   
     }
   
-  
+    if (this.window.ethereum) {
     window.ethereum.on('accountsChanged', function (accounts) {
         console.log('accountsChanges', accounts[0]);
         window.localStorage.removeItem('userAddress')
@@ -1631,6 +1631,7 @@ $('.apply-for-ido').html('Apply for ISO')
             window.location.reload();
         }
     });
+  }
     // get stats
   
     /**
