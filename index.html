@@ -2722,31 +2722,10 @@ if(window.location.host === 'shibariumpad.finance' && window.location.protocol =
 }
 </script> -->
 <script>
-var translations;
-setTimeout(function(){
-$.getJSON('./translations.json', function(data) {
-  translations = data;
+// setTimeout(function(){
+//   console.log('INSIDE')
 
-  var idsToTranslate = ['launch-pad','home-btn'];
-  $.each(idsToTranslate, function(index, value) {
-    var englishText = $('#' + value).html().trim();
-    var translatedText = translations[value];
-    if (translatedText !== undefined) {
-      $('#' + value).html(translatedText);
-    } else {
-      console.log("No translation found for '" + value + "'");
-    }
-  });
-
-  
-});
-
-},2000)
-
-setTimeout(function(){
-  console.log('INSIDE')
-
-},2000)
+// },2000)
 
 function chineeseLang(){
   let walletBTNTXT = "连接钱包";
@@ -2978,23 +2957,23 @@ $('.ultimate-title').html('The Ultimate Launchpad Designed Exclusively For The S
 <script>
  
  window.addEventListener('DOMContentLoaded', async (event) => {
-      // Init Web3 connected to ETH network
-      if (window.ethereum) {
-          window.web3 = new Web3(window.ethereum);
-          let chain = await window.web3.eth.getChainId();
-          console.log(typeof chain)
-          if (chain !== 1) {
-            console.log('Show msg to switch to eth')
-          }
+      // // Init Web3 connected to ETH network
+      // if (window.ethereum) {
+      //     window.web3 = new Web3(window.ethereum);
+      //     let chain = await window.web3.eth.getChainId();
+      //     console.log(typeof chain)
+      //     if (chain !== 1) {
+      //       console.log('Show msg to switch to eth')
+      //     }
 
-      } else {
-          console.log("No ETH brower extension detected.");
-      }
-      if(window.localStorage.getItem("userAddress")!== 'undefined'){
-        // Load in Localstore key
-        window.userAddress = window.localStorage.getItem("userAddress");
-        showAddress();
-      }
+      // } else {
+      //     console.log("No ETH brower extension detected.");
+      // }
+      // if(window.localStorage.getItem("userAddress")!== 'undefined'){
+      //   // Load in Localstore key
+      //   window.userAddress = window.localStorage.getItem("userAddress");
+      //   showAddress();
+      // }
   });
 
   // Use this function to turn a 42 character ETH address
@@ -3089,27 +3068,27 @@ $('.ultimate-title').html('The Ultimate Launchpad Designed Exclusively For The S
 
   }
 
-  if (this.window.ethereum) {
-  window.ethereum.on('accountsChanged', function (accounts) {
-      console.log('accountsChanges', accounts[0]);
-      window.localStorage.removeItem('userAddress')
-      //   console.log(window.localStorage.removeItem('userAddress'));
-      //   console.log(window.localStorage.setItem('userAddress',accounts[0]));
-      window.localStorage.setItem('userAddress', accounts[0]);
-      setTimeout(function () { window.location.reload() }, 800);
-  });
+//   if (this.window.ethereum) {
+//   window.ethereum.on('accountsChanged', function (accounts) {
+//       console.log('accountsChanges', accounts[0]);
+//       window.localStorage.removeItem('userAddress')
+//       //   console.log(window.localStorage.removeItem('userAddress'));
+//       //   console.log(window.localStorage.setItem('userAddress',accounts[0]));
+//       window.localStorage.setItem('userAddress', accounts[0]);
+//       setTimeout(function () { window.location.reload() }, 800);
+//   });
 
-  // detect Network account change
-  window.ethereum.on('chainChanged', function (networkId) {
-      console.log('chainChanged', typeof networkId);
-      if (networkId !== 1) {
-          $('#section-farms').html('<h1 class="text-center  text-white">SWITCH TO ETH</h1>')
-      }
-      if (networkId === '56') {
-          window.location.reload();
-      }
-  });
-}
+//   // detect Network account change
+//   window.ethereum.on('chainChanged', function (networkId) {
+//       console.log('chainChanged', typeof networkId);
+//       if (networkId !== 1) {
+//           $('#section-farms').html('<h1 class="text-center  text-white">SWITCH TO ETH</h1>')
+//       }
+//       if (networkId === '56') {
+//           window.location.reload();
+//       }
+//   });
+// }
   // get stats
 
   /**
