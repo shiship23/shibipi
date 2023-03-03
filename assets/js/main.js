@@ -209,129 +209,129 @@
               "py-3",
             ],
             a = ["absolute", ...e, "bg-transparent", "py-5"];
-          document.querySelectorAll(".navbar").forEach((s) => {
-            const c = s.dataset.navbarVersion;
-            "sticky" === s.dataset.positionStyle &&
-              (s.classList.add("absolute", ...e),
-              window.addEventListener("scroll", () => {
-                const e = window.pageYOffset;
-                "v1" === c
-                  ? (e > 100 &&
-                      (s.classList.remove(...a), s.classList.add(...t)),
-                    0 === e &&
-                      (s.classList.remove(...t), s.classList.add(...a)))
-                  : (e > 100 &&
-                      (s.classList.remove(...a),
-                      s.classList.add(...t),
-                      s.querySelectorAll(".search-box").forEach((e) => {
-                        const t = e.getElementsByTagName("input")[0],
-                          a = e.getElementsByTagName("svg")[0];
-                        t.classList.remove(
-                          "text-primary-100",
-                          "placeholder:text-primary-100"
-                        ),
-                          t.classList.add(
-                            "text-gray-700",
-                            "placeholder:text-gray-700"
-                          ),
-                          a.classList.remove("fill-primary-100"),
-                          a.classList.add("fill-gray-700");
-                      }),
-                      s.querySelectorAll(".nav-text").forEach((e) => {
-                        e.classList.remove(
-                          "text-white",
-                          "hover:text-gray-300",
-                          "dark:hover:text-gray-300"
-                        ),
-                          e.classList.add(
-                            "text-gray-900",
-                            "hover:text-primary-500",
-                            "dark:hover:text-primary-500"
-                          ),
-                          e.querySelectorAll("svg").forEach((e) => {
-                            e.classList.remove(
-                              "fill-white",
-                              "group-hover:fill-gray-300"
-                            ),
-                              e.classList.add(
-                                "fill-gray-900",
-                                "group-hover:fill-primary-500"
-                              );
-                          });
-                      }),
-                      s.querySelectorAll(".svg-button").forEach((e) => {
-                        e.classList.replace(
-                          "hover:border-gray-500",
-                          "hover:border-primary-500"
-                        ),
-                          e.querySelectorAll("svg").forEach((e) => {
-                            e.classList.remove(
-                              "fill-white",
-                              "group-hover:fill-gray-300"
-                            ),
-                              e.classList.add(
-                                "fill-gray-700",
-                                "group-hover:fill-primary-500"
-                              );
-                          });
-                      })),
-                    0 === e &&
-                      (s.classList.remove(...t),
-                      s.classList.add(...a),
-                      s.querySelectorAll(".search-box").forEach((e) => {
-                        const t = e.getElementsByTagName("input")[0],
-                          a = e.getElementsByTagName("svg")[0];
-                        t.classList.add(
-                          "text-primary-100",
-                          "placeholder:text-primary-100"
-                        ),
-                          t.classList.remove(
-                            "text-gray-700",
-                            "placeholder:text-gray-700"
-                          ),
-                          a.classList.add("fill-primary-100"),
-                          a.classList.remove("fill-gray-700");
-                      }),
-                      s.querySelectorAll(".nav-text").forEach((e) => {
-                        e.classList.add(
-                          "text-white",
-                          "hover:text-gray-300",
-                          "dark:hover:text-gray-300"
-                        ),
-                          e.classList.remove(
-                            "text-gray-900",
-                            "hover:text-primary-500",
-                            "dark:hover:text-primary-500"
-                          ),
-                          e.querySelectorAll("svg").forEach((e) => {
-                            e.classList.add(
-                              "fill-white",
-                              "group-hover:fill-gray-300"
-                            ),
-                              e.classList.remove(
-                                "fill-gray-900",
-                                "group-hover:fill-primary-500"
-                              );
-                          });
-                      }),
-                      s.querySelectorAll(".svg-button").forEach((e) => {
-                        e.classList.replace(
-                          "hover:border-primary-500",
-                          "hover:border-gray-500"
-                        ),
-                          e.querySelectorAll("svg").forEach((e) => {
-                            e.classList.add(
-                              "fill-white",
-                              "group-hover:fill-gray-300"
-                            ),
-                              e.classList.remove(
-                                "fill-gray-700",
-                                "group-hover:fill-primary-500"
-                              );
-                          });
-                      })));
-              }));
-          });
+        //   document.querySelectorAll(".navbar").forEach((s) => {
+        //     const c = s.dataset.navbarVersion;
+        //     "sticky" === s.dataset.positionStyle &&
+        //       (s.classList.add("absolute", ...e),
+        //       window.addEventListener("scroll", () => {
+        //         const e = window.pageYOffset;
+        //         "v1" === c
+        //           ? (e > 100 &&
+        //               (s.classList.remove(...a), s.classList.add(...t)),
+        //             0 === e &&
+        //               (s.classList.remove(...t), s.classList.add(...a)))
+        //           : (e > 100 &&
+        //               (s.classList.remove(...a),
+        //               s.classList.add(...t),
+        //               s.querySelectorAll(".search-box").forEach((e) => {
+        //                 const t = e.getElementsByTagName("input")[0],
+        //                   a = e.getElementsByTagName("svg")[0];
+        //                 t.classList.remove(
+        //                   "text-primary-100",
+        //                   "placeholder:text-primary-100"
+        //                 ),
+        //                   t.classList.add(
+        //                     "text-gray-700",
+        //                     "placeholder:text-gray-700"
+        //                   ),
+        //                   a.classList.remove("fill-primary-100"),
+        //                   a.classList.add("fill-gray-700");
+        //               }),
+        //               s.querySelectorAll(".nav-text").forEach((e) => {
+        //                 e.classList.remove(
+        //                   "text-white",
+        //                   "hover:text-gray-300",
+        //                   "dark:hover:text-gray-300"
+        //                 ),
+        //                   e.classList.add(
+        //                     "text-gray-900",
+        //                     "hover:text-primary-500",
+        //                     "dark:hover:text-primary-500"
+        //                   ),
+        //                   e.querySelectorAll("svg").forEach((e) => {
+        //                     e.classList.remove(
+        //                       "fill-white",
+        //                       "group-hover:fill-gray-300"
+        //                     ),
+        //                       e.classList.add(
+        //                         "fill-gray-900",
+        //                         "group-hover:fill-primary-500"
+        //                       );
+        //                   });
+        //               }),
+        //               s.querySelectorAll(".svg-button").forEach((e) => {
+        //                 e.classList.replace(
+        //                   "hover:border-gray-500",
+        //                   "hover:border-primary-500"
+        //                 ),
+        //                   e.querySelectorAll("svg").forEach((e) => {
+        //                     e.classList.remove(
+        //                       "fill-white",
+        //                       "group-hover:fill-gray-300"
+        //                     ),
+        //                       e.classList.add(
+        //                         "fill-gray-700",
+        //                         "group-hover:fill-primary-500"
+        //                       );
+        //                   });
+        //               })),
+        //             0 === e &&
+        //               (s.classList.remove(...t),
+        //               s.classList.add(...a),
+        //               s.querySelectorAll(".search-box").forEach((e) => {
+        //                 const t = e.getElementsByTagName("input")[0],
+        //                   a = e.getElementsByTagName("svg")[0];
+        //                 t.classList.add(
+        //                   "text-primary-100",
+        //                   "placeholder:text-primary-100"
+        //                 ),
+        //                   t.classList.remove(
+        //                     "text-gray-700",
+        //                     "placeholder:text-gray-700"
+        //                   ),
+        //                   a.classList.add("fill-primary-100"),
+        //                   a.classList.remove("fill-gray-700");
+        //               }),
+        //               s.querySelectorAll(".nav-text").forEach((e) => {
+        //                 e.classList.add(
+        //                   "text-white",
+        //                   "hover:text-gray-300",
+        //                   "dark:hover:text-gray-300"
+        //                 ),
+        //                   e.classList.remove(
+        //                     "text-gray-900",
+        //                     "hover:text-primary-500",
+        //                     "dark:hover:text-primary-500"
+        //                   ),
+        //                   e.querySelectorAll("svg").forEach((e) => {
+        //                     e.classList.add(
+        //                       "fill-white",
+        //                       "group-hover:fill-gray-300"
+        //                     ),
+        //                       e.classList.remove(
+        //                         "fill-gray-900",
+        //                         "group-hover:fill-primary-500"
+        //                       );
+        //                   });
+        //               }),
+        //               s.querySelectorAll(".svg-button").forEach((e) => {
+        //                 e.classList.replace(
+        //                   "hover:border-primary-500",
+        //                   "hover:border-gray-500"
+        //                 ),
+        //                   e.querySelectorAll("svg").forEach((e) => {
+        //                     e.classList.add(
+        //                       "fill-white",
+        //                       "group-hover:fill-gray-300"
+        //                     ),
+        //                       e.classList.remove(
+        //                         "fill-gray-700",
+        //                         "group-hover:fill-primary-500"
+        //                       );
+        //                   });
+        //               })));
+        //       }));
+        //   });
         })();
       },
       292: function () {
