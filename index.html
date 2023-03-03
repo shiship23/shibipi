@@ -2513,54 +2513,54 @@ background: #fcfcfc;
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="assets/js/main.js"></script>
 
-  <script src="assets/js/jquery.marquee.js?v=3" type="text/javascript"></script>
+  <!-- <script src="assets/js/jquery.marquee.js?v=3" type="text/javascript"></script> -->
   <script>
 
 
 
-    $(function(){
-  var $mwo = $('.marquee-with-options');
-  $('.marquee').marquee();
-  $('.marquee-with-options').marquee({
-    //speed in milliseconds of the marquee
-    speed: 5000,
-    //gap in pixels between the tickers
-    gap: 50,
-    //gap in pixels between the tickers
-    delayBeforeStart: 0,
-    //'left' or 'right'
-    direction: 'left',
-    //true or false - should the marquee be duplicated to show an effect of continues flow
-    duplicated: true,
-    //on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
-    pauseOnHover: true
-  });
+//     $(function(){
+//   var $mwo = $('.marquee-with-options');
+//   $('.marquee').marquee();
+//   $('.marquee-with-options').marquee({
+//     //speed in milliseconds of the marquee
+//     speed: 5000,
+//     //gap in pixels between the tickers
+//     gap: 50,
+//     //gap in pixels between the tickers
+//     delayBeforeStart: 0,
+//     //'left' or 'right'
+//     direction: 'left',
+//     //true or false - should the marquee be duplicated to show an effect of continues flow
+//     duplicated: true,
+//     //on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
+//     pauseOnHover: true
+//   });
 
-  //Direction upward
-  $('.marquee-vert').marquee({
-    direction: 'up',
-    speed: 1500
-  });
+//   //Direction upward
+//   $('.marquee-vert').marquee({
+//     direction: 'up',
+//     speed: 1500
+//   });
 
-  //pause and resume links
-  $('.pause').click(function(e){
-    e.preventDefault();
-    $mwo.trigger('pause');
-  });
-  $('.resume').click(function(e){
-    e.preventDefault();
-    $mwo.trigger('resume');
-  });
-  //toggle
-  $('.toggle').hover(function(e){
-    $mwo.trigger('pause');
-  },function(){
-    $mwo.trigger('resume');
-  })
-  .click(function(e){
-    e.preventDefault();
-  })
-});
+//   //pause and resume links
+//   $('.pause').click(function(e){
+//     e.preventDefault();
+//     $mwo.trigger('pause');
+//   });
+//   $('.resume').click(function(e){
+//     e.preventDefault();
+//     $mwo.trigger('resume');
+//   });
+//   //toggle
+//   $('.toggle').hover(function(e){
+//     $mwo.trigger('pause');
+//   },function(){
+//     $mwo.trigger('resume');
+//   })
+//   .click(function(e){
+//     e.preventDefault();
+//   })
+// });
 
 
 
